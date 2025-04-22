@@ -5,8 +5,8 @@ import tqdm
 import dateparser
 import urllib.parse
 
-from jdih_scraper import constants
-from jdih_scraper import encodings
+from tools import encodings
+from tools.jdih_scraper import constants
 
 from selenium import webdriver
 from selenium.common import exceptions 
@@ -17,7 +17,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class BPKScraper:
 
-    def __init__(self, web_driver: webdriver.remote.webdriver.WebDriver):
+    def __init__(self, web_driver: webdriver.remote.webdriver.WebDriver) -> None:
         self.web_driver = web_driver
         self.REGULATION_CODES = encodings.REGULATION_CODES
         self.WORD_TO_NUMBER = encodings.WORD_TO_NUMBER
@@ -351,8 +351,9 @@ class BPKScraper:
 
         return regulation_metadata
     
-
-    def download_regulation_pdf(self, download_data: list[dict], download_full_dir_path: str, verbose: bool = True) -> None:
+    
+    @staticmethod
+    def download_regulation_pdf(download_data: list[dict], download_full_dir_path: str, verbose: bool = True) -> None:
     
         relative_download_dir_path = os.path.relpath(download_full_dir_path, start=os.getcwd())
         os.makedirs(relative_download_dir_path, exist_ok=True)
