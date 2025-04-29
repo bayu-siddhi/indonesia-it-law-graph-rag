@@ -1,1 +1,0 @@
-from tools.regulation_parser.parser import RegulationParser
