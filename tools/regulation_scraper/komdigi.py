@@ -4,7 +4,7 @@ import time
 import tqdm
 
 from tools import encodings
-from tools.jdih_scraper import constants
+from tools.regulation_scraper import constants
 
 from selenium import webdriver
 from selenium.webdriver.common import by

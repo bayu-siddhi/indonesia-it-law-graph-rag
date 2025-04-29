@@ -6,7 +6,7 @@ import dateparser
 import urllib.parse
 
 from tools import encodings
-from tools.jdih_scraper import constants
+from tools.regulation_scraper import constants
 
 from selenium import webdriver
 from selenium.common import exceptions 
