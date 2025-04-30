@@ -4,9 +4,9 @@ import json
 import time
 import tqdm
 
-from tools import utils
-from tools import encodings
-from tools.regulation_parser import constants
+from src.prep import utils
+from src.prep import encodings
+from src.prep.regulation_parser import constants
 
 
 class RegulationParser:

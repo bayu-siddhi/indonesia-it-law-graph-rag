@@ -146,7 +146,7 @@ class RegulationGraphBuilder:
         }
 
         # Draw graph
-        visual_graph = pyvis.network.Network()
+        visual_graph = pyvis.network.Network(height="100%")
 
         # Draw node
         for node in graph_result.nodes:
@@ -169,7 +169,7 @@ class RegulationGraphBuilder:
 
     # https://neo4j.com/docs/cypher-manual/current/indexes/search-performance-indexes/managing-indexes/
     def __create_id_index(self, tx: neo4j.Session) -> None:
-        indexes = {
+        range_indexes = {
             "Regulation": "regulation_id_index",
             "Consideration": "consideration_id_index",
             "Observation": "observation_id_index",
@@ -179,7 +179,12 @@ class RegulationGraphBuilder:
             "Ineffective": "ineffective_id_index"
         }
 
-        for label, index_name in indexes.items():
+        fulltext_indexes = {
+            "Effective": "effective_fulltext_index",
+            "Definition": "definition_fulltext_index"
+        }
+
+        for label, index_name in range_indexes.items():
             tx.run(
                 query="""
                 CREATE INDEX {index_name} IF NOT EXISTS FOR (n:{label}) ON (n.id)
@@ -189,15 +194,18 @@ class RegulationGraphBuilder:
                 )
             )
         
-        tx.run(
-            query="""
-            CREATE FULLTEXT INDEX effective_fulltext_index IF NOT EXISTS
-            FOR (n:Effective) ON EACH [n.text]
-            """
-        )
-        
+        for label, index_name in fulltext_indexes.items():
+            tx.run(
+                query="""
+                CREATE FULLTEXT INDEX {index_name} IF NOT EXISTS
+                FOR (n:{label}) ON EACH [n.text]
+                """.format(
+                    index_name=index_name,
+                    label=label
+                )
+            )
 
-    
+
     # https://neo4j.com/docs/python-manual/current/data-types/#_date
     def __string_to_neo4j_date(self, date: str) -> neo4j.time.Date | None:
         date = re.search(r"(\d{4})-(\d{2})-(\d{2})", date)
@@ -339,8 +347,9 @@ class RegulationGraphBuilder:
                             n.text = $modified_text,
                             n.real_text = $real_text
                         WITH n
-                        MATCH (regulation:Regulation {id: $regulation_id})
-                        MERGE (regulation)-[rel:HAS_DEFINITION]->(n)
+                        MATCH (reg:Regulation {id: $regulation_id})
+                        MERGE (reg)-[rel:HAS_DEFINITION]->(n)
+                        SET n.source = reg.type + " No. " + reg.number + " Tahun " + reg.year + " Pasal 1, Definisi " + $name
                         RETURN COUNT(n) AS num_nodes, COUNT(rel) AS num_edges
                         """,
                         parameters={
@@ -348,8 +357,7 @@ class RegulationGraphBuilder:
                             "name": definition["name"],
                             "modified_text": modified_text,
                             "real_text": definition['definition'].lower(),
-                            "regulation_id": int(regulation["id"]),
-                            "relationship_type": "HAS_DEFINITION"
+                            "regulation_id": int(regulation["id"])
                         }
                     )
 
@@ -382,7 +390,7 @@ class RegulationGraphBuilder:
                         WITH n
                         MATCH (reg:Regulation {id: $regulation_id})
                         MERGE (reg)-[rel:HAS_ARTICLE]->(n)
-                        SET n.name = reg.type + " No. " + reg.number + " Tahun " + reg.year + " Pasal " + n.number
+                        SET n.source = reg.type + " No. " + reg.number + " Tahun " + reg.year + " Pasal " + n.number
                         RETURN COUNT(n) AS num_nodes, COUNT(rel) AS num_edges
                         """,
                         parameters={

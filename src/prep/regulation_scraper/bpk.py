@@ -5,8 +5,8 @@ import tqdm
 import dateparser
 import urllib.parse
 
-from tools import encodings
-from tools.regulation_scraper import constants
+from src.prep import encodings
+from src.prep.regulation_scraper import constants
 
 from selenium import webdriver
 from selenium.common import exceptions 

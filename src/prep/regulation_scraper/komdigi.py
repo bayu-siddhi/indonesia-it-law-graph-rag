@@ -3,8 +3,8 @@ import re
 import time
 import tqdm
 
-from tools import encodings
-from tools.regulation_scraper import constants
+from src.prep import encodings
+from src.prep.regulation_scraper import constants
 
 from selenium import webdriver
 from selenium.webdriver.common import by
