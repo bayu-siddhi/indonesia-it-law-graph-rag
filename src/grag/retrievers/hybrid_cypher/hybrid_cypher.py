@@ -1,9 +1,9 @@
 import time
+import warnings
 from typing import (
     Callable,
     Dict,
     List,
-    Optional,
     Tuple
 )
 from neo4j import (
@@ -26,7 +26,7 @@ from src.grag.retrievers.hybrid_cypher.retrieval_query import (
 )
 
 
-def retriever_result_formatter(
+def _retriever_result_formatter(
     record: Record
 ) -> RetrieverResultItem:
     return RetrieverResultItem(
@@ -37,15 +37,15 @@ def retriever_result_formatter(
     )
 
 
-def tool_result_formatter(
+def _tool_result_formatter(
     articles: List[RetrieverResultItem],
     definitions: List[RetrieverResultItem]
-) -> Tuple[str, List]:
+) -> Tuple[str, List[int]]:
     node_ids = []
 
     article_result = (
-        "## **Daftar Pasal Peraturan Perundang-Undangan yang (Mungkin) Relevan "
-        "untuk Menjawab Kueri:**\n"
+        "## **Daftar Pasal Peraturan Perundang-Undangan yang "
+        "(Mungkin) Relevan untuk Menjawab Kueri:**\n"
     )
     article_result += (("-" * 80) + "\n\n") 
     for article in articles:
@@ -53,8 +53,8 @@ def tool_result_formatter(
         node_ids.append(article.metadata["id"])
 
     definition_result = (
-        "## **Daftar Definisi Konsep Menurut Peraturan Perundang-Undangan yang "
-        "(Mungkin) Relevan untuk Menjawab Kueri:**\n"
+        "## **Daftar Definisi Konsep Menurut Peraturan Perundang-"
+        "Undangan yang (Mungkin) Relevan untuk Menjawab Kueri:**\n"
     )
     definition_result += (("-" * 80) + "\n\n") 
     for definition in definitions:
@@ -70,13 +70,22 @@ def create_hybrid_cypher_retriever_tool(
     embedder_model: HuggingFaceEmbeddings,
     neo4j_driver: Driver,
     neo4j_config: Dict[str, str],
-    top_k_initial_article: Optional[int] = 5,
-    total_article_limit: Optional[int] = 10,
-    total_definition_limit: Optional[int] = 5,
+    top_k_initial_article: int = 5,
+    total_article_limit: int = 10,
+    total_definition_limit: int = 5,
 ) -> Callable[[str], ToolMessage]:
-    
-    # TODO: KASIH WARNING JIKA top_k_initial_article == total_article_limit
-    # TODO: KASIH ERROR JIKA top_k_initial_article > total_article_limit
+    if top_k_initial_article == total_article_limit:
+        warnings.warn(
+            "Setting top_k_initial_article equal to total_article_limit "
+            "means all article nodes will be retrieved via hybrid search "
+            "only. No additional nodes will be expanded through Cypher "
+            "query traversal."
+        )
+    elif top_k_initial_article > total_article_limit:
+        raise ValueError(
+            "top_k_initial_article must be less than or equal to total_"
+            "article_limit"
+        )
 
     article_retriever_1 = HybridCypherRetriever(
         driver=neo4j_driver,
@@ -84,7 +93,7 @@ def create_hybrid_cypher_retriever_tool(
         fulltext_index_name=neo4j_config["ARTICLE_FULLTEXT_INDEX_NAME"],
         retrieval_query=ARTICLE_RETRIEVAL_QUERY_1,
         embedder=embedder_model,
-        result_formatter=retriever_result_formatter,
+        result_formatter=_retriever_result_formatter,
         neo4j_database=neo4j_config["DATABASE_NAME"],
     )
 
@@ -94,7 +103,7 @@ def create_hybrid_cypher_retriever_tool(
         fulltext_index_name=neo4j_config["ARTICLE_FULLTEXT_INDEX_NAME"],
         retrieval_query=ARTICLE_RETRIEVAL_QUERY_2,
         embedder=embedder_model,
-        result_formatter=retriever_result_formatter,
+        result_formatter=_retriever_result_formatter,
         neo4j_database=neo4j_config["DATABASE_NAME"],
     )
 
@@ -103,7 +112,7 @@ def create_hybrid_cypher_retriever_tool(
         index_name=neo4j_config["DEFINITION_VECTOR_INDEX_NAME"],
         retrieval_query=DEFINITION_RETRIEVAL_QUERY,
         embedder=embedder_model,
-        result_formatter=retriever_result_formatter,
+        result_formatter=_retriever_result_formatter,
         neo4j_database=neo4j_config["DATABASE_NAME"],
     )
 
@@ -115,8 +124,10 @@ def create_hybrid_cypher_retriever_tool(
         query: str
     ) -> ToolMessage:
         """Hybrid Cypher Retriever Tool"""
+        # TODO: PERBAIKI DESKRIPSI TOOL
         
         start_time = time.time()
+        query = query.lower()
 
         articles = article_retriever_1.search(
             query_text=query,
@@ -155,11 +166,11 @@ def create_hybrid_cypher_retriever_tool(
             }
         )
 
-        run_time = time.time() - start_time
-
-        content, node_ids = tool_result_formatter(
+        content, node_ids = _tool_result_formatter(
             articles.items, definitions.items
         )
+        run_time = time.time() - start_time
+        
         artifact = {
             "run_time": run_time,
             "is_context_fetched": True,
