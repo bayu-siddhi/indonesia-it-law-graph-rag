@@ -33,6 +33,7 @@ from langchain_neo4j.chains.graph_qa.prompts import (
 )
 from langchain_neo4j import GraphCypherQAChain
 
+
 INTERMEDIATE_STEPS_KEY = "context"
 GENERATED_CYPHER_KEY = "cypher"
 
@@ -102,10 +103,10 @@ def extract_cypher(text: str) -> str:
     matches = re.findall(pattern, text, re.DOTALL)
     cypher_query = matches[0] if matches else text
     
-    #####################################################################
-    matches = re.search(r"match|call|return|yield", cypher_query.lower())
+    ############################################################################
+    matches = re.search(r"MATCH|CALL|RETURN|YIELD", cypher_query, re.IGNORECASE)
     cypher_query = cypher_query if matches else ""
-    #####################################################################
+    ############################################################################
 
     # Quote node labels in backticks if they contain spaces and are not already quoted
     cypher_query = re.sub(
@@ -145,6 +146,7 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
 
     ###############################################
     cypher_fix_chain: Runnable[Dict[str, Any], str]
+    example_key: str = "example"  #: :meta private:
     max_cypher_generation_attempts: int = 3
     """The maximum amount of Cypher Generation attempts that should be made"""
     ###############################################
@@ -164,6 +166,14 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
                 "necessary precautions. "
                 "See https://python.langchain.com/docs/security for more information."
             )
+    
+    @property
+    def example_keys(self) -> List[str]:
+        """Return the example keys.
+
+        :meta private:
+        """
+        return [self.example_key]
 
     @classmethod
     def from_llm(
@@ -173,7 +183,7 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
         qa_prompt: Optional[BasePromptTemplate] = None,
         cypher_generation_prompt: Optional[BasePromptTemplate] = None,
         #############################################
-        cypher_fix_prompt: BasePromptTemplate = None,
+        cypher_fix_prompt: Optional[BasePromptTemplate] = None,
         #############################################
         cypher_llm: Optional[BaseLanguageModel] = None,
         qa_llm: Optional[BaseLanguageModel] = None,
@@ -337,8 +347,10 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
         _run_manager = run_manager or CallbackManagerForChainRun.get_noop_manager()
         callbacks = _run_manager.get_child()
         question = inputs[self.input_key]
+        example = inputs.get(self.example_key, "")
         args = {
             "question": question,
+            "example": example,
             "schema": self.graph_schema,
         }
         args.update(inputs)
@@ -415,7 +427,7 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
                 cypher_result = []
 
         ############################################################################
-        _run_manager.on_text("Return Direct:", end="\n", verbose=self.verbose)
+        _run_manager.on_text("Skip QA LLM:", end="\n", verbose=self.verbose)
         _run_manager.on_text(
             str(self.return_direct), color="green", end="\n\n", verbose=self.verbose
         )

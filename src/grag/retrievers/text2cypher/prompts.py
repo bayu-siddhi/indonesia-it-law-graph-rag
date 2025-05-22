@@ -1,5 +1,44 @@
-from langchain_core.prompts.prompt import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 
+
+# CYPHER_GENERATION_TEMPLATE = """
+# ## Task:
+# - Generate Neo4j Cypher statement to query a graph database.
+
+# ## Instructions:
+# - Make a cypher code for user query or user questions.
+# - Use only the provided relationship types and properties in the schema.
+# - Do not use any other relationship types or properties that are not provided.
+
+# ## User Question or Query:
+# {question}
+
+# ## Schema:
+# {schema}
+
+# ## Note:
+# - Do not include any explanations or apologies in your responses.
+# - Do not respond to any questions that might ask anything else than for you to construct a Cypher statement.
+# - Do not include any text except the generated Cypher statement.
+
+# ## Examples:
+# Following are some examples that you can use as a reference to create Cypher code according to user questions.
+
+# [Example 1]
+# User query   : "Apa isi pasal 100 UU nomor 90 tahun 2020?"
+# Cypher query : ```MATCH (r:Regulation)-[:HAS_ARTICLE]->(a:Article)
+# WHERE r.type = 'UU' AND r.number = 90 AND r.year = 2020 AND a.number = '100'
+# RETURN a.text AS text```
+
+# [Example 2]
+# User query   : "Apa isi pasal selanjutnya dari pasal 100 undang-undang / UU nomor 90 tahun 2020?"
+# Cypher query : ```MATCH (r:Regulation)-[:HAS_ARTICLE]->(a:Article)-[:NEXT_ARTICLE]->(next_article)
+# WHERE r.type = 'UU' AND r.number = 90 AND r.year = 2020 AND a.number = '100'
+# RETURN next_article.text AS text```
+
+# ## Your Generated Cypher Statement
+
+# """
 
 CYPHER_GENERATION_TEMPLATE = """
 ## Task:
@@ -10,10 +49,8 @@ CYPHER_GENERATION_TEMPLATE = """
 - Use only the provided relationship types and properties in the schema.
 - Do not use any other relationship types or properties that are not provided.
 
-## User Question or Query:
-{question}
-
 ## Schema:
+
 {schema}
 
 ## Note:
@@ -24,24 +61,16 @@ CYPHER_GENERATION_TEMPLATE = """
 ## Examples:
 Following are some examples that you can use as a reference to create Cypher code according to user questions.
 
-[Example 1]
-User query   : "Apa isi pasal 100 UU nomor 90 tahun 2020?"
-Cypher query : ```MATCH (r:Regulation)-[:HAS_ARTICLE]->(a:Article)
-WHERE r.type = 'UU' AND r.number = 90 AND r.year = 2020 AND a.number = '100'
-RETURN a.text AS text```
+{example}
 
-[Example 2]
-User query   : "Apa isi pasal selanjutnya dari pasal 100 undang-undang / UU nomor 90 tahun 2020?"
-Cypher query : ```MATCH (r:Regulation)-[:HAS_ARTICLE]->(a:Article)-[:NEXT_ARTICLE]->(next_article)
-WHERE r.type = 'UU' AND r.number = 90 AND r.year = 2020 AND a.number = '100'
-RETURN next_article.text AS text```
+## Current User Question:
 
-## Your Generated Cypher Statement
-
+{question}
 """
 
+# {examples}
 CYPHER_GENERATION_PROMPT = PromptTemplate(
-    input_variables=["schema", "question"], template=CYPHER_GENERATION_TEMPLATE
+    input_variables=["schema", "example", "question"], template=CYPHER_GENERATION_TEMPLATE
 )
 
 CYPHER_FIX_TEMPLATE = """## Task:
