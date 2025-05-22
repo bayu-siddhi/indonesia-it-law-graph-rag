@@ -12,14 +12,14 @@ from neo4j import (
 )
 from langchain_core.tools import tool
 from langchain_core.messages import ToolMessage
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_core.embeddings import Embeddings
 from neo4j_graphrag.types import RetrieverResultItem
 from neo4j_graphrag.retrievers import (
     HybridCypherRetriever,
     VectorCypherRetriever
 )
-from src.grag.retrievers.models import SimpleQuery
-from src.grag.retrievers.hybrid_cypher.retrieval_query import (
+from ..models import SimpleQuery
+from .retrieval_query import (
     ARTICLE_RETRIEVAL_QUERY_1,
     ARTICLE_RETRIEVAL_QUERY_2,
     DEFINITION_RETRIEVAL_QUERY
@@ -67,7 +67,7 @@ def _tool_result_formatter(
 
 
 def create_hybrid_cypher_retriever_tool(
-    embedder_model: HuggingFaceEmbeddings,
+    embedder_model: Embeddings,
     neo4j_driver: Driver,
     neo4j_config: Dict[str, str],
     top_k_initial_article: int = 5,
