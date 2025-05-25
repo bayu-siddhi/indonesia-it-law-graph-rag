@@ -21,7 +21,8 @@ from langchain_core.messages import (
     ToolMessage
 )
 from langchain_neo4j import Neo4jGraph
-from ..models import SimpleQuery
+# from ..models import SimpleQuery
+from .models import Text2CypherInput
 from .prompts import (
     CYPHER_GENERATION_PROMPT,
     CYPHER_FIX_PROMPT,
@@ -40,16 +41,8 @@ def _tool_result_formatter(
 ) -> Tuple[str, Dict[str, Any]]:
     artifact = {
         "is_context_fetched": False,
-        "cypher_gen_usage_metadata": {
-            "input_tokens": 0,
-            "output_tokens": 0,
-            "total_tokens": 0
-        },
-        "qa_usage_metadata": {
-            "input_tokens": 0,
-            "output_tokens": 0,
-            "total_tokens": 0
-        }
+        "cypher_gen_usage_metadata": {},
+        "qa_usage_metadata": {}
     }
 
     if not result["cypher"][-1]:
@@ -80,8 +73,7 @@ def _tool_result_formatter(
         artifact["is_context_fetched"] = bool(result["context"])
         if result["result"].usage_metadata:
             for key, value in result["result"].usage_metadata.items():
-                if key != "input_token_details":
-                    artifact["qa_usage_metadata"][key] += value
+                artifact["qa_usage_metadata"][key] = value
 
         response = (
             "### **Hasil Pembuatan Kode Cypher:**\n"
@@ -92,17 +84,20 @@ def _tool_result_formatter(
     
     for cypher_gen_ai_message in result["cypher"]:
         for key, value in cypher_gen_ai_message.usage_metadata.items():
-            if key != "input_token_details":
-                artifact["cypher_gen_usage_metadata"][key] += value
+            if isinstance(value, (int, float)):
+                artifact["cypher_gen_usage_metadata"][key] = \
+                    artifact["cypher_gen_usage_metadata"].get(key, 0) + value
+            else:
+                artifact["cypher_gen_usage_metadata"][key] = value
     
     return response, artifact
 
 
 def create_text2cypher_retriever_tool(
     neo4j_graph: Neo4jGraph,
-    embedder_model: Embeddings,
     cypher_llm: BaseLanguageModel,
     qa_llm: BaseLanguageModel,
+    embedder_model: Optional[Embeddings] = None,
     qa_prompt: Optional[BasePromptTemplate] = None,
     cypher_generation_prompt: Optional[BasePromptTemplate] = None,
     cypher_fix_prompt: Optional[BasePromptTemplate] = None,
@@ -118,7 +113,7 @@ def create_text2cypher_retriever_tool(
     if cypher_fix_prompt is None:
         cypher_fix_prompt = CYPHER_FIX_PROMPT
 
-    text2cypher_chain = GraphCypherQAChainMod.from_llm(
+    text2cypher = GraphCypherQAChainMod.from_llm(
         graph=neo4j_graph,
         qa_prompt=qa_prompt,
         cypher_generation_prompt=cypher_generation_prompt,
@@ -132,30 +127,33 @@ def create_text2cypher_retriever_tool(
         verbose=verbose
     )
 
-    example_selector = SemanticSimilarityExampleSelector.from_examples(
-        examples=text2cypher_example,
-        embeddings=embedder_model,
-        vectorstore_cls=InMemoryVectorStore,
-        k=num_examples
-    )
+    if embedder_model is not None:
+        example_selector = SemanticSimilarityExampleSelector.from_examples(
+            examples=text2cypher_example,
+            embeddings=embedder_model,
+            vectorstore_cls=InMemoryVectorStore,
+            k=num_examples
+        )
 
-    few_shot_prompt_template = FewShotPromptTemplate(
-        example_selector=example_selector,
-        example_prompt=text2cypher_example_prompt,
-        suffix="",
-        input_variables=["question"],
-    )
+        few_shot_prompt_template = FewShotPromptTemplate(
+            example_selector=example_selector,
+            example_prompt=text2cypher_example_prompt,
+            suffix="",
+            input_variables=["question"],
+        )
 
-    few_shot_selection_chain = RunnableLambda(
-        lambda x: {
-            "query": x,
-            "example": few_shot_prompt_template.invoke({
-                "question": x.lower()
-            }).to_string()
-        }
-    )
+        few_shot_selection = RunnableLambda(
+            lambda x: {
+                "query": x,
+                "example": few_shot_prompt_template.invoke({
+                    "question": x.lower()
+                }).to_string()
+            }
+        )
 
-    text2cypher_chain_with_few_shot = few_shot_selection_chain | text2cypher_chain
+        text2cypher_chain = few_shot_selection | text2cypher
+    else:
+        text2cypher_chain = text2cypher
 
     @tool(
         args_schema=SimpleQuery,
@@ -172,10 +170,11 @@ def create_text2cypher_retriever_tool(
         
         # selected_examples = "INI CONTOH "  # NANTI HAPUS
         # result = text2cypher_chain.invoke({"query": query, "example": selected_examples})
-
-        result = text2cypher_chain_with_few_shot.invoke(query)
+        result = text2cypher_chain.invoke(query)
         response, artifact = _tool_result_formatter(result, skip_qa_llm)
-
+        
+        artifact["cypher_gen_usage_metadata"]["model"] = cypher_llm.model
+        if not skip_qa_llm: artifact["qa_usage_metadata"]["model"] = qa_llm.model
         artifact["run_time"] = time.time() - start_time
         
         return response, artifact
