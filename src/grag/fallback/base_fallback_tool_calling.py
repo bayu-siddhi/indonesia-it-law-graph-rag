@@ -4,6 +4,7 @@ from abc import (
 )
 from typing import (
     Dict,
+    List,
     Optional
 )
 from langchain_core.messages import (
@@ -21,8 +22,8 @@ class BaseFallbackToolCalling(ABC):
     @abstractmethod
     def check(
         cls,
-        tool_message: ToolMessage
-    ) -> bool:
+        tool_message: List[ToolMessage]
+    ) -> List[bool]:
         """
         Check whether a fallback tool should be triggered based on the tool message.
         """
@@ -32,8 +33,8 @@ class BaseFallbackToolCalling(ABC):
     @abstractmethod
     def tool_call(
         cls,
-        prev_tool_call: ToolMessage,
-        name: Optional[str] = None
+        prev_tool_call: AIMessage,
+        fallback_tool_status: List[bool]
     ) -> AIMessage:
         """
         Create a new tool call message as a fallback attempt.

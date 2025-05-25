@@ -63,6 +63,7 @@ def create_workflow(
         else:
             # return "tools"
             # NGGA TAHU KENAPA KALAU PAKAI V2 ITU MALAH ERROR
+            # SUDAH AMAN, PAS ITU NGGA BISA KARENA LUPA MASUKIN store nya
             tool_calls = [
                 tool_node.inject_tool_args(call, state, store)  # type: ignore[arg-type]
                 for call in last_message.tool_calls
