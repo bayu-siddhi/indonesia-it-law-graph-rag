@@ -29,6 +29,7 @@ BPK_REGEX_PATTERNS = {
     },
     "regulation_metadata": {
         "reg_title": r"judul\s(.*)",
+        "reg_short_title": r"((?=(?:No|No.|Nomor) \d).*Tahun \d{4})",
         "reg_about": r"tentang (.*)",
         "reg_amendment_number_1": r"^perubahan atas",
         "reg_amendment_number_2": r"^perubahan (.+) atas",

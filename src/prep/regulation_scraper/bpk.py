@@ -1,55 +1,83 @@
 import os
 import re
 import time
-import tqdm
 import dateparser
 import urllib.parse
-
-from src.prep import encodings
-from src.prep.regulation_scraper import constants
-
-from selenium import webdriver
-from selenium.common import exceptions 
-from selenium.webdriver.common import by
-from selenium.webdriver.support import ui
+from tqdm import tqdm
+from typing import (
+    Dict,
+    List,
+    Union
+)
+from selenium.webdriver import (
+    Firefox,
+    FirefoxOptions
+)
+from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.common.exceptions import (
+    NoSuchElementException,
+    TimeoutException
+)
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from ..encodings import (
+    REGULATION_CODES,
+    WORD_TO_NUMBER
+)
+from .constants import (
+    BPK_REGEX_PATTERNS,
+    BPK_SELECTORS
+)
 
 
 class BPKScraper:
 
-    def __init__(self, web_driver: webdriver.remote.webdriver.WebDriver) -> None:
+    def __init__(
+        self,
+        web_driver: WebDriver
+    ) -> None:
         self.web_driver = web_driver
-        self.REGULATION_CODES = encodings.REGULATION_CODES
-        self.WORD_TO_NUMBER = encodings.WORD_TO_NUMBER
-        self.BPK_SELECTORS = constants.BPK_SELECTORS
-        self.BPK_REGEX_PATTERNS = constants.BPK_REGEX_PATTERNS
+        self.REGULATION_CODES = REGULATION_CODES
+        self.WORD_TO_NUMBER = WORD_TO_NUMBER
+        self.BPK_SELECTORS = BPK_SELECTORS
+        self.BPK_REGEX_PATTERNS = BPK_REGEX_PATTERNS
 
 
-    def active_regulation(self, url: str, regulation_type: str, verbose: bool = True) -> list[dict]:
+    def active_regulation(
+        self,
+        url: str,
+        regulation_type: str,
+        verbose: bool = True
+    ) -> List[Dict[str, Union[str, bool]]]:
         SELECTORS = self.BPK_SELECTORS[self.active_regulation.__name__]
         REGEX_PATTERNS = self.BPK_REGEX_PATTERNS[self.active_regulation.__name__]
         active_regulations = []
         net_durations = []
 
         # Format URL page numbering
-        if re.search(REGEX_PATTERNS["page_number"], url, re.IGNORECASE):
+        if re.search(pattern=REGEX_PATTERNS["page_number"], string=url, flags=re.IGNORECASE):
             new_url = re.sub(REGEX_PATTERNS["page_number"], "p={page}", url, flags=re.IGNORECASE)
         else:
             new_url = url + "&p={page}"
 
         # Get last page number
         self.web_driver.get(new_url.format(page=1))
-        wait = ui.WebDriverWait(self.web_driver, timeout=10)
-        wait.until(EC.presence_of_element_located((by.By.CSS_SELECTOR, SELECTORS["pagination_box"])))
-        pagination_box = self.web_driver.find_element(by.By.CSS_SELECTOR, SELECTORS["pagination_box"])
-        last_page_button = pagination_box.find_element(by.By.XPATH, "./*[last()]")
-        last_page_href = last_page_button.find_element(by.By.CSS_SELECTOR, "[href]").get_attribute("href")
+        wait = WebDriverWait(self.web_driver, timeout=10)
+        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, SELECTORS["pagination_box"])))
+        pagination_box = self.web_driver.find_element(By.CSS_SELECTOR, SELECTORS["pagination_box"])
+        last_page_button = pagination_box.find_element(By.XPATH, "./*[last()]")
+        last_page_href = last_page_button.find_element(By.CSS_SELECTOR, "[href]").get_attribute("href")
         last_page_number = int(re.search(REGEX_PATTERNS["page_number"], last_page_href, re.IGNORECASE)[1])
 
         global_start = time.time()
 
         # Iterate for every page
-        for page in tqdm.tqdm(iterable=range(1, last_page_number + 1), desc="Scraping active regulations", disable=not verbose):
+        for page in tqdm(
+            iterable=range(1, last_page_number + 1), 
+            desc="Scraping active regulations",
+            disable=not verbose
+        ):
             local_start = time.time()
             access_page = False
             trial_number = 10
@@ -58,11 +86,11 @@ class BPKScraper:
             for _ in range(trial_number):
                 try:
                     self.web_driver.get(new_url.format(page=page))
-                    wait = ui.WebDriverWait(self.web_driver, timeout=10)
-                    wait.until(EC.presence_of_element_located((by.By.XPATH, SELECTORS["reg_box"])))
+                    wait = WebDriverWait(self.web_driver, timeout=10)
+                    wait.until(EC.presence_of_element_located((By.XPATH, SELECTORS["reg_box"])))
                     access_page = True
                     break
-                except exceptions.TimeoutException:
+                except TimeoutException:
                     time.sleep(2)
             
             if not access_page:
@@ -70,39 +98,54 @@ class BPKScraper:
                     print(f"Unable to access {url} on page={page} after {trial_number} attempts")
                     print(f"Skip the scraping process to page={page + 1}")
                 continue
-            
+
             # Get all regulation instances
-            regulations_box = self.web_driver.find_element(by.By.XPATH, SELECTORS["reg_box"])
-            regulations_all = regulations_box.find_elements(by.By.CSS_SELECTOR, SELECTORS["reg_items"])
+            regulations_box = self.web_driver.find_element(By.XPATH, SELECTORS["reg_box"])
+            regulations_all = regulations_box.find_elements(By.CSS_SELECTOR, SELECTORS["reg_items"])
 
             # Iterate for every regulation instances
             # Ignore all ineffective regulations
             for regulation in regulations_all:
                 if not re.findall(REGEX_PATTERNS["ineffective_reg"], regulation.text, re.IGNORECASE):        
                     # Get regulation number and year element
-                    regulation_number_and_year = regulation.find_element(by.By.CSS_SELECTOR, SELECTORS["reg_number"]).text.lower()
-                    
+                    regulation_number_and_year = regulation.find_element(
+                        By.CSS_SELECTOR, SELECTORS["reg_number"]
+                    ).text.lower()
+
                     # Get regulation number
-                    new_regulation_number = re.search(REGEX_PATTERNS["reg_new_number"], regulation_number_and_year, re.IGNORECASE)
-                    old_regulation_number = re.search(REGEX_PATTERNS["reg_old_number"], new_regulation_number[0], re.IGNORECASE)
-                    regulation_number = new_regulation_number[1] if old_regulation_number is None else old_regulation_number[1]
+                    new_regulation_number = re.search(
+                        REGEX_PATTERNS["reg_new_number"], regulation_number_and_year, re.IGNORECASE
+                    )
+                    old_regulation_number = re.search(
+                        REGEX_PATTERNS["reg_old_number"], new_regulation_number[0], re.IGNORECASE
+                    )
+                    regulation_number = new_regulation_number[1] \
+                        if old_regulation_number is None else old_regulation_number[1]
 
                     # Get regulation year
-                    regulation_year = re.search(REGEX_PATTERNS["reg_year"], regulation_number_and_year, re.IGNORECASE)
+                    regulation_year = re.search(
+                        REGEX_PATTERNS["reg_year"], regulation_number_and_year, re.IGNORECASE
+                    )
                     regulation_year = regulation_year[1] if regulation_year is not None else ""
 
                     # Get regulation title
-                    regulation_title = regulation.find_element(by.By.CSS_SELECTOR, SELECTORS["reg_title"]).text.strip()
-                    
+                    regulation_title = regulation.find_element(
+                        By.CSS_SELECTOR, SELECTORS["reg_title"]
+                    ).text.strip()
+
                     # Get regulation subjects
                     regulation_subjects = []
-                    regulation_subject_elements = regulation.find_elements(by.By.CSS_SELECTOR, SELECTORS["reg_subject"])
+                    regulation_subject_elements = regulation.find_elements(
+                        By.CSS_SELECTOR, SELECTORS["reg_subject"]
+                    )
                     if regulation_subject_elements:
                         for subject in regulation_subject_elements:
                             regulation_subjects.append(subject.text)
                     
                     # Get regulation URL link
-                    regulation_href = regulation.find_element(by.By.CSS_SELECTOR, SELECTORS["reg_href"]).get_attribute("href")
+                    regulation_href = regulation.find_element(
+                        By.CSS_SELECTOR, SELECTORS["reg_href"]
+                    ).get_attribute("href")
                     
                     # Create regulation temporary ID, just for ordering
                     regulation_id = f"{regulation_type}_{regulation_year}_{regulation_number.zfill(3)}"
@@ -127,30 +170,46 @@ class BPKScraper:
         gross_time = time.time() - global_start
 
         if verbose:
-            print("=" * 100)
+            print("=" * 80)
             print(f"{'URL':<20}: {url}")
             print(f"{'Regulation type':<20}: {regulation_type}")
             print(f"{'Total regulations':<20}: {len(active_regulations)} regulations")
             print(f"{'Gross time':<20}: {round(gross_time, 3)} seconds")
             print(f"{'Net time':<20}: {round(sum(net_durations), 3)} seconds")
-            print(f"{'Average gross time':<20}: {round(gross_time / len(active_regulations), 3)} seconds")
-            print(f"{'Average net time':<20}: {round(sum(net_durations) / len(active_regulations), 3)} seconds")
-            print("=" * 100)
+            print((
+                f"{'Average gross time':<20}: "
+                f"{round(gross_time / len(active_regulations), 3)} seconds"
+            ))
+            print((
+                f"{'Average net time':<20}: "
+                f"{round(sum(net_durations) / len(active_regulations), 3)} seconds"
+            ))
+            print("=" * 80)
 
         return active_regulations
 
 
-    def regulation_metadata(self, urls: list[str], verbose: bool = True) -> list[dict]:
+    def regulation_metadata(
+        self,
+        urls: List[str],
+        verbose: bool = True
+    ) -> List[Dict[str, str]]:
         SELECTORS = self.BPK_SELECTORS[self.regulation_metadata.__name__]
         REGEX_PATTERNS = self.BPK_REGEX_PATTERNS[self.regulation_metadata.__name__]
-        regulation_id_template = "{year}{type}{number}{section}{section_number}{additional_section_number}"
+        regulation_id_template = (
+            "{year}{type}{number}{section}{section_number}{additional_section_number}"
+        )
         regulation_metadata = []
         net_durations = []
 
         global_start = time.time()
 
         # Iterate for every regulation links
-        for url in tqdm.tqdm(iterable=urls, desc="Scraping regulation metadata", disable=not verbose):
+        for url in tqdm(
+            iterable=urls,
+            desc="Scraping regulation metadata",
+            disable=not verbose
+        ):
             local_start = time.time()
             access_page = False
             trial_number = 10
@@ -159,12 +218,12 @@ class BPKScraper:
             for _ in range(trial_number):
                 try:
                     self.web_driver.get(url)
-                    wait = ui.WebDriverWait(self.web_driver, timeout=10)
-                    wait.until(EC.presence_of_element_located((by.By.XPATH, SELECTORS["metadata_box"])))
-                    wait.until(EC.presence_of_element_located((by.By.XPATH, SELECTORS["download_box"])))
+                    wait = WebDriverWait(self.web_driver, timeout=10)
+                    wait.until(EC.presence_of_element_located((By.XPATH, SELECTORS["metadata_box"])))
+                    wait.until(EC.presence_of_element_located((By.XPATH, SELECTORS["download_box"])))
                     access_page = True
                     break
-                except exceptions.TimeoutException:
+                except TimeoutException:
                     time.sleep(2)
             
             if not access_page:
@@ -175,9 +234,9 @@ class BPKScraper:
 
             # Extract metadata
             ineffective = False
-            metadata_box = self.web_driver.find_element(by.By.XPATH, SELECTORS["metadata_box"])
-            metadata_inner_box = metadata_box.find_element(by.By.CSS_SELECTOR, SELECTORS["metadata_inner_box"])
-            metadata_elements = metadata_inner_box.find_elements(by.By.XPATH, "./*")[:-2]
+            metadata_box = self.web_driver.find_element(By.XPATH, SELECTORS["metadata_box"])
+            metadata_inner_box = metadata_box.find_element(By.CSS_SELECTOR, SELECTORS["metadata_inner_box"])
+            metadata_elements = metadata_inner_box.find_elements(By.XPATH, "./*")[:-2]
 
             for index, element in enumerate(metadata_elements):
                 if index == 1:
@@ -209,6 +268,11 @@ class BPKScraper:
                 elif index == 5:
                     short_type = re.search(REGEX_PATTERNS["reg_short_type"], element.text, re.IGNORECASE)
                     short_type = short_type[1].upper() if short_type is not None else ""
+
+                    # Extract regulation short title
+                    short_title = re.search(REGEX_PATTERNS["reg_short_title"], title, re.IGNORECASE)
+                    short_title = short_type + " " + short_title[1] if short_title is not None else ""
+
                 # Extract regulation year
                 elif index == 6:
                     year = re.search(REGEX_PATTERNS["reg_year"], element.text, re.IGNORECASE)
@@ -265,16 +329,16 @@ class BPKScraper:
             )
 
             # Extract regulation download link and name
-            download_box = self.web_driver.find_element(by.By.XPATH, SELECTORS["download_box"])
-            download_link = download_box.find_element(by.By.CSS_SELECTOR, "[href]").get_attribute("href")
+            download_box = self.web_driver.find_element(By.XPATH, SELECTORS["download_box"])
+            download_link = download_box.find_element(By.CSS_SELECTOR, "[href]").get_attribute("href")
             download_name = f"{short_type}_{year}_{str(number).zfill(3)}"
 
             # Extract regulation status references
-            status_box = self.web_driver.find_element(by.By.XPATH, SELECTORS["status_box"])
+            status_box = self.web_driver.find_element(By.XPATH, SELECTORS["status_box"])
             
             try:
-                status_inner_box = status_box.find_element(by.By.CSS_SELECTOR, SELECTORS["status_inner_box"])
-            except exceptions.NoSuchElementException:
+                status_inner_box = status_box.find_element(By.CSS_SELECTOR, SELECTORS["status_inner_box"])
+            except NoSuchElementException:
                 status_inner_box = None
             
             repealed = []
@@ -283,7 +347,7 @@ class BPKScraper:
             amend = []
             
             if status_inner_box is not None:
-                status_elements = status_inner_box.find_elements(by.By.XPATH, "./*")
+                status_elements = status_inner_box.find_elements(By.XPATH, "./*")
                 current_status = None
                 next_status = None
 
@@ -297,7 +361,7 @@ class BPKScraper:
                         next_status = text
                         continue
 
-                    regulation_references = element.find_elements(by.By.CSS_SELECTOR, "[href]")
+                    regulation_references = element.find_elements(By.CSS_SELECTOR, "[href]")
                     for regulation_reference in regulation_references:
                         href = regulation_reference.get_attribute("href")
                         if current_status == "dicabut dengan :":
@@ -316,6 +380,7 @@ class BPKScraper:
                 "download_link": download_link,     # Link Download Peraturan
                 "download_name": download_name,     # Nama File Download
                 "title": title,                     # Judul Lengkap Peraturan
+                "short_title": short_title,         # Judul Nomor Peraturan
                 "about": about,                     # Judul Isi Peraturan
                 "type": regulation_type,            # Jenis Peraturan
                 "short_type": short_type,           # Jenis Peraturan (Singkatan)
@@ -342,43 +407,46 @@ class BPKScraper:
 
         if verbose:
             print("=" * 100)
-            print(f"{'Total regulations':<20}: {len(urls)} regulations")
+            print(f"{'Total regulations':<20}: {len(regulation_metadata)} regulations")
             print(f"{'Gross time':<20}: {round(gross_time, 3)} seconds")
             print(f"{'Net time':<20}: {round(sum(net_durations), 3)} seconds")
-            print(f"{'Average gross time':<20}: {round(gross_time / len(urls), 3)} seconds")
-            print(f"{'Average net time':<20}: {round(sum(net_durations) / len(urls), 3)} seconds")
+            print(f"{'Average gross time':<20}: {round(gross_time / len(regulation_metadata), 3)} seconds")
+            print(f"{'Average net time':<20}: {round(sum(net_durations) / len(regulation_metadata), 3)} seconds")
             print("=" * 100)
 
         return regulation_metadata
     
     
     @staticmethod
-    def download_regulation_pdf(download_data: list[dict], download_full_dir_path: str, verbose: bool = True) -> None:
-    
+    def download_regulation_pdf(
+        download_data: List[Dict[str, str]],
+        download_full_dir_path: str,
+        verbose: bool = True
+    ) -> None:
         relative_download_dir_path = os.path.relpath(download_full_dir_path, start=os.getcwd())
         os.makedirs(relative_download_dir_path, exist_ok=True)
 
         # Only for Firefox
         # https://stackoverflow.com/questions/60170311/how-to-switch-download-directory-using-selenium-firefox-python
-        firefox_options = webdriver.FirefoxOptions()
+        firefox_options = FirefoxOptions()
         firefox_options.set_preference("browser.download.folderList", 2)  # Use custom folder
         firefox_options.set_preference("browser.download.dir", download_full_dir_path)  # Specify the destination folder
         firefox_options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/pdf")  # Avoid prompts
         firefox_options.set_preference("pdfjs.disabled", True)  # Disable PDF preview in browser
         # firefox_options.add_argument("-headless")  # Does not display browser
 
-        web_driver = webdriver.Firefox(firefox_options)
+        web_driver = Firefox(firefox_options)
         web_driver.set_page_load_timeout(5)
 
-        for row in tqdm.tqdm(iterable=download_data, desc="Download PDF files", disable=not verbose):
+        for row in tqdm(iterable=download_data, desc="Download PDF files", disable=not verbose):
             try:
                 web_driver.get(row["url"])
-            except exceptions.TimeoutException:
+            except TimeoutException:
                 pass
 
         time.sleep(20)
 
-        for row in tqdm.tqdm(iterable=download_data, desc="Rename PDF files", disable=not verbose):
+        for row in tqdm(iterable=download_data, desc="Rename PDF files", disable=not verbose):
             # https://stackoverflow.com/questions/300445/how-to-unquote-a-urlencoded-unicode-string-in-python
             downloaded_file = re.search(r"\d+\/(.*\.pdf)$", row["url"])[1]
             downloaded_file = urllib.parse.unquote(downloaded_file)

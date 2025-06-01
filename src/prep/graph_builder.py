@@ -3,172 +3,39 @@ import json
 import time
 import neo4j
 import pyvis
-import tqdm
-import prettytable
-import sentence_transformers
+from typing import (
+    Any,
+    Dict,
+    List,
+    Optional,
+    Tuple,
+    Union
+)
+from tqdm import tqdm
+from prettytable import PrettyTable
+from sentence_transformers import SentenceTransformer  # Ganti ke langchain-huggingface
 
 
 class RegulationGraphBuilder:
 
-    def __init__(self, uri: str, auth: tuple[str], database: str, embedding_model: str) -> None:
+    def __init__(
+        self,
+        uri: str,
+        auth: Tuple[str],
+        database: str,
+        embedding_model: str  # Ganti ke model nya langsung, bukan str
+    ) -> None:
         self.URI = uri
         self.AUTH = auth
         self.DATABASE = database
         self.embedding_model = embedding_model
-    
-
-    def detach_delete_all(self) -> bool:
-        result = False
-        with neo4j.GraphDatabase.driver(uri=self.URI, auth=self.AUTH) as driver:
-            with driver.session(database=self.DATABASE) as session:
-
-                session.execute_write(lambda tx: tx.run(query="MATCH (n) DETACH DELETE n"))
-                result = session.execute_read(lambda tx: tx.run(query="MATCH (n) RETURN COUNT(n) AS num_nodes").single())
-                result = not bool(result["num_nodes"])
-        
-        return result
-    
-
-    def build_regulation_graph(self, json_input: str, batch_size: int = 32, verbose=True) -> dict[list]:
-        if not json_input.endswith(".json"):
-            json_input = json_input + ".json"
-
-        # https://stackoverflow.com/questions/20199126/reading-json-from-a-file
-        with open(json_input, encoding="utf-8") as file:
-            json_data = json.load(file)
-
-        summary = {
-            'Name': [],
-            'ID': [],
-            'Regulation': [],
-            'Consideration': [],
-            'Observation': [],
-            'Definition': [],
-            'Article': [],
-            'Reg_AMENDED_BY': [],
-            'HAS_CONSIDERATION': [],
-            'HAS_OBSERVATION': [],
-            'HAS_DEFINITION': [],
-            'HAS_ARTICLE': [],
-            'NEXT_ARTICLE': [],
-            'PREVIOUS_ARTICLE': [],
-            'REFER_TO': [],
-            'Art_AMENDED_BY': [],
-            'RELATED_TO': []
-        }
-
-        with neo4j.GraphDatabase.driver(uri=self.URI, auth=self.AUTH) as driver:
-            start_time = time.time()
-
-            with driver.session(database=self.DATABASE) as session:
-                # Create node ID index
-                session.execute_write(self.__create_id_index)
-
-                for regulation in tqdm.tqdm(iterable=json_data, desc="Building regulation graph ", disable=not verbose):
-                    summary["Name"].append(regulation["download_name"])
-                    summary["RELATED_TO"].append(0)
-
-                    results = session.execute_write(self.__create_regulation_node, regulation)
-                    summary["ID"].append(results["ID"])
-                    summary["Regulation"].append(results["Regulation"])
-
-                    results = session.execute_write(self.__create_regulation_amendment_relationship, regulation)
-                    summary["Reg_AMENDED_BY"].append(results["AMENDED_BY"])
-
-                    results = session.execute_write(self.__create_regulation_content, regulation)
-                    for key, value in results.items():
-                        summary[key].append(value) 
-
-                    results = session.execute_write(self.__complete_article_sequence_relationship, regulation)
-                    for key, value in results.items():
-                        summary[key][-1] += value
-
-                # Set ineffective node and edge
-                session.execute_write(self.__set_ineffective_node_and_edge)
-
-            # Create embedding for all text node
-            self.__create_vector_embedding(driver=driver, batch_size=batch_size, verbose=verbose)
-
-            # Create RELATED_TO relationship based on articles similarity
-            results = self.__create_related_to_relationship(driver=driver)
-            for result in results:
-                index = summary["Name"].index(result["regulation_name"])
-                summary["RELATED_TO"][index] = result["RELATED_TO"]
-            
-            # Delete unused properties
-            with driver.session(database=self.DATABASE) as session:
-                session.execute_write(self.__delete_unused_properties)
-        
-        if verbose:
-            print(f"Finished building regulation graph in {round(time.time() - start_time, 2)} seconds")
-            self.print_summary(summary=summary)
-        
-        return summary
-    
-
-    def print_summary(self, summary: dict[list]) -> None:
-        table = prettytable.PrettyTable()
-        
-        for key, value in summary.items():
-            table.add_column(key, value)
-        
-        table.add_divider()
-        table.add_row(["TOTAL", ""] + [sum(value) for value in list(summary.values())[2:]])
-        
-        for key in list(summary.keys())[2:]:
-            table.align[key] = "r"
-        
-        print(table)
-    
-
-    def visualize_graph(self, output_html: str) -> None:
-        if not output_html.endswith(".html"):
-            output_html = output_html + ".html"
-
-        graph_result = None
-
-        with neo4j.GraphDatabase.driver(uri=self.URI, auth=self.AUTH) as driver:
-            with driver.session(database=self.DATABASE) as session:
-                # Query to get a graphy result
-                graph_result = session.execute_read(
-                    lambda tx: tx.run(
-                        query="MATCH (n)-[r]-(m) RETURN n, r, m"
-                    ).graph()
-                )
-
-        # What property to use as text for each node
-        nodes_text_properties = {
-            "Regulation": "download_name",
-            "Consideration": "id",
-            "Observation": "id",
-            "Definition": "name",
-            "Article": "number",
-        }
-
-        # Draw graph
-        visual_graph = pyvis.network.Network(height="100%")
-
-        # Draw node
-        for node in graph_result.nodes:
-            # print(list(node.labels))
-            node_label = list(node.labels)[0] if list(node.labels)[0] in nodes_text_properties.keys() else "Article"
-            # if node_label not in ["Effective", "Ineffective"]:
-            node_text = node[nodes_text_properties[node_label]]
-            visual_graph.add_node(n_id=node.element_id, label=node_text, group=node_label)
-
-        # Draw relationship
-        for relationship in graph_result.relationships:
-            visual_graph.add_edge(
-                source=relationship.start_node.element_id,
-                to=relationship.end_node.element_id,
-                title=relationship.type
-            )
-        
-        visual_graph.show(output_html, notebook=False)
 
 
     # https://neo4j.com/docs/cypher-manual/current/indexes/search-performance-indexes/managing-indexes/
-    def __create_id_index(self, tx: neo4j.Session) -> None:
+    def _create_id_index(
+        self,
+        tx: neo4j.Session
+    ) -> None:
         range_indexes = {
             "Regulation": "regulation_id_index",
             "Consideration": "consideration_id_index",
@@ -207,14 +74,21 @@ class RegulationGraphBuilder:
 
 
     # https://neo4j.com/docs/python-manual/current/data-types/#_date
-    def __string_to_neo4j_date(self, date: str) -> neo4j.time.Date | None:
+    def _string_to_neo4j_date(
+        self,
+        date: str
+    ) -> Optional[neo4j.time.Date]:
         date = re.search(r"(\d{4})-(\d{2})-(\d{2})", date)
         date = neo4j.time.Date(year=int(date[1]), month=int(date[2]), day=int(date[3])) if date else None
         return date
 
 
-    def __create_regulation_node(self, tx, regulation) -> neo4j.Record:
-        query_result = tx.run(
+    def _create_regulation_node(
+        self,
+        tx: neo4j.Session,
+        regulation: Dict[str, Any]
+    ) -> Dict[str, int]:
+        regulation_result = tx.run(
             query="""
             MERGE (r:Regulation {id: $id})
             SET r.title = $title,
@@ -243,8 +117,8 @@ class RegulationGraphBuilder:
                 "order_of_amendment": int(regulation["amendment"]),
                 "institution": regulation["institution"],
                 "issue_place": regulation["issue_place"],
-                "issue_date": self.__string_to_neo4j_date(regulation["issue_date"]),
-                "effective_date": self.__string_to_neo4j_date(regulation["effective_date"]),
+                "issue_date": self._string_to_neo4j_date(regulation["issue_date"]),
+                "effective_date": self._string_to_neo4j_date(regulation["effective_date"]),
                 "subjects": regulation["subjects"],
                 "reference_url": regulation["url"],
                 "download_url": regulation["download_link"],
@@ -252,10 +126,37 @@ class RegulationGraphBuilder:
             }
         )
 
-        return query_result.single()
+
+        edge_result = tx.run(
+            query="""
+            UNWIND $subjects AS subject
+            MATCH (r:Regulation {id: $regulation_id})
+            MERGE (s:Subject {title: subject})
+            MERGE (r)-[rel:HAS_SUBJECT]->(s) 
+            RETURN COUNT(rel) AS HAS_SUBJECT
+            """,
+            parameters={
+                "regulation_id": int(regulation["id"]),
+                "subjects": regulation["subjects"],
+            }
+        )
+
+        regulation_result = regulation_result.single()
+        edge_result = edge_result.single()
+
+        result = {}
+        result["ID"] = regulation_result["ID"]
+        result["Regulation"] = regulation_result["Regulation"]
+        result["HAS_SUBJECT"] = edge_result["HAS_SUBJECT"]
+
+        return result
 
 
-    def __create_regulation_amendment_relationship(self, tx, regulation) -> dict:
+    def _create_regulation_amendment_relationship(
+        self,
+        tx: neo4j.Session,
+        regulation: Dict[str, Any]
+    ) -> Dict[str, int]:
         result = {"AMENDED_BY": 0}
         for amended_regulation in regulation["status"]["amend"]:
             if re.search(r"peraturan\.bpk\.go\.id", amended_regulation, re.IGNORECASE) is None:
@@ -263,7 +164,9 @@ class RegulationGraphBuilder:
                     query="""
                     MATCH (current_regulation:Regulation {id: $current_regulation})
                     MATCH (amended_regulation:Regulation {id: $amended_regulation})
-                    MERGE (amended_regulation)-[rel:AMENDED_BY {order_of_amendment: current_regulation.order_of_amendment}]->(current_regulation)
+                    MERGE (amended_regulation)-[rel:AMENDED_BY {
+                        order_of_amendment: current_regulation.order_of_amendment
+                    }]->(current_regulation)
                     RETURN COUNT(rel) AS num_edges
                     """,
                     parameters={
@@ -277,7 +180,11 @@ class RegulationGraphBuilder:
         return result
 
 
-    def __create_regulation_content(self, tx, regulation) -> dict:
+    def _create_regulation_content(
+        self,
+        tx: neo4j.Session,
+        regulation: Dict[str, Any]
+    ) -> Dict[str, int]:
         result = {
             "Consideration": 0,
             "HAS_CONSIDERATION": 0,
@@ -296,8 +203,8 @@ class RegulationGraphBuilder:
         for key, content in regulation["content"].items():
             if key in ["consideration", "observation"]:
                 modified_text = (
-                    f"{regulation['title']}, "
-                    f"Bagian {'Menimbang' if key == 'consideration' else 'Mengingat'}:\n"
+                    f"Daftar {'Latar Belakang' if key == 'consideration' else 'Dasar Hukum'} "
+                    f"dari {regulation['title']}:\n"
                     f"{content['text']}".strip()
                 )
 
@@ -305,12 +212,13 @@ class RegulationGraphBuilder:
                     query="""
                     MERGE (n {id: $id})
                     SET n.text = $modified_text,
-                        n.real_text = $real_text
+                        n.real_text = $real_text,
+                        n.title = "Daftar " + $object + " dari " + $regulation_short_title
                     WITH n
                     CALL apoc.create.addLabels(n, $labels)
                     YIELD node
-                    MATCH (regulation:Regulation {id: $regulation_id})
-                    CALL apoc.create.relationship(regulation, $relationship_type, {}, node)
+                    MATCH (reg:Regulation {id: $regulation_id})
+                    CALL apoc.create.relationship(reg, $relationship_type, {}, node)
                     YIELD rel
                     RETURN COUNT(node) AS num_nodes, COUNT(rel) AS num_edges
                     """,
@@ -318,9 +226,11 @@ class RegulationGraphBuilder:
                         "id": int(content["id"]),
                         "modified_text": modified_text,
                         "real_text": content["text"].lower(),
+                        "object": "Latar Belakang" if key == "consideration" else "Dasar Hukum",
+                        "regulation_short_title": regulation["short_title"],
                         "labels": [key.title()],
                         "regulation_id": int(regulation["id"]),
-                        "relationship_type": "HAS_CONSIDERATION" if key == "consideration" else "HAS_OBSERVATION"
+                        "relationship_type": "HAS_CONSIDERATION" if key == "consideration" else "HAS_OBSERVATION",
                     }
                 )
 
@@ -335,8 +245,8 @@ class RegulationGraphBuilder:
             elif key == "definitions":
                 for definition in content:
                     modified_text = (
-                        f"{regulation['title']}, "
-                        f"Definisi {definition['name']}:\n"
+                        f"Definisi \"{definition['name']}\" Menurut Pasal 1 "
+                        f"{regulation['title']}:\n"
                         f"{definition['definition']}".strip()
                     )
 
@@ -345,20 +255,22 @@ class RegulationGraphBuilder:
                         MERGE (n:Definition {id: $id})
                         SET n.name = $name,
                             n.text = $modified_text,
-                            n.real_text = $real_text
+                            n.real_text = $real_text,
+                            n.title = "Definisi '" + $name + "' Menurut Pasal 1 " + $regulation_short_title
                         WITH n
                         MATCH (reg:Regulation {id: $regulation_id})
                         MERGE (reg)-[rel:HAS_DEFINITION]->(n)
-                        SET n.source = reg.type + " No. " + reg.number + " Tahun " + reg.year + " Pasal 1, Definisi " + $name
                         RETURN COUNT(n) AS num_nodes, COUNT(rel) AS num_edges
                         """,
                         parameters={
                             "id": int(definition["id"]),
                             "name": definition["name"],
+                            "regulation_short_title": regulation["short_title"],
                             "modified_text": modified_text,
                             "real_text": definition['definition'].lower(),
                             "regulation_id": int(regulation["id"])
                         }
+                        # SET n.title = "Definisi '" + $name + "' Menurut Pasal 1 "+ reg.type + " Nomor " + reg.number + " Tahun " + reg.year
                     )
 
                     query_result = query_result.single()
@@ -384,21 +296,24 @@ class RegulationGraphBuilder:
                             n.chapter = $chapter,
                             n.part = $part,
                             n.paragraph = $paragraph,
+                            n.title = "Pasal " + $number + " " + $regulation_short_title,
                             n.text = $modified_text,
                             n.real_text = $real_text,
-                            n.next_article = $next_article_id
+                            n.next_article = $next_article_id,
+                            n.status = "Berlaku"
                         WITH n
                         MATCH (reg:Regulation {id: $regulation_id})
                         MERGE (reg)-[rel:HAS_ARTICLE]->(n)
-                        SET n.source = reg.type + " No. " + reg.number + " Tahun " + reg.year + " Pasal " + n.number
                         RETURN COUNT(n) AS num_nodes, COUNT(rel) AS num_edges
                         """,
+                        # SET n.title = "Pasal " + n.number + " " + reg.type + " Nomor " + reg.number + " Tahun " + reg.year
                         parameters={
                             "id": int(article["id"]),
                             "number": article["article_number"],
                             "chapter": article["chapter_number"],
                             "part": article["part_number"],
                             "paragraph": article["paragraph_number"],
+                            "regulation_short_title": regulation["short_title"],
                             "modified_text": modified_text,
                             "real_text": article["text"].lower(),
                             "next_article_id": int(article["next_article"]) if article["next_article"] else None,
@@ -417,11 +332,11 @@ class RegulationGraphBuilder:
                             MATCH (prev_article:Article {id: $prev_article_article_id})
                             MERGE (prev_article)-[next_rel:NEXT_ARTICLE {
                                     order_of_amendment: regulation.order_of_amendment,
-                                    effective: true
+                                    is_effective: true
                                 }]->(article)
                             MERGE (article)-[previous_rel:PREVIOUS_ARTICLE {
                                     order_of_amendment: regulation.order_of_amendment,
-                                    effective: true
+                                    is_effective: true
                                 }]->(prev_article)
                             RETURN COUNT(next_rel) AS NEXT_ARTICLE, COUNT(previous_rel) AS PREVIOUS_ARTICLE
                             """,
@@ -475,7 +390,11 @@ class RegulationGraphBuilder:
         return result
 
 
-    def __complete_article_sequence_relationship(self, tx: neo4j.Session, regulation: dict) -> neo4j.Record:
+    def _complete_article_sequence_relationship(
+        self,
+        tx: neo4j.Session,
+        regulation: Dict[str, Any]
+    ) -> neo4j.Record:
         """
         Melengkapi relasi `NEXT_ARTICLE` antar pasal dalam suatu peraturan.
 
@@ -508,11 +427,11 @@ class RegulationGraphBuilder:
             WHERE NOT (current)-[:NEXT_ARTICLE]->(next)
             MERGE (current)-[next_rel:NEXT_ARTICLE {
                     order_of_amendment: current_regulation.order_of_amendment,
-                    effective: true
+                    is_effective: true
                 }]->(next)
             MERGE (next)-[previous_rel:PREVIOUS_ARTICLE {
                     order_of_amendment: current_regulation.order_of_amendment,
-                    effective: true
+                    is_effective: true
                 }]->(current)
             RETURN COUNT(next_rel) AS NEXT_ARTICLE, COUNT(previous_rel) AS PREVIOUS_ARTICLE
             """,
@@ -524,17 +443,22 @@ class RegulationGraphBuilder:
         return query_result.single()
     
 
-    def __set_ineffective_node_and_edge(self, tx: neo4j.Session) -> bool:
+    def _set_ineffective_node_and_edge(
+        self,
+        tx: neo4j.Session
+    ) -> bool:
         query_result_1 = tx.run(
             query="""
             MATCH (amended:Article)-[rel:AMENDED_BY]->(:Article)
             REMOVE amended:Effective
             WITH amended
+            SET amended.status = "Tidak Berlaku"
+            WITH amended
             OPTIONAL MATCH ()-[rel_in:NEXT_ARTICLE]->(amended)   // OPTIONAL karena Pasal 1 pasti tidak punya
             OPTIONAL MATCH (amended)-[rel_out:NEXT_ARTICLE]->()  // OPTIONAL karena Pasal akhir pasti tidak punya
             SET amended:Ineffective,
-                rel_in.effective = False,
-                rel_out.effective = False
+                rel_in.is_effective = False,
+                rel_out.is_effective = False
             RETURN COUNT(amended) AS num_nodes
             """
         )
@@ -554,7 +478,7 @@ class RegulationGraphBuilder:
             WITH a, candidate, max_order_of_amendment
             MATCH (a)-[rel:NEXT_ARTICLE]->(candidate)
             WHERE rel.order_of_amendment <> max_order_of_amendment
-            SET rel.effective = False
+            SET rel.is_effective = False
             RETURN COUNT(rel) AS num_edges
             """
         )
@@ -583,19 +507,20 @@ class RegulationGraphBuilder:
         query_result_2 = query_result_2.single()
         query_result_3 = query_result_3.single()
         
-        return bool(query_result_1["num_nodes"] + query_result_2["num_edges"] + query_result_3["num_edges"])
+        return bool(query_result_1["num_nodes"] \
+            + query_result_2["num_edges"] \
+            + query_result_3["num_edges"])
     
 
     # https://neo4j.com/docs/genai/tutorials/embeddings-vector-indexes/embeddings/sentence-transformers/
-    def __create_vector_embedding(
-            self,
-            driver: neo4j.Driver,
-            batch_size: int,
-            verbose: bool = True
+    def _create_vector_embedding(
+        self,
+        driver: neo4j.Driver,
+        batch_size: int,
+        verbose: bool = True
     ) -> neo4j.Record:
-        
         nodes_with_embeddings = []
-        model = sentence_transformers.SentenceTransformer(self.embedding_model)
+        model = SentenceTransformer(self.embedding_model)
 
         with driver.session(database=self.DATABASE) as session:
             result = session.execute_read(
@@ -613,8 +538,11 @@ class RegulationGraphBuilder:
             total_batch = num_result / batch_size
 
             # Create batching numbering
-            for batch_n in tqdm.tqdm(iterable=range(1, int(total_batch + (total_batch % 1 > 0) + 1)),
-                                     desc="Create vector embeddings  ", disable=not verbose):
+            for batch_n in tqdm(
+                iterable=range(1, int(total_batch + (total_batch % 1 > 0) + 1)),
+                desc="Create vector embeddings  ",
+                disable=not verbose
+            ):
                 
                 # Process per batch (e.g., batch_size = 32, batch 1 will be result[0:32])
                 for record in result[(batch_n - 1) * batch_size: batch_n * batch_size]:
@@ -630,11 +558,11 @@ class RegulationGraphBuilder:
                     
                     # Import when a batch of movies has embeddings ready; flush buffer
                     if len(nodes_with_embeddings) == batch_size:
-                        session.execute_write(self.__import_batch, nodes_with_embeddings)
+                        session.execute_write(self._import_batch, nodes_with_embeddings)
                         nodes_with_embeddings = []
             
             # Flush last batch
-            session.execute_write(self.__import_batch, nodes_with_embeddings)
+            session.execute_write(self._import_batch, nodes_with_embeddings)
         
             # Import complete, show counters
             records = session.execute_read(
@@ -647,12 +575,6 @@ class RegulationGraphBuilder:
             )
 
             if records["count_nodes_with_embeddings"] > 0:
-
-                # print("=" * 100)
-                # print(f"{'Total nodes with embeddings':<28}: {records['count_nodes_with_embeddings']}\n"
-                #       f"{'Embedding model':<28}: {self.embedding_model}\n"
-                #       f"{'Embedding size':<28}: {records['embedding_size']}")
-
                 with driver.session(database=self.DATABASE) as session:
                     vector_index_dict = {
                         "effective_vector_index": "Effective", 
@@ -672,19 +594,22 @@ class RegulationGraphBuilder:
                                     `vector.similarity_function`: "cosine"
                                 }} }}
                                 """,
-                                parameters={"vector_dimensions": records["embedding_size"]}
+                                parameters={
+                                    "vector_dimensions": records["embedding_size"]
+                                }
                             )
                         )
-
-                # print("=" * 100)
-            
             else:
                 print("Failed to create node embeddings")
 
         return records
     
 
-    def __import_batch(self, tx: neo4j.Session, nodes_with_embeddings: list[dict]) -> None:
+    def _import_batch(
+        self,
+        tx: neo4j.Session,
+        nodes_with_embeddings: List[Dict[str, Union[int, List[float]]]]
+    ) -> None:
         # Add embeddings to Consideration, Observation, Definition, and Article nodes
         tx.run(
             query="""
@@ -692,11 +617,16 @@ class RegulationGraphBuilder:
             MATCH (n:Article|Definition|Consideration|Observation {id: node.id})
             CALL db.create.setNodeVectorProperty(n, "embedding", node.embedding)
             """,
-            parameters={"nodes": nodes_with_embeddings}
+            parameters={
+                "nodes": nodes_with_embeddings
+            }
         )
 
     
-    def __create_related_to_relationship(self, driver: neo4j.Driver) -> list:
+    def _create_similar_to_relationship(
+        self,
+        driver: neo4j.Driver
+    ) -> List[neo4j.Record]:
         # Create text index for text node
         with driver.session(database=self.DATABASE) as session:
             session.execute_write(
@@ -741,9 +671,9 @@ class RegulationGraphBuilder:
                             AND NOT source_node.text CONTAINS "berlaku pada tanggal"
                             AND NOT target_node.text CONTAINS "yang dimaksud dengan"
                             AND NOT target_node.text CONTAINS "berlaku pada tanggal"
-                        MERGE (source_node)-[rel:RELATED_TO {score: score}]->(target_node)
+                        MERGE (source_node)-[rel:SIMILAR_TO {score: score}]->(target_node)
 
-                        RETURN regulation_name, COUNT(DISTINCT rel) AS RELATED_TO
+                        RETURN regulation_name, COUNT(DISTINCT rel) AS SIMILAR_TO
                         ORDER BY regulation_name ASC
                         """
                     )
@@ -753,16 +683,194 @@ class RegulationGraphBuilder:
         return query_results
     
 
-    def __delete_unused_properties(self, tx: neo4j.Session) -> bool:
+    def _delete_unused_properties(
+        self,
+        tx: neo4j.Session
+    ) -> bool:
         query_result = tx.run(
             query="""
             MATCH (n:Regulation|Consideration|Observation|Definition|Article)
-            REMOVE n.order_of_amendment, n.next_article, n.real_text
+            REMOVE n.next_article, n.real_text
             RETURN COUNT(n) AS num_nodes
             """
         )
+        # REMOVE n.order_of_amendment, n.next_article, n.real_text
+
 
         query_result = query_result.single()
-
         return bool(query_result["num_nodes"])
+
+
+
+    def detach_delete_all(
+        self
+    ) -> bool:
+        result = False
+        with neo4j.GraphDatabase.driver(uri=self.URI, auth=self.AUTH) as driver:
+            with driver.session(database=self.DATABASE) as session:
+
+                session.execute_write(lambda tx: tx.run(query="MATCH (n) DETACH DELETE n"))
+                result = session.execute_read(
+                    lambda tx: tx.run(query="MATCH (n) RETURN COUNT(n) AS num_nodes").single()
+                )
+                result = not bool(result["num_nodes"])
+        
+        return result
     
+
+    def build_graph(
+        self,
+        json_input: str,
+        batch_size: int = 32,
+        verbose=True
+    ) -> Dict[str, List[Union[str, int]]]:
+        if not json_input.endswith(".json"):
+            json_input = json_input + ".json"
+
+        # https://stackoverflow.com/questions/20199126/reading-json-from-a-file
+        with open(json_input, encoding="utf-8") as file:
+            json_data = json.load(file)
+
+        summary = {
+            "Name": [],
+            "ID": [],
+            "Regulation": [],
+            "Consideration": [],
+            "Observation": [],
+            "Definition": [],
+            "Article": [],
+            "HAS_SUBJECT": [],
+            "Reg_AMENDED_BY": [],
+            "HAS_CONSIDERATION": [],
+            "HAS_OBSERVATION": [],
+            "HAS_DEFINITION": [],
+            "HAS_ARTICLE": [],
+            "NEXT_ARTICLE": [],
+            "PREVIOUS_ARTICLE": [],
+            "REFER_TO": [],
+            "Art_AMENDED_BY": [],
+            "SIMILAR_TO": []
+        }
+
+        with neo4j.GraphDatabase.driver(uri=self.URI, auth=self.AUTH) as driver:
+            start_time = time.time()
+
+            with driver.session(database=self.DATABASE) as session:
+                # Create node ID index
+                session.execute_write(self._create_id_index)
+
+                for regulation in tqdm(
+                    iterable=json_data,
+                    desc="Building regulation graph ",
+                    disable=not verbose
+                ):
+                    summary["Name"].append(regulation["download_name"])
+                    summary["SIMILAR_TO"].append(0)
+
+                    results = session.execute_write(self._create_regulation_node, regulation)
+                    summary["ID"].append(results["ID"])
+                    summary["Regulation"].append(results["Regulation"])
+                    summary["HAS_SUBJECT"].append(results["HAS_SUBJECT"])
+
+                    results = session.execute_write(self._create_regulation_amendment_relationship, regulation)
+                    summary["Reg_AMENDED_BY"].append(results["AMENDED_BY"])
+
+                    results = session.execute_write(self._create_regulation_content, regulation)
+                    for key, value in results.items():
+                        summary[key].append(value) 
+
+                    results = session.execute_write(self._complete_article_sequence_relationship, regulation)
+                    for key, value in results.items():
+                        summary[key][-1] += value
+
+                # Set ineffective node and edge
+                session.execute_write(self._set_ineffective_node_and_edge)
+
+            # Create embedding for all text node
+            self._create_vector_embedding(driver=driver, batch_size=batch_size, verbose=verbose)
+
+            # Create SIMILAR_TO relationship based on articles similarity
+            results = self._create_similar_to_relationship(driver=driver)
+            for result in results:
+                index = summary["Name"].index(result["regulation_name"])
+                summary["SIMILAR_TO"][index] = result["SIMILAR_TO"]
+            
+            # Delete unused properties
+            with driver.session(database=self.DATABASE) as session:
+                session.execute_write(self._delete_unused_properties)
+        
+        if verbose:
+            print(f"Finished building regulation graph in {round(time.time() - start_time, 2)} seconds")
+            self.print_summary(summary=summary)
+        
+        return summary
+    
+
+    def print_summary(
+        self,
+        summary: Dict[str, List[Union[str, int]]]
+    ) -> None:
+        table = PrettyTable()
+        
+        for key, value in summary.items():
+            table.add_column(key, value)
+        
+        table.add_divider()
+        table.add_row(["TOTAL", ""] + [sum(value) for value in list(summary.values())[2:]])
+        
+        for key in list(summary.keys())[2:]:
+            table.align[key] = "r"
+        
+        print(table)
+    
+
+    def visualize_graph(
+        self,
+        output_html: str
+    ) -> None:
+        if not output_html.endswith(".html"):
+            output_html = output_html + ".html"
+
+        graph_result = None
+
+        with neo4j.GraphDatabase.driver(uri=self.URI, auth=self.AUTH) as driver:
+            with driver.session(database=self.DATABASE) as session:
+                # Query to get a graphy result
+                graph_result = session.execute_read(
+                    lambda tx: tx.run(
+                        query="MATCH (n)-[r]-(m) RETURN n, r, m"
+                    ).graph()
+                )
+
+        # What property to use as text for each node
+        nodes_text_properties = {
+            "Subject": "title",
+            "Regulation": "download_name",
+            "Consideration": "title",
+            "Observation": "title",
+            "Definition": "name",
+            "Effective": "number",
+            "Ineffective": "number",
+        }
+
+        # Draw graph
+        visual_graph = pyvis.network.Network(height="1080px")
+
+        # Draw node
+        for node in graph_result.nodes:
+            # print(list(node.labels))
+            # node_label = list(node.labels)[0] if list(node.labels)[0] in nodes_text_properties.keys() else "Article"
+            node_label = list(set(node.labels) & set(nodes_text_properties))[0]
+            # if node_label not in ["Effective", "Ineffective"]:
+            node_text = node[nodes_text_properties[node_label]]
+            visual_graph.add_node(n_id=node.element_id, label=node_text, group=node_label)
+
+        # Draw relationship
+        for relationship in graph_result.relationships:
+            visual_graph.add_edge(
+                source=relationship.start_node.element_id,
+                to=relationship.end_node.element_id,
+                title=relationship.type
+            )
+        
+        visual_graph.show(output_html, notebook=False)
