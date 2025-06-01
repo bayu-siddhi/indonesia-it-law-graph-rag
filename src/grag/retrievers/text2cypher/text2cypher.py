@@ -3,6 +3,7 @@ from typing import (
     Any,
     Callable,
     Dict,
+    List,
     Optional,
     Tuple
 )
@@ -93,6 +94,25 @@ def _tool_result_formatter(
     return response, artifact
 
 
+def _exclude_keys_from_data(
+    data: Any,
+    excluded_keys: List[str]
+) -> Any:
+    if isinstance(data, dict):
+        new_data = {}
+        for key, value in data.items():
+            if key not in excluded_keys:
+                new_data[key] = _exclude_keys_from_data(value, excluded_keys)
+        return new_data
+    elif isinstance(data, list):
+        new_data = []
+        for item in data:
+            new_data.append(_exclude_keys_from_data(item, excluded_keys))
+        return new_data
+    else:
+        return data
+
+
 def create_text2cypher_retriever_tool(
     neo4j_graph: Neo4jGraph,
     cypher_llm: BaseLanguageModel,
@@ -138,6 +158,7 @@ def create_text2cypher_retriever_tool(
         few_shot_prompt_template = FewShotPromptTemplate(
             example_selector=example_selector,
             example_prompt=text2cypher_example_prompt,
+            prefix="",  # Mainkan prefix nya, tambahkan judul ## Example dan beberapa keterangan tambahan sebelum melihat example, contoh nya jelaskan bahwa ada 3 jenis peraturan yang tersedia di database, yaitu Peraturan Menteri Komunikasi dan Informatika disingkat PERMENKOMINFO, Undang-Undang adalah UU, dan Peraturan Pemerintah adalah PP
             suffix="",
             input_variables=["question"],
         )
@@ -159,7 +180,7 @@ def create_text2cypher_retriever_tool(
         args_schema=SimpleQuery,
         response_format="content_and_artifact"
     )
-    def text2cypher(
+    def text2cypher_retriever(
         query: str,
         # example: str = ""
     ) -> ToolMessage:
@@ -171,6 +192,7 @@ def create_text2cypher_retriever_tool(
         # selected_examples = "INI CONTOH "  # NANTI HAPUS
         # result = text2cypher_chain.invoke({"query": query, "example": selected_examples})
         result = text2cypher_chain.invoke(query)
+        result = _exclude_keys_from_data(result, excluded_keys=["embedding"])
         response, artifact = _tool_result_formatter(result, skip_qa_llm)
         
         artifact["cypher_gen_usage_metadata"]["model"] = cypher_llm.model
@@ -179,4 +201,4 @@ def create_text2cypher_retriever_tool(
         
         return response, artifact
     
-    return text2cypher
+    return text2cypher_retriever

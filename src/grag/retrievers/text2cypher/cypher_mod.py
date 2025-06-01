@@ -397,7 +397,8 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
             if cypher_query:
                 ######################################################################
                 try:
-                    cypher_result = self.graph.query(cypher_query)[: self.top_k]
+                    # cypher_result = self.graph.query(cypher_query)[: self.top_k]
+                    cypher_result = self.graph.query(cypher_query)
                     if not cypher_result:
                         cypher_result = []
                 except Neo4jError as e:
