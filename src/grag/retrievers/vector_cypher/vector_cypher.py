@@ -14,10 +14,7 @@ from langchain_core.tools import tool
 from langchain_core.messages import ToolMessage
 from langchain_core.embeddings import Embeddings
 from neo4j_graphrag.types import RetrieverResultItem
-from neo4j_graphrag.retrievers import (
-    HybridCypherRetriever,
-    VectorCypherRetriever
-)
+from neo4j_graphrag.retrievers import VectorCypherRetriever
 from ..models import SimpleQuery
 from .retrieval_query import (
     ARTICLE_RETRIEVAL_QUERY_1,
@@ -66,7 +63,7 @@ def _tool_result_formatter(
     return content, node_ids
 
 
-def create_hybrid_cypher_retriever_tool(
+def create_vector_cypher_retriever_tool(
     embedder_model: Embeddings,
     neo4j_driver: Driver,
     neo4j_config: Dict[str, str],
@@ -77,7 +74,7 @@ def create_hybrid_cypher_retriever_tool(
     if top_k_initial_article == total_article_limit:
         warnings.warn(
             "Setting top_k_initial_article equal to total_article_limit "
-            "means all article nodes will be retrieved via hybrid search "
+            "means all article nodes will be retrieved via vector search "
             "only. No additional nodes will be expanded through Cypher "
             "query traversal."
         )
@@ -87,20 +84,18 @@ def create_hybrid_cypher_retriever_tool(
             "article_limit"
         )
 
-    article_retriever_1 = HybridCypherRetriever(
+    article_retriever_1 = VectorCypherRetriever(
         driver=neo4j_driver,
-        vector_index_name=neo4j_config["ARTICLE_VECTOR_INDEX_NAME"],
-        fulltext_index_name=neo4j_config["ARTICLE_FULLTEXT_INDEX_NAME"],
+        index_name=neo4j_config["ARTICLE_VECTOR_INDEX_NAME"],
         retrieval_query=ARTICLE_RETRIEVAL_QUERY_1,
         embedder=embedder_model,
         result_formatter=_retriever_result_formatter,
         neo4j_database=neo4j_config["DATABASE_NAME"],
     )
 
-    article_retriever_2 = HybridCypherRetriever(
+    article_retriever_2 = VectorCypherRetriever(
         driver=neo4j_driver,
-        vector_index_name=neo4j_config["ARTICLE_VECTOR_INDEX_NAME"],
-        fulltext_index_name=neo4j_config["ARTICLE_FULLTEXT_INDEX_NAME"],
+        index_name=neo4j_config["ARTICLE_VECTOR_INDEX_NAME"],
         retrieval_query=ARTICLE_RETRIEVAL_QUERY_2,
         embedder=embedder_model,
         result_formatter=_retriever_result_formatter,
@@ -120,10 +115,10 @@ def create_hybrid_cypher_retriever_tool(
         args_schema=SimpleQuery,
         response_format="content_and_artifact"
     )
-    def hybrid_cypher_retriever(
+    def vector_cypher_retriever(
         query: str
     ) -> ToolMessage:
-        """Hybrid Cypher Retriever Tool"""
+        """Vector Cypher Retriever Tool"""
         # TODO: PERBAIKI DESKRIPSI TOOL
         
         start_time = time.time()
@@ -179,5 +174,5 @@ def create_hybrid_cypher_retriever_tool(
         
         return content, artifact
     
-    return hybrid_cypher_retriever
+    return vector_cypher_retriever
     
