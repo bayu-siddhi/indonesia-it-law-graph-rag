@@ -40,6 +40,21 @@ from langchain_core.prompts import PromptTemplate
 
 # """
 
+
+# TODO
+# Mainkan prefix nya,
+# tambahkan judul ## Example dan beberapa keterangan tambahan sebelum melihat example,
+FEW_SHOT_PREFIX_TEMPLATE = """## Examples:
+Following are some examples that you can use as a reference to create Cypher code according to user questions.
+
+"""
+
+
+# TODO
+# Tambahkan beberapa keterangan penting sebelum membuat Cypher Query,
+# contoh nya jelaskan bahwa ada 3 jenis peraturan yang tersedia di database,
+# yaitu Peraturan Menteri Komunikasi dan Informatika disingkat PERMENKOMINFO,
+# Undang-Undang adalah UU, dan Peraturan Pemerintah adalah PP
 CYPHER_GENERATION_TEMPLATE = """
 ## Task:
 - Generate Neo4j Cypher statement to query a graph database.
@@ -57,9 +72,6 @@ CYPHER_GENERATION_TEMPLATE = """
 - Do not include any explanations or apologies in your responses.
 - Do not respond to any questions that might ask anything else than for you to construct a Cypher statement.
 - Do not include any text except the generated Cypher statement.
-
-## Examples:
-Following are some examples that you can use as a reference to create Cypher code according to user questions.
 
 {example}
 

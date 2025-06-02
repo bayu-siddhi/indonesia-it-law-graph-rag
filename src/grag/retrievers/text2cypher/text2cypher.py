@@ -22,12 +22,12 @@ from langchain_core.messages import (
     ToolMessage
 )
 from langchain_neo4j import Neo4jGraph
-# from ..models import SimpleQuery
-from .models import Text2CypherInput
+from ..models import SimpleQuery
 from .prompts import (
     CYPHER_GENERATION_PROMPT,
     CYPHER_FIX_PROMPT,
     CYPHER_QA_PROMPT,
+    FEW_SHOT_PREFIX_TEMPLATE
 )
 from .examples import (
     text2cypher_example,
@@ -36,22 +36,66 @@ from .examples import (
 from .cypher_mod import GraphCypherQAChainMod
 
 
+def _exclude_keys_from_data(
+    data: Any,
+    excluded_keys: List[str]
+) -> Any:
+    """
+    Recursively excludes keys from dictionaries and lists.
+
+    Args:
+        data (Any): Any nested Python structure (dict, list, or scalar).
+        excluded_keys (List[str]): Keys to remove from dictionaries.
+
+    Returns:
+        Any: Cleaned data with excluded keys removed.
+    """
+    if isinstance(data, dict):
+        new_data = {}
+        for key, value in data.items():
+            if key not in excluded_keys:
+                new_data[key] = _exclude_keys_from_data(value, excluded_keys)
+        return new_data
+    elif isinstance(data, list):
+        new_data = []
+        for item in data:
+            new_data.append(_exclude_keys_from_data(item, excluded_keys))
+        return new_data
+    else:
+        return data
+
+
 def _tool_result_formatter(
     result: Dict[str, Any],
     skip_qa_llm: bool
 ) -> Tuple[str, Dict[str, Any]]:
+    """
+    Formats the result from the text2cypher chain into a tool output.
+
+    Args:
+        result (Dict[str, Any]): The result dictionary from the text2cypher chain,
+            including Cypher generation, execution, and optional QA result.
+        skip_qa_llm (bool): Flag to skip the QA LLM (query explanation phase) 
+            if True.
+
+    Returns:
+        Tuple[str, Dict[str, Any]]: A formatted response and a metadata artifact 
+            dictionary.
+    """
     artifact = {
         "is_context_fetched": False,
         "cypher_gen_usage_metadata": {},
         "qa_usage_metadata": {}
     }
 
+    # Handle cases where Cypher generation fails
     if not result["cypher"][-1]:
         print("cypher None")
         result["cypher"][-1] = AIMessage(
             content="Tidak dapat membuat kode Cypher Neo4j berdasarkan permintaan query"
         )
 
+    # Format response differently based on whether the QA LLM was used
     if skip_qa_llm:
         artifact["is_context_fetched"] = bool(result["result"])
         if not result["result"]:
@@ -64,7 +108,6 @@ def _tool_result_formatter(
             "### **Hasil Eksekusi Kode Cypher ke Database:**\n"
             f"{result['result']}"
         )
-    
     else:
         if not result["result"] or result["result"].content == "":
             result["result"] = AIMessage(
@@ -82,7 +125,8 @@ def _tool_result_formatter(
             "### **Hasil Eksekusi Kode Cypher ke Database:**\n"
             f"{result['result'].content}"
         )
-    
+
+    # Aggregate usage metadata from all Cypher generation steps
     for cypher_gen_ai_message in result["cypher"]:
         for key, value in cypher_gen_ai_message.usage_metadata.items():
             if isinstance(value, (int, float)):
@@ -94,45 +138,54 @@ def _tool_result_formatter(
     return response, artifact
 
 
-def _exclude_keys_from_data(
-    data: Any,
-    excluded_keys: List[str]
-) -> Any:
-    if isinstance(data, dict):
-        new_data = {}
-        for key, value in data.items():
-            if key not in excluded_keys:
-                new_data[key] = _exclude_keys_from_data(value, excluded_keys)
-        return new_data
-    elif isinstance(data, list):
-        new_data = []
-        for item in data:
-            new_data.append(_exclude_keys_from_data(item, excluded_keys))
-        return new_data
-    else:
-        return data
-
-
 def create_text2cypher_retriever_tool(
     neo4j_graph: Neo4jGraph,
     cypher_llm: BaseLanguageModel,
     qa_llm: BaseLanguageModel,
     embedder_model: Optional[Embeddings] = None,
-    qa_prompt: Optional[BasePromptTemplate] = None,
-    cypher_generation_prompt: Optional[BasePromptTemplate] = None,
-    cypher_fix_prompt: Optional[BasePromptTemplate] = None,
+    qa_prompt: BasePromptTemplate = CYPHER_QA_PROMPT,
+    cypher_generation_prompt: BasePromptTemplate = CYPHER_GENERATION_PROMPT,
+    cypher_fix_prompt: BasePromptTemplate = CYPHER_FIX_PROMPT,
+    few_shot_prefix_template: Optional[str] = FEW_SHOT_PREFIX_TEMPLATE,
     num_examples: int = 5,
     skip_qa_llm: bool = False,
     verbose: bool = False
 ) -> Callable[[str], ToolMessage]:
-    
-    if qa_prompt is None:
-        qa_prompt = CYPHER_QA_PROMPT
-    if cypher_generation_prompt is None:
-        cypher_generation_prompt = CYPHER_GENERATION_PROMPT
-    if cypher_fix_prompt is None:
-        cypher_fix_prompt = CYPHER_FIX_PROMPT
+    """
+    Create a text-to-Cypher retriever tool using Neo4j and LLMs.
 
+    This tool converts natural language queries into Cypher code using LLM 
+    prompting, executes the generated Cypher on a Neo4j database, and 
+    optionally explains the result using a second QA LLM. The tool supports 
+    few-shot prompting with semantic similarity if an embedding model is 
+    provided.
+
+    Args:
+        neo4j_graph (Neo4jGraph): The Neo4j graph interface for running 
+            Cypher queries.
+        cypher_llm (BaseLanguageModel): LLM used to generate Cypher from 
+            text input.
+        qa_llm (BaseLanguageModel): LLM used to interpret and answer questions 
+            based on results.
+        embedder_model (Optional[Embeddings]): Model used for selecting 
+            examples semantically.
+        qa_prompt (Optional[BasePromptTemplate]): Prompt template for the 
+            QA LLM.
+        cypher_generation_prompt (Optional[BasePromptTemplate]): Prompt 
+            template for generating Cypher.
+        cypher_fix_prompt (Optional[BasePromptTemplate]): Prompt template 
+            for fixing Cypher queries.
+        num_examples (int): Number of few-shot examples to include in 
+            prompting.
+        skip_qa_llm (bool): Whether to skip the final QA stage and just 
+            return raw data.
+        verbose (bool): Whether to print debugging information.
+
+    Returns:
+        Callable[[str], ToolMessage]: A LangChain tool that receives a 
+            user query and returns result.
+    """
+    # Create the text2cypher chain
     text2cypher = GraphCypherQAChainMod.from_llm(
         graph=neo4j_graph,
         qa_prompt=qa_prompt,
@@ -147,6 +200,8 @@ def create_text2cypher_retriever_tool(
         verbose=verbose
     )
 
+     # Add few-shot prompting with semantic similarity example selection
+     # if an embedder model is provided
     if embedder_model is not None:
         example_selector = SemanticSimilarityExampleSelector.from_examples(
             examples=text2cypher_example,
@@ -158,7 +213,7 @@ def create_text2cypher_retriever_tool(
         few_shot_prompt_template = FewShotPromptTemplate(
             example_selector=example_selector,
             example_prompt=text2cypher_example_prompt,
-            prefix="",  # Mainkan prefix nya, tambahkan judul ## Example dan beberapa keterangan tambahan sebelum melihat example, contoh nya jelaskan bahwa ada 3 jenis peraturan yang tersedia di database, yaitu Peraturan Menteri Komunikasi dan Informatika disingkat PERMENKOMINFO, Undang-Undang adalah UU, dan Peraturan Pemerintah adalah PP
+            prefix=few_shot_prefix_template,
             suffix="",
             input_variables=["question"],
         )
@@ -188,17 +243,15 @@ def create_text2cypher_retriever_tool(
         # TODO: PERBAIKI DESKRIPSI TOOL
 
         start_time = time.time()
-        
-        # selected_examples = "INI CONTOH "  # NANTI HAPUS
-        # result = text2cypher_chain.invoke({"query": query, "example": selected_examples})
+
         result = text2cypher_chain.invoke(query)
         result = _exclude_keys_from_data(result, excluded_keys=["embedding"])
         response, artifact = _tool_result_formatter(result, skip_qa_llm)
-        
+
         artifact["cypher_gen_usage_metadata"]["model"] = cypher_llm.model
         if not skip_qa_llm: artifact["qa_usage_metadata"]["model"] = qa_llm.model
         artifact["run_time"] = time.time() - start_time
-        
+
         return response, artifact
-    
+
     return text2cypher_retriever
