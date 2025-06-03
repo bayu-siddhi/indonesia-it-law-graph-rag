@@ -22,7 +22,7 @@ from langchain_core.messages import (
     ToolMessage
 )
 from langchain_neo4j import Neo4jGraph
-from ..models import SimpleQuery
+from ..models import SimpleQueryInput
 from .prompts import (
     CYPHER_GENERATION_PROMPT,
     CYPHER_FIX_PROMPT,
@@ -232,7 +232,7 @@ def create_text2cypher_retriever_tool(
         text2cypher_chain = text2cypher
 
     @tool(
-        args_schema=SimpleQuery,
+        args_schema=SimpleQueryInput,
         response_format="content_and_artifact"
     )
     def text2cypher_retriever(

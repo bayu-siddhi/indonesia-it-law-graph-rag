@@ -17,7 +17,7 @@ from langchain_core.messages import ToolMessage
 from langchain_core.embeddings import Embeddings
 from neo4j_graphrag.types import RetrieverResultItem
 from neo4j_graphrag.retrievers import VectorCypherRetriever
-from ..models import SimpleQuery
+from ..models import SimpleQueryInput
 from .retrieval_query import (
     ARTICLE_RETRIEVAL_QUERY_1,
     ARTICLE_RETRIEVAL_QUERY_2,
@@ -203,7 +203,7 @@ def create_vector_cypher_retriever_tool(
     )
 
     @tool(
-        args_schema=SimpleQuery,
+        args_schema=SimpleQueryInput,
         response_format="content_and_artifact"
     )
     def vector_cypher_retriever(
