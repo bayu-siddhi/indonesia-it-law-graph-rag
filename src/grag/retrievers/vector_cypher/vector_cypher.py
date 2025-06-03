@@ -25,6 +25,53 @@ from .retrieval_query import (
 )
 
 
+def _input_validation(
+    total_definition_limit: int,
+    top_k_initial_article: int,
+    max_k_expanded_article: int,
+    total_article_limit: Optional[int],
+) -> int:
+    if total_article_limit is None:
+        total_article_limit = -1
+    
+    if total_definition_limit <= 0:
+        raise ValueError(
+            "`total_definition_limit` must be greater than zero (0)"
+        )
+    if top_k_initial_article <= 0:
+        raise ValueError(
+            "`top_k_initial_article` must be greater than zero (0)"
+        )
+    if total_article_limit == 0 or total_article_limit < -1:
+        raise ValueError(
+            "`total_article_limit` must be None or greater than zero (0)"
+        )
+    if max_k_expanded_article <= 0 and max_k_expanded_article != -1:
+        raise ValueError(
+            "`max_k_expanded_article` must be (-1) or greater than zero (0)"
+        )
+    if max_k_expanded_article != -1:
+        if top_k_initial_article + max_k_expanded_article > total_article_limit:
+            if total_article_limit != -1:
+                total_article_limit = -1
+                warnings.warn(
+                    "Setting (`top_k_initial_article` + `max_k_expanded_article`) "
+                    "greater than `total_article_limit` means `total_article_limit` "
+                    "will be ignored. This is equivalent to setting " 
+                    "`total_article_limit=None`"
+                )
+    else:
+        if total_article_limit > 0:
+            total_article_limit = -1
+            warnings.warn(
+                "Setting `max_k_expanded_article=-1` means `total_article_limit` "
+                "will be ignored. This is equivalent to setting "
+                "`total_article_limit=None`"
+            )
+    
+    return total_article_limit
+
+
 def _retriever_result_formatter(
     record: Record
 ) -> RetrieverResultItem:
@@ -93,7 +140,8 @@ def create_vector_cypher_retriever_tool(
     neo4j_config: Dict[str, str],
     total_definition_limit: int = 5,
     top_k_initial_article: int = 5,
-    total_article_limit: Optional[int] = 10,
+    max_k_expanded_article: int = -1,
+    total_article_limit: Optional[int] = None,
 ) -> Callable[[str], ToolMessage]:
     """
     Create a Vector Cypher retriever tool for retrieving legal articles 
@@ -119,21 +167,12 @@ def create_vector_cypher_retriever_tool(
         Callable[[str], ToolMessage]: A LangChain-compatible tool callable.
     """
     # Safety checks for input configuration
-    if top_k_initial_article == total_article_limit:
-        warnings.warn(
-            "Setting top_k_initial_article equal to total_article_limit "
-            "means all article nodes will be retrieved via vector search "
-            "only. No additional nodes will be expanded through Cypher "
-            "query traversal."
-        )
-    elif top_k_initial_article > total_article_limit:
-        raise ValueError(
-            "top_k_initial_article must be less than or equal to total_"
-            "article_limit"
-        )
-    
-    if total_article_limit is None:
-        total_article_limit = 100
+    total_article_limit = _input_validation(
+        total_definition_limit=total_definition_limit,
+        top_k_initial_article=top_k_initial_article,
+        max_k_expanded_article=max_k_expanded_article,
+        total_article_limit=total_article_limit
+    )
     
     # Initialize vector retrievers for articles and definitions
     article_retriever_1 = VectorCypherRetriever(
@@ -182,7 +221,14 @@ def create_vector_cypher_retriever_tool(
         articles = article_retriever_1.search(
             query_text=query,
             top_k=top_k_initial_article,
-            query_params={"limit": total_article_limit},
+            query_params={
+                "limit": (
+                    max_k_expanded_article
+                    # total_article_limit - top_k_initial_article
+                    if max_k_expanded_article != -1
+                    else 100
+                )
+            },
         )
 
         # If needed, perform additional article search
@@ -190,7 +236,7 @@ def create_vector_cypher_retriever_tool(
         if len(articles.items) < total_article_limit:
             additional_articles = article_retriever_2.search(
                 query_text=query,
-                top_k=top_k_initial_article + total_article_limit,
+                top_k=total_article_limit,
                 query_params={
                     "excluded_ids": [
                         item.metadata["id"] for item in articles.items
@@ -213,7 +259,6 @@ def create_vector_cypher_retriever_tool(
         definitions = definition_retriever.search(
             query_text=query,
             top_k=total_definition_limit,
-            query_params={"limit": total_definition_limit},
         )
 
         # Format output and record node IDs
