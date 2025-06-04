@@ -13,12 +13,15 @@ from neo4j import (
     Result,
     RoutingControl
 )
-from neo4j.graph import Graph
 from IPython.display import HTML
+from neo4j.graph import Graph
 from neo4j_viz import VisualizationGraph
 from neo4j_viz.neo4j import from_neo4j
 from langchain_neo4j import Neo4jGraph
-from langchain_core.messages import ToolCall
+from langchain_core.messages import (
+    ToolCall,
+    ToolMessage
+)
 from langchain_core.prompts import BasePromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.language_models import BaseLanguageModel
@@ -48,9 +51,19 @@ CAPTION_MAPPING = {
 def _get_unique_node_ids(
     result: Graph
 ) -> List[str]:
+    """
+    Extracts unique node IDs from a Neo4j Graph result object.
+
+    Args:
+        result (Graph): A Neo4j query result in graph format.
+
+    Returns:
+        List[str]: A list of unique node IDs found in the graph 
+            result.
+    """
     node_ids: Set[str] = set()
     for node in result.nodes:
-        node_ids.add(node.element_id)
+        node_ids.add(node["id"])
     
     return list(node_ids)
 
@@ -59,13 +72,26 @@ def _autocomplete_relationship(
     neo4j_graph: Neo4jGraph,
     node_ids: List[str]
 ) -> Graph:
+    """
+    Retrieves related relationships for the specified node IDs from the 
+    Neo4j database.
+
+    Args:
+        neo4j_graph (Neo4jGraph): The Neo4j graph instance used to run 
+            the query.
+        node_ids (List[str]): A list of node IDs to find relationships 
+            for.
+
+    Returns:
+        Graph: A graph result including nodes and relationships.
+    """
     result = neo4j_graph._driver.execute_query(
         query_="""
             MATCH (n)
-            WHERE elementId(n) IN $node_ids
+            WHERE n.id IN $node_ids
             OPTIONAL MATCH (re:Regulation)-[rel1]->(n)
             OPTIONAL MATCH (n)-[rel2]->(m)
-            WHERE elementId(m) IN $node_ids
+            WHERE m.id IN $node_ids
             RETURN *
         """,
         parameters_={"node_ids": node_ids},
@@ -81,6 +107,15 @@ def _remove_attribute_from_node(
     vg: VisualizationGraph,
     attribute: str
 ) -> None:
+    """
+    Removes a given attribute from every node in a VisualizationGraph.
+
+    Args:
+        vg (VisualizationGraph): The visualization graph containing 
+            nodes.
+        attribute (str): The attribute name (or substring of it) to 
+            be removed.
+    """
     for node in vg.nodes:
         attributes_to_remove = []
         for property in node:
@@ -97,6 +132,16 @@ def _modify_nodes_caption_and_relationship(
     vg: VisualizationGraph,
     caption_mapping: Dict[str, str] 
 ) -> None:
+    """
+    Modifies node captions and colors based on a caption mapping 
+    dictionary. Also increases caption size for relationships.
+
+    Args:
+        vg (VisualizationGraph): The visualization graph containing 
+            nodes and relationships.
+        caption_mapping (Dict[str, str]): A mapping between original 
+            captions and their replacement attribute and color.
+    """
     for node in vg.nodes:
         if node.caption in caption_mapping.keys():
             node.old_caption = node.caption
@@ -114,20 +159,36 @@ def _modify_nodes_caption_and_relationship(
 def create_graph_visualizer_tool(
     llm: BaseLanguageModel,
     neo4j_graph: Neo4jGraph,
-    cypher_generation_prompt: Optional[BasePromptTemplate] = None,
-    cypher_fix_prompt: Optional[BasePromptTemplate] = None,
-    caption_mapping: Optional[Dict[str, Tuple[str, Color]]] = None,
+    cypher_generation_prompt: BasePromptTemplate = CYPHER_GENERATION_PROMPT,
+    cypher_fix_prompt: BasePromptTemplate = CYPHER_FIX_PROMPT,
+    caption_mapping: Dict[str, Tuple[str, Color]] = CAPTION_MAPPING,
     autocomplete_relationship: bool = False,
     verbose: bool = False
 ) -> Callable[[str, List[str]], Dict[str, Union[HTML, Dict, bool, float]]]:
-    
-    if cypher_generation_prompt is None:
-        cypher_generation_prompt = CYPHER_GENERATION_PROMPT
-    if cypher_fix_prompt is None:
-        cypher_fix_prompt = CYPHER_FIX_PROMPT
-    if caption_mapping is None:
-        caption_mapping = CAPTION_MAPPING
-    
+    """
+    Creates a graph visualization tool that supports visualizing Neo4j 
+    graphs from either Cypher queries or lists of node IDs. Automatically 
+    formats nodes and relationships with custom styling.
+
+    Args:
+        llm (BaseLanguageModel): Language model used to generate Cypher 
+            queries.
+        neo4j_graph (Neo4jGraph): Neo4j graph instance to run queries on.
+        cypher_generation_prompt (BasePromptTemplate): Prompt template for 
+            Cypher generation.
+        cypher_fix_prompt (BasePromptTemplate): Prompt template for Cypher 
+            fixing.
+        caption_mapping (Dict[str, Tuple[str, Color]]): Mapping of node 
+            types to caption keys and colors.
+        autocomplete_relationship (bool): Whether to fetch extra 
+            relationships for the selected nodes.
+        verbose (bool): If True, enables verbose output.
+
+    Returns:
+        Callable: A callable function `graph_visualizer` that can be 
+            invoked with either a Cypher query or a list of node IDs.
+    """
+    # Create a Cypher generator tool that returns artifacts and Cypher code
     cypher_viz_generator = create_text2cypher_retriever_tool(
         neo4j_graph=neo4j_graph,
         cypher_llm=llm,
@@ -139,27 +200,42 @@ def create_graph_visualizer_tool(
     )
 
     def graph_visualizer(
-        cypher_query: Optional[str] = None,
-        node_ids: Optional[List[str]] = None
-    ) -> Dict[str, Union[HTML, bool, float]]:
-        
+        tool_message: ToolMessage
+    ) -> Dict[str, Union[VisualizationGraph, bool, float]]:
+        """
+        Visualizes a subgraph from Neo4j using either a Cypher query or 
+        node IDs.
+
+        Args:
+            cypher_query (Optional[str]): A Cypher query to visualize.
+            node_ids (Optional[List[int]]): A list of node IDs to 
+                visualize.
+
+        Returns:
+            Dict[str, Union[HTML, bool, float]]: A dictionary containing:
+                - "viz": the rendered visualization (or False if failed),
+                - "run_time": execution time,
+                - "artifact": additional metadata and model usage info.
+        """
         start_time = time.time()
         artifact = {}
 
-        if (
-            cypher_query
-            and node_ids
-        ) or (
-            cypher_query is None
-            and node_ids is None
-        ):
-            raise ValueError((
-                "Exactly one of `cypher_query` or `node_ids` "
-                "must be provided.  Do not provide both or neither."
-            ))
+        # Validate input
+        if tool_message.name == "text2cypher_retriever":
+            cypher_query = extract_cypher(tool_message.content)
+            node_ids = None
+        elif tool_message.name == "vecotr_cypher_retriever":
+            node_ids = tool_message.artifact["node_ids"]
+            cypher_query = None
+        else:
+            return {
+                "viz": False,
+                "run_time": time.time() - start_time,
+                "artifact": artifact
+            }
 
         if cypher_query:
-            # ToolCalling agar return AIMessage berisi artifact 
+            # Modify the Cypher query to return all data.
             new_cypher_query = cypher_viz_generator.invoke(
                 ToolCall(
                     name="cypher_viz_generator",
@@ -169,6 +245,7 @@ def create_graph_visualizer_tool(
                 )
             )
 
+            # If context was successfully fetched
             if new_cypher_query.artifact["is_context_fetched"]:
                 artifact = new_cypher_query.artifact
                 new_cypher_query = extract_cypher(new_cypher_query.content)
@@ -179,12 +256,14 @@ def create_graph_visualizer_tool(
                     result_transformer_=Result.graph,
                 )
 
+                # Optionally autocomplete missing relationships
                 if autocomplete_relationship:
                     node_ids = _get_unique_node_ids(result)
                     result = _autocomplete_relationship(
                         neo4j_graph, node_ids
                     )
 
+                # Convert raw result to visualization object
                 vg = from_neo4j(result)
                 _remove_attribute_from_node(vg, "date")
                 _modify_nodes_caption_and_relationship(
@@ -192,12 +271,13 @@ def create_graph_visualizer_tool(
                 )
             
             return {
-                "viz": vg.render() if artifact else False,
+                "viz": vg if artifact else False,
                 "run_time": time.time() - start_time,
                 "artifact": artifact
             }
         
         else:
+            # When node_ids are given directly
             result = _autocomplete_relationship(
                 neo4j_graph, node_ids
             )
@@ -209,7 +289,7 @@ def create_graph_visualizer_tool(
             )
 
             return {
-                "viz": vg.render(),
+                "viz": vg,
                 "run_time": time.time() - start_time,
                 "artifact": artifact
             }
