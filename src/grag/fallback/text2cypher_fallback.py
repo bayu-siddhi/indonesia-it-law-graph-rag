@@ -65,7 +65,6 @@ class Text2CypherFallback(BaseFallbackToolCalling):
         new_tool_calls: List[Dict[str, Any]] = []
 
         for tool_name, tool_args in zip(alternate_tool_name, prev_tool_call_args):
-            tool_args.update(intent="general")  # "general" untuk jaga-jaga
             new_tool_calls.append({
                 "name": tool_name,
                 "args": tool_args,
@@ -75,10 +74,11 @@ class Text2CypherFallback(BaseFallbackToolCalling):
 
         return AIMessage(
             content=(
-                "Tidak dapat menemukan data yang sesuai untuk request: "
-                f"{prev_tool_call_args} dengan menggunakan tool {prev_tool_name}. "
-                "Mencoba ulang pencarian data dengan menggunakan tool alternatif "
-                f"{alternate_tool_name} untuk mendapatkan konteks tambahan."
+                # "Tidak dapat menemukan data yang sesuai untuk request: "
+                # f"{prev_tool_call_args} dengan menggunakan tool {prev_tool_name}. "
+                # "Mencoba ulang pencarian data dengan menggunakan tool alternatif "
+                # f"{alternate_tool_name} untuk mendapatkan konteks tambahan."
+                ""
             ),
             additional_kwargs={},
             response_metadata={},
