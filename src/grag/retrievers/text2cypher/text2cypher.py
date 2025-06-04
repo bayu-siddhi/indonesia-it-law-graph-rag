@@ -102,9 +102,12 @@ def _tool_result_formatter(
             result["result"] = [
                 "Tidak dapat menemukan data yang sesuai dengan permintaan query"
             ]
+        
+        cypher = result['cypher'][-1].content.replace('`', '\`')
+        
         response = (
             "### **Hasil Pembuatan Kode Cypher:**\n"
-            f"{result['cypher'][-1].content}\n\n"
+            f"{cypher}\n\n"
             "### **Hasil Eksekusi Kode Cypher ke Database:**\n"
             f"{result['result']}"
         )
@@ -239,7 +242,9 @@ def create_text2cypher_retriever_tool(
         query: str,
         # example: str = ""
     ) -> ToolMessage:
-        """Text2Cypher Tool"""
+        """Text2Cypher Tool
+        Jika pengguna meminta informasi tentang **isi pasal spesifik, struktur regulasi, pertimbangann hukum (consideration), dasar hukum (observation), hubungan antar pasal atau peraturan, atau apa pun yang dapat direpresentasikan sebagai Neo4j Cypher**, gunakan `text2cypher_retriever` ini.
+        """
         # TODO: PERBAIKI DESKRIPSI TOOL
 
         start_time = time.time()

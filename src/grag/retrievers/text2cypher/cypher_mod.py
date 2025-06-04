@@ -99,13 +99,17 @@ def extract_cypher(text: str) -> str:
         str: Properly formatted Cypher query with correct backtick quoting.
     """
     # Extract Cypher code enclosed in triple backticks
-    pattern = r"```(.*?)```"
+    pattern = r"(?:```|\\`\\`\\`)(.*?)(?:```|\\`\\`\\`)"
     matches = re.findall(pattern, text, re.DOTALL)
     cypher_query = matches[0] if matches else text
     
     ############################################################################
     matches = re.search(r"MATCH|CALL|RETURN|YIELD", cypher_query, re.IGNORECASE)
     cypher_query = cypher_query if matches else ""
+
+    # BARU: Menambah spasi seteleh teks "cypher" awal
+    if cypher_query.lower().startswith("cypher"):
+        cypher_query = cypher_query.replace("cypher", "cypher ", 1)
     ############################################################################
 
     # Quote node labels in backticks if they contain spaces and are not already quoted
