@@ -209,8 +209,8 @@ def create_vector_cypher_retriever_tool(
     def vector_cypher_retriever(
         query: str
     ) -> ToolMessage:
-        """
-        Vector Cypher Retriever Tool
+        """Vector Cypher Retriever Tool
+        Jika pengguna mengajukan **pertanyaan umum** yang **bukan terkait isi pasal spesifik, struktur regulasi, hubungan, atau apa pun yang dapat direpresentasikan sebagai Neo4j Cypher**, gunakan `vector_cypher_retriever` ini. Jika anda bingung harus menggunakan tool apa, maka gunakanlah `vector_cypher_retriever` ini sebagai tool default.
         """
         # TODO: PERBAIKI DESKRIPSI TOOL
         
