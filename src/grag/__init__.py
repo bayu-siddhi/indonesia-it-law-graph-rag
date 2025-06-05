@@ -9,4 +9,7 @@ from .fallback import (
     Text2CypherFallback
 )
 from .agent import create_agent
-from .workflow import create_workflow
+from .workflow import (
+    create_grag_workflow,
+    vector_cypher_workflow
+)
