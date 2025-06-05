@@ -143,37 +143,38 @@ async def graph_rag_on_message(
         
     await output_msg.send()
 
-    # chat_history: List[BaseMessage] = workflow\
-    #     .get_state(config)\
-    #     .values["messages"]
+    chat_history: List[BaseMessage] = workflow\
+        .get_state(config)\
+        .values["messages"]
     
-    # tool_messages = []
-    # tool_message_idxs = []
+    tool_messages = []
+    tool_message_idxs = []
 
-    # for idx in range(-1, (-len(chat_history) - 1), -1):
-    #     if isinstance(chat_history[idx], ToolMessage):
-    #         tool_message_idxs.append(idx)
-    #     else:
-    #         if isinstance(chat_history[idx], HumanMessage):
-    #             if tool_message_idxs:
-    #                 tool_message_idxs.sort()
-    #                 tool_messages = [
-    #                     chat_history[i] for i in tool_message_idxs
-    #                 ]
-    #             break
+    for idx in range(-1, (-len(chat_history) - 1), -1):
+        if isinstance(chat_history[idx], ToolMessage):
+            tool_message_idxs.append(idx)
+        else:
+            if isinstance(chat_history[idx], HumanMessage):
+                if tool_message_idxs:
+                    tool_message_idxs.sort()
+                    tool_messages = [
+                        chat_history[i] for i in tool_message_idxs
+                    ]
+                break
     
-    # for message in tool_messages:
-    #     graph_viz = graph_visualizer(tool_message=message)
-    #     graph_viz_path = str(uuid.uuid4()) + ".html"
-    #     graph_viz_path = os.path.join("graph_viz", graph_viz_path)
-    #     with open(graph_viz_path, "w", encoding="utf-8") as f:
-    #         f.write(graph_viz["viz"].render(height="300px").data.strip())
-    #     with open(graph_viz_path, "r", encoding="utf-8") as f:
-    #         html_string = f.read()
+    for message in tool_messages:
+        graph_viz = graph_visualizer(tool_message=message)
+        graph_viz_path = str(uuid.uuid4()) + ".html"
+        graph_viz_path = os.path.join("public", "graph_viz", graph_viz_path)
+        with open(graph_viz_path, "w", encoding="utf-8") as f:
+            f.write(graph_viz["viz"].render(height="100%").data.strip())
 
-    #     await cl.Message(content=html_string).send()
+        # await cl.Text(content=html_string).send()
+        # Kirim src sebagai prop ke elemen kustom
+        element = cl.CustomElement(name="Neo4jViz", props={"src": graph_viz_path})
+        await cl.Message(content="Visualisasi Neo4j:", elements=[element]).send()
 
-    # pprint(workflow.get_state(config)[0])
+    pprint(workflow.get_state(config)[0])
 
 
 
