@@ -4,7 +4,6 @@ from typing import (
     Callable,
     Dict,
     List,
-    Optional,
     Set,
     Tuple,
     Union
@@ -13,7 +12,6 @@ from neo4j import (
     Result,
     RoutingControl
 )
-from IPython.display import HTML
 from neo4j.graph import Graph
 from neo4j_viz import VisualizationGraph
 from neo4j_viz.neo4j import from_neo4j
@@ -37,14 +35,44 @@ from ..retrievers import (
 
 
 CAPTION_MAPPING = {
-    "Regulation": ("download_name", Color("#F79767")),
-    "Consideration": ("old_caption", Color("#569480")),
-    "Observation": ("old_caption", Color("#D9C8AE")),
-    "Definition": ("name", Color("#DA7194")),
-    "Article:Effective": ("number", Color("#4C8EDA")),
-    "Effective:Article": ("number", Color("#4C8EDA")),
-    "Article:Ineffective": ("number", Color("#F16667")),
-    "Ineffective:Article": ("number", Color("#F16667")),
+    "Regulation": {
+        "caption": "download_name",
+        "color": Color("#F79767") 
+        # "size": 50  # default
+    },
+    "Subject": {
+        "caption": "title",
+        "color": Color("#ffdf81") ,
+        "size": 40
+    },
+    "Consideration": {
+        "caption": "old_caption",
+        "color": Color("#569480") 
+    },
+    "Observation": {
+        "caption": "old_caption",
+        "color": Color("#D9C8AE") 
+    },
+    "Definition": {
+        "caption": "name",
+        "color": Color("#DA7194") 
+    },
+    "Article:Effective": {
+        "caption": "number",
+        "color": Color("#4C8EDA") 
+    },
+    "Effective:Article": {
+        "caption": "number",
+        "color": Color("#4C8EDA") 
+    },
+    "Article:Ineffective": {
+        "caption": "number",
+        "color": Color("#F16667") 
+    },
+    "Ineffective:Article": {
+        "caption": "number",
+        "color": Color("#F16667") 
+    }
 }
 
 
@@ -90,7 +118,8 @@ def _autocomplete_relationship(
             MATCH (n)
             WHERE n.id IN $node_ids
             OPTIONAL MATCH (re:Regulation)-[rel1]->(n)
-            OPTIONAL MATCH (n)-[rel2]->(m)
+            OPTIONAL MATCH (re)-[rel2]->(su:Subject)
+            OPTIONAL MATCH (n)-[rel3]->(m)
             WHERE m.id IN $node_ids
             RETURN *
         """,
@@ -146,11 +175,11 @@ def _modify_nodes_caption_and_relationship(
         if node.caption in caption_mapping.keys():
             node.old_caption = node.caption
             node.caption = eval(
-                f"node.{caption_mapping[node.old_caption][0]}"
+                f"node.{caption_mapping[node.old_caption]['caption']}"
             )
-            node.color = caption_mapping[node.old_caption][1]
+            node.color = caption_mapping[node.old_caption]["color"]
+            node.size = caption_mapping[node.old_caption].get("size", 50)
             node.caption_size = 1
-            node.size = 50
     
     for rel in vg.relationships:
         rel.caption_size = 2
@@ -164,7 +193,7 @@ def create_graph_visualizer_tool(
     caption_mapping: Dict[str, Tuple[str, Color]] = CAPTION_MAPPING,
     autocomplete_relationship: bool = False,
     verbose: bool = False
-) -> Callable[[str, List[str]], Dict[str, Union[HTML, Dict, bool, float]]]:
+) -> Callable[[ToolMessage], Dict[str, Union[bool, VisualizationGraph, float, Dict]]]:
     """
     Creates a graph visualization tool that supports visualizing Neo4j 
     graphs from either Cypher queries or lists of node IDs. Automatically 
@@ -204,16 +233,16 @@ def create_graph_visualizer_tool(
     ) -> Dict[str, Union[VisualizationGraph, bool, float]]:
         """
         Visualizes a subgraph from Neo4j using either a Cypher query or 
-        node IDs.
+        node IDs from ToolMessage.
 
         Args:
-            cypher_query (Optional[str]): A Cypher query to visualize.
-            node_ids (Optional[List[int]]): A list of node IDs to 
-                visualize.
+            tool_message (ToolMessage): ToolMessage contain either Cypher
+                query in `.content`, or key "node_ids" in `.artifact`.
 
         Returns:
-            Dict[str, Union[HTML, bool, float]]: A dictionary containing:
-                - "viz": the rendered visualization (or False if failed),
+            Dict[str, Union[VisualizationGraph, bool, float]]: A dictionary 
+                containing:
+                - "viz": the VisualizationGraph instance (or False if failed),
                 - "run_time": execution time,
                 - "artifact": additional metadata and model usage info.
         """
@@ -224,7 +253,7 @@ def create_graph_visualizer_tool(
         if tool_message.name == "text2cypher_retriever":
             cypher_query = extract_cypher(tool_message.content)
             node_ids = None
-        elif tool_message.name == "vecotr_cypher_retriever":
+        elif tool_message.name == "vector_cypher_retriever":
             node_ids = tool_message.artifact["node_ids"]
             cypher_query = None
         else:
