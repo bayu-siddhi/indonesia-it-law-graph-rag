@@ -8,6 +8,7 @@ from typing import (
     List
 )
 from langchain_core.messages import (
+    AIMessageChunk,
     BaseMessage,
     HumanMessage,
     ToolMessage
@@ -26,14 +27,13 @@ async def show_graph_viz(
     for idx in range(-1, (-len(state_messages) - 1), -1):
         if isinstance(state_messages[idx], ToolMessage):
             tool_message_idxs.append(idx)
-        else:
-            if isinstance(state_messages[idx], HumanMessage):
-                if tool_message_idxs:
-                    tool_message_idxs.sort()
-                    tool_messages = [
-                        state_messages[i] for i in tool_message_idxs
-                    ]
-                break
+        elif isinstance(state_messages[idx], HumanMessage):
+            if tool_message_idxs:
+                tool_message_idxs.sort()
+                tool_messages = [
+                    state_messages[i] for i in tool_message_idxs
+                ]
+            break
     
     for message in tool_messages:
         graph_viz = graph_visualizer_tool(tool_message=message)
@@ -54,15 +54,15 @@ async def show_graph_viz(
                     ).data.strip()
                 )
 
-        element = cl.CustomElement(
-            name="Neo4jViz",
-            props={"src": graph_viz_path}
-        )
+            element = cl.CustomElement(
+                name="Neo4jViz",
+                props={"src": graph_viz_path}
+            )
 
-        await cl.Message(
-            content="Visualisasi Neo4j:",
-            elements=[element]
-        ).send()
+            await cl.Message(
+                content="Visualisasi Neo4j:",
+                elements=[element]
+            ).send()
 
 
 
@@ -81,15 +81,16 @@ async def graph_rag_on_message(
         config=RunnableConfig(callbacks=[cb], **config)
     ):
         if (
-            metadata["langgraph_node"] == "agent"
-            and msg.content
+            msg.content
+            and isinstance(msg, AIMessageChunk)
+            and metadata["langgraph_node"] == "agent"
         ):
             await output_msg.stream_token(msg.content)
         
     await output_msg.send()
 
-    # state_messages: List[BaseMessage] = workflow\
-    #     .get_state(config)\
-    #     .values["messages"]
+    state_messages: List[BaseMessage] = workflow\
+        .get_state(config)\
+        .values["messages"]
     
-    # await show_graph_viz(graph_visualizer_tool, state_messages)
+    await show_graph_viz(graph_visualizer_tool, state_messages)

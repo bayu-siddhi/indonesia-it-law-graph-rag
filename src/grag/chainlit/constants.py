@@ -15,10 +15,14 @@ GRAPH_RAG_SETTINGS = [
         id="llm_model",
         label="LLM Model",
         tooltip="Model LLM yang akan digunakan sebagai landasan Graph-RAG",
-        initial_index=1,
+        initial_index=0,
         values=[
-            "gemini-2.0-flash",
-            "llama3.1:8b-instruct-q4_0"
+            "google/gemini-2.0-flash",
+            "ollama/llama3.1:8b-instruct-q4_0",
+            "ollama/llama3.2:3b-instruct-q4_0",
+            # "ollama/qwen3:4b-q4_K_M",
+            "lmstudio/llama-3.2-3b-instruct",
+            # "lmstudio/qwen3-4b"
         ]
     )
 ]

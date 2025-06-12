@@ -3,5 +3,8 @@ from .constants import (
     GRAPH_RAG_SETTINGS,
     GRAPH_RAG_STARTERS,
 )
-from .prepare import prepare_graph_rag
+from .prepare import (
+    configure_graph_rag,
+    initialize_graph_rag
+)
 from .chat import graph_rag_on_message
