@@ -1,6 +1,7 @@
 from typing import (
     cast,
     Callable,
+    List,
     Optional,
     Sequence,
     Type,
@@ -95,10 +96,50 @@ def create_agent(
         has_tool_calls = isinstance(response, AIMessage) and response.tool_calls
         remaining_steps = _get_state_value(state, "remaining_steps", None)
         is_last_step = _get_state_value(state, "is_last_step", False)
-        return (
-            (remaining_steps is None and is_last_step and has_tool_calls)
-            or (remaining_steps is not None and remaining_steps < 2 and has_tool_calls)
+        return (remaining_steps is None and is_last_step and has_tool_calls) or (
+            remaining_steps is not None and remaining_steps < 2 and has_tool_calls
         )
+    
+    def _check_fallback(
+        messages: List[BaseMessage]
+    ) -> Union[StateSchema, bool]:
+        tool_call_message = None
+        tool_message_idxs = []
+        tool_messages = []
+
+        # Check if a tool call was made
+        # Then get the tool call and tool message
+        for idx in range(-1, (-len(messages) - 1), -1):
+            if isinstance(messages[idx], ToolMessage):
+                tool_message_idxs.append(idx)
+            else:
+                if isinstance(messages[idx], AIMessage) and tool_message_idxs:
+                    tool_call_message = messages[idx]
+                    tool_message_idxs.sort()
+                    tool_messages = [messages[i] for i in tool_message_idxs]
+                    break
+        
+        # If there is a tool call
+        if tool_call_message:
+                # Check if the previous tool failed to get data
+            fallback_tool_status = fallback_tool_calling_cls.check(
+                tool_messages=tool_messages
+            )
+
+            # If any tool failed to get data, then do fallback
+            if any(fallback_tool_status):
+                # print("FOLLBACK")  # TODO: Nanti hapus
+                new_tool_call_message = fallback_tool_calling_cls.tool_call(
+                    prev_tool_call=tool_call_message,
+                    fallback_tool_status=fallback_tool_status,
+                    name=name
+                )
+
+                return {
+                    "messages": [new_tool_call_message]
+                }
+        
+        return False
 
     # Define the function that calls the model 
     def call_model(
@@ -106,7 +147,7 @@ def create_agent(
         config: RunnableConfig
     ) -> StateSchema:
         """
-        Call the model and return the updated state.
+        Call the model and return the updated state (synchronously).
         
         Args:
             state (StateSchema): The current agent state, including message history 
@@ -122,41 +163,9 @@ def create_agent(
         _validate_chat_history(messages)
         
         if fallback_tool_calling_cls is not None:
-            tool_call_message = None
-            tool_message_idxs = []
-            tool_messages = []
-
-            # Check if a tool call was made
-            # Then get the tool call and tool message
-            for idx in range(-1, (-len(messages) - 1), -1):
-                if isinstance(messages[idx], ToolMessage):
-                    tool_message_idxs.append(idx)
-                else:
-                    if isinstance(messages[idx], AIMessage) and tool_message_idxs:
-                        tool_call_message = messages[idx]
-                        tool_message_idxs.sort()
-                        tool_messages = [messages[i] for i in tool_message_idxs]
-                        break
-            
-            # If there is a tool call
-            if tool_call_message:
-                 # Check if the previous tool failed to get data
-                fallback_tool_status = fallback_tool_calling_cls.check(
-                    tool_messages=tool_messages
-                )
-
-                # If any tool failed to get data, then do fallback
-                if any(fallback_tool_status):
-                    # print("FOLLBACK")  # TODO: Nanti hapus
-                    new_tool_call_message = fallback_tool_calling_cls.tool_call(
-                        prev_tool_call=tool_call_message,
-                        fallback_tool_status=fallback_tool_status,
-                        name=name
-                    )
-
-                    return {
-                        "messages": [new_tool_call_message]
-                    }
+            fallback: Union[StateSchema, bool] = _check_fallback(messages=messages)
+            if fallback:
+                return fallback
         
         # print("NO FOLLBACK")  # TODO: Nanti hapus
         response = cast(AIMessage, model_runnable.invoke(state, config))
@@ -178,5 +187,51 @@ def create_agent(
         return {
             "messages": [response]
         }
+    
+    async def acall_model(
+        state: StateSchema,
+        config: RunnableConfig
+    ) -> StateSchema:
+        """
+        Call the model and return the updated state (asynchronously).
+        
+        Args:
+            state (StateSchema): The current agent state, including message history 
+                and step metadata.
+            config (RunnableConfig): Additional configuration for invoking the model 
+                (e.g., callbacks, tags).
+    
+        Returns:
+            StateSchema: The updated state including the new message (either from 
+                model or fallback tool).
+        """
+        messages = _get_state_value(state, "messages")
+        _validate_chat_history(messages)
+        
+        if fallback_tool_calling_cls is not None:
+            fallback: Union[StateSchema, bool] = _check_fallback(messages=messages)
+            if fallback:
+                return fallback
+        
+        # print("NO FOLLBACK")  # TODO: Nanti hapus
+        response = cast(AIMessage, await model_runnable.ainvoke(state, config))
+        response.name = name
 
-    return RunnableCallable(call_model)
+        if _are_more_steps_needed(state, response):
+            return {
+                "messages": [
+                    AIMessage(
+                        id=response.id,
+                        content=(
+                            "Maaf, diperlukan langkah lebih lanjut untuk memproses "
+                            "permintaan ini."
+                        ),
+                    )
+                ]
+            }
+        
+        return {
+            "messages": [response]
+        }
+    
+    return RunnableCallable(call_model, acall_model)
