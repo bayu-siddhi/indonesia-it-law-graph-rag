@@ -29,7 +29,7 @@ from ..agent import create_agent
 from ..fallback import BaseFallbackToolCalling
 
 
-def create_workflow(
+def create_graph_rag_workflow(
     model: BaseChatModel,
     tools: Union[Sequence[Union[BaseTool, Callable]], ToolNode],
     *,

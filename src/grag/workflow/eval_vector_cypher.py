@@ -1,19 +1,23 @@
+import copy
 import uuid
 from typing import (
     Dict,
     List,
     Optional,
     Tuple,
+    Union
 )
+from tqdm import tqdm
 from ragas import EvaluationDataset
 from neo4j import RoutingControl
 from langchain_neo4j import Neo4jGraph
 from langchain_core.messages import ToolCall
 from langchain_core.embeddings import Embeddings
 from ..retrievers import create_vector_cypher_retriever_tool
+from ...prep.encodings import REGULATION_CODES
 
 
-def vector_cypher_workflow(
+def vector_cypher_eval_workflow(
     evaluation_dataset: EvaluationDataset,
     *,
     embedder_model: Embeddings,
@@ -23,7 +27,10 @@ def vector_cypher_workflow(
     top_k_initial_article: int = 5,
     max_k_expanded_article: int = -1,
     total_article_limit: Optional[int] = None,
+    verbose: bool = True
 ) -> Tuple[EvaluationDataset, List[List[int]]]:
+    evaluation_dataset = copy.deepcopy(evaluation_dataset)
+    
     vector_cypher_retriever = create_vector_cypher_retriever_tool(
         embedder_model=embedder_model,
         neo4j_driver=neo4j_graph._driver,
@@ -36,7 +43,11 @@ def vector_cypher_workflow(
 
     all_article_node_ids = []
 
-    for idx, data in enumerate(evaluation_dataset):
+    for data in tqdm(
+        iterable=evaluation_dataset,
+        desc="Running vector_cypher_retriever on evaluation dataset",
+        disable=not verbose
+    ):
         tool_result = vector_cypher_retriever.invoke(
             ToolCall(
                 name=vector_cypher_retriever.model_dump()["name"],
@@ -51,7 +62,10 @@ def vector_cypher_workflow(
         art_definition_node_ids = []
 
         for _idx in range(len(definition_node_ids)):
-            new_definition_id = int(str(definition_node_ids[_idx])[:-6] + "500100")
+            new_definition_id = int(
+                str(definition_node_ids[_idx])[:-6] + \
+                REGULATION_CODES["section"]["article"] + "00100"
+            )
             art_definition_node_ids.append(new_definition_id)
 
         all_article_node_ids.append(
@@ -66,7 +80,7 @@ def vector_cypher_workflow(
                 RETURN n.text AS text
             """,
             parameters_={
-                "node_ids": article_node_ids + definition_node_ids
+                "node_ids": article_node_ids + art_definition_node_ids
             },
             routing_=RoutingControl.READ,
             database_=neo4j_graph._database
@@ -76,6 +90,6 @@ def vector_cypher_workflow(
         for record in query_result.records:
             retrieved_contexts.append(record["text"])
 
-        evaluation_dataset[idx].retrieved_contexts = retrieved_contexts
+        data.retrieved_contexts = retrieved_contexts
     
     return evaluation_dataset, all_article_node_ids
