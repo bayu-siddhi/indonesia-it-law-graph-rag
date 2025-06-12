@@ -10,8 +10,8 @@ from typing import (
 from langchain_core.tools import tool
 from langchain_core.embeddings import Embeddings
 from langchain_core.runnables import RunnableLambda
+from langchain_core.language_models import BaseChatModel
 from langchain_core.vectorstores import InMemoryVectorStore
-from langchain_core.language_models import BaseLanguageModel
 from langchain_core.example_selectors import SemanticSimilarityExampleSelector
 from langchain_core.prompts import (
     BasePromptTemplate,
@@ -84,8 +84,9 @@ def _tool_result_formatter(
     """
     artifact = {
         "is_context_fetched": False,
-        "cypher_gen_usage_metadata": {},
-        "qa_usage_metadata": {}
+        "context": ["Tidak dapat menemukan data yang sesuai dengan permintaan query"]
+        # "cypher_gen_usage_metadata": {},
+        # "qa_usage_metadata": {}
     }
 
     # Handle cases where Cypher generation fails
@@ -98,10 +99,10 @@ def _tool_result_formatter(
     # Format response differently based on whether the QA LLM was used
     if skip_qa_llm:
         artifact["is_context_fetched"] = bool(result["result"])
-        if not result["result"]:
-            result["result"] = [
-                "Tidak dapat menemukan data yang sesuai dengan permintaan query"
-            ]
+        if result["result"]:
+            artifact["context"] = result["result"]
+        else:
+            result["result"] = artifact["context"]
         
         cypher = result['cypher'][-1].content.replace('`', '\`')
         
@@ -111,16 +112,18 @@ def _tool_result_formatter(
             "### **Hasil Eksekusi Kode Cypher ke Database:**\n"
             f"{result['result']}"
         )
+
     else:
         if not result["result"] or result["result"].content == "":
-            result["result"] = AIMessage(
-                content="Tidak dapat menemukan data yang sesuai dengan permintaan query"
-            )
+            result["result"] = AIMessage(content=artifact["context"][0])
 
-        artifact["is_context_fetched"] = bool(result["context"])
-        if result["result"].usage_metadata:
-            for key, value in result["result"].usage_metadata.items():
-                artifact["qa_usage_metadata"][key] = value
+        if bool(result["context"]):
+            artifact["is_context_fetched"] = bool(result["context"])
+            artifact["context"] = result["context"]
+
+        # if result["result"].usage_metadata:
+        #     for key, value in result["result"].usage_metadata.items():
+        #         artifact["qa_usage_metadata"][key] = value
 
         response = (
             "### **Hasil Pembuatan Kode Cypher:**\n"
@@ -129,27 +132,30 @@ def _tool_result_formatter(
             f"{result['result'].content}"
         )
 
-    # Aggregate usage metadata from all Cypher generation steps
-    for cypher_gen_ai_message in result["cypher"]:
-        for key, value in cypher_gen_ai_message.usage_metadata.items():
-            if isinstance(value, (int, float)):
-                artifact["cypher_gen_usage_metadata"][key] = \
-                    artifact["cypher_gen_usage_metadata"].get(key, 0) + value
-            else:
-                artifact["cypher_gen_usage_metadata"][key] = value
+    # # Aggregate usage metadata from all Cypher generation steps
+    # for cypher_gen_ai_message in result["cypher"]:
+    #     if cypher_gen_ai_message.usage_metadata:
+    #         # TERNYATA GARA2 usage_metadata DEFAULTNYA ADALAH NONE
+    #         # MAKANYA ERROR PAS DIKASIH FUNCITON .items()
+    #         for key, value in cypher_gen_ai_message.usage_metadata.items():
+    #             if isinstance(value, (int, float)):
+    #                 artifact["cypher_gen_usage_metadata"][key] = \
+    #                     artifact["cypher_gen_usage_metadata"].get(key, 0) + value
+    #             else:
+    #                 artifact["cypher_gen_usage_metadata"][key] = value
     
     return response, artifact
 
 
 def create_text2cypher_retriever_tool(
     neo4j_graph: Neo4jGraph,
-    cypher_llm: BaseLanguageModel,
-    qa_llm: BaseLanguageModel,
+    cypher_llm: BaseChatModel,
+    qa_llm: BaseChatModel,
     embedder_model: Optional[Embeddings] = None,
-    qa_prompt: BasePromptTemplate = CYPHER_QA_PROMPT,
-    cypher_generation_prompt: BasePromptTemplate = CYPHER_GENERATION_PROMPT,
-    cypher_fix_prompt: BasePromptTemplate = CYPHER_FIX_PROMPT,
-    few_shot_prefix_template: Optional[str] = FEW_SHOT_PREFIX_TEMPLATE,
+    qa_prompt: Optional[BasePromptTemplate] = None,
+    cypher_generation_prompt: Optional[BasePromptTemplate] = None,
+    cypher_fix_prompt: Optional[BasePromptTemplate] = None,
+    few_shot_prefix_template: Optional[str] = None,
     num_examples: int = 5,
     skip_qa_llm: bool = False,
     verbose: bool = False
@@ -188,6 +194,16 @@ def create_text2cypher_retriever_tool(
         Callable[[str], ToolMessage]: A LangChain tool that receives a 
             user query and returns result.
     """
+    # Validated input data
+    if qa_prompt is None:
+        qa_prompt = CYPHER_QA_PROMPT
+    if cypher_generation_prompt is None:
+        cypher_generation_prompt = CYPHER_GENERATION_PROMPT
+    if cypher_fix_prompt is None:
+        cypher_fix_prompt = CYPHER_FIX_PROMPT
+    if few_shot_prefix_template is None:
+        few_shot_prefix_template = FEW_SHOT_PREFIX_TEMPLATE
+
     # Create the text2cypher chain
     text2cypher = GraphCypherQAChainMod.from_llm(
         graph=neo4j_graph,
@@ -253,10 +269,11 @@ def create_text2cypher_retriever_tool(
         result = _exclude_keys_from_data(result, excluded_keys=["embedding"])
         response, artifact = _tool_result_formatter(result, skip_qa_llm)
 
-        artifact["cypher_gen_usage_metadata"]["model"] = cypher_llm.model
-        if not skip_qa_llm: artifact["qa_usage_metadata"]["model"] = qa_llm.model
+        # artifact["cypher_gen_usage_metadata"]["model"] = cypher_llm.model
+        # if not skip_qa_llm: artifact["qa_usage_metadata"]["model"] = qa_llm.model
         artifact["run_time"] = time.time() - start_time
 
         return response, artifact
+        # return result, artifact
 
     return text2cypher_retriever
