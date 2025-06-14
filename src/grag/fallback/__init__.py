@@ -1,2 +1,4 @@
+"""Fallback modules"""
+
 from .base_fallback_tool_calling import BaseFallbackToolCalling
-from .text2cypher_fallback import Text2CypherFallback
+from .fallback_tool_calling import FallbackToolCalling
