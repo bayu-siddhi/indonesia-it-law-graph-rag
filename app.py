@@ -1,12 +1,12 @@
-import chainlit as cl
 from dotenv import load_dotenv
-from src.grag.chainlit import (
+import chainlit as cl
+from src.ui import (
     GRAPH_RAG_DESC,
     GRAPH_RAG_SETTINGS,
     GRAPH_RAG_STARTERS,
     configure_graph_rag,
     graph_rag_on_message,
-    initialize_graph_rag
+    initialize_graph_rag,
 )
 
 
@@ -17,12 +17,13 @@ async def chat_profile():
             name="Graph-RAG",
             markdown_description=GRAPH_RAG_DESC,
             icon="https://picsum.photos/200",
-            starters=GRAPH_RAG_STARTERS
+            starters=GRAPH_RAG_STARTERS,
         ),
         cl.ChatProfile(
             name="TAG",
             markdown_description="TODO",
             icon="https://picsum.photos/250",
+            starters=None,
             # default=True
         ),
     ]
@@ -43,11 +44,11 @@ async def on_chat_start():
         settings = await cl.ChatSettings(GRAPH_RAG_SETTINGS).send()
 
         llm, graph_workflow, graph_visualizer_tool = configure_graph_rag(
-            llm_name = settings["llm_model"],
+            llm_name=settings["llm_model"],
             neo4j_graph=cl.user_session.get("neo4j_graph"),
-            embedder_model=cl.user_session.get("embedder_model")
+            embedder_model=cl.user_session.get("embedder_model"),
         )
-        
+
         cl.user_session.set("llm", llm)
         cl.user_session.set("graph_workflow", graph_workflow)
         cl.user_session.set("graph_visualizer_tool", graph_visualizer_tool)
@@ -62,9 +63,9 @@ async def setup_agent(settings):
 
     if chat_profile == "Graph-RAG":
         llm, graph_workflow, graph_visualizer_tool = configure_graph_rag(
-            llm_name = settings["llm_model"],
+            llm_name=settings["llm_model"],
             neo4j_graph=cl.user_session.get("neo4j_graph"),
-            embedder_model=cl.user_session.get("embedder_model")
+            embedder_model=cl.user_session.get("embedder_model"),
         )
 
         cl.user_session.set("llm", llm)
@@ -79,7 +80,7 @@ async def setup_agent(settings):
 async def on_message(input_msg: cl.Message):
     chat_profile = cl.user_session.get("chat_profile")
     config = {"configurable": {"thread_id": cl.context.session.id}}
-    
+
     if chat_profile == "Graph-RAG":
         graph_workflow = cl.user_session.get("graph_workflow")
         graph_visualizer_tool = cl.user_session.get("graph_visualizer_tool")
@@ -88,7 +89,7 @@ async def on_message(input_msg: cl.Message):
             workflow=graph_workflow,
             graph_visualizer_tool=graph_visualizer_tool,
             input_msg=input_msg,
-            config=config
+            config=config,
         )
 
     elif chat_profile == "TAG":
