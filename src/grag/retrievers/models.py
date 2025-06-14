@@ -1,3 +1,5 @@
+"""Base model for Graph-RAG retrievers"""
+
 from pydantic import BaseModel, Field
 
 

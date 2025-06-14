@@ -1,10 +1,8 @@
 """Question answering over a graph."""
 
 from __future__ import annotations
-
 import re
 from typing import Any, Dict, List, Optional, Union
-
 from langchain_core.callbacks import CallbackManagerForChainRun
 from langchain_core.language_models import BaseLanguageModel
 from langchain_core.messages import SystemMessage
@@ -25,7 +23,7 @@ from langchain_neo4j.chains.graph_qa.cypher_utils import (
 )
 from langchain_neo4j.chains.graph_qa.cypher import (
     construct_schema,
-    get_function_response
+    get_function_response,
 )
 from langchain_neo4j.chains.graph_qa.prompts import (
     CYPHER_GENERATION_PROMPT,
@@ -37,7 +35,8 @@ from langchain_neo4j import GraphCypherQAChain
 INTERMEDIATE_STEPS_KEY = "context"
 GENERATED_CYPHER_KEY = "cypher"
 
-FUNCTION_RESPONSE_SYSTEM = """You are an assistant that helps to form nice and human 
+FUNCTION_RESPONSE_SYSTEM = """
+You are an assistant that helps to form nice and human 
 understandable answers based on the provided information from tools.
 Do not add any other information that wasn't present in the tools, and use 
 very concise style in interpreting results!
@@ -77,7 +76,8 @@ Corrected Cypher Query:
 """
 
 CYPHER_FIX_PROMPT = PromptTemplate(
-    input_variables=["schema", "cypher_query", "cypher_error"], template=CYPHER_FIX_TEMPLATE
+    input_variables=["schema", "cypher_query", "cypher_error"],
+    template=CYPHER_FIX_TEMPLATE,
 )
 
 
@@ -102,7 +102,7 @@ def extract_cypher(text: str) -> str:
     pattern = r"(?:```|\\`\\`\\`)(.*?)(?:```|\\`\\`\\`)"
     matches = re.findall(pattern, text, re.DOTALL)
     cypher_query = matches[0] if matches else text
-    
+
     ############################################################################
     matches = re.search(r"MATCH|CALL|RETURN|YIELD", cypher_query, re.IGNORECASE)
     cypher_query = cypher_query if matches else ""
@@ -170,7 +170,7 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
                 "necessary precautions. "
                 "See https://python.langchain.com/docs/security for more information."
             )
-    
+
     @property
     def example_keys(self) -> List[str]:
         """Return the example keys.
@@ -296,17 +296,17 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
                     ]
                 )
                 qa_chain = response_prompt | qa_llm
-            except (NotImplementedError, AttributeError):
-                raise ValueError("Provided LLM does not support native tools/functions")
+            except (NotImplementedError, AttributeError) as exc:
+                raise ValueError(
+                    "Provided LLM does not support native tools/functions"
+                ) from exc
         #######################################################################
         else:
             qa_chain = qa_prompt | qa_llm.bind(**use_qa_llm_kwargs)
-        cypher_generation_chain = (
-            cypher_generation_prompt | cypher_llm.bind(**use_cypher_llm_kwargs)
+        cypher_generation_chain = cypher_generation_prompt | cypher_llm.bind(
+            **use_cypher_llm_kwargs
         )
-        cypher_fix_chain = (
-            cypher_fix_prompt | cypher_llm.bind(**use_cypher_llm_kwargs)
-        )
+        cypher_fix_chain = cypher_fix_prompt | cypher_llm.bind(**use_cypher_llm_kwargs)
         #######################################################################
 
         if exclude_types and include_types:
@@ -389,8 +389,9 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
                 cypher_query = self.cypher_query_corrector(cypher_query)
 
             _run_manager.on_text(
-                f"Generated Cypher ({cypher_generation_attempt}):", end="\n",
-                verbose=self.verbose
+                f"Generated Cypher ({cypher_generation_attempt}):",
+                end="\n",
+                verbose=self.verbose,
             )
             _run_manager.on_text(
                 cypher_query.strip(), color="green", end="\n\n", verbose=self.verbose
@@ -409,18 +410,21 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
                     cypher_error = f"{e.code}\n{e.message}"
 
                     _run_manager.on_text(
-                    "Cypher Query Execution Error: ", end="\n", verbose=self.verbose
+                        "Cypher Query Execution Error: ", end="\n", verbose=self.verbose
                     )
                     _run_manager.on_text(
-                        cypher_error.strip(), color="yellow", end="\n\n", verbose=self.verbose
+                        cypher_error.strip(),
+                        color="yellow",
+                        end="\n\n",
+                        verbose=self.verbose,
                     )
-                    
+
                     # Retry Cypher Generation
                     generated_cypher = self.cypher_fix_chain.invoke(
                         {
                             "schema": self.graph_schema,
                             "cypher_query": cypher_query,
-                            "cypher_error": cypher_error
+                            "cypher_error": cypher_error,
                         },
                         callbacks=callbacks,
                     )
@@ -437,7 +441,7 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
             str(self.return_direct), color="green", end="\n\n", verbose=self.verbose
         )
         ############################################################################
-        
+
         _run_manager.on_text("Full Context:", end="\n", verbose=self.verbose)
         _run_manager.on_text(
             str(cypher_result), color="green", end="\n\n", verbose=self.verbose
@@ -446,7 +450,7 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
         final_result: Union[List[Dict[str, Any]], str]
         ###########################################
         if self.return_direct or not cypher_result:
-        ###########################################
+            ###########################################
             final_result = cypher_result
         else:
 

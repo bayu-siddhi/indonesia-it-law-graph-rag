@@ -1,18 +1,14 @@
+"""Vector Cypher retriever evaluation workflow"""
+
 import copy
 import uuid
-from typing import (
-    Dict,
-    List,
-    Optional,
-    Tuple,
-    Union
-)
+from typing import Dict, List, Optional, Tuple, Union
 from tqdm import tqdm
-from ragas import EvaluationDataset
 from neo4j import RoutingControl
 from langchain_neo4j import Neo4jGraph
 from langchain_core.messages import ToolCall
 from langchain_core.embeddings import Embeddings
+from ragas import EvaluationDataset
 from ..retrievers import create_vector_cypher_retriever_tool
 from ...prep.encodings import REGULATION_CODES
 
@@ -29,8 +25,10 @@ def vector_cypher_eval_workflow(
     total_article_limit: Optional[int] = None,
     verbose: bool = True
 ) -> Tuple[EvaluationDataset, List[List[int]]]:
+    """
+    TODO: Docstring
+    """
     evaluation_dataset = copy.deepcopy(evaluation_dataset)
-    
     vector_cypher_retriever = create_vector_cypher_retriever_tool(
         embedder_model=embedder_model,
         neo4j_driver=neo4j_graph._driver,
@@ -46,31 +44,31 @@ def vector_cypher_eval_workflow(
     for data in tqdm(
         iterable=evaluation_dataset,
         desc="Running vector_cypher_retriever on evaluation dataset",
-        disable=not verbose
+        disable=not verbose,
     ):
         tool_result = vector_cypher_retriever.invoke(
             ToolCall(
                 name=vector_cypher_retriever.model_dump()["name"],
                 args={"query": data.user_input},
                 id=f"run-{uuid.uuid4()}-0",  # required
-                type="tool_call"             # required
+                type="tool_call",  # required
             )
         )
-        
         article_node_ids = tool_result.artifact["node_ids"][:-total_definition_limit]
         definition_node_ids = tool_result.artifact["node_ids"][-total_definition_limit:]
         art_definition_node_ids = []
 
-        for _idx in range(len(definition_node_ids)):
+        for def_node_id in definition_node_ids:
             new_definition_id = int(
-                str(definition_node_ids[_idx])[:-6] + \
-                REGULATION_CODES["section"]["article"] + "00100"
+                str(def_node_id)[:-6] + REGULATION_CODES["section"]["article"] + "00100"
             )
             art_definition_node_ids.append(new_definition_id)
 
-        all_article_node_ids.append(
-            article_node_ids + art_definition_node_ids
+        current_article_node_ids = list(
+            dict.fromkeys(article_node_ids + art_definition_node_ids)
         )
+
+        all_article_node_ids.append(current_article_node_ids)
 
         query_result = neo4j_graph._driver.execute_query(
             query_="""
@@ -79,17 +77,14 @@ def vector_cypher_eval_workflow(
                 WHERE n.id = node_id
                 RETURN n.text AS text
             """,
-            parameters_={
-                "node_ids": article_node_ids + art_definition_node_ids
-            },
+            parameters_={"node_ids": current_article_node_ids},
             routing_=RoutingControl.READ,
-            database_=neo4j_graph._database
+            database_=neo4j_graph._database,
         )
 
         retrieved_contexts = []
         for record in query_result.records:
             retrieved_contexts.append(record["text"])
-
         data.retrieved_contexts = retrieved_contexts
-    
+
     return evaluation_dataset, all_article_node_ids

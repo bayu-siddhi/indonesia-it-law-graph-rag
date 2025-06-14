@@ -1,21 +1,17 @@
+"""Text2Cypher retriever evaluation workflow"""
+
+# import re
 import copy
 import uuid
-from typing import (
-    List,
-    Optional,
-    Tuple
-)
+from typing import List, Optional, Tuple
 from tqdm import tqdm
-from ragas import EvaluationDataset
 from langchain_neo4j import Neo4jGraph
 from langchain_core.messages import ToolCall
 from langchain_core.embeddings import Embeddings
 from langchain_core.prompts import BasePromptTemplate
 from langchain_core.language_models import BaseChatModel
-from ..retrievers import (
-    create_text2cypher_retriever_tool,
-    extract_cypher
-)
+from ragas import EvaluationDataset
+from ..retrievers import create_text2cypher_retriever_tool, extract_cypher
 
 
 def text2cypher_eval_workflow(
@@ -29,10 +25,12 @@ def text2cypher_eval_workflow(
     cypher_generation_prompt: Optional[BasePromptTemplate] = None,
     cypher_fix_prompt: Optional[BasePromptTemplate] = None,
     few_shot_prefix_template: Optional[str] = None,
-    num_examples: int = 5,
-    skip_qa_llm: bool = True,
-    verbose: bool = True
+    few_shot_num_examples: Optional[int] = None,
+    verbose: bool = True,
 ) -> Tuple[EvaluationDataset, List[str]]:
+    """
+    TODO: Docstring
+    """
     evaluation_dataset = copy.deepcopy(evaluation_dataset)
 
     text2cypher_retriever = create_text2cypher_retriever_tool(
@@ -44,9 +42,10 @@ def text2cypher_eval_workflow(
         cypher_generation_prompt=cypher_generation_prompt,
         cypher_fix_prompt=cypher_fix_prompt,
         few_shot_prefix_template=few_shot_prefix_template,
-        num_examples=num_examples,
-        skip_qa_llm=skip_qa_llm,
-        verbose=False
+        few_shot_num_examples=few_shot_num_examples,
+        add_context_to_artifact=True,
+        skip_qa_llm=True,
+        verbose=False,
     )
 
     generated_cypher_results = []
@@ -54,25 +53,38 @@ def text2cypher_eval_workflow(
     for data in tqdm(
         iterable=evaluation_dataset,
         desc="Running text2cypher_retriever on evaluation dataset",
-        disable=not verbose
+        disable=not verbose,
     ):
         tool_result = text2cypher_retriever.invoke(
             ToolCall(
                 name=text2cypher_retriever.model_dump()["name"],
                 args={"query": data.user_input},
                 id=f"run-{uuid.uuid4()}-0",  # required
-                type="tool_call"             # required
+                type="tool_call",  # required
             )
         )
 
-        generated_cypher_results.append(
-            extract_cypher(tool_result.content)
-        )
-        
-        retrieved_contexts = []
-        for context in tool_result.artifact["context"]:
-            retrieved_contexts.append(str(context))
-        
+        generated_cypher_results.append(extract_cypher(tool_result.content))
+
+        # retrieved_contexts = [
+        #     str(tool_result.artifact["context"])
+        # ]
+
+        if tool_result.artifact["is_context_fetched"]:
+            retrieved_contexts = []
+            for context in tool_result.artifact["context"]:
+                retrieved_contexts.append(str(context))
+        else:
+            retrieved_contexts = [
+                "Tidak dapat menemukan data yang sesuai dengan permintaan query"
+            ]
+        # retrieved_contexts = [
+        #     re.search(
+        #         r"### \*\*Hasil Eksekusi Kode Cypher ke Database:\*\*\n(.*)",
+        #         string=tool_result.content,
+        #         flags=re.DOTALL
+        #     )[1]
+        # ]
         data.retrieved_contexts = retrieved_contexts
-    
+
     return evaluation_dataset, generated_cypher_results
