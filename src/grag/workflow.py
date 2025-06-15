@@ -16,8 +16,8 @@ from langgraph.prebuilt.chat_agent_executor import (
     StateSchemaType,
     _get_state_value,
 )
-from ..agent import create_agent
-from ..fallback import BaseFallbackToolCalling
+from .agent import create_agent
+from .fallback import BaseFallbackToolCalling
 
 
 def create_graph_rag_workflow(
