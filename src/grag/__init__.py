@@ -11,10 +11,13 @@ from .fallback import (
     FallbackToolCalling
 )
 from .agent import create_agent
-from .workflow import (
-    create_graph_rag_workflow,
+from .evaluation import (
+    evaluate_retriever,
+    evaluate_text_generation,
+    evaluate_end_to_end,
     vector_cypher_eval_workflow,
     text2cypher_eval_workflow,
     text_generation_eval_workflow,
     graph_rag_eval_workflow
 )
+from .workflow import create_graph_rag_workflow

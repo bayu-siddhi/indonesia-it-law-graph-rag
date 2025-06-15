@@ -24,7 +24,7 @@ import ragas.messages as ragas_m
 from ragas import EvaluationDataset, MultiTurnSample
 # from ragas.integrations.langgraph import convert_to_ragas_messages
 
-from .graph_rag import create_graph_rag_workflow
+from ..workflow import create_graph_rag_workflow
 from ..fallback import BaseFallbackToolCalling
 from ...prep.encodings import REGULATION_CODES
 
