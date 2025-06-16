@@ -1,6 +1,5 @@
 """Text2Cypher retriever evaluation workflow"""
 
-# import re
 import copy
 import uuid
 from typing import List, Optional, Tuple
@@ -16,6 +15,7 @@ from ..retrievers import create_text2cypher_retriever_tool, extract_cypher
 
 def text2cypher_eval_workflow(
     evaluation_dataset: EvaluationDataset,
+    experiment_name: str,
     *,
     neo4j_graph: Neo4jGraph,
     cypher_llm: BaseChatModel,
@@ -52,23 +52,19 @@ def text2cypher_eval_workflow(
 
     for data in tqdm(
         iterable=evaluation_dataset,
-        desc="Running text2cypher_retriever on evaluation dataset",
+        desc=f"Running text2cypher_retriever: `{experiment_name}`",
         disable=not verbose,
     ):
         tool_result = text2cypher_retriever.invoke(
             ToolCall(
                 name=text2cypher_retriever.model_dump()["name"],
                 args={"query": data.user_input},
-                id=f"run-{uuid.uuid4()}-0",  # required
-                type="tool_call",  # required
+                id=f"run-{uuid.uuid4()}-0",
+                type="tool_call",
             )
         )
 
         generated_cypher_results.append(extract_cypher(tool_result.content))
-
-        # retrieved_contexts = [
-        #     str(tool_result.artifact["context"])
-        # ]
 
         if tool_result.artifact["is_context_fetched"]:
             retrieved_contexts = []
@@ -78,13 +74,7 @@ def text2cypher_eval_workflow(
             retrieved_contexts = [
                 "Tidak dapat menemukan data yang sesuai dengan permintaan query"
             ]
-        # retrieved_contexts = [
-        #     re.search(
-        #         r"### \*\*Hasil Eksekusi Kode Cypher ke Database:\*\*\n(.*)",
-        #         string=tool_result.content,
-        #         flags=re.DOTALL
-        #     )[1]
-        # ]
+
         data.retrieved_contexts = retrieved_contexts
 
     return evaluation_dataset, generated_cypher_results

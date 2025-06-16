@@ -15,6 +15,7 @@ from ...prep.encodings import REGULATION_CODES
 
 def vector_cypher_eval_workflow(
     evaluation_dataset: EvaluationDataset,
+    experiment_name: str,
     *,
     embedder_model: Embeddings,
     neo4j_graph: Neo4jGraph,
@@ -23,7 +24,7 @@ def vector_cypher_eval_workflow(
     top_k_initial_article: int = 5,
     max_k_expanded_article: int = -1,
     total_article_limit: Optional[int] = None,
-    verbose: bool = True
+    verbose: bool = True,
 ) -> Tuple[EvaluationDataset, List[List[int]]]:
     """
     TODO: Docstring
@@ -43,15 +44,15 @@ def vector_cypher_eval_workflow(
 
     for data in tqdm(
         iterable=evaluation_dataset,
-        desc="Running vector_cypher_retriever on evaluation dataset",
+        desc=f"Running vector_cypher_retriever: `{experiment_name}`",
         disable=not verbose,
     ):
         tool_result = vector_cypher_retriever.invoke(
             ToolCall(
                 name=vector_cypher_retriever.model_dump()["name"],
                 args={"query": data.user_input},
-                id=f"run-{uuid.uuid4()}-0",  # required
-                type="tool_call",  # required
+                id=f"run-{uuid.uuid4()}-0",
+                type="tool_call",
             )
         )
         article_node_ids = tool_result.artifact["node_ids"][:-total_definition_limit]

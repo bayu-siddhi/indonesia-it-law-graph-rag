@@ -32,7 +32,9 @@ TEXT2CYPHER_CONTEXT_TEMPLATE = """
 
 def text_generation_eval_workflow(
     evaluation_dataset: EvaluationDataset,
-    tool_names: List[str],
+    experiment_name: str,
+    *,
+    expected_tool_call_names: List[str],
     generated_cypher_results: List[str],
     llm: BaseChatModel,
     verbose: bool = True,
@@ -44,8 +46,10 @@ def text_generation_eval_workflow(
     agent = create_agent(model=llm, tools=[])
 
     for data, tool_name, cypher in tqdm(
-        iterable=list(zip(evaluation_dataset, tool_names, generated_cypher_results)),
-        desc="Running llm_text_generation on evaluation dataset",
+        iterable=list(
+            zip(evaluation_dataset, expected_tool_call_names, generated_cypher_results)
+        ),
+        desc=f"Running llm_text_generation: `{experiment_name}`",
         disable=not verbose,
     ):
         tool_call_id = f"run-{uuid.uuid4()}-0"
@@ -53,11 +57,11 @@ def text_generation_eval_workflow(
         # Formatting ToolMessage content
         if "text2cypher" in tool_name and cypher:
             tool_message_content = TEXT2CYPHER_CONTEXT_TEMPLATE.format(
-                cypher=cypher, context="[" + " ".join(data.reference_contexts) + "]"
+                cypher=cypher, context="[" + " ".join(data.retrieved_contexts) + "]"
             )
         elif "vector" in tool_name:
             tool_message_content = VECTOR_CYPHER_CONTEXT_TEMPLATE.format(
-                context="\n\n".join(data.reference_contexts)
+                context="\n\n".join(data.retrieved_contexts)
             )
         else:
             print("Unknown `tool_name`, skipping `user_input`: " f"{data.user_input}")
