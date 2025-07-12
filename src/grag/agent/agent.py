@@ -1,10 +1,11 @@
 """Agent to use tools or generate final answer"""
 
+from copy import deepcopy
 from typing import cast, Callable, List, Optional, Sequence, Type, Union
 from langchain_core.tools import BaseTool
 from langchain_core.runnables import RunnableConfig
 from langchain_core.language_models import BaseChatModel
-from langchain_core.messages import AIMessage, BaseMessage, ToolMessage
+from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, ToolMessage
 from langgraph.utils.runnable import RunnableCallable
 from langgraph.prebuilt.tool_node import ToolNode
 from langgraph.prebuilt.chat_agent_executor import (
@@ -24,7 +25,7 @@ def create_agent(
     tools: Union[Sequence[Union[BaseTool, Callable]], ToolNode],
     *,
     name: str = "agent",
-    prompt: Prompt = AGENT_SYSTEM_PROMPT,
+    prompt: Optional[Prompt] = None,
     fallback_tool_calling_cls: Optional[Type[BaseFallbackToolCalling]] = None,
 ) -> RunnableCallable:
     """
@@ -49,6 +50,8 @@ def create_agent(
         result (RunnableCallable): A callable object that processes agent
             state and returns the next agent message.
     """
+    if not prompt:
+        prompt = AGENT_SYSTEM_PROMPT
 
     # Convert tools to ToolNode if necessary and extract tool classes
     if isinstance(tools, ToolNode):
@@ -136,6 +139,20 @@ def create_agent(
 
         return False
 
+    def _query_injection(
+        ai_message: AIMessage,
+        human_message: HumanMessage
+    ):
+        if ai_message.tool_calls:
+            tool_calls = []
+            for tool_call in ai_message.tool_calls:
+                tool_call_copy = deepcopy(tool_call)
+                tool_call_copy["args"]["query"] = str(human_message.content)
+                tool_calls.append(tool_call_copy)
+            ai_message.tool_calls = tool_calls
+
+        return ai_message
+
     # Define the function that calls the model
     def call_model(state: StateSchema, config: RunnableConfig) -> StateSchema:
         """
@@ -154,13 +171,18 @@ def create_agent(
         messages = _get_state_value(state, "messages")
         _validate_chat_history(messages)
 
+        # Check fallback status
         if fallback_tool_calling_cls is not None:
             fallback: Union[StateSchema, bool] = _check_fallback(messages=messages)
             if fallback:
                 return fallback
 
+        # Generate tool calling or final answer
         response = cast(AIMessage, model_runnable.invoke(state, config))
         response.name = name
+
+        if isinstance(messages[-1], HumanMessage):
+            response = _query_injection(response, messages[-1])
 
         if _are_more_steps_needed(state, response):
             return {
@@ -194,13 +216,18 @@ def create_agent(
         messages = _get_state_value(state, "messages")
         _validate_chat_history(messages)
 
+        # Check fallback status
         if fallback_tool_calling_cls is not None:
             fallback: Union[StateSchema, bool] = _check_fallback(messages=messages)
             if fallback:
                 return fallback
 
+        # Generate tool calling or final answer
         response = cast(AIMessage, await model_runnable.ainvoke(state, config))
         response.name = name
+
+        if isinstance(messages[-1], HumanMessage):
+            response = _query_injection(response, messages[-1])
 
         if _are_more_steps_needed(state, response):
             return {
