@@ -1,6 +1,6 @@
 """Neo4j Cypher retriever query"""
 
-ARTICLE_RETRIEVAL_QUERY_1 = """
+ARTICLE_RETRIEVAL_QUERY = """
 // Collect initial search result nodes
 WITH collect({node: node, score: score}) AS init_nodes_data
 UNWIND init_nodes_data AS item
@@ -38,34 +38,13 @@ WITH init_nodes_data + sorted_related_data AS all_nodes_data
 UNWIND all_nodes_data AS data
 
 // Return final results
-RETURN data.node.text AS text, {
-    id: data.node.id,
-    type: "Article",
-    source: data.node.source,
-    score: data.score
+RETURN data.node.text AS text, data.score AS score, {
+    id: data.node.id
 } AS metadata
-"""
-
-ARTICLE_RETRIEVAL_QUERY_2 = """
-WITH node, score
-WHERE NOT node.id IN $excluded_ids
-
-RETURN node.text AS text, {
-    id: node.id,
-    type: "Article",
-    source: node.source,
-    score: score
-} AS metadata
-
-ORDER BY score DESC
-LIMIT $limit
 """
 
 DEFINITION_RETRIEVAL_QUERY = """
-RETURN node.text AS text, {
-    id: node.id,
-    type: "Definition",
-    source: node.source,
-    score: score
+RETURN node.text AS text, score, {
+    id: node.id
 } AS metadata
 """
