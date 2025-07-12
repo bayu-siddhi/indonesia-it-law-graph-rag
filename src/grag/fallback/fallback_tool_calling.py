@@ -25,12 +25,17 @@ class FallbackToolCalling(BaseFallbackToolCalling):
             fallback_tool_status (List[bool]): List indicating True for tool calls
                 needing fallback.
         """
-        fallback_tool_status = []
+        fallback_tool_status: List[bool] = []
         for tool_message in tool_messages:
             for availabel_tool_name in cls.tool_map:
                 if tool_message.name in availabel_tool_name:
                     fallback_tool_status.append(
                         not tool_message.artifact.get("is_context_fetched", False)
+                        if (
+                            hasattr(tool_message, "artifact")
+                            and isinstance(tool_message.artifact, dict)
+                        )
+                        else True
                     )
                     break
                 fallback_tool_status.append(False)
@@ -83,7 +88,13 @@ class FallbackToolCalling(BaseFallbackToolCalling):
             )
 
         return AIMessage(
-            content=(""),
+            content=(
+                "[Pesan fallback] Tidak dapat menemukan data yang sesuai untuk request: "
+                f"{prev_tool_call_args} dengan menggunakan tool {prev_tool_name}. "
+                "Mencoba ulang pencarian data dengan menggunakan tool alternatif "
+                f"{alternate_tool_name} untuk mendapatkan konteks tambahan yang mungkin "
+                "relevan bagi pertanyaan pengguna."
+            ),
             additional_kwargs={},
             response_metadata={},
             type=prev_tool_call.type,
@@ -93,8 +104,3 @@ class FallbackToolCalling(BaseFallbackToolCalling):
             tool_calls=new_tool_calls,
             invalid_tool_calls=prev_tool_call.invalid_tool_calls,
         )
-
-        # "Tidak dapat menemukan data yang sesuai untuk request: "
-        # f"{prev_tool_call_args} dengan menggunakan tool {prev_tool_name}. "
-        # "Mencoba ulang pencarian data dengan menggunakan tool alternatif "
-        # f"{alternate_tool_name} untuk mendapatkan konteks tambahan."
