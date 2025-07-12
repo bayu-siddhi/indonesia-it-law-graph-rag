@@ -30,7 +30,7 @@ def create_graph_rag_workflow(
     checkpointer: Optional[Checkpointer] = None,
     store: Optional[BaseStore] = None,
     name: Optional[str] = None,
-    fallback_tool_calling_cls: Optional[Type[BaseFallbackToolCalling]] = None,
+    fallback_tool_calling_cls: Optional[BaseFallbackToolCalling] = None,
 ) -> CompiledStateGraph:
     """
     Creates a compiled state graph workflow for an agent that can use tools.
