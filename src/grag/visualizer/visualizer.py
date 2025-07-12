@@ -2,7 +2,7 @@
 
 import time
 import uuid
-from typing import Callable, Dict, List, Set, Tuple, Union
+from typing import Any, Callable, Dict, List, Set, Tuple
 from neo4j import Result, RoutingControl
 from neo4j.graph import Graph
 from neo4j_viz import VisualizationGraph
@@ -19,8 +19,8 @@ from ..retrievers import create_text2cypher_retriever_tool, extract_cypher
 CAPTION_MAPPING = {
     "Regulation": {"caption": "download_name", "color": Color("#F79767")},
     "Subject": {"caption": "title", "color": Color("#ffdf81"), "size": 40},
-    "Consideration": {"caption": "old_caption", "color": Color("#569480")},
-    "Observation": {"caption": "old_caption", "color": Color("#D9C8AE")},
+    "Consideration": {"caption": None, "color": Color("#569480")},
+    "Observation": {"caption": None, "color": Color("#D9C8AE")},
     "Definition": {"caption": "name", "color": Color("#DA7194")},
     "Article:Effective": {"caption": "number", "color": Color("#4C8EDA")},
     "Effective:Article": {"caption": "number", "color": Color("#4C8EDA")},
@@ -81,6 +81,13 @@ def _autocomplete_relationship(neo4j_graph: Neo4jGraph, node_ids: List[str]) -> 
     return result
 
 
+def _modify_neo4j_date(vg: VisualizationGraph, attribute: str) -> None:
+    for node in vg.nodes:
+        for property in node.properties:
+            if attribute in property:
+                node.properties[property] = node.properties[property].iso_format()
+
+
 def _remove_attribute_from_node(vg: VisualizationGraph, attribute: str) -> None:
     """
     Removes a given attribute from every node in a VisualizationGraph.
@@ -93,14 +100,13 @@ def _remove_attribute_from_node(vg: VisualizationGraph, attribute: str) -> None:
     """
     for node in vg.nodes:
         attributes_to_remove = []
-        for data in node:
-            # data[0] is key, [1] is value
-            if attribute in data[0]:
-                attributes_to_remove.append(data[0])
+        for property in node.properties:
+            if attribute in property:
+                attributes_to_remove.append(property)
 
         # Hapus atribut di loop terpisah (wajib)
         for attribute_name in attributes_to_remove:
-            delattr(node, attribute_name)
+            del node.properties[attribute_name]
 
 
 def _modify_nodes_caption_and_relationship(
@@ -118,11 +124,10 @@ def _modify_nodes_caption_and_relationship(
     """
     for node in vg.nodes:
         if node.caption in caption_mapping:
-            node.old_caption = node.caption
-            node.caption = eval(f"node.{caption_mapping[node.old_caption]['caption']}")
-            # node.caption = f"node.{caption_mapping[node.old_caption]['caption']}"
-            node.color = caption_mapping[node.old_caption]["color"]
-            node.size = caption_mapping[node.old_caption].get("size", 50)
+            node.color = caption_mapping[node.caption]["color"]
+            node.size = caption_mapping[node.caption].get("size", 50)
+            if caption_mapping[node.caption]["caption"]:
+                node.caption = node.properties[caption_mapping[node.caption]["caption"]]
             node.caption_size = 1
 
     for rel in vg.relationships:
@@ -138,7 +143,7 @@ def create_graph_visualizer_tool(
     caption_mapping: Dict[str, Tuple[str, Color]] = CAPTION_MAPPING,
     autocomplete_relationship: bool = False,
     verbose: bool = False,
-) -> Callable[[ToolMessage], Dict[str, Union[bool, VisualizationGraph, float, Dict]]]:
+) -> Callable[[ToolMessage], Dict[str, Any]]:
     """
     Creates a graph visualization tool that supports visualizing Neo4j
     graphs from either Cypher queries or lists of node IDs. Automatically
@@ -166,16 +171,15 @@ def create_graph_visualizer_tool(
     cypher_viz_generator = create_text2cypher_retriever_tool(
         neo4j_graph=neo4j_graph,
         cypher_llm=llm,
-        qa_llm=llm,
         cypher_generation_prompt=cypher_generation_prompt,
         cypher_fix_prompt=cypher_fix_prompt,
-        skip_qa_llm=True,
+        add_context_to_artifact=True,
         verbose=verbose,
     )
 
     def graph_visualizer(
         tool_message: ToolMessage,
-    ) -> Dict[str, Union[VisualizationGraph, bool, float]]:
+    ) -> Dict[str, Any]:
         """
         Visualizes a subgraph from Neo4j using either a Cypher query or
         node IDs from ToolMessage.
@@ -185,8 +189,7 @@ def create_graph_visualizer_tool(
                 query in `.content`, or key "node_ids" in `.artifact`.
 
         Returns:
-            result (Dict[str, Union[VisualizationGraph, bool, float]]):
-                A dictionary containing:
+            result (Dict[str, Any]]): A dictionary containing:
                 - "viz": the VisualizationGraph instance (or False if failed),
                 - "run_time": execution time,
                 - "artifact": additional metadata and model usage info.
@@ -237,7 +240,8 @@ def create_graph_visualizer_tool(
 
                 # Convert raw result to visualization object
                 vg = from_neo4j(result)
-                _remove_attribute_from_node(vg, "date")
+                _modify_neo4j_date(vg, "date")
+                _remove_attribute_from_node(vg, "embedding")
                 _modify_nodes_caption_and_relationship(vg, caption_mapping)
 
             return {
@@ -250,7 +254,8 @@ def create_graph_visualizer_tool(
         result = _autocomplete_relationship(neo4j_graph, node_ids)
 
         vg = from_neo4j(result)
-        _remove_attribute_from_node(vg, "date")
+        _modify_neo4j_date(vg, "date")
+        _remove_attribute_from_node(vg, "embedding")
         _modify_nodes_caption_and_relationship(vg, caption_mapping)
 
         return {
