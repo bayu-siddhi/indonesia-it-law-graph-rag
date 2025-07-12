@@ -1,7 +1,7 @@
 """Text2Cypher retriever tool"""
 
 import time
-from typing import Any, Callable, Dict, List, Optional, Tuple
+from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 from langchain_core.tools import tool
 from langchain_core.embeddings import Embeddings
 from langchain_core.runnables import RunnableLambda
@@ -18,7 +18,7 @@ from .prompts import (
     CYPHER_QA_PROMPT,
     FEW_SHOT_PREFIX_TEMPLATE,
 )
-from .examples import text2cypher_example, text2cypher_example_prompt
+from .examples import TEXT2CYPHER_EXAMPLES, TEXT2CYPHER_EXAMPLES_PROMPT
 from .cypher_mod import GraphCypherQAChainMod
 
 
@@ -69,8 +69,6 @@ def _tool_result_formatter(
     artifact = {
         "is_context_fetched": False,
         "context": [],
-        # "cypher_gen_usage_metadata": {},
-        # "qa_usage_metadata": {}
     }
 
     # Handle cases where Cypher generation fails
@@ -112,10 +110,6 @@ def _tool_result_formatter(
             if add_context_to_artifact:
                 artifact["context"] = result["context"]
 
-        # if result["result"].usage_metadata:
-        #     for key, value in result["result"].usage_metadata.items():
-        #         artifact["qa_usage_metadata"][key] = value
-
         response = (
             "### **Hasil Pembuatan Kode Cypher:**\n"
             f"{result['cypher'][-1].content}\n\n"
@@ -123,36 +117,24 @@ def _tool_result_formatter(
             f"{result['result'].content}"
         )
 
-    # # Aggregate usage metadata from all Cypher generation steps
-    # for cypher_gen_ai_message in result["cypher"]:
-    #     if cypher_gen_ai_message.usage_metadata:
-    #         # TERNYATA GARA2 usage_metadata DEFAULTNYA ADALAH NONE
-    #         # MAKANYA ERROR PAS DIKASIH FUNCITON .items()
-    #         for key, value in cypher_gen_ai_message.usage_metadata.items():
-    #             if isinstance(value, (int, float)):
-    #                 artifact["cypher_gen_usage_metadata"][key] = \
-    #                     artifact["cypher_gen_usage_metadata"].get(key, 0) + value
-    #             else:
-    #                 artifact["cypher_gen_usage_metadata"][key] = value
-
     return response, artifact
 
 
 def create_text2cypher_retriever_tool(
     neo4j_graph: Neo4jGraph,
     cypher_llm: BaseChatModel,
-    qa_llm: BaseChatModel,
+    qa_llm: Optional[BaseChatModel] = None,
     embedder_model: Optional[Embeddings] = None,
     *,
     qa_prompt: Optional[BasePromptTemplate] = None,
     cypher_generation_prompt: Optional[BasePromptTemplate] = None,
     cypher_fix_prompt: Optional[BasePromptTemplate] = None,
     few_shot_prefix_template: Optional[str] = None,
-    few_shot_num_examples: Optional[int] = None,
+    few_shot_num_examples: int = 5,
     add_context_to_artifact: bool = False,
-    skip_qa_llm: bool = False,
+    skip_qa_llm: bool = True,
     verbose: bool = False,
-) -> Callable[[str], ToolMessage]:
+) -> Callable[[str], Union[str, ToolMessage]]:
     """
     Create a text-to-Cypher retriever tool using Neo4j and LLMs.
 
@@ -179,7 +161,8 @@ def create_text2cypher_retriever_tool(
             for Cypher error correction.
         few_shot_prefix_template (Optional[str]): Template string prefix for
             few-shot examples (required if examples used).
-        few_shot_num_examples (int): Number of few-shot examples to include (if enabled).
+        few_shot_num_examples (int): Number of few-shot examples to include
+            (if enabled).
         skip_qa_llm (bool): If True, skips the QA stage and returns raw data.
         verbose (bool): If True, enables verbose logging.
 
@@ -192,6 +175,8 @@ def create_text2cypher_retriever_tool(
             tool that receives a user query and returns result.
     """
     # Validated input data
+    if qa_llm is None:
+        qa_llm = cypher_llm
     if qa_prompt is None:
         qa_prompt = CYPHER_QA_PROMPT
     if cypher_generation_prompt is None:
@@ -200,8 +185,6 @@ def create_text2cypher_retriever_tool(
         cypher_fix_prompt = CYPHER_FIX_PROMPT
     if few_shot_prefix_template is None:
         few_shot_prefix_template = FEW_SHOT_PREFIX_TEMPLATE
-    if few_shot_num_examples is None:
-        few_shot_num_examples = 5
 
     # Create the text2cypher chain
     text2cypher = GraphCypherQAChainMod.from_llm(
@@ -211,7 +194,8 @@ def create_text2cypher_retriever_tool(
         cypher_fix_prompt=cypher_fix_prompt,
         cypher_llm=cypher_llm,
         qa_llm=qa_llm,
-        exclude_types=["embedding"],
+        exclude_types=["Effective", "Ineffective", "embedding"],
+        top_k=100,
         return_intermediate_steps=not skip_qa_llm,
         return_direct=skip_qa_llm,
         allow_dangerous_requests=True,
@@ -222,7 +206,7 @@ def create_text2cypher_retriever_tool(
     # if an embedder model is provided
     if embedder_model is not None:
         example_selector = SemanticSimilarityExampleSelector.from_examples(
-            examples=text2cypher_example,
+            examples=TEXT2CYPHER_EXAMPLES,
             embeddings=embedder_model,
             vectorstore_cls=InMemoryVectorStore,
             k=few_shot_num_examples,
@@ -230,17 +214,16 @@ def create_text2cypher_retriever_tool(
 
         few_shot_prompt_template = FewShotPromptTemplate(
             example_selector=example_selector,
-            example_prompt=text2cypher_example_prompt,
+            example_prompt=TEXT2CYPHER_EXAMPLES_PROMPT,
             prefix=few_shot_prefix_template,
             suffix="",
-            input_variables=["question"],
         )
 
         few_shot_selection = RunnableLambda(
             lambda x: {
                 "query": x,
                 "example": few_shot_prompt_template.invoke(
-                    {"question": x.lower()}
+                    {"query": x.lower()}
                 ).to_string(),
             }
         )
@@ -249,21 +232,44 @@ def create_text2cypher_retriever_tool(
     else:
         text2cypher_chain = text2cypher
 
+    # Create graph projection for graph analysis
+    with neo4j_graph._driver.session(database=neo4j_graph._database) as session:
+        if not session.execute_read(
+            lambda tx: list(tx.run(query="CALL gds.graph.exists('graph');"))
+        )[0]["exists"]:
+            session.execute_write(
+                lambda tx: list(
+                    tx.run(
+                        query="""
+                        MATCH (source)-[r]-(target)
+                        RETURN gds.graph.project(
+                            'graph', source, target
+                        );
+                        """
+                    )
+                )
+            )
+
     @tool(args_schema=SimpleQueryInput, response_format="content_and_artifact")
-    def text2cypher_retriever(
-        query: str,
-        # example: str = ""
-    ) -> ToolMessage:
+    def text2cypher_retriever(query: str) -> Union[str, ToolMessage]:
         """
-        **`text2cypher_retriever`**:
-        *   **Fungsi:** Menerjemahkan pertanyaan bahasa alami menjadi kueri Cypher untuk mengambil informasi spesifik dan terstruktur langsung dari database graf hukum Neo4j.
-        *   **Kapan Digunakan:** Gunakan alat ini ketika pertanyaan pengguna secara spesifik menanyakan:
-            *   Isi dari pasal, bagian, atau properti tertentu dari suatu peraturan.
-            *   Hubungan antar entitas hukum (misalnya, peraturan mana yang mencabut peraturan lain, pasal mana yang saling merujuk, dan jenis hubungan lainnya).
-            *   Struktur hierarki peraturan atau komponennya.
-            *   Properti atau fakta spesifik tentang entitas yang diketahui dalam graf (misalnya, tanggal berlaku, nomor, tahun).
-            *   **Informasi yang membutuhkan analisis graf**, seperti mencari pasal paling berpengaruh, entitas yang berperan sebagai penjembatan, rekomendasi pasal, deteksi komunitas tertentu, jalur terpendek antar entitas, dan analisis graf lainnya.
-        *   **Singkatnya:** Gunakan untuk kueri yang tepat mengenai struktur graf, hubungan, fakta spesifik, atau analisis graf, di mana jawabannya dapat ditemukan dengan mengueri skema graf yang telah ditentukan.
+        Gunakan alat ini untuk mendapatkan data/informasi hukum yang spesifik.
+        Misal ketika pertanyaan pengguna secara spesifik menanyakan:
+
+        *   Isi dari pasal, bagian, atribut, data, atau tertentu dari suatu peraturan
+            (seperti tanggal, nomor peraturan, judul peraturan, nomor pasal, judul pasal, 
+            dasar hukum suatu peraturan, latar belakang atau pertimbangan suatu peraturan, 
+            apakah suatu peraturan atau pasal masih aktif atau tidak, atau data spesifikk 
+            lainnya).
+        *   Hubungan antar entitas hukum (misalnya, peraturan mana yang mencabut peraturan
+            lain, pasal mana yang saling merujuk, dan pasal aktif sebelum/sesudah suatu
+            pasal, dan pasal yang terkait atau mirip dengan pasal lain).
+        *   Daftar judul subjek atau bidang, yang melekat pada setiap peraturan atau regulasi.
+        *   Struktur hierarki peraturan atau komponennya.
+        *   Informasi yang membutuhkan analisis graf, seperti mencari pasal paling berpengaruh,
+            entitas yang berperan sebagai penjembatan, rekomendasi pasal, deteksi komunitas
+            tertentu, jalur atau hubungan terpendek antar entitas hukum, dan analisis graf
+            lainnya.
         """
 
         start_time = time.time()
@@ -273,12 +279,8 @@ def create_text2cypher_retriever_tool(
         response, artifact = _tool_result_formatter(
             result, add_context_to_artifact, skip_qa_llm
         )
-
-        # artifact["cypher_gen_usage_metadata"]["model"] = cypher_llm.model
-        # if not skip_qa_llm: artifact["qa_usage_metadata"]["model"] = qa_llm.model
         artifact["run_time"] = time.time() - start_time
 
         return response, artifact
-        # return result, artifact
 
     return text2cypher_retriever

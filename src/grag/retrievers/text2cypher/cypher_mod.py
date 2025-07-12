@@ -103,14 +103,11 @@ def extract_cypher(text: str) -> str:
     matches = re.findall(pattern, text, re.DOTALL)
     cypher_query = matches[0] if matches else text
 
-    ############################################################################
     matches = re.search(r"MATCH|CALL|RETURN|YIELD", cypher_query, re.IGNORECASE)
     cypher_query = cypher_query if matches else ""
 
-    # BARU: Menambah spasi seteleh teks "cypher" awal
     if cypher_query.lower().startswith("cypher"):
         cypher_query = cypher_query.replace("cypher", "cypher ", 1)
-    ############################################################################
 
     # Quote node labels in backticks if they contain spaces and are not already quoted
     cypher_query = re.sub(
@@ -148,12 +145,10 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
         See https://python.langchain.com/docs/security for more information.
     """
 
-    ###############################################
     cypher_fix_chain: Runnable[Dict[str, Any], str]
     example_key: str = "example"  #: :meta private:
     max_cypher_generation_attempts: int = 3
     """The maximum amount of Cypher Generation attempts that should be made"""
-    ###############################################
 
     def __init__(self, **kwargs: Any) -> None:
         """Initialize the chain."""
@@ -186,9 +181,7 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
         *,
         qa_prompt: Optional[BasePromptTemplate] = None,
         cypher_generation_prompt: Optional[BasePromptTemplate] = None,
-        #############################################
         cypher_fix_prompt: Optional[BasePromptTemplate] = None,
-        #############################################
         cypher_llm: Optional[BaseLanguageModel] = None,
         qa_llm: Optional[BaseLanguageModel] = None,
         exclude_types: List[str] = [],
@@ -241,7 +234,7 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
                     )
             else:
                 cypher_generation_prompt = CYPHER_GENERATION_PROMPT
-        ############################################################################
+
         if cypher_fix_prompt:
             if cypher_llm_kwargs:
                 raise ValueError(
@@ -260,7 +253,7 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
                     )
             else:
                 cypher_fix_prompt = CYPHER_FIX_PROMPT
-        ############################################################################
+
         if qa_prompt:
             if qa_llm_kwargs:
                 raise ValueError(
@@ -300,14 +293,13 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
                 raise ValueError(
                     "Provided LLM does not support native tools/functions"
                 ) from exc
-        #######################################################################
         else:
             qa_chain = qa_prompt | qa_llm.bind(**use_qa_llm_kwargs)
         cypher_generation_chain = cypher_generation_prompt | cypher_llm.bind(
             **use_cypher_llm_kwargs
         )
+
         cypher_fix_chain = cypher_fix_prompt | cypher_llm.bind(**use_cypher_llm_kwargs)
-        #######################################################################
 
         if exclude_types and include_types:
             raise ValueError(
@@ -334,9 +326,7 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
             graph_schema=graph_schema,
             qa_chain=qa_chain,
             cypher_generation_chain=cypher_generation_chain,
-            ##################################
             cypher_fix_chain=cypher_fix_chain,
-            ##################################
             cypher_query_corrector=cypher_query_corrector,
             use_function_response=use_function_response,
             **kwargs,
@@ -360,10 +350,7 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
         args.update(inputs)
 
         list_generated_cypher: List = []
-
-        #####################################
         str_output_parser = StrOutputParser()
-        #####################################
 
         generated_cypher = self.cypher_generation_chain.invoke(
             args, callbacks=callbacks
@@ -379,10 +366,8 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
             cypher_result is None
             and cypher_generation_attempt < self.max_cypher_generation_attempts + 1
         ):
-            #########################################################################
             # Extract Cypher code if it is wrapped in backticks
             cypher_query = extract_cypher(str_output_parser.invoke(generated_cypher))
-            #########################################################################
 
             # Correct Cypher query if enabled
             if self.cypher_query_corrector:
@@ -398,12 +383,10 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
             )
 
             # Retrieve and limit the number of results
-            # Generated Cypher be null if query corrector identifies invalid schema
+            # Generated Cypher be empty str if query corrector identifies invalid schema
             if cypher_query:
-                ######################################################################
                 try:
-                    # cypher_result = self.graph.query(cypher_query)[: self.top_k]
-                    cypher_result = self.graph.query(cypher_query)
+                    cypher_result = self.graph.query(cypher_query)[: self.top_k]
                     if not cypher_result:
                         cypher_result = []
                 except Neo4jError as e:
@@ -431,16 +414,16 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
 
                     list_generated_cypher.append(generated_cypher)
                     cypher_generation_attempt += 1
-                ######################################################################
             else:
                 cypher_result = []
 
-        ############################################################################
+        if cypher_result is None:
+            cypher_result = []
+
         _run_manager.on_text("Skip QA LLM:", end="\n", verbose=self.verbose)
         _run_manager.on_text(
             str(self.return_direct), color="green", end="\n\n", verbose=self.verbose
         )
-        ############################################################################
 
         _run_manager.on_text("Full Context:", end="\n", verbose=self.verbose)
         _run_manager.on_text(
@@ -448,9 +431,8 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
         )
 
         final_result: Union[List[Dict[str, Any]], str]
-        ###########################################
+
         if self.return_direct or not cypher_result:
-            ###########################################
             final_result = cypher_result
         else:
 
@@ -465,11 +447,9 @@ class GraphCypherQAChainMod(GraphCypherQAChain):
                     callbacks=callbacks,
                 )
 
-        #######################################################################
         chain_result: Dict[str, Any] = {GENERATED_CYPHER_KEY: list_generated_cypher}
         if self.return_intermediate_steps:
             chain_result[INTERMEDIATE_STEPS_KEY] = cypher_result
         chain_result[self.output_key] = final_result
-        #######################################################################
 
         return chain_result
