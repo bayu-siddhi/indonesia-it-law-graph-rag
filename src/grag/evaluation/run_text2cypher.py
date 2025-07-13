@@ -1,4 +1,4 @@
-"""Text2Cypher retriever evaluation workflow"""
+"""Text2Cypher retriever workflow"""
 
 import copy
 import uuid
@@ -7,48 +7,51 @@ from tqdm import tqdm
 from langchain_neo4j import Neo4jGraph
 from langchain_core.messages import ToolCall
 from langchain_core.embeddings import Embeddings
-from langchain_core.prompts import BasePromptTemplate
 from langchain_core.language_models import BaseChatModel
 from ragas import EvaluationDataset
 from ..retrievers import create_text2cypher_retriever_tool, extract_cypher
 
 
-def text2cypher_eval_workflow(
+def run_text2cypher_workflow(
     evaluation_dataset: EvaluationDataset,
     experiment_name: str,
     *,
     neo4j_graph: Neo4jGraph,
     cypher_llm: BaseChatModel,
-    qa_llm: BaseChatModel,
     embedder_model: Optional[Embeddings] = None,
-    qa_prompt: Optional[BasePromptTemplate] = None,
-    cypher_generation_prompt: Optional[BasePromptTemplate] = None,
-    cypher_fix_prompt: Optional[BasePromptTemplate] = None,
-    few_shot_prefix_template: Optional[str] = None,
-    few_shot_num_examples: Optional[int] = None,
     verbose: bool = True,
 ) -> Tuple[EvaluationDataset, List[str]]:
     """
-    TODO: Docstring
+    Runs a text-to-cypher retrieval workflow to enriches the evaluation 
+    dataset with retrieved contexts and generated Cypher queries.
+
+    Args:
+        evaluation_dataset (EvaluationDataset): The EvaluationDataset object 
+            containing questions for evaluation.
+        experiment_name (str): The name of the experiment.
+        neo4j_graph (Neo4jGraph): The Neo4j graph instance.
+        cypher_llm (BaseChatModel): The language model used for generating 
+            Cypher queries.
+        embedder_model (Optional[Embeddings], optional): The embedding model 
+            used for semantic similarity search (few-shot examples). Defaults 
+            to None.
+        verbose (bool, optional): Whether to display progress information. 
+            Defaults to True.
+
+    Returns:
+        results (Tuple[EvaluationDataset, List[str]]): A tuple containing 
+            the modified EvaluationDataset object with retrieved contexts 
+            and a list of generated Cypher queries.
     """
+    generated_cypher_results = []
     evaluation_dataset = copy.deepcopy(evaluation_dataset)
 
     text2cypher_retriever = create_text2cypher_retriever_tool(
         neo4j_graph=neo4j_graph,
         cypher_llm=cypher_llm,
-        qa_llm=qa_llm,
         embedder_model=embedder_model,
-        qa_prompt=qa_prompt,
-        cypher_generation_prompt=cypher_generation_prompt,
-        cypher_fix_prompt=cypher_fix_prompt,
-        few_shot_prefix_template=few_shot_prefix_template,
-        few_shot_num_examples=few_shot_num_examples,
         add_context_to_artifact=True,
-        skip_qa_llm=True,
-        verbose=False,
     )
-
-    generated_cypher_results = []
 
     for data in tqdm(
         iterable=evaluation_dataset,
@@ -76,5 +79,6 @@ def text2cypher_eval_workflow(
             ]
 
         data.retrieved_contexts = retrieved_contexts
+
 
     return evaluation_dataset, generated_cypher_results

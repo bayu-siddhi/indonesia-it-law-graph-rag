@@ -1,16 +1,14 @@
-"""LLM text generation evaluation workflow"""
+"""LLM text generation workflow"""
 
 import copy
 import uuid
-from typing import List
+from typing import List, Optional
 from tqdm import tqdm
 from langchain_core.messages import AIMessage, HumanMessage, ToolMessage
 from langchain_core.language_models import BaseChatModel
+from langgraph.prebuilt.chat_agent_executor import Prompt
 from ragas import EvaluationDataset
 from ..agent import create_agent
-
-# from langgraph.graph import MessagesState
-# from langgraph.prebuilt.chat_agent_executor import _get_prompt_runnable
 
 
 VECTOR_CYPHER_CONTEXT_TEMPLATE = """
@@ -30,20 +28,40 @@ TEXT2CYPHER_CONTEXT_TEMPLATE = """
 """.strip()
 
 
-def text_generation_eval_workflow(
+def run_text_generation_workflow(
     evaluation_dataset: EvaluationDataset,
     experiment_name: str,
     *,
     expected_tool_call_names: List[str],
     generated_cypher_results: List[str],
     llm: BaseChatModel,
+    prompt: Optional[Prompt] = None,
     verbose: bool = True,
 ) -> EvaluationDataset:
     """
-    TODO: Docstring
+    Runs a text generation workflow to evaluate the LLM's ability to 
+    generate responses based on retrieved contexts.
+
+    Args:
+        evaluation_dataset (EvaluationDataset): The EvaluationDataset 
+            object containing questions and retrieved contexts for evaluation.
+        experiment_name (str): The name of the experiment.
+        expected_tool_call_names (List[str]): A list of expected tool 
+            call names corresponding to each question.
+        generated_cypher_results (List[str]): A list of generated Cypher 
+            queries (if applicable) corresponding to each question.
+        llm (BaseChatModel): The language model used for text generation.
+        prompt (Optional[Prompt], optional): An optional prompt to use for 
+            the LLM. Defaults to None.
+        verbose (bool, optional): Whether to display progress information. 
+            Defaults to True.
+
+    Returns:
+        result (EvaluationDataset): The modified EvaluationDataset object 
+            with the generated responses added to each data point.
     """
     evaluation_dataset = copy.deepcopy(evaluation_dataset)
-    agent = create_agent(model=llm, tools=[])
+    agent = create_agent(model=llm, tools=[], prompt=prompt)
 
     for data, tool_name, cypher in tqdm(
         iterable=list(
@@ -67,7 +85,11 @@ def text_generation_eval_workflow(
             print("Unknown `tool_name`, skipping `user_input`: " f"{data.user_input}")
             continue
 
-        # Create fake "messages" state history
+        tool_message_content += (
+            "\n\nJawab apa adanya berdasarkan data atau informasi yang telah diambil ini."
+        )
+
+        # Create messages state history
         state = {
             "messages": [
                 HumanMessage(content=data.user_input),
@@ -90,7 +112,8 @@ def text_generation_eval_workflow(
             ]
         }
 
+        # Run LLM
         response = agent.invoke(state)
-        data.response = response["messages"][-1].content
+        data.response = str(response["messages"][-1].content)
 
     return evaluation_dataset
