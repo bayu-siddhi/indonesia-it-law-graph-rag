@@ -1,3 +1,5 @@
+"""Constants and encodings used in regulation scraping and parsing."""
+
 REGULATION_CODES = {
     "type": {
         "UU": "01",

@@ -1,1 +1,3 @@
-from src.prep.regulation_parser.parser import RegulationParser
+"""Regulation parser modules"""
+
+from .parser import RegulationParser

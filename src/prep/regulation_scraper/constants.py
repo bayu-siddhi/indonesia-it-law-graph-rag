@@ -1,3 +1,5 @@
+"""Constants used for scraping regulation data, including selectors and regex patterns."""
+
 ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 
 BPK_SELECTORS = {
@@ -8,7 +10,7 @@ BPK_SELECTORS = {
         "reg_number": "div.col-lg-8.fw-semibold.fs-5.text-gray-600",
         "reg_title": "div.col-lg-10.fs-2.fw-bold.pe-4",
         "reg_subject": "span.badge.badge-light-primary.mb-2",
-        "reg_href": "div.col-lg-10.fs-2.fw-bold.pe-4 a"
+        "reg_href": "div.col-lg-10.fs-2.fw-bold.pe-4 a",
     },
     "regulation_metadata": {
         "metadata_box": "/html/body/div/div/div[2]/div[2]/div/div[1]/div[2]/div",
@@ -16,7 +18,7 @@ BPK_SELECTORS = {
         "download_box": "/html/body/div/div/div[2]/div[2]/div/div[2]/div[1]",
         "status_box": "/html/body/div/div/div[2]/div[2]/div/div[2]/div[2]",
         "status_inner_box": "div.container.fs-6",
-    }
+    },
 }
 
 BPK_REGEX_PATTERNS = {
@@ -25,7 +27,7 @@ BPK_REGEX_PATTERNS = {
         "ineffective_reg": r"dicabut dengan",
         "reg_new_number": r"\b(?:nomor|no\.)\s+(\d+)",
         "reg_old_number": r"(\d+)\/",
-        "reg_year": r"tahun\s+(\d+)"
+        "reg_year": r"tahun\s+(\d+)",
     },
     "regulation_metadata": {
         "reg_title": r"judul\s(.*)",
@@ -43,23 +45,29 @@ BPK_REGEX_PATTERNS = {
         "reg_subject": r"subjek\s(.*)",
         "reg_status": r"status\s(.*)",
         "reg_institution": r"lokasi\s(.*)",
-        "status_type": r"(dicabut dengan :|diubah dengan :|mengubah :|mencabut :)"
-    }
+        "status_type": r"(dicabut dengan :|diubah dengan :|mengubah :|mencabut :)",
+    },
 }
 
 KOMDIGI_SELECTORS = {
-    "regulation_product_content": {
-        "regulation_box": "div#produk-content"
-    }
+    "regulation_product_content": {"regulation_box": "div#produk-content"}
 }
 
 KOMDIGI_REGEX_PATTERNS = {
-    "__check_ol_tag": {
+    "_check_ol_tag": {
         "html_tag": r"<\s*([a-zA-Z0-9]+)([^>]*)>",
-        "ol_type": r"\b(lower-alpha|decimal|a)\b"
+        "ol_type": r"\b(lower-alpha|decimal|a)\b",
     },
-    "__process_parent_element_text": {
-        "special_token_pattern_1": r"(^bab \w+$)|(^pasal \w+$)|(^bagian \w+$)|(^paragraf \w+$)|(^menimbang$)|(^mengingat$)|(^memutuskan$)|(^menetapkan$)|(^memperhatikan$)",
-        "special_token_pattern_2": r"(^dengan rahmat Tuhan Yang Maha Esa)|(^dengan persetujuan)|(^agar setiap orang mengetahuinya)|(^ditetapkan di)|(^disahkan di)|(^diundangkan di)"
-    }
+    "_process_parent_element_text": {
+        "special_token_pattern_1": (
+            r"(^bab \w+$)|(^pasal \w+$)|(^bagian \w+$)|(^paragraf \w+$)|"
+            r"(^menimbang$)|(^mengingat$)|(^memutuskan$)|(^menetapkan$)|"
+            r"(^memperhatikan$)"
+        ),
+        "special_token_pattern_2": (
+            r"(^dengan rahmat Tuhan Yang Maha Esa)|(^dengan persetujuan)|"
+            r"(^agar setiap orang mengetahuinya)|(^ditetapkan di)|"
+            r"(^disahkan di)|(^diundangkan di)"
+        ),
+    },
 }
