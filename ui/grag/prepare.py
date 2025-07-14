@@ -107,7 +107,9 @@ def configure_graph_rag(
     )
 
     graph_visualizer_tool: Callable[[ToolMessage], Dict[str, Any]] = (
-        create_graph_visualizer_tool(llm=llm, neo4j_graph=neo4j_graph)
+        create_graph_visualizer_tool(
+            llm=llm, neo4j_graph=neo4j_graph, autocomplete_relationship=True
+        )
     )
 
     checkpointer = MemorySaver()
