@@ -1,0 +1,1938 @@
+[
+    {
+        "id": "199901036100000",
+        "url": "https://peraturan.bpk.go.id/Details/45357/uu-no-36-tahun-1999",
+        "download_link": "https://peraturan.bpk.go.id/Download/33857/UU%20Nomor%2036%20Tahun%201999.pdf",
+        "download_name": "UU_1999_036",
+        "title": "Undang-undang (UU) Nomor 36 Tahun 1999 tentang Telekomunikasi",
+        "short_title": "UU Nomor 36 Tahun 1999",
+        "about": "Telekomunikasi",
+        "type": "Undang-undang (UU)",
+        "short_type": "UU",
+        "amendment": "0",
+        "number": "36",
+        "year": "1999",
+        "institution": "Pemerintah Pusat",
+        "issue_place": "Jakarta",
+        "issue_date": "1999-09-08",
+        "effective_date": "2000-09-08",
+        "subjects": [
+            "ILMU PENGETAHUAN DAN TEKNOLOGI"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/46798/uu-no-3-tahun-1989"
+            ],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/246523/uu-no-6-tahun-2023",
+                "https://peraturan.bpk.go.id/Details/234926/perpu-no-2-tahun-2022",
+                "https://peraturan.bpk.go.id/Details/149750/uu-no-11-tahun-2020"
+            ],
+            "amend": []
+        }
+    },
+    {
+        "id": "199901040100000",
+        "url": "https://peraturan.bpk.go.id/Details/45370/uu-no-40-tahun-1999",
+        "download_link": "https://peraturan.bpk.go.id/Download/33870/UU%20Nomor%2040%20Tahun%201999.pdf",
+        "download_name": "UU_1999_040",
+        "title": "Undang-undang (UU) Nomor 40 Tahun 1999 tentang Pers",
+        "short_title": "UU Nomor 40 Tahun 1999",
+        "about": "Pers",
+        "type": "Undang-undang (UU)",
+        "short_type": "UU",
+        "amendment": "0",
+        "number": "40",
+        "year": "1999",
+        "institution": "Pemerintah Pusat",
+        "issue_place": "Jakarta",
+        "issue_date": "1999-09-23",
+        "effective_date": "1999-09-23",
+        "subjects": [
+            "PERS, POS, DAN PERIKLANAN"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/47032/uu-no-21-tahun-1982",
+                "https://peraturan.bpk.go.id/Details/49551/uu-no-4-tahun-1967",
+                "https://peraturan.bpk.go.id/Details/49812/uu-no-11-tahun-1966"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "200801011100000",
+        "url": "https://peraturan.bpk.go.id/Details/37589/uu-no-11-tahun-2008",
+        "download_link": "https://peraturan.bpk.go.id/Download/26683/UU%20Nomor%2011%20Tahun%202008.pdf",
+        "download_name": "UU_2008_011",
+        "title": "Undang-undang (UU) Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik",
+        "short_title": "UU Nomor 11 Tahun 2008",
+        "about": "Informasi dan Transaksi Elektronik",
+        "type": "Undang-undang (UU)",
+        "short_type": "UU",
+        "amendment": "0",
+        "number": "11",
+        "year": "2008",
+        "institution": "Pemerintah Pusat",
+        "issue_place": "Jakarta",
+        "issue_date": "2008-04-21",
+        "effective_date": "2010-04-21",
+        "subjects": [
+            "PERS, POS, DAN PERIKLANAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/274494/uu-no-1-tahun-2024",
+                "https://peraturan.bpk.go.id/Details/37582/uu-no-19-tahun-2016"
+            ],
+            "amend": []
+        }
+    },
+    {
+        "id": "201601019100000",
+        "url": "https://peraturan.bpk.go.id/Details/37582/uu-no-19-tahun-2016",
+        "download_link": "https://peraturan.bpk.go.id/Download/26676/UU%20Nomor%20%2019%20Tahun%202016.pdf",
+        "download_name": "UU_2016_019",
+        "title": "Undang-undang (UU) Nomor 19 Tahun 2016 tentang Perubahan Atas Undang-Undang Nomor 11 Tahun 2008 Tentang Informasi Dan Transaksi Elektronik",
+        "short_title": "UU Nomor 19 Tahun 2016 tentang Perubahan Atas Undang-Undang Nomor 11 Tahun 2008",
+        "about": "Perubahan Atas Undang-Undang Nomor 11 Tahun 2008 Tentang Informasi Dan Transaksi Elektronik",
+        "type": "Undang-undang (UU)",
+        "short_type": "UU",
+        "amendment": "1",
+        "number": "19",
+        "year": "2016",
+        "institution": "Pemerintah Pusat",
+        "issue_place": "Jakarta",
+        "issue_date": "2016-11-25",
+        "effective_date": "2016-11-25",
+        "subjects": [
+            "PERS, POS, DAN PERIKLANAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/274494/uu-no-1-tahun-2024"
+            ],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/37589/uu-no-11-tahun-2008"
+            ]
+        }
+    },
+    {
+        "id": "202201027100000",
+        "url": "https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022",
+        "download_link": "https://peraturan.bpk.go.id/Download/224884/UU%20Nomor%2027%20Tahun%202022.pdf",
+        "download_name": "UU_2022_027",
+        "title": "Undang-undang (UU) Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi",
+        "short_title": "UU Nomor 27 Tahun 2022",
+        "about": "Pelindungan Data Pribadi",
+        "type": "Undang-undang (UU)",
+        "short_type": "UU",
+        "amendment": "0",
+        "number": "27",
+        "year": "2022",
+        "institution": "Pemerintah Pusat",
+        "issue_place": "Jakarta",
+        "issue_date": "2022-10-17",
+        "effective_date": "2022-10-17",
+        "subjects": [
+            "HAK ASASI MANUSIA",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "202401001100000",
+        "url": "https://peraturan.bpk.go.id/Details/274494/uu-no-1-tahun-2024",
+        "download_link": "https://peraturan.bpk.go.id/Download/332870/UU%20Nomor%201%20Tahun%202024.pdf",
+        "download_name": "UU_2024_001",
+        "title": "Undang-undang (UU) Nomor 1 Tahun 2024 tentang Perubahan Kedua atas Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik",
+        "short_title": "UU Nomor 1 Tahun 2024 tentang Perubahan Kedua atas Undang-Undang Nomor 11 Tahun 2008",
+        "about": "Perubahan Kedua atas Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik",
+        "type": "Undang-undang (UU)",
+        "short_type": "UU",
+        "amendment": "2",
+        "number": "1",
+        "year": "2024",
+        "institution": "Pemerintah Pusat",
+        "issue_place": "Jakarta",
+        "issue_date": "2024-01-02",
+        "effective_date": "2024-01-02",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "INFORMASI PUBLIK"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/37582/uu-no-19-tahun-2016",
+                "https://peraturan.bpk.go.id/Details/37589/uu-no-11-tahun-2008"
+            ]
+        }
+    },
+    {
+        "id": "200002052100000",
+        "url": "https://peraturan.bpk.go.id/Details/53323/pp-no-52-tahun-2000",
+        "download_link": "https://peraturan.bpk.go.id/Download/42706/PP%20No.52%20TH%202000.pdf",
+        "download_name": "PP_2000_052",
+        "title": "Peraturan Pemerintah (PP) Nomor 52 Tahun 2000 tentang Penyelenggaraan Telekomunikasi",
+        "short_title": "PP Nomor 52 Tahun 2000",
+        "about": "Penyelenggaraan Telekomunikasi",
+        "type": "Peraturan Pemerintah (PP)",
+        "short_type": "PP",
+        "amendment": "0",
+        "number": "52",
+        "year": "2000",
+        "institution": "Pemerintah Pusat",
+        "issue_place": "Jakarta",
+        "issue_date": "2000-07-11",
+        "effective_date": "2000-07-11",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/57453/pp-no-8-tahun-1993",
+                "https://peraturan.bpk.go.id/Details/57657/pp-no-4-tahun-1992",
+                "https://peraturan.bpk.go.id/Details/58179/pp-no-37-tahun-1991",
+                "https://peraturan.bpk.go.id/Details/66584/pp-no-20-tahun-1980",
+                "https://peraturan.bpk.go.id/Details/70184/pp-no-55-tahun-1970",
+                "https://peraturan.bpk.go.id/Details/70801/pp-no-21-tahun-1967"
+            ],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/161970/pp-no-46-tahun-2021"
+            ],
+            "amend": []
+        }
+    },
+    {
+        "id": "201902071100000",
+        "url": "https://peraturan.bpk.go.id/Details/122030/pp-no-71-tahun-2019",
+        "download_link": "https://peraturan.bpk.go.id/Download/112816/PP%20Nomor%2071%20Tahun%202019.pdf",
+        "download_name": "PP_2019_071",
+        "title": "Peraturan Pemerintah (PP) Nomor 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik",
+        "short_title": "PP Nomor 71 Tahun 2019",
+        "about": "Penyelenggaraan Sistem dan Transaksi Elektronik",
+        "type": "Peraturan Pemerintah (PP)",
+        "short_type": "PP",
+        "amendment": "0",
+        "number": "71",
+        "year": "2019",
+        "institution": "Pemerintah Pusat",
+        "issue_place": "Jakarta",
+        "issue_date": "2019-10-04",
+        "effective_date": "2019-10-10",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/5296/pp-no-82-tahun-2012"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201902080100000",
+        "url": "https://peraturan.bpk.go.id/Details/126143/pp-no-80-tahun-2019",
+        "download_link": "https://peraturan.bpk.go.id/Download/117172/PP%20Nomor%2080%20Tahun%202019.pdf",
+        "download_name": "PP_2019_080",
+        "title": "Peraturan Pemerintah (PP) Nomor 80 Tahun 2019 tentang Perdagangan Melalui Sistem Elektronik",
+        "short_title": "PP Nomor 80 Tahun 2019",
+        "about": "Perdagangan Melalui Sistem Elektronik",
+        "type": "Peraturan Pemerintah (PP)",
+        "short_type": "PP",
+        "amendment": "0",
+        "number": "80",
+        "year": "2019",
+        "institution": "Pemerintah Pusat",
+        "issue_place": "Jakarta",
+        "issue_date": "2019-11-20",
+        "effective_date": "2019-11-25",
+        "subjects": [
+            "ILMU PENGETAHUAN DAN TEKNOLOGI",
+            "PERLINDUNGAN USAHA, PERUSAHAAN, BADAN USAHA, PERDAGANGAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "202102046100000",
+        "url": "https://peraturan.bpk.go.id/Details/161970/pp-no-46-tahun-2021",
+        "download_link": "https://peraturan.bpk.go.id/Download/154649/PP%20Nomor%2046%20Tahun%202021.pdf",
+        "download_name": "PP_2021_046",
+        "title": "Peraturan Pemerintah (PP) Nomor 46 Tahun 2021 tentang Pos, Telekomunikasi, dan Penyiaran",
+        "short_title": "PP Nomor 46 Tahun 2021",
+        "about": "Pos, Telekomunikasi, dan Penyiaran",
+        "type": "Peraturan Pemerintah (PP)",
+        "short_type": "PP",
+        "amendment": "0",
+        "number": "46",
+        "year": "2021",
+        "institution": "Pemerintah Pusat",
+        "issue_place": "Jakarta",
+        "issue_date": "2021-02-02",
+        "effective_date": "2021-02-02",
+        "subjects": [
+            "PERS, POS, DAN PERIKLANAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "CIPTA KERJA"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/5347/pp-no-15-tahun-2013",
+                "https://peraturan.bpk.go.id/Details/49688/pp-no-52-tahun-2005",
+                "https://peraturan.bpk.go.id/Details/49678/pp-no-51-tahun-2005",
+                "https://peraturan.bpk.go.id/Details/49674/pp-no-50-tahun-2005",
+                "https://peraturan.bpk.go.id/Details/49339/pp-no-11-tahun-2005",
+                "https://peraturan.bpk.go.id/Details/53326/pp-no-53-tahun-2000",
+                "https://peraturan.bpk.go.id/Details/53323/pp-no-52-tahun-2000"
+            ]
+        }
+    },
+    {
+        "id": "200703011100000",
+        "url": "https://peraturan.bpk.go.id/Details/159911/permenkominfo-no-11permkominfo42007-tahun-200",
+        "download_link": "https://peraturan.bpk.go.id/Download/152473/Permen%20Kominfo%20Nomor%2011%20Tahun%202007.pdf",
+        "download_name": "PERMENKOMINFO_2007_011",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 11/PER/M.KOMINFO/4/2007 Tahun 2007 tentang Penyediaan Kewajiban Pelayanan Universal Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 11/PER/M.KOMINFO/4/2007 Tahun 2007",
+        "about": "Penyediaan Kewajiban Pelayanan Universal Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "11",
+        "year": "2007",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2007-04-13",
+        "effective_date": "2007-04-13",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "PERIZINAN, PELAYANAN PUBLIK"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/159937/permenkominfo-no-38permkominfo92007-tahun-200"
+            ],
+            "amend": []
+        }
+    },
+    {
+        "id": "200703026100000",
+        "url": "https://peraturan.bpk.go.id/Details/159930/permenkominfo-no-26permkominfo52007-tahun-200",
+        "download_link": "https://peraturan.bpk.go.id/Download/256228/Permen%20Kominfo%20Nomor%2026%20Tahun%202007.pdf",
+        "download_name": "PERMENKOMINFO_2007_026",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 26/PER/M.KOMINFO/5/2007 Tahun 2007 tentang Pengamanan Pemanfaatan Jaringan Telekomunikasi Berbasis Protokol Internet",
+        "short_title": "PERMENKOMINFO Nomor 26/PER/M.KOMINFO/5/2007 Tahun 2007",
+        "about": "Pengamanan Pemanfaatan Jaringan Telekomunikasi Berbasis Protokol Internet",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "26",
+        "year": "2007",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2007-05-04",
+        "effective_date": "2007-05-04",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/160510/permenkominfo-no-27permkominfo92006-tahun-200"
+            ],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/150097/permenkominfo-no-5-tahun-2017",
+                "https://peraturan.bpk.go.id/Details/157635/permenkominfo-no-24permkominfo122011-tahun-20",
+                "https://peraturan.bpk.go.id/Details/158417/permenkominfo-no-29permkominfo122010-tahun-20",
+                "https://peraturan.bpk.go.id/Details/158237/permenkominfo-no-16permkominfo102010-tahun-20"
+            ],
+            "amend": []
+        }
+    },
+    {
+        "id": "200703038100000",
+        "url": "https://peraturan.bpk.go.id/Details/159937/permenkominfo-no-38permkominfo92007-tahun-200",
+        "download_link": "https://peraturan.bpk.go.id/Download/152500/Permen%20Kominfo%20Nomor%2038%20Tahun%202007.pdf",
+        "download_name": "PERMENKOMINFO_2007_038",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 38/PER/M.KOMINFO/9/2007 Tahun 2007 tentang Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 11/PER/M.KOMINFO/04/2007 tentang Penyediaan Kewajiban Pelayanan Universal Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 38/PER/M.KOMINFO/9/2007 Tahun 2007",
+        "about": "Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 11/PER/M.KOMINFO/04/2007 tentang Penyediaan Kewajiban Pelayanan Universal Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "1",
+        "number": "38",
+        "year": "2007",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2007-09-20",
+        "effective_date": "2007-09-20",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "PERIZINAN, PELAYANAN PUBLIK"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/159911/permenkominfo-no-11permkominfo42007-tahun-200"
+            ]
+        }
+    },
+    {
+        "id": "200903041100000",
+        "url": "https://peraturan.bpk.go.id/Details/159035/permenkominfo-no-41permkominfo102009-tahun-20",
+        "download_link": "https://peraturan.bpk.go.id/Download/151518/Permen%20Kominfo%20Nomor%2041%20Tahun%202009.pdf",
+        "download_name": "PERMENKOMINFO_2009_041",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 41/PER/M.KOMINFO/10/2009 Tahun 2009 tentang Tata Cara Penilaian Pencapaian Tingkat Komponen Dalam Negeri pada Penyelenggaraan Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 41/PER/M.KOMINFO/10/2009 Tahun 2009",
+        "about": "Tata Cara Penilaian Pencapaian Tingkat Komponen Dalam Negeri pada Penyelenggaraan Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "41",
+        "year": "2009",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2009-10-16",
+        "effective_date": "2009-10-16",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "200903042100000",
+        "url": "https://peraturan.bpk.go.id/Details/159038/permenkominfo-no-42permkominfo102009-tahun-20",
+        "download_link": "https://peraturan.bpk.go.id/Download/254807/Permen%20Kominfo%20Nomor%2042%20Tahun%202009.pdf",
+        "download_name": "PERMENKOMINFO_2009_042",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 42/PER/M.KOMINFO/10/2009 Tahun 2009 tentang Tata Cara Memperoleh Izin bagi Lembaga Penyiaran Asing yang Melakukan Kegiatan Peliputan di Indonesia",
+        "short_title": "PERMENKOMINFO Nomor 42/PER/M.KOMINFO/10/2009 Tahun 2009",
+        "about": "Tata Cara Memperoleh Izin bagi Lembaga Penyiaran Asing yang Melakukan Kegiatan Peliputan di Indonesia",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "42",
+        "year": "2009",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2009-10-19",
+        "effective_date": "2009-10-19",
+        "subjects": [
+            "PERS, POS, DAN PERIKLANAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "PERIZINAN, PELAYANAN PUBLIK"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201003001100000",
+        "url": "https://peraturan.bpk.go.id/Details/158049/permenkominfo-no-1permkominfo12010-tahun-2010",
+        "download_link": "https://peraturan.bpk.go.id/Download/150526/Permen%20Kominfo%20Nomor%201%20Tahun%202010.pdf",
+        "download_name": "PERMENKOMINFO_2010_001",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 1/PER/M.KOMINFO/1/2010 Tahun 2010 tentang Penyelenggaraan Jaringan Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 1/PER/M.KOMINFO/1/2010 Tahun 2010",
+        "about": "Penyelenggaraan Jaringan Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "1",
+        "year": "2010",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2010-01-25",
+        "effective_date": "2010-01-25",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/150682/permenkominfo-no-7-tahun-2015",
+                "https://peraturan.bpk.go.id/Details/151479/permenkominfo-no-38-tahun-2014"
+            ],
+            "amend": []
+        }
+    },
+    {
+        "id": "201003016100000",
+        "url": "https://peraturan.bpk.go.id/Details/158237/permenkominfo-no-16permkominfo102010-tahun-20",
+        "download_link": "https://peraturan.bpk.go.id/Download/150715/Permen%20Kominfo%20Nomor%2016%20Tahun%202010.pdf",
+        "download_name": "PERMENKOMINFO_2010_016",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 16/PER/M.KOMINFO/10/2010 Tahun 2010 tentang Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 26/PER/M.KOMINFO/5/2007 tentang Pengamanan Pemanfaatan Jaringan Telekomunikasi Berbasis Protokol Internet",
+        "short_title": "PERMENKOMINFO Nomor 16/PER/M.KOMINFO/10/2010 Tahun 2010",
+        "about": "Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 26/PER/M.KOMINFO/5/2007 tentang Pengamanan Pemanfaatan Jaringan Telekomunikasi Berbasis Protokol Internet",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "1",
+        "number": "16",
+        "year": "2010",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2010-10-20",
+        "effective_date": "2010-09-30",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/150097/permenkominfo-no-5-tahun-2017",
+                "https://peraturan.bpk.go.id/Details/157635/permenkominfo-no-24permkominfo122011-tahun-20",
+                "https://peraturan.bpk.go.id/Details/158417/permenkominfo-no-29permkominfo122010-tahun-20"
+            ],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/159930/permenkominfo-no-26permkominfo52007-tahun-200"
+            ]
+        }
+    },
+    {
+        "id": "201003029100000",
+        "url": "https://peraturan.bpk.go.id/Details/158417/permenkominfo-no-29permkominfo122010-tahun-20",
+        "download_link": "https://peraturan.bpk.go.id/Download/150895/Permen%20Kominfo%20Nomor%2029%20Tahun%202010.pdf",
+        "download_name": "PERMENKOMINFO_2010_029",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 29/PER/M.KOMINFO/12/2010 Tahun 2010 tentang Perubahan Kedua atas Peraturan Menteri Komunikasi dan Informatika Nomor : 26/PER/M.KOMINFO/5/2007 tentang Pengamanan Pemanfaatan Jaringan Telekomunikasi Berbasis Protokol Internet",
+        "short_title": "PERMENKOMINFO Nomor 29/PER/M.KOMINFO/12/2010 Tahun 2010",
+        "about": "Perubahan Kedua atas Peraturan Menteri Komunikasi dan Informatika Nomor : 26/PER/M.KOMINFO/5/2007 tentang Pengamanan Pemanfaatan Jaringan Telekomunikasi Berbasis Protokol Internet",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "2",
+        "number": "29",
+        "year": "2010",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2010-12-30",
+        "effective_date": "2011-01-01",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/150097/permenkominfo-no-5-tahun-2017",
+                "https://peraturan.bpk.go.id/Details/157635/permenkominfo-no-24permkominfo122011-tahun-20"
+            ],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/158237/permenkominfo-no-16permkominfo102010-tahun-20",
+                "https://peraturan.bpk.go.id/Details/159930/permenkominfo-no-26permkominfo52007-tahun-200"
+            ]
+        }
+    },
+    {
+        "id": "201103002100000",
+        "url": "https://peraturan.bpk.go.id/Details/157623/permenkominfo-no-2permkominfo32011-tahun-2011",
+        "download_link": "https://peraturan.bpk.go.id/Download/150088/Kemen%20Kominfo%20Nomor%202%20Tahun%202011.pdf",
+        "download_name": "PERMENKOMINFO_2011_002",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 2/PER/M.KOMINFO/3/2011 Tahun 2011 tentang Sertifikasi Radio Elektronika dan Operator Radio",
+        "short_title": "PERMENKOMINFO Nomor 2/PER/M.KOMINFO/3/2011 Tahun 2011",
+        "about": "Sertifikasi Radio Elektronika dan Operator Radio",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "2",
+        "year": "2011",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2011-03-03",
+        "effective_date": "2011-03-07",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "JABATAN / PROFESI / KEAHLIAN / SERTIFIKASI"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201103024100000",
+        "url": "https://peraturan.bpk.go.id/Details/157635/permenkominfo-no-24permkominfo122011-tahun-20",
+        "download_link": "https://peraturan.bpk.go.id/Download/150100/Kemen%20Kominfo%20Nomor%2024%20Tahun%202011.pdf",
+        "download_name": "PERMENKOMINFO_2011_024",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 24/PER/M.KOMINFO/12/2011 Tahun 2011 tentang Perubahan Ketiga atas Peraturan Menteri Komunikasi dan Informatika Nomor 26/Per/M.Kominfo/5/2007 tentang Pengamanan Pemanfaatan Jaringan Telekomunikasi Berbasis Protokol Internet",
+        "short_title": "PERMENKOMINFO Nomor 24/PER/M.KOMINFO/12/2011 Tahun 2011",
+        "about": "Perubahan Ketiga atas Peraturan Menteri Komunikasi dan Informatika Nomor 26/Per/M.Kominfo/5/2007 tentang Pengamanan Pemanfaatan Jaringan Telekomunikasi Berbasis Protokol Internet",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "3",
+        "number": "24",
+        "year": "2011",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2011-12-07",
+        "effective_date": "2011-12-07",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/150097/permenkominfo-no-5-tahun-2017"
+            ],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/158417/permenkominfo-no-29permkominfo122010-tahun-20",
+                "https://peraturan.bpk.go.id/Details/158237/permenkominfo-no-16permkominfo102010-tahun-20",
+                "https://peraturan.bpk.go.id/Details/159930/permenkominfo-no-26permkominfo52007-tahun-200"
+            ]
+        }
+    },
+    {
+        "id": "201203041100000",
+        "url": "https://peraturan.bpk.go.id/Details/161640/permenkominfo-no-41-tahun-2012",
+        "download_link": "https://peraturan.bpk.go.id/Download/154306/Permen%20Kominfo%20Nomor%2041%20Tahun%202012.pdf",
+        "download_name": "PERMENKOMINFO_2012_041",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 41 Tahun 2012 tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Berlangganan Melalui Satelit, Kabel, dan Terestrial",
+        "short_title": "PERMENKOMINFO Nomor 41 Tahun 2012",
+        "about": "Penyelenggaraan Penyiaran Lembaga Penyiaran Berlangganan Melalui Satelit, Kabel, dan Terestrial",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "41",
+        "year": "2012",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2012-10-04",
+        "effective_date": "2012-10-17",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201303020100000",
+        "url": "https://peraturan.bpk.go.id/Details/155397/permenkominfo-no-20-tahun-2013",
+        "download_link": "https://peraturan.bpk.go.id/Download/147767/Kemen%20Kominfo%20Nomor%2020%20Tahun%202013.pdf",
+        "download_name": "PERMENKOMINFO_2013_020",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 20 Tahun 2013 tentang Jaringan Dokumentasi dan Informasi Hukum Kementerian Komunikasi dan Informatika",
+        "short_title": "PERMENKOMINFO Nomor 20 Tahun 2013",
+        "about": "Jaringan Dokumentasi dan Informasi Hukum Kementerian Komunikasi dan Informatika",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "20",
+        "year": "2013",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2013-06-25",
+        "effective_date": "2013-06-28",
+        "subjects": [
+            "PERS, POS, DAN PERIKLANAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "JARINGAN DOKUMENTASI DAN INFORMASI HUKUM / JDIH"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201303023100000",
+        "url": "https://peraturan.bpk.go.id/Details/155401/permenkominfo-no-23-tahun-2013",
+        "download_link": "https://peraturan.bpk.go.id/Download/147771/Kemen%20Kominfo%20Nomor%2023%20Tahun%202013.pdf",
+        "download_name": "PERMENKOMINFO_2013_023",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 23 Tahun 2013 tentang Pengelolaan Nama Domain",
+        "short_title": "PERMENKOMINFO Nomor 23 Tahun 2013",
+        "about": "Pengelolaan Nama Domain",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "23",
+        "year": "2013",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2013-10-07",
+        "effective_date": "2013-10-18",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201303024100000",
+        "url": "https://peraturan.bpk.go.id/Details/161671/permenkominfo-no-24-tahun-2013",
+        "download_link": "https://peraturan.bpk.go.id/Download/154337/Permen%20Kominfo%20Nomor%2024%20Tahun%202013.pdf",
+        "download_name": "PERMENKOMINFO_2013_024",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 24 Tahun 2013 tentang Layanan Jelajah (Roaming) Internasional",
+        "short_title": "PERMENKOMINFO Nomor 24 Tahun 2013",
+        "about": "Layanan Jelajah (Roaming) Internasional",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "24",
+        "year": "2013",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2013-10-31",
+        "effective_date": "2013-11-27",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201403014100000",
+        "url": "https://peraturan.bpk.go.id/Details/161730/permenkominfo-no-14-tahun-2014",
+        "download_link": "https://peraturan.bpk.go.id/Download/154395/Kemen%20Kominfo%20Nomor%2014%20Tahun%202014.pdf",
+        "download_name": "PERMENKOMINFO_2014_014",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 14 Tahun 2014 tentang Kampanye Pemilihan Umum melalui Penggunaan Jasa Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 14 Tahun 2014",
+        "about": "Kampanye Pemilihan Umum melalui Penggunaan Jasa Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "14",
+        "year": "2014",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2014-03-14",
+        "effective_date": "2014-03-24",
+        "subjects": [
+            "PARTAI POLITIK DAN PEMILU",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "PEMILIHAN UMUM DAERAH, DPRD, PEMILIHAN KEPALA DAERAH"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/158680/permenkominfo-no-11permkominfo22009-tahun-200"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201403038100000",
+        "url": "https://peraturan.bpk.go.id/Details/151479/permenkominfo-no-38-tahun-2014",
+        "download_link": "https://peraturan.bpk.go.id/Download/143724/Permen%20Kominfo%20Nomor%2038%20Tahun%202014.pdf",
+        "download_name": "PERMENKOMINFO_2014_038",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 38 Tahun 2014 tentang Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 1/PER/M.KOMINFO/1/2010 Tentang Penyelenggaraan Jaringan Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 38 Tahun 2014",
+        "about": "Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 1/PER/M.KOMINFO/1/2010 Tentang Penyelenggaraan Jaringan Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "1",
+        "number": "38",
+        "year": "2014",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2014-09-29",
+        "effective_date": "2014-10-08",
+        "subjects": [
+            "PERS, POS, DAN PERIKLANAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/150682/permenkominfo-no-7-tahun-2015"
+            ],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/158049/permenkominfo-no-1permkominfo12010-tahun-2010"
+            ]
+        }
+    },
+    {
+        "id": "201503007100000",
+        "url": "https://peraturan.bpk.go.id/Details/150682/permenkominfo-no-7-tahun-2015",
+        "download_link": "https://peraturan.bpk.go.id/Download/142893/Permen%20Kominfo%20Nomor%207%20Tahun%202015.pdf",
+        "download_name": "PERMENKOMINFO_2015_007",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 7 Tahun 2015 tentang Perubahan Kedua Atas Peraturan Menteri Komunikasi Dan Informatika Nomor : 01/Per/M.Kominfo/01/2010 Tentang Penyelenggaraan Jaringan Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 7 Tahun 2015",
+        "about": "Perubahan Kedua Atas Peraturan Menteri Komunikasi Dan Informatika Nomor : 01/Per/M.Kominfo/01/2010 Tentang Penyelenggaraan Jaringan Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "2",
+        "number": "7",
+        "year": "2015",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2015-02-12",
+        "effective_date": "2015-02-12",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/151479/permenkominfo-no-38-tahun-2014",
+                "https://peraturan.bpk.go.id/Details/158049/permenkominfo-no-1permkominfo12010-tahun-2010"
+            ]
+        }
+    },
+    {
+        "id": "201503017100000",
+        "url": "https://peraturan.bpk.go.id/Details/161772/permenkominfo-no-17-tahun-2015",
+        "download_link": "https://peraturan.bpk.go.id/Download/154439/Kemen%20Kominfo%20Nomor%2017%20Tahun%202015.pdf",
+        "download_name": "PERMENKOMINFO_2015_017",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 17 Tahun 2015 tentang Persyaratan Teknis Pembaca Kartu Cerdas Nirkontak (Contactless Smart Card Reader)",
+        "short_title": "PERMENKOMINFO Nomor 17 Tahun 2015",
+        "about": "Persyaratan Teknis Pembaca Kartu Cerdas Nirkontak (Contactless Smart Card Reader)",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "17",
+        "year": "2015",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2015-04-20",
+        "effective_date": "2015-04-27",
+        "subjects": [
+            "ILMU PENGETAHUAN DAN TEKNOLOGI",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201503026100000",
+        "url": "https://peraturan.bpk.go.id/Details/151097/permenkominfo-no-26-tahun-2015",
+        "download_link": "https://peraturan.bpk.go.id/Download/143316/Permen%20Kominfo%20Nomor%2026%20Tahun%202015.pdf",
+        "download_name": "PERMENKOMINFO_2015_026",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 26 Tahun 2015 tentang Pelaksanaan Penutupan Konten dan/atau Hak Akses Pengguna Pelanggaran Hak Cipta dan/atau Hak Terkait Dalam Sistem Elektronik",
+        "short_title": "PERMENKOMINFO Nomor 26 Tahun 2015",
+        "about": "Pelaksanaan Penutupan Konten dan/atau Hak Akses Pengguna Pelanggaran Hak Cipta dan/atau Hak Terkait Dalam Sistem Elektronik",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "26",
+        "year": "2015",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2015-07-02",
+        "effective_date": "",
+        "subjects": [
+            "HAK ATAS KEKAYAAN INTELEKTUAL",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201503032100000",
+        "url": "https://peraturan.bpk.go.id/Details/151143/permenkominfo-no-32-tahun-2015",
+        "download_link": "https://peraturan.bpk.go.id/Download/143362/Permen%20Kominfo%20Nomor%2032%20Tahun%202015.pdf",
+        "download_name": "PERMENKOMINFO_2015_032",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 32 Tahun 2015 tentang Pengelolaan Nomor Protokol Internet",
+        "short_title": "PERMENKOMINFO Nomor 32 Tahun 2015",
+        "about": "Pengelolaan Nomor Protokol Internet",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "32",
+        "year": "2015",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2015-12-01",
+        "effective_date": "2015-12-02",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201503035100000",
+        "url": "https://peraturan.bpk.go.id/Details/151148/permenkominfo-no-35-tahun-2015",
+        "download_link": "https://peraturan.bpk.go.id/Download/143367/Permen%20Kominfo%20Nomor%2035%20Tahun%202015.pdf",
+        "download_name": "PERMENKOMINFO_2015_035",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 35 Tahun 2015 tentang Persyaratan Teknis Alat dan Perangkat Telekomunikasi Jarak Dekat",
+        "short_title": "PERMENKOMINFO Nomor 35 Tahun 2015",
+        "about": "Persyaratan Teknis Alat dan Perangkat Telekomunikasi Jarak Dekat",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "35",
+        "year": "2015",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2015-12-31",
+        "effective_date": "2015-12-31",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/161632/permenkominfo-no-34-tahun-2012"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201603004100000",
+        "url": "https://peraturan.bpk.go.id/Details/150525/permenkominfo-no-4-tahun-2016",
+        "download_link": "https://peraturan.bpk.go.id/Download/142725/Permen%20Kominfo%20Nomor%204%20Tahun%202017.pdf",
+        "download_name": "PERMENKOMINFO_2016_004",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 4 Tahun 2016 tentang Sistem Manajemen Pengamanan Informasi",
+        "short_title": "PERMENKOMINFO Nomor 4 Tahun 2016",
+        "about": "Sistem Manajemen Pengamanan Informasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "4",
+        "year": "2016",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2016-04-08",
+        "effective_date": "2016-04-11",
+        "subjects": [
+            "PERS, POS, DAN PERIKLANAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201603005100000",
+        "url": "https://peraturan.bpk.go.id/Details/150526/permenkominfo-no-5-tahun-2016",
+        "download_link": "https://peraturan.bpk.go.id/Download/142726/Permen%20Kominfo%20Nomor%205%20Tahun%202016.pdf",
+        "download_name": "PERMENKOMINFO_2016_005",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2016 tentang Uji Coba Teknologi Telekomunikasi, Informatika, Dan Penyiaran",
+        "short_title": "PERMENKOMINFO Nomor 5 Tahun 2016",
+        "about": "Uji Coba Teknologi Telekomunikasi, Informatika, Dan Penyiaran",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "5",
+        "year": "2016",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2016-04-08",
+        "effective_date": "2016-04-11",
+        "subjects": [
+            "ILMU PENGETAHUAN DAN TEKNOLOGI",
+            "PERS, POS, DAN PERIKLANAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201603010100000",
+        "url": "https://peraturan.bpk.go.id/Details/150531/permenkominfo-no-10-tahun-2016",
+        "download_link": "https://peraturan.bpk.go.id/Download/142731/Permen%20Kominfo%20Nomor%2010%20Tahun%202017.pdf",
+        "download_name": "PERMENKOMINFO_2016_010",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 10 Tahun 2016 tentang Layanan Nomor Tunggal Panggilan Darurat",
+        "short_title": "PERMENKOMINFO Nomor 10 Tahun 2016",
+        "about": "Layanan Nomor Tunggal Panggilan Darurat",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "10",
+        "year": "2016",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2016-07-11",
+        "effective_date": "2016-07-15",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "PERIZINAN, PELAYANAN PUBLIK"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201603013100000",
+        "url": "https://peraturan.bpk.go.id/Details/150535/permenkominfo-no-13-tahun-2016",
+        "download_link": "https://peraturan.bpk.go.id/Download/142735/Permen%20Kominfo%20Nomor%2013%20Tahun%202016.pdf",
+        "download_name": "PERMENKOMINFO_2016_013",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 13 Tahun 2016 tentang Hasil Pemetaan Urusan Pemerintahan Daerah di Bidang Komunikasi dan Informatika",
+        "short_title": "PERMENKOMINFO Nomor 13 Tahun 2016",
+        "about": "Hasil Pemetaan Urusan Pemerintahan Daerah di Bidang Komunikasi dan Informatika",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "13",
+        "year": "2016",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2016-08-18",
+        "effective_date": "2016-08-18",
+        "subjects": [
+            "OTONOMI DAERAH DAN PEMERINTAH DAERAH",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201603014100000",
+        "url": "https://peraturan.bpk.go.id/Details/150536/permenkominfo-no-14-tahun-2016",
+        "download_link": "https://peraturan.bpk.go.id/Download/142736/Permen%20Kominfo%20Nomor%2014%20Tahun%202016.pdf",
+        "download_name": "PERMENKOMINFO_2016_014",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 14 Tahun 2016 tentang Pedoman Nomenklatur Perangkat Daerah Bidang Komunikasi dan Informatika",
+        "short_title": "PERMENKOMINFO Nomor 14 Tahun 2016",
+        "about": "Pedoman Nomenklatur Perangkat Daerah Bidang Komunikasi dan Informatika",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "14",
+        "year": "2016",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2016-08-18",
+        "effective_date": "2016-08-18",
+        "subjects": [
+            "OTONOMI DAERAH DAN PEMERINTAH DAERAH",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "STRUKTUR ORGANISASI",
+            "STANDAR / PEDOMAN"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201603020100000",
+        "url": "https://peraturan.bpk.go.id/Details/150543/permenkominfo-no-20-tahun-2016",
+        "download_link": "https://peraturan.bpk.go.id/Download/142743/Permen%20Kominfo%20Nomor%2020%20Tahun%202016.pdf",
+        "download_name": "PERMENKOMINFO_2016_020",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 20 Tahun 2016 tentang Perlindungan Data Pribadi Dalam Sistem Elektronik",
+        "short_title": "PERMENKOMINFO Nomor 20 Tahun 2016",
+        "about": "Perlindungan Data Pribadi Dalam Sistem Elektronik",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "20",
+        "year": "2016",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2016-11-07",
+        "effective_date": "2016-12-01",
+        "subjects": [
+            "PERLINDUNGAN KONSUMEN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201703005100000",
+        "url": "https://peraturan.bpk.go.id/Details/150097/permenkominfo-no-5-tahun-2017",
+        "download_link": "https://peraturan.bpk.go.id/Download/142264/Permen%20Kominfo%20Nomor%205%20Tahun%202017.pdf",
+        "download_name": "PERMENKOMINFO_2017_005",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2017 tentang Perubahan Keempat atas Peraturan Menteri Komunikasi dan Informatika Nomor 26/PER/M.KOMINFO/5/2007 tentang Pengamanan Pemanfaatan Jaringan Telekomunikasi Berbasis Protokol Internet",
+        "short_title": "PERMENKOMINFO Nomor 5 Tahun 2017",
+        "about": "Perubahan Keempat atas Peraturan Menteri Komunikasi dan Informatika Nomor 26/PER/M.KOMINFO/5/2007 tentang Pengamanan Pemanfaatan Jaringan Telekomunikasi Berbasis Protokol Internet",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "4",
+        "number": "5",
+        "year": "2017",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2017-01-19",
+        "effective_date": "2017-01-24",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/157635/permenkominfo-no-24permkominfo122011-tahun-20",
+                "https://peraturan.bpk.go.id/Details/158417/permenkominfo-no-29permkominfo122010-tahun-20",
+                "https://peraturan.bpk.go.id/Details/158237/permenkominfo-no-16permkominfo102010-tahun-20",
+                "https://peraturan.bpk.go.id/Details/159930/permenkominfo-no-26permkominfo52007-tahun-200"
+            ]
+        }
+    },
+    {
+        "id": "201703006100000",
+        "url": "https://peraturan.bpk.go.id/Details/150102/permenkominfo-no-6-tahun-2017",
+        "download_link": "https://peraturan.bpk.go.id/Download/142269/Permen%20Kominfo%20Nomor%206%20Tahun%202017.pdf",
+        "download_name": "PERMENKOMINFO_2017_006",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 6 Tahun 2017 tentang Penyelenggaraan Layanan Televisi Protokol Internet (Internet Protocol Television)",
+        "short_title": "PERMENKOMINFO Nomor 6 Tahun 2017",
+        "about": "Penyelenggaraan Layanan Televisi Protokol Internet (Internet Protocol Television)",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "6",
+        "year": "2017",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2017-01-24",
+        "effective_date": "2017-02-07",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "PERIZINAN, PELAYANAN PUBLIK"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/151297/permenkominfo-no-15-tahun-2014",
+                "https://peraturan.bpk.go.id/Details/158233/permenkominfo-no-11permkominfo72010-tahun-201"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201803001100000",
+        "url": "https://peraturan.bpk.go.id/Details/149083/permenkominfo-no-1-tahun-2018",
+        "download_link": "https://peraturan.bpk.go.id/Download/141107/Permen%20Kominfo%20Nomor%201%20Tahun%202018.pdf",
+        "download_name": "PERMENKOMINFO_2018_001",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 1 Tahun 2018 tentang Akreditasi Lembaga Pelatihan Teknis Bidang Teknologi Informasi dan Komunikasi",
+        "short_title": "PERMENKOMINFO Nomor 1 Tahun 2018",
+        "about": "Akreditasi Lembaga Pelatihan Teknis Bidang Teknologi Informasi dan Komunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "1",
+        "year": "2018",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2018-02-19",
+        "effective_date": "2018-04-12",
+        "subjects": [
+            "ILMU PENGETAHUAN DAN TEKNOLOGI",
+            "PERS, POS, DAN PERIKLANAN",
+            "PENDIDIKAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201803003100000",
+        "url": "https://peraturan.bpk.go.id/Details/149634/permenkominfo-no-3-tahun-2018",
+        "download_link": "https://peraturan.bpk.go.id/Download/141680/Permen%20Kominfo%20Nomor%203%20Tahun%202018.pdf",
+        "download_name": "PERMENKOMINFO_2018_003",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 3 Tahun 2018 tentang Organisasi Dan Tata Kerja Badan Aksesibilitas Telekomunikasi dan Informasi",
+        "short_title": "PERMENKOMINFO Nomor 3 Tahun 2018",
+        "about": "Organisasi Dan Tata Kerja Badan Aksesibilitas Telekomunikasi dan Informasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "3",
+        "year": "2018",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2018-05-23",
+        "effective_date": "2018-06-05",
+        "subjects": [
+            "PROGRAM, RENCANA PEMBANGUNAN DAN RENCANA KERJA",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "STRUKTUR ORGANISASI"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/259754/permenkominfo-no-4-tahun-2023"
+            ],
+            "amend": []
+        }
+    },
+    {
+        "id": "201803010100000",
+        "url": "https://peraturan.bpk.go.id/Details/149653/permenkominfo-no-10-tahun-2018",
+        "download_link": "https://peraturan.bpk.go.id/Download/141699/Permen%20Kominfo%20Nomor%2010%20Tahun%202018.pdf",
+        "download_name": "PERMENKOMINFO_2018_010",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 10 Tahun 2018 tentang Pelaksanaan Kewajiban Pelayanan Universal Telekomunikasi dan Informatika",
+        "short_title": "PERMENKOMINFO Nomor 10 Tahun 2018",
+        "about": "Pelaksanaan Kewajiban Pelayanan Universal Telekomunikasi dan Informatika",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "10",
+        "year": "2018",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2018-08-27",
+        "effective_date": "2018-08-30",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "PERIZINAN, PELAYANAN PUBLIK"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/151093/permenkominfo-no-25-tahun-2015",
+                "https://peraturan.bpk.go.id/Details/156866/permenkominfo-no-23-tahun-2012"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201803011100000",
+        "url": "https://peraturan.bpk.go.id/Details/149655/permenkominfo-no-11-tahun-2018",
+        "download_link": "https://peraturan.bpk.go.id/Download/141701/Permen%20Kominfo%20Nomor%2011%20Tahun%202018.pdf",
+        "download_name": "PERMENKOMINFO_2018_011",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 11 Tahun 2018 tentang Penyelenggaraan Sertifikasi Elektronik",
+        "short_title": "PERMENKOMINFO Nomor 11 Tahun 2018",
+        "about": "Penyelenggaraan Sertifikasi Elektronik",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "11",
+        "year": "2018",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2018-08-27",
+        "effective_date": "2018-09-06",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "JABATAN / PROFESI / KEAHLIAN / SERTIFIKASI"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201803012100000",
+        "url": "https://peraturan.bpk.go.id/Details/149726/permenkominfo-no-12-tahun-2018",
+        "download_link": "https://peraturan.bpk.go.id/Download/141806/Permen%20Kominfo%20Nomor%2012%20Tahun%202018.pdf",
+        "download_name": "PERMENKOMINFO_2018_012",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 12 Tahun 2018 tentang Penyelenggaraan Telekomunikasi Khusus Untuk Keperluan Instansi Pemerintah atau Badan Hukum",
+        "short_title": "PERMENKOMINFO Nomor 12 Tahun 2018",
+        "about": "Penyelenggaraan Telekomunikasi Khusus Untuk Keperluan Instansi Pemerintah atau Badan Hukum",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "12",
+        "year": "2018",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2018-09-17",
+        "effective_date": "2018-09-24",
+        "subjects": [
+            "ADMINISTRASI DAN TATA USAHA NEGARA",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/150527/permenkominfo-no-6-tahun-2016"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201803016100000",
+        "url": "https://peraturan.bpk.go.id/Details/149737/permenkominfo-no-16-tahun-2018",
+        "download_link": "https://peraturan.bpk.go.id/Download/141816/Permen%20Kominfo%20Nomor%2016%20Tahun%202018.pdf",
+        "download_name": "PERMENKOMINFO_2018_016",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 16 Tahun 2018 tentang Ketentuan Operasional Sertifikasi Alat dan/atau Perangkat Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 16 Tahun 2018",
+        "about": "Ketentuan Operasional Sertifikasi Alat dan/atau Perangkat Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "16",
+        "year": "2018",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2018-12-31",
+        "effective_date": "2018-12-31",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "JABATAN / PROFESI / KEAHLIAN / SERTIFIKASI"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/150110/permenkominfo-no-11-tahun-2017",
+                "https://peraturan.bpk.go.id/Details/150548/permenkominfo-no-23-tahun-2016",
+                "https://peraturan.bpk.go.id/Details/161758/permenkominfo-no-1-tahun-2015",
+                "https://peraturan.bpk.go.id/Details/161733/permenkominfo-no-18-tahun-2014",
+                "https://peraturan.bpk.go.id/Details/155281/permenkominfo-no-5-tahun-2013"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201903004100000",
+        "url": "https://peraturan.bpk.go.id/Details/255619/permenkominfo-no-4-tahun-2019",
+        "download_link": "https://peraturan.bpk.go.id/Download/312308/2019permen4..pdf",
+        "download_name": "PERMENKOMINFO_2019_004",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 4 Tahun 2019 tentang Persyaratan Teknis Alat dan/atau Perangkat Telekomunikasi untuk Keperluan Penyelenggaraan Televisi Siaran dan Radio Siaran",
+        "short_title": "PERMENKOMINFO Nomor 4 Tahun 2019",
+        "about": "Persyaratan Teknis Alat dan/atau Perangkat Telekomunikasi untuk Keperluan Penyelenggaraan Televisi Siaran dan Radio Siaran",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "4",
+        "year": "2019",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2019-06-25",
+        "effective_date": "2019-06-28",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "SISTEM PENGENDALIAN INTERN"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/151295/permenkominfo-no-9-tahun-2014",
+                "https://peraturan.bpk.go.id/Details/151292/permenkominfo-no-7-tahun-2014",
+                "https://peraturan.bpk.go.id/Details/151289/permenkominfo-no-5-tahun-2014",
+                "https://peraturan.bpk.go.id/Details/155404/permenkominfo-no-26-tahun-2013",
+                "https://peraturan.bpk.go.id/Details/161635/permenkominfo-no-37-tahun-2012",
+                "https://peraturan.bpk.go.id/Details/161634/permenkominfo-no-36-tahun-2012"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201903005100000",
+        "url": "https://peraturan.bpk.go.id/Details/255658/permenkominfo-no-5-tahun-2019",
+        "download_link": "https://peraturan.bpk.go.id/Download/312351/2019permen5..pdf",
+        "download_name": "PERMENKOMINFO_2019_005",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2019 tentang Optimalisasi Penggunaan Spektrum Frekuensi Radio",
+        "short_title": "PERMENKOMINFO Nomor 5 Tahun 2019",
+        "about": "Optimalisasi Penggunaan Spektrum Frekuensi Radio",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "5",
+        "year": "2019",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2019-06-28",
+        "effective_date": "2019-07-31",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "SISTEM PENGENDALIAN INTERN"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "201903013100000",
+        "url": "https://peraturan.bpk.go.id/Details/203113/permenkominfo-no-13-tahun-2019",
+        "download_link": "https://peraturan.bpk.go.id/Download/197082/BN%201329-2019.pdf",
+        "download_name": "PERMENKOMINFO_2019_013",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 13 Tahun 2019 tentang Penyelenggaraan Jasa Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 13 Tahun 2019",
+        "about": "Penyelenggaraan Jasa Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "13",
+        "year": "2019",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2019-10-18",
+        "effective_date": "2020-04-25",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/150107/permenkominfo-no-9-tahun-2017",
+                "https://peraturan.bpk.go.id/Details/150106/permenkominfo-no-8-tahun-2017",
+                "https://peraturan.bpk.go.id/Details/161769/permenkominfo-no-8-tahun-2015",
+                "https://peraturan.bpk.go.id/Details/151469/permenkominfo-no-34-tahun-2014",
+                "https://peraturan.bpk.go.id/Details/155301/permenkominfo-no-16-tahun-2013",
+                "https://peraturan.bpk.go.id/Details/155300/permenkominfo-no-15-tahun-2013",
+                "https://peraturan.bpk.go.id/Details/156871/permenkominfo-no-27-tahun-2012",
+                "https://peraturan.bpk.go.id/Details/156870/permenkominfo-no-26-tahun-2012",
+                "https://peraturan.bpk.go.id/Details/156869/permenkominfo-no-25-tahun-2012",
+                "https://peraturan.bpk.go.id/Details/157624/permenkominfo-no-14permkominfo42011-tahun-201",
+                "https://peraturan.bpk.go.id/Details/159683/permenkominfo-no-7pmkominfo42008-tahun-2008",
+                "https://peraturan.bpk.go.id/Details/159785/permenkominfo-no-31permkominfo92008-tahun-200",
+                "https://peraturan.bpk.go.id/Details/159905/permenkominfo-no-10permkominfo32007-tahun-200",
+                "https://peraturan.bpk.go.id/Details/160501/permenkominfo-no-5permkominfoi2006-tahun-2006"
+            ],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/203125/permenkominfo-no-14-tahun-2021",
+                "https://peraturan.bpk.go.id/Details/203112/permenkominfo-no-1-tahun-2021",
+                "https://peraturan.bpk.go.id/Details/169167/permenkominfo-no-2-tahun-2020"
+            ],
+            "amend": []
+        }
+    },
+    {
+        "id": "202003001100000",
+        "url": "https://peraturan.bpk.go.id/Details/169165/permenkominfo-no-1-tahun-2020",
+        "download_link": "https://peraturan.bpk.go.id/Download/162261/Nomor%201%20Tahun%202020.pdf",
+        "download_name": "PERMENKOMINFO_2020_001",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 1 Tahun 2020 tentang Pengendalian Alat Dan/Atau Perangkat Telekomunikasi Yang Tersambung Ke Jaringan Bergerak Seluler Melalui Identifikasi International Mobile Equipment Identity",
+        "short_title": "PERMENKOMINFO Nomor 1 Tahun 2020",
+        "about": "Pengendalian Alat Dan/Atau Perangkat Telekomunikasi Yang Tersambung Ke Jaringan Bergerak Seluler Melalui Identifikasi International Mobile Equipment Identity",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "1",
+        "year": "2020",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2020-04-16",
+        "effective_date": "2020-04-16",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "202003002100000",
+        "url": "https://peraturan.bpk.go.id/Details/169167/permenkominfo-no-2-tahun-2020",
+        "download_link": "https://peraturan.bpk.go.id/Download/162263/Nomor%202%20Tahun%202020.pdf",
+        "download_name": "PERMENKOMINFO_2020_002",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 2 Tahun 2020 tentang Perubahan Atas Peraturan Menteri Komunikasi Dan Informatika Nomor 13 Tahun 2019 Tentang Penyelenggaraan Jasa Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 2 Tahun 2020 tentang Perubahan Atas Peraturan Menteri Komunikasi Dan Informatika Nomor 13 Tahun 2019",
+        "about": "Perubahan Atas Peraturan Menteri Komunikasi Dan Informatika Nomor 13 Tahun 2019 Tentang Penyelenggaraan Jasa Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "1",
+        "number": "2",
+        "year": "2020",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2020-04-20",
+        "effective_date": "2021-01-31",
+        "subjects": [
+            "PENGADAAN BARANG / JASA",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/203125/permenkominfo-no-14-tahun-2021",
+                "https://peraturan.bpk.go.id/Details/203112/permenkominfo-no-1-tahun-2021"
+            ],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/203113/permenkominfo-no-13-tahun-2019"
+            ]
+        }
+    },
+    {
+        "id": "202003005100000",
+        "url": "https://peraturan.bpk.go.id/Details/203049/permenkominfo-no-5-tahun-2020",
+        "download_link": "https://peraturan.bpk.go.id/Download/197017/Nomor%205%20Tahun%202020.pdf",
+        "download_name": "PERMENKOMINFO_2020_005",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2020 tentang Penyelenggara Sistem Elektronik Lingkup Privat",
+        "short_title": "PERMENKOMINFO Nomor 5 Tahun 2020",
+        "about": "Penyelenggara Sistem Elektronik Lingkup Privat",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "5",
+        "year": "2020",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2020-11-16",
+        "effective_date": "2020-11-24",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/151474/permenkominfo-no-36-tahun-2014",
+                "https://peraturan.bpk.go.id/Details/161734/permenkominfo-no-19-tahun-2014"
+            ],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/203121/permenkominfo-no-10-tahun-2021"
+            ],
+            "amend": []
+        }
+    },
+    {
+        "id": "202103001100000",
+        "url": "https://peraturan.bpk.go.id/Details/203112/permenkominfo-no-1-tahun-2021",
+        "download_link": "https://peraturan.bpk.go.id/Download/197081/Nomor%201%20Tahun%202021.pdf",
+        "download_name": "PERMENKOMINFO_2021_001",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 1 Tahun 2021 tentang Perubahan Kedua atas Peraturan Menteri Komunikasi dan Informatika Nomor 13 Tahun 2019 tentang Penyelenggaraan Jasa Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 1 Tahun 2021 tentang Perubahan Kedua atas Peraturan Menteri Komunikasi dan Informatika Nomor 13 Tahun 2019",
+        "about": "Perubahan Kedua atas Peraturan Menteri Komunikasi dan Informatika Nomor 13 Tahun 2019 tentang Penyelenggaraan Jasa Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "2",
+        "number": "1",
+        "year": "2021",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2021-01-27",
+        "effective_date": "2021-01-28",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "CIPTA KERJA"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/203125/permenkominfo-no-14-tahun-2021"
+            ],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/169167/permenkominfo-no-2-tahun-2020",
+                "https://peraturan.bpk.go.id/Details/203113/permenkominfo-no-13-tahun-2019"
+            ]
+        }
+    },
+    {
+        "id": "202103005100000",
+        "url": "https://peraturan.bpk.go.id/Details/203070/permenkominfo-no-5-tahun-2021",
+        "download_link": "https://peraturan.bpk.go.id/Download/197038/Nomor%205%20Tahun%202021_compressed.pdf",
+        "download_name": "PERMENKOMINFO_2021_005",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2021 tentang Penyelenggaraan Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 5 Tahun 2021",
+        "about": "Penyelenggaraan Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "5",
+        "year": "2021",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2021-03-31",
+        "effective_date": "2021-04-01",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "CIPTA KERJA"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/150388/permenkominfo-no-21-tahun-2017",
+                "https://peraturan.bpk.go.id/Details/150118/permenkominfo-no-14-tahun-2017",
+                "https://peraturan.bpk.go.id/Details/150541/permenkominfo-no-19-tahun-2016",
+                "https://peraturan.bpk.go.id/Details/150539/permenkominfo-no-17-tahun-2016",
+                "https://peraturan.bpk.go.id/Details/150534/permenkominfo-no-12-tahun-2016",
+                "https://peraturan.bpk.go.id/Details/161727/permenkominfo-no-11-tahun-2014",
+                "https://peraturan.bpk.go.id/Details/159691/permenkominfo-no-9permkominfo42008-tahun-2008",
+                "https://peraturan.bpk.go.id/Details/159901/permenkominfo-no-3permkominfo12007-tahun-2007",
+                "https://peraturan.bpk.go.id/Details/160502/permenkominfo-no-8permkominfo22006-tahun-2006",
+                "https://peraturan.bpk.go.id/Details/160703/permenkominfo-no-16permkominfo92005-tahun-200"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "202103006100000",
+        "url": "https://peraturan.bpk.go.id/Details/203116/permenkominfo-no-6-tahun-2021",
+        "download_link": "https://peraturan.bpk.go.id/Download/197085/Nomor%206%20Tahun%202021.pdf",
+        "download_name": "PERMENKOMINFO_2021_006",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 6 Tahun 2021 tentang Penyelenggaraan Penyiaran",
+        "short_title": "PERMENKOMINFO Nomor 6 Tahun 2021",
+        "about": "Penyelenggaraan Penyiaran",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "6",
+        "year": "2021",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2021-03-31",
+        "effective_date": "2021-04-01",
+        "subjects": [
+            "PERS, POS, DAN PERIKLANAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "CIPTA KERJA"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/203117/permenkominfo-no-3-tahun-2019",
+                "https://peraturan.bpk.go.id/Details/150540/permenkominfo-no-18-tahun-2016",
+                "https://peraturan.bpk.go.id/Details/151324/permenkominfo-no-27-tahun-2014",
+                "https://peraturan.bpk.go.id/Details/155283/permenkominfo-no-6-tahun-2013",
+                "https://peraturan.bpk.go.id/Details/161638/permenkominfo-no-40-tahun-2012",
+                "https://peraturan.bpk.go.id/Details/156858/permenkominfo-no-18-tahun-2012",
+                "https://peraturan.bpk.go.id/Details/156857/permenkominfo-no-17-tahun-2012"
+            ],
+            "amended": [
+                "https://peraturan.bpk.go.id/Details/203122/permenkominfo-no-11-tahun-2021"
+            ],
+            "amend": []
+        }
+    },
+    {
+        "id": "202103007100000",
+        "url": "https://peraturan.bpk.go.id/Details/203118/permenkominfo-no-7-tahun-2021",
+        "download_link": "https://peraturan.bpk.go.id/Download/197087/Nomor%207%20Tahun%202021.pdf",
+        "download_name": "PERMENKOMINFO_2021_007",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 7 Tahun 2021 tentang Penggunaan Spektrum Frekuensi Radio",
+        "short_title": "PERMENKOMINFO Nomor 7 Tahun 2021",
+        "about": "Penggunaan Spektrum Frekuensi Radio",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "7",
+        "year": "2021",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2021-03-31",
+        "effective_date": "2021-04-01",
+        "subjects": [
+            "PERS, POS, DAN PERIKLANAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "CIPTA KERJA"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/149650/permenkominfo-no-9-tahun-2018"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "202103010100000",
+        "url": "https://peraturan.bpk.go.id/Details/203121/permenkominfo-no-10-tahun-2021",
+        "download_link": "https://peraturan.bpk.go.id/Download/197090/Nomor%2010%20Tahun%202021.pdf",
+        "download_name": "PERMENKOMINFO_2021_010",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 10 Tahun 2021 tentang Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2020 tentang Penyelenggara Sistem Elektronik Lingkup Privat",
+        "short_title": "PERMENKOMINFO Nomor 10 Tahun 2021 tentang Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2020",
+        "about": "Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 5 Tahun 2020 tentang Penyelenggara Sistem Elektronik Lingkup Privat",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "1",
+        "number": "10",
+        "year": "2021",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2021-05-21",
+        "effective_date": "2021-05-21",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "PERIZINAN, PELAYANAN PUBLIK"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/203049/permenkominfo-no-5-tahun-2020"
+            ]
+        }
+    },
+    {
+        "id": "202103011100000",
+        "url": "https://peraturan.bpk.go.id/Details/203122/permenkominfo-no-11-tahun-2021",
+        "download_link": "https://peraturan.bpk.go.id/Download/197091/Nomor%2011%20Tahun%202021.pdf",
+        "download_name": "PERMENKOMINFO_2021_011",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 11 Tahun 2021 tentang Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 6 Tahun 2021 tentang Penyelenggaraan Penyiaran",
+        "short_title": "PERMENKOMINFO Nomor 11 Tahun 2021 tentang Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 6 Tahun 2021",
+        "about": "Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 6 Tahun 2021 tentang Penyelenggaraan Penyiaran",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "1",
+        "number": "11",
+        "year": "2021",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2021-08-10",
+        "effective_date": "2021-08-10",
+        "subjects": [
+            "PERS, POS, DAN PERIKLANAN",
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "CIPTA KERJA"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/203116/permenkominfo-no-6-tahun-2021"
+            ]
+        }
+    },
+    {
+        "id": "202103013100000",
+        "url": "https://peraturan.bpk.go.id/Details/203124/permenkominfo-no-13-tahun-2021",
+        "download_link": "https://peraturan.bpk.go.id/Download/197093/Nomor%2013%20Tahun%202021.pdf",
+        "download_name": "PERMENKOMINFO_2021_013",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 13 Tahun 2021 tentang Standar Teknis Alat Telekomunikasi dan/atau Perangkat Telekomunikasi Bergerak Seluler Berbasis Standar Teknologi Long Term Evolution dan Standar Teknologi International Mobile Telecommunication-2020",
+        "short_title": "PERMENKOMINFO Nomor 13 Tahun 2021",
+        "about": "Standar Teknis Alat Telekomunikasi dan/atau Perangkat Telekomunikasi Bergerak Seluler Berbasis Standar Teknologi Long Term Evolution dan Standar Teknologi International Mobile Telecommunication-2020",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "13",
+        "year": "2021",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2021-10-12",
+        "effective_date": "2021-10-18",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "STANDAR / PEDOMAN",
+            "CIPTA KERJA"
+        ],
+        "status": {
+            "repealed": [
+                "https://peraturan.bpk.go.id/Details/316817/permenkomdigi-no-4-tahun-2025"
+            ],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/151100/permenkominfo-no-27-tahun-2015"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "202103014100000",
+        "url": "https://peraturan.bpk.go.id/Details/203125/permenkominfo-no-14-tahun-2021",
+        "download_link": "https://peraturan.bpk.go.id/Download/197094/Nomor%2014%20Tahun%202021.pdf",
+        "download_name": "PERMENKOMINFO_2021_014",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 14 Tahun 2021 tentang Perubahan Ketiga atas Peraturan Menteri Komunikasi dan Informatika Nomor 13 Tahun 2019 tentang Penyelenggaraan Jasa Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 14 Tahun 2021 tentang Perubahan Ketiga atas Peraturan Menteri Komunikasi dan Informatika Nomor 13 Tahun 2019",
+        "about": "Perubahan Ketiga atas Peraturan Menteri Komunikasi dan Informatika Nomor 13 Tahun 2019 tentang Penyelenggaraan Jasa Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "3",
+        "number": "14",
+        "year": "2021",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2021-12-28",
+        "effective_date": "2021-12-29",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET",
+            "CIPTA KERJA"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": [
+                "https://peraturan.bpk.go.id/Details/203112/permenkominfo-no-1-tahun-2021",
+                "https://peraturan.bpk.go.id/Details/169167/permenkominfo-no-2-tahun-2020",
+                "https://peraturan.bpk.go.id/Details/203113/permenkominfo-no-13-tahun-2019"
+            ]
+        }
+    },
+    {
+        "id": "202203016100000",
+        "url": "https://peraturan.bpk.go.id/Details/255601/permenkominfo-no-16-tahun-2022",
+        "download_link": "https://peraturan.bpk.go.id/Download/312289/2022permen16..pdf",
+        "download_name": "PERMENKOMINFO_2022_016",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 16 Tahun 2022 tentang Kebijakan Umum Penyelenggaraan Audit Teknologi Informasi dan Komunikasi",
+        "short_title": "PERMENKOMINFO Nomor 16 Tahun 2022",
+        "about": "Kebijakan Umum Penyelenggaraan Audit Teknologi Informasi dan Komunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "16",
+        "year": "2022",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2022-12-27",
+        "effective_date": "2022-12-30",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "202403003100000",
+        "url": "https://peraturan.bpk.go.id/Details/282035/permenkominfo-no-3-tahun-2024",
+        "download_link": "https://peraturan.bpk.go.id/Download/340973/Permen%20Kominfo_Nomor_3_Tahun_2024.pdf",
+        "download_name": "PERMENKOMINFO_2024_003",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 3 Tahun 2024 tentang Sertifikasi Alat Telekomunikasi dan/atau Perangkat Telekomunikasi",
+        "short_title": "PERMENKOMINFO Nomor 3 Tahun 2024",
+        "about": "Sertifikasi Alat Telekomunikasi dan/atau Perangkat Telekomunikasi",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "3",
+        "year": "2024",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2024-02-13",
+        "effective_date": "2024-05-22",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "202403004100000",
+        "url": "https://peraturan.bpk.go.id/Details/299331/permenkominfo-no-4-tahun-2024",
+        "download_link": "https://peraturan.bpk.go.id/Download/358996/PerMenKominfo%20No.%204%20tahun%202024.pdf",
+        "download_name": "PERMENKOMINFO_2024_004",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 4 Tahun 2024 tentang PENYELENGGARAAN URUSAN PEMERINTAHAN KONKUREN BIDANG KOMUNIKASI DAN INFORMATIKA",
+        "short_title": "PERMENKOMINFO Nomor 4 Tahun 2024",
+        "about": "PENYELENGGARAAN URUSAN PEMERINTAHAN KONKUREN BIDANG KOMUNIKASI DAN INFORMATIKA",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "4",
+        "year": "2024",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2024-09-03",
+        "effective_date": "2024-09-05",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [
+                "https://peraturan.bpk.go.id/Details/300777/permenkominfo-no-8-tahun-2019"
+            ],
+            "amended": [],
+            "amend": []
+        }
+    },
+    {
+        "id": "202403006100000",
+        "url": "https://peraturan.bpk.go.id/Details/305569/permenkominfo-no-6-tahun-2024",
+        "download_link": "https://peraturan.bpk.go.id/Download/365714/permenkominfo-no-6-tahun-2024.pdf",
+        "download_name": "PERMENKOMINFO_2024_006",
+        "title": "Peraturan Menteri Komunikasi dan Informatika Nomor 6 Tahun 2024 tentang Tata Cara Seleksi Pengguna Pita Frekuensi Radio",
+        "short_title": "PERMENKOMINFO Nomor 6 Tahun 2024",
+        "about": "Tata Cara Seleksi Pengguna Pita Frekuensi Radio",
+        "type": "Peraturan Menteri Komunikasi dan Informatika",
+        "short_type": "PERMENKOMINFO",
+        "amendment": "0",
+        "number": "6",
+        "year": "2024",
+        "institution": "Kementerian Komunikasi dan Informatika",
+        "issue_place": "Jakarta",
+        "issue_date": "2024-09-30",
+        "effective_date": "2024-10-03",
+        "subjects": [
+            "TELEKOMUNIKASI, INFORMATIKA, SIBER, DAN INTERNET"
+        ],
+        "status": {
+            "repealed": [],
+            "repeal": [],
+            "amended": [],
+            "amend": []
+        }
+    }
+]

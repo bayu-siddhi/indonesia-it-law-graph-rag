@@ -1,0 +1,157 @@
+Mengingat
+
+:
+
+1.
+
+<!-- image -->
+
+<!-- image -->
+
+## PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA REPUBLIK INDONESIA NOMOR 38 TAHUN 2014 TENTANG
+
+## PERUBAHAN ATAS
+
+PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA NOMOR: 01/PER/M.KOMINFO/01/2010 TENTANG PENYELENGGARAAN JARINGAN TELEKOMUNIKASI
+
+## DENGAN RAHMAT TUHAN YANG MAHA ESA MENTERI KOMUNIKASI DAN INFORMATIKA REPUBLIK INDONESIA,
+
+Menimbang  :  a.
+
+bahwa untuk mendorong pertumbuhan penyelenggaraan jaringan telekomunikasi, perlu melakukan  perubahan  terhadap  Peraturan  Menteri Komunikasi dan Informatika Nomor: 01/PER/M.KOMINFO/01/2010 tentang Penyelenggaraan Jaringan Telekomunikasi;
+
+- b. bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam huruf a, perlu menetapkan Peraturan Menteri Komunikasi  dan  Informatika tentang Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor: 01/PER/M.KOMINFO/01/2010 tentang Penyelenggaraan Jaringan Telekomunikasi;
+- Undang-Undang  Nomor  36  Tahun  1999  tentang Telekomunikasi (Lembaran Negara Republik Indonesia  Tahun  1999  Nomor:  154,  Tambahan Lembaran Negara Republik Indonesia Nomor: 3881);
+- 2. Undang-Undang  Nomor  39  Tahun  2008  tentang Kementerian  Negara  (Lembaran  Negara  Republik Indonesia  Tahun  2008  Nomor:  166,  Tambahan Lembaran Negara Republik Indonesia Nomor: 4916);
+
+- 3. Peraturan Pemerintah  Nomor  52  Tahun  2000 tentang Penyelenggaraan Telekomunikasi (Lembaran Negara Republik Indonesia Tahun 2000 Nomor:  107, Tambahan  Lembaran  Negara  Republik  Indonesia Nomor: 3980);
+- 4. Peraturan Pemerintah  Nomor  53  Tahun  2000 tentang Penggunaan Spektrum Frekuensi Radio dan Orbit  Satelit  (Lembaran  Negara  Republik  Indonesia Tahun  2000  Nomor:  108,  Tambahan  Lembaran Republik Indonesia Negara Nomor: 3981);
+- 5. Peraturan Pemerintah Nomor 7 Tahun 2009 tentang Jenis dan Tarif Atas Jenis Penerimaan Negara Bukan Pajak  yang  Berlaku  Pada  Departemen  Komunikasi dan Informatika (Lembaran Negara Republik Indonesia Tahun  2009  Nomor  20,  Tambahan Lembaran Negara Republik Indonesia Nomor 4974), sebagaimana  telah  diubah  dengan    Peraturan Pemerintah  Nomor  76  Tahun  2010  (Lembaran Negara Republik Indonesia Tahun 2010 Nomor 135, Tambahan  Lembaran  Negara  Republik  Indonesia Nomor 5171);
+- 6. Keputusan      Menteri    Perhubungan  Nomor:  KM.  4 Tahun 2001  tentang Penetapan    Rencana    Dasar Teknis    Nasional    2000  ( Fundamental  Technical Plan      National      2000 ) Pembangunan Telekomunikasi  Nasional        sebagaimana        telah beberapa  kali  diubah,  terakhir    dengan    Peraturan Menteri  Komunikasi  dan  Informatika  Nomor  17 Tahun  2014  tentang  Perubahan  Ketujuh  atas Keputusan  Menteri    Perhubungan  Nomor:  KM.  4 Tahun 2001  tentang Penetapan    Rencana    Dasar Teknis    Nasional    2000  ( Fundamental  Technical Plan      National      2000 ) Pembangunan Telekomunikasi Nasional;
+- 7. Keputusan    Menteri    Perhubungan  Nomor:  KM.  21 Tahun 2001 tentang Penyelenggaraan Jasa Telekomunikasi    sebagaimana  telah  beberapa  kali diubah,    terakhir    dengan    Peraturan    Menteri Komunikasi dan Informatika Nomor: 31/PER/M.KOMINFO/09/2008  tentang  Perubahan Ketiga  atas  Keputusan    Menteri    Perhubungan Nomor: KM. 21 Tahun 2001 tentang Penyelenggaraan Jasa Telekomunikasi;
+
+- 8. Peraturan  Menteri  Komunikasi  dan  Informatika Nomor: 13/P/M.KOMINFO/8/2005 tentang Penyelenggaraan Telekomunikasi yang Menggunakan Satelit  sebagaimana telah diubah dengan Peraturan Menteri Komunikasi dan Informatika Nomor: 37/P/M.KOMINFO/12/2006;
+- 9. Peraturan  Menteri  Komunikasi  dan  Informatika Nomor: 08/PER/M.KOMINFO/02/2006 tentang Interkoneksi;
+- 10. Peraturan  Menteri  Komunikasi  dan  Informatika Nomor: 03/PER/M.KOMINFO/1/2007 tentang Sewa Jaringan;
+- 11. Peraturan  Menteri  Komunikasi  dan  Informatika Nomor  :  01/PER/M.KOMINFO/01/2010  tentang Penyelenggaraan Jaringan Telekomunikasi;
+- 12. Peraturan    Menteri  Komunikasi    dan    Informatika Nomor:  17/  PER/M.KOMINFO/10/2010    tentang Organisasi    dan    Tata      Kerja  Kementerian Komunikasi dan Informatika;
+
+## MEMUTUSKAN :
+
+Menetapkan  :  PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA TENTANG PERUBAHAN ATAS PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA NOMOR: 01/PER/M.KOMINFO/01/ 2010 TENTANG PENYELENGGARAAN JARINGAN TELEKOMUNIKASI.
+
+## Pasal I
+
+Beberapa ketentuan dalam Peraturan Menteri Komunikasi dan Informatika Nomor: 01/PER/M.KOMINFO/01/2010 tentang Penyelenggaraan Jaringan Telekomunikasi diubah sebagai berikut:
+
+- 1. Ketentuan Pasal 4 diubah sehingga berbunyi sebagai berikut:
+
+## Pasal 4
+
+- (1) Penyelenggaraan  jaringan  telekomunikasi  yang memerlukan  alokasi  spektrum  frekuensi  radio tertentu,  kode  wilayah,  dan/atau  kode  akses jaringan, jumlah penyelenggaraannya dibatasi.
+
+- (2) Penyelenggaraan  jaringan  telekomunikasi  yang jumlah  penyelenggaranya  dibatasi  sebagaimana dimaksud  pada  ayat  (1),  tata  cara  perizinannya dilakukan melalui proses seleksi.
+- (3) Ketentuan  proses  seleksi  sebagaimana  dimaksud pada  ayat  (2)  tidak  berlaku  bagi  penyelenggara jaringan  telekomunikasi  yang  telah  memperoleh izin  penggunaan  kode  wilayah  atau  kode  akses jaringan  dan  bermaksud  menyelenggarakan  jenis penyelenggaraan jaringan telekomunikasi lain:
+- a. yang berbeda dari jenis penyelenggaraan jaringan telekomunikasi yang telah diselenggarakannya;
+- b. dengan menggunakan alokasi spektrum frekuensi radio sesuai izin penggunaan spektrum frekuensi radio yang telah dimilikinya; dan
+- c. memerlukan  kode  wilayah  atau  kode  akses jaringan baru.
+- (4) Tata  cara  perizinan  penyelenggaraan  jaringan telekomunikasi sebagaimana dimaksud pada ayat (3) dilakukan melalui proses evaluasi.
+- 2. Ketentuan Pasal 5 diubah sehingga berbunyi sebagai berikut:
+
+## Pasal 5
+
+Penyelenggaraan  jaringan  telekomunikasi  yang  tidak memerlukan alokasi spektrum frekuensi radio tertentu, kode wilayah, dan/atau kode akses jaringan, tata  cara  perizinannya  dilakukan  melalui  proses evaluasi.
+
+- 3. Di antara Pasal 5 dan Pasal 6 disisipkan 1 (satu) pasal yaitu Pasal 5A yang berbunyi sebagai berikut:
+
+## Pasal 5A
+
+Izin prinsip penyelenggaraan jaringan telekomunikasi dan  izin  penyelenggaraan  jaringan  telekomunikasi ditetapkan oleh Menteri.
+
+- 4. Ketentuan Pasal 67 diubah sehingga berbunyi sebagai berikut:
+
+## Pasal 67
+
+- (1) Permohonan izin prinsip penyelenggaraan jaringan telekomunikasi yang tata cara perizinannya melalui  proses  evaluasi  sebagaimana  dimaksud dalam Pasal 4 ayat (4) dan Pasal 5 dapat diajukan setiap waktu.
+- (2) Evaluasi  sebagaimana  dimaksud  pada  ayat  (1) dilakukan dengan memperhatikan:
+- a. persaingan usaha yang sehat;
+- b. perlindungan investasi;
+- c. perbandingan  ketersediaan  layanan  ( supplyside ) dengan kebutuhan masyarakat ( demandside ) yang berimbang; dan/atau
+- d. efisiensi nasional.
+- (3) Permohonan  izin  prinsip  sebagaimana  dimaksud pada ayat (1) disampaikan kepada Menteri.
+- (4) Evaluasi terhadap permohonan sebagaimana dimaksud  dalam  Pasal  4  ayat  (4)  dilakukan  oleh Tim yang ditetapkan oleh Menteri.
+- (5) Evaluasi terhadap permohonan sebagaimana dimaksud dalam Pasal 5 dilakukan oleh Direktur Jenderal.
+- 5. Ketentuan ayat (1) Pasal 68 diubah sehingga Pasal 68 berbunyi sebagai berikut:
+- (1) Permohonan izin prinsip penyelenggaraan jaringan telekomunikasi yang tata cara perizinannya melalui proses evaluasi sebagaimana  dimaksud  dalam  Pasal  67  ayat  (1) melampirkan persyaratan sebagai berikut:
+- a. akta pendirian perusahaan beserta pengesahan dari instansi yang berwenang;
+- b. perubahan akta perusahaan beserta persetujuan  atau  surat  penerimaan  laporan dari instansi yang berwenang;
+
+- c. Nomor Pokok Wajib Pajak (NPWP);
+- d. surat keterangan domisili;
+- e. rencana usaha ( business plan ) yang memuat:
+- 1. jenis layanan sesuai dengan penyelenggaraan yang dimohonkan;
+- 2. cakupan wilayah pembangunan dan layanan yang akan dibangun ( roll out plan ) yang merupakan komitmen untuk 5 (lima) tahun;
+- f. surat pernyataan kepemilikan dana dari bank, paling  sedikit  sebesar  5%  (lima  persen)  dari total  investasi  untuk  pembangunan  sarana dan prasarana telekomunikasi selama 5 (lima) tahun sebagaimana tercantum dalam roll  out plan ;
+- g. data teknis yang terdiri dari :
+- 1. konfigurasi  sistem  dan  teknologi  jaringan yang akan dibangun;
+- 2. diagram dan rute serta peta jaringan;
+- 3. spektrum  frekuensi  radio  yang  diusulkan dalam  hal  calon  penyelenggara  jaringan telekomunikasi  bermaksud  menggunakan spektrum frekuensi radio.
+- h. pernyataan bahwa data teknis, alat/perangkat,  sarana  dan/atau  prasarana telekomunikasi  yang  akan  dibangun  sesuai dengan  persyaratan  teknis,  konfigurasi  dan hirarki  jaringan  telekomunikasi  berdasarkan rencana dasar teknis;
+- i. untuk perusahaan eksisting wajib melampirkan  surat  keterangan  tidak  ada pajak  yang  terhutang  ( tax  clearance ) dari kantor pajak;
+
+- j. surat pernyataan/laporan susunan kepemilikan saham  perusahaan  langsung sampai  dengan  2  (dua)  tingkat  di  atas perusahaan  pemohon,  termasuk  negara  asal pemilik saham;
+- k. surat pernyataan tidak akan merubah susunan kepemilikan saham  perusahaan selama masa laku izin prinsip;
+- l. surat pernyataan tidak akan merubah susunan kepemilikan saham  perusahaan setelah mendapat izin penyelenggaraan jaringan  telekomunikasi,  sebelum  memenuhi kewajiban  pembangunan  paling  sedikit  50% (lima  puluh  persen)  dari  total  kewajiban pembangunan selama 5 (lima) tahun sebagaimana tercantum dalam izin penyelenggaraan jaringan telekomunikasi;
+- m. surat pernyataan tidak ada hubungan afiliasi dengan perusahaan lain (pada tingkat direktur utama).
+- (2) Persyaratan sebagaimana dimaksud pada ayat (1) huruf j dan huruf k tidak berlaku bagi perusahaan  terbuka  (publik)  yang  transaksi perubahan  sahamnya  dilakukan  melalui  bursa saham dalam negeri.
+- (3) Dalam  hal  persyaratan  permohonan  izin  prinsip penyelenggaraan jaringan telekomunikasi sebagaimana  dimaksud  pada  ayat  (1)  tidak lengkap, maka permohonan dinyatakan batal dan pemohon dapat mengajukan permohonan baru.
+- 6. Ketentuan  ayat  (2)  dan  ayat  (4)  Pasal  70  diubah sehingga Pasal 70 berbunyi sebagai berikut:
+- (1) Berdasarkan hasil seleksi sebagaimana dimaksud dalam  Pasal  66  ayat  (4)  atau  berdasarkan  hasil evaluasi  sebagaimana  dimaksud  dalam  Pasal  69 ayat (1) bagi yang memenuhi persyaratan, Menteri menerbitkan izin prinsip.
+
+- (2) Izin prinsip sebagaimana dimaksud pada ayat (1) berlaku paling lama:
+- a. 3  (tiga)  tahun  bagi  penyelenggaraan  jaringan yang  tata  cara  perizinannya  melalui  proses seleksi sebagaimana dimaksud dalam Pasal 4 ayat  (2)  dan  penyelenggaraan  jaringan  yang tata cara perizinannya melalui proses evaluasi sebagaimana  dimaksud  dalam  Pasal  4  ayat (4);
+- b. 2  (dua)  tahun  bagi  penyelenggaraan  jaringan yang    tata  cara  perizinannya  melalui  proses evaluasi  sebagaimana  dimaksud  dalam  Pasal 5.
+- (3) Izin prinsip sebagaimana dimaksud pada ayat (2) dapat  diperpanjang  apabila  pemilik  izin  prinsip telah melakukan  investasi dalam persiapan pembangunan sarana dan prasarana sesuai hasil penilaian Tim  yang  dibentuk  oleh  Direktur Jenderal.
+- (4) Izin  prinsip  dapat  diperpanjang  1  (satu)  kali dengan masa berlaku paling lama 1 (satu) tahun untuk  izin  prinsip  sebagaimana  dimaksud  pada ayat  (2)  huruf  a,  dan  6  (enam)  bulan  untuk  izin prinsip  sebagaimana  dimaksud  pada  ayat  (2) huruf b.
+- (5) Dalam hal permohonan perpanjangan izin prinsip sebagaimana  dimaksud  pada  ayat  (3)  tidak ditetapkan dalam jangka waktu 14 (empat belas) hari kerja sejak diterimanya permohonan perpanjangan  izin  prinsip,  maka  izin  prinsip dinyatakan diperpanjang.
+- 7. Ketentuan ayat (1) Pasal 74 diubah sehingga Pasal 74 berbunyi sebagai berikut:
+
+## Pasal 74
+
+- (1) Izin penyelenggaraan  jaringan  telekomunikasi diberikan  tanpa  batas  waktu  dan  dilakukan evaluasi  setiap  1  (satu)  tahun  serta  evaluasi secara menyeluruh setiap 5 (lima) tahun.
+
+- (2) Apabila  hasil  evaluasi  sebagaimana  dimaksud pada ayat (1) dinyatakan tidak memenuhi ketentuan dalam perizinan, pemilik izin penyelenggaraan dikenakan sanksi sesuai dengan ketentuan peraturan perundang-undangan.
+
+## Pasal II
+
+Peraturan  Menteri  ini  mulai  berlaku  pada  tanggal diundangkan.
+
+Agar setiap orang mengetahuinya, memerintahkan pengundangan Peraturan Menteri ini dengan penempatannya dalam Berita Negara Republik Indonesia.
+
+Ditetapkan di Jakarta pada tanggal 29 September 2014
+
+## MENTERI KOMUNIKASI DAN INFORMATIKA REPUBLIK INDONESIA,
+
+ttd.
+
+## TIFATUL SEMBIRING
+
+Diundangkan di Jakarta pada tanggal 8 Oktober 2014
+
+## MENTERI HUKUM DAN HAK ASASI MANUSIA REPUBLIK INDONESIA,
+
+ttd.
+
+## AMIR SYAMSUDIN
+
+BERITA NEGARA REPUBLIK INDONESIA TAHUN 2014 NOMOR 1509
+
+Karo
+
+<!-- image -->
+
+Dirjen PPI
+
+Sekjen
+
+Kemkominfo

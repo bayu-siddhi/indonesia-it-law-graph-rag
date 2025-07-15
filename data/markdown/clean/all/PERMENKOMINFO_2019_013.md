@@ -1,0 +1,719 @@
+PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA
+REPUBLIK INDONESIA
+NOMOR 13 TAHUN 2019
+TENTANG
+PENYELENGGARAAN JASA TELEKOMUNIKASI
+
+DENGAN RAHMAT TUHAN YANG MAHA ESA
+MENTERI KOMUNIKASI DAN INFORMATIKA REPUBLIK INDONESIA,
+
+## Menimbang
+a. bahwa untuk melaksanakan ketentuan Pasal 14 ayat (2) Peraturan Pemerintah Nomor 52 Tahun 2000 tentang Penyelenggaraan Telekomunikasi serta untuk mewujudkan efisiensi dan efektivitas investasi dan kemudahan berusaha di sektor telekomunikasi, perlu dilakukan simplifikasi regulasi dan penyederhanaan Penyelenggaraan Jasa Telekomunikasi;
+b. bahwa peraturan pelaksanaan yang mengatur mengenai penyelenggaraan jasa telekomunikasi dipandang sudah tidak sesuai lagi dengan perkembangan dan kebutuhan hukum masyarakat mengenai jasa telekomunikasi sehingga perlu diganti;
+c. bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam huruf a dan huruf b, perlu menetapkan Peraturan Menteri Komunikasi dan Informatika tentang Penyelenggaraan Jasa Telekomunikasi;
+
+## Mengingat
+(1) Undang-Undang Nomor 36 Tahun 1999 tentang Telekomunikasi (Lembaran Negara Republik Indonesia Tahun 1999 Nomor 154, Tambahan Lembaran Negara Republik Indonesia Nomor 3881);
+(2) Peraturan Pemerintah Nomor 52 Tahun 2000 tentang Penyelenggaraan Telekomunikasi (Lembaran Negara Republik Indonesia Tahun 2000 Nomor 107, Tambahan Lembaran Negara Republik Indonesia Nomor 3980);
+(3) Peraturan Pemerintah Nomor 53 Tahun 2000 tentang Penggunaan Spektrum Frekuensi Radio dan Orbit Satelit (Lembaran Negara Republik Indonesia Tahun 2000 Nomor 108, Tambahan Lembaran Negara Republik Indonesia Nomor 3981);
+(4) Peraturan Pemerintah Nomor 80 Tahun 2015 tentang Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku pada Kementerian Komunikasi dan Informatika (Lembaran Negara Republik Indonesia Tahun 2015 Nomor 246, Tambahan Lembaran Negara Republik Indonesia Nomor 5749);
+(5) Peraturan Pemerintah Nomor 24 Tahun 2018 tentang Pelayanan Perizinan Berusaha Terintegrasi secara Elektronik (Lembaran Negara Republik Indonesia Tahun 2018 Nomor 90, Tambahan Lembaran Negara Republik Indonesia Nomor 6215);
+(6) Peraturan Presiden Nomor 54 Tahun 2015 tentang Kementerian Komunikasi dan Informatika (Lembaran Negara Republik Indonesia Tahun 2015 Nomor 96);
+(7) Peraturan Menteri Komunikasi dan Informatika Nomor 6 Tahun 2018 tentang Organisasi dan Tata Kerja Kementerian Komunikasi dan Informatika (Berita Negara Republik Indonesia Tahun 2018 Nomor 1019);
+(8) Peraturan Menteri Komunikasi dan Informatika Nomor 7 Tahun 2018 tentang Pelayanan Perizinan Berusaha Terintegrasi secara Elektronik Bidang Komunikasi dan Informatika (Berita Negara Republik Indonesia Tahun 2018 Nomor 1041) sebagaimana telah diubah dengan Peraturan Menteri Komunikasi dan Informatika Nomor 7 Tahun 2019 tentang Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 7 Tahun 2018 tentang Pelayanan Perizinan Berusaha Terintegrasi secara Elektronik Bidang Komunikasi dan Informatika (Berita Negara Republik Indonesia Tahun 2019 Nomor 841);
+
+## Memutuskan
+
+## Menetapkan
+PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA TENTANG PENYELENGGARAAN JASA TELEKOMUNIKASI.
+
+## BAB I
+KETENTUAN UMUM
+
+## Pasal 1
+Dalam Peraturan Menteri ini yang dimaksud dengan:
+(1) Telekomunikasi adalah setiap pemancaran, pengiriman, dan/atau penerimaan dari setiap informasi dalam bentuk tanda-tanda, isyarat, tulisan, gambar, suara, dan bunyi melalui sistem kawat, optik, radio, atau sistem elektromagnetik lainnya.
+(2) Jaringan Telekomunikasi adalah rangkaian perangkat Telekomunikasi dan kelengkapannya yang digunakan dalam bertelekomunikasi.
+(3) Jasa Telekomunikasi adalah layanan Telekomunikasi untuk memenuhi kebutuhan bertelekomunikasi dengan menggunakan Jaringan Telekomunikasi.
+(4) Penyelenggaraan Jaringan Telekomunikasi adalah kegiatan penyediaan dan/atau pelayanan Jaringan Telekomunikasi yang memungkinkan terselenggaranya Telekomunikasi.
+(5) Penyelenggaraan Jasa Telekomunikasi adalah kegiatan penyediaan dan/atau pelayanan Jasa Telekomunikasi yang memungkinkan terselenggaranya Telekomunikasi.
+(6) Penyelenggara Jaringan Telekomunikasi adalah badan usaha milik negara, badan usaha milik daerah, badan usaha swasta, atau koperasi yang memperoleh Izin Penyelenggaraan Jaringan Telekomunikasi.
+(7) Penyelenggara Jasa Telekomunikasi adalah badan usaha milik negara, badan usaha milik daerah, badan usaha swasta, atau koperasi yang memperoleh Izin Penyelenggaraan Jasa Telekomunikasi.
+(8) Pelanggan adalah perseorangan, badan hukum, instansi pemerintah yang menggunakan Jaringan Telekomunikasi dan/atau Jasa Telekomunikasi berdasarkan kontrak.
+(9) Penyelenggaraan Jasa Teleponi Dasar adalah Penyelenggaraan Jasa Telekomunikasi yang menyediakan layanan teleponi dasar dengan menggunakan teknologi circuit switched atau teknologi lainnya.
+(10) Penyelenggaraan Jasa Nilai Tambah Teleponi adalah Penyelenggaraan Jasa Telekomunikasi yang menyediakan layanan nilai tambah untuk layanan teleponi dasar.
+(11) Penyelenggaraan Jasa Multimedia adalah Penyelenggaraan Jasa Telekomunikasi yang menyediakan layanan berbasis teknologi informasi selain Penyelenggaraan Jasa Teleponi Dasar dan Penyelenggaraan Jasa Nilai Tambah Teleponi.
+(12) Layanan Pusat Panggilan Informasi (Call Center) adalah jenis layanan dalam Penyelenggaraan Jasa Telekomunikasi yang menyediakan layanan pusat panggilan teleponi untuk pencarian informasi guna kepentingan Pelanggan Layanan Pusat Panggilan Informasi (Call Center).
+(13) Layanan Panggilan Terkelola (Calling Card) adalah jenis layanan dalam Penyelenggaraan Jasa Telekomunikasi yang menyediakan layanan panggilan teleponi dengan tambahan fitur yang dapat mengelola panggilan dan/atau tagihan melalui proses tambahan autentikasi pemakai atau kode akses sebelum dilakukan panggilan teleponi.
+(14) Layanan Internet Teleponi untuk Keperluan Publik yang selanjutnya disebut Layanan ITKP adalah jenis layanan dalam Penyelenggaraan Jasa Telekomunikasi yang menyediakan layanan teleponi sambungan langsung jarak jauh dan sambungan langsung internasional berbasis protokol internet, serta penggunaannya melalui kode akses sebelum dilakukan panggilan teleponi.
+(15) Layanan Konten adalah jenis layanan dalam Penyelenggaraan Jasa Telekomunikasi yang menyediakan Konten dengan memanfaatkan layanan jasa teleponi dasar.
+(16) Layanan Akses Internet (Internet Service Provider) yang selanjutnya disebut Layanan Akses Internet (ISP) adalah jenis layanan dalam Penyelenggaraan Jasa Telekomunikasi yang menyediakan layanan internet bagi Pelanggan untuk terhubung dengan jaringan internet publik.
+(17) Layanan Gerbang Akses Internet (Network Access Point) yang selanjutnya disebut Layanan Gerbang Akses Internet (NAP) adalah jenis layanan dalam Penyelenggaraan Jasa Telekomunikasi yang menyediakan layanan penyaluran trafik internet dan routing bagi Penyelenggara Jasa Telekomunikasi lainnya untuk terhubung ke jaringan internet internasional (IP Transit), terhubung dengan sesama Penyelenggara Layanan Gerbang Akses Internet, dan menjadi titik penyebaran akses Internet di dalam negeri (Internet Exchange), serta dapat berfungsi sebagai penyimpan sementara (caching) dan/atau pengatur penyaluran (distribution) konten internet.
+(18) Layanan Sistem Komunikasi Data adalah jenis layanan dalam Penyelenggaraan Jasa Telekomunikasi yang menyediakan layanan komunikasi data untuk berbagai kebutuhan tertentu yang diselenggarakan dengan jaminan ketersambungan, kualitas, dan keamanan.
+(19) Layanan Televisi Protokol Internet (Internet Protocol Television) yang selanjutnya disebut Layanan IPTV adalah jenis layanan dalam Penyelenggaraan Jasa Telekomunikasi yang menyediakan layanan konvergen radio dan televisi, video, audio, teks, grafik dan data yang disalurkan melalui jaringan protokol internet yang dijamin kualitas layanannya, keamanannya, kehandalannya, dan mampu memberikan layanan komunikasi dengan Pelanggan secara 2 (dua) arah atau interaktif.
+(20) Penyedia Konten Independen adalah pengembang Konten (content developer), pemilik konten (content owner), dan/atau pemasok konten (content supplier) yang menyediakan Konten kepada Penyelenggara Jasa Telekomunikasi untuk dapat menyelenggarakan layanan yang mengandung konten.
+(21) Perizinan Berusaha Terintegrasi Secara Elektronik atau Online Single Submission yang selanjutnya disingkat dengan OSS adalah Perizinan Berusaha yang diterbitkan oleh Lembaga OSS untuk dan atas nama menteri, pimpinan lembaga, gubernur, atau bupati/walikota kepada Pelaku Usaha melalui sistem elektronik yang terintegrasi.
+(22) Pelaku Usaha adalah badan usaha atau perseorangan yang melakukan kegiatan usaha pada bidang tertentu.
+(23) Uji Laik Operasi adalah pengujian sistem secara teknis dan operasional.
+(24) Izin Penyelenggaraan Jasa Telekomunikasi yang selanjutnya disebut Izin Penyelenggaraan adalah izin yang diberikan oleh Menteri kepada Penyelenggara Jasa Telekomunikasi untuk menyelenggarakan Jasa Telekomunikasi secara komersial.
+(25) Komitmen Layanan adalah kewajiban Penyelenggara Jasa Telekomunikasi untuk menyediakan layanan di wilayah tertentu dengan komitmen penyediaan layanan sesuai dengan ketentuan peraturan perundang-undangan.
+(26) Sarana dan Prasarana Telekomunikasi adalah segala sesuatu yang memungkinkan dan mendukung berfungsinya Telekomunikasi.
+(27) Alat Telekomunikasi adalah setiap alat perlengkapan yang digunakan dalam bertelekomunikasi.
+(28) Perangkat Telekomunikasi adalah sekelompok Alat Telekomunikasi yang memungkinkan bertelekomunikasi.
+(29) Konten adalah pesan yang dapat berupa suara, tulisan, gambar, video, atau bentuk visual lainnya, sajian-sajian dalam bentuk program, atau gabungan sebagiannya, dan/atau keseluruhannya dalam bentuk digital, yang dapat diciptakan, diubah, disimpan, disajikan, dikomunikasikan, dan disebarluaskan secara elektronik.
+(30) Ketersambungan adalah tersambungnya perangkat Jasa Telekomunikasi seperti server, simpul jasa (node), dan router secara fisik dengan Jaringan Telekomunikasi.
+(31) Jual Kembali Jasa Telekomunikasi adalah kegiatan menjual kembali layanan Telekomunikasi melalui kerja sama.
+(32) Hak Labuh (Landing Right) Satelit adalah hak untuk menggunakan Satelit Asing yang diberikan oleh Menteri kepada Penyelenggara Telekomunikasi.
+(33) Penomoran Telekomunikasi adalah kombinasi digit yang mencirikan identitas Pelanggan, wilayah, elemen jaringan, penyelenggara, atau layanan Telekomunikasi.
+(34) Nomor Protokol Internet yang selanjutnya disebut Nomor PI adalah Alamat Protokol Internet (Internet Protocol Address) dan Nomor Sistem Otonom (Autonomous System Number).
+(35) Alamat Protokol Internet (Internet Protocol Address) adalah alamat identifikasi yang diberikan (assign) pada sebuah perangkat untuk terhubung ke jaringan internet dengan menggunakan protokol internet.
+(36) Nomor Sistem Otonom (Autonomous System Number) adalah nomor yang digunakan sebagai pengidentifikasi suatu kelompok yang terdiri dari satu atau lebih protokol internet yang terkoneksi ke kelompok lainnya dalam suatu kebijakan koneksi yang didefinisikan dengan jelas.
+(37) Biaya Hak Penyelenggaraan Telekomunikasi yang selanjutnya disebut BHP Telekomunikasi adalah kewajiban yang harus dibayar oleh setiap Penyelenggara Telekomunikasi dan merupakan Penerimaan Negara Bukan Pajak.
+(38) Kontribusi Kewajiban Pelayanan Universal/Universal Service Obligation yang selanjutnya disebut Kontribusi KPU/USO adalah kewajiban yang harus dibayar oleh setiap penyelenggara Telekomunikasi dan merupakan Penerimaan Negara Bukan Pajak.
+(39) Tahun Buku adalah jangka waktu 1 (satu) tahun yang dimulai dari bulan Januari sampai dengan bulan Desember.
+(40) Daftar Hitam Penyelenggara Telekomunikasi adalah daftar yang memuat identitas Direksi, Pengurus, dan/atau Badan Hukum yang dikenai sanksi administratif sesuai dengan ketentuan peraturan perundang-undangan.
+(41) Menteri adalah Menteri yang menyelenggarakan urusan pemerintahan di bidang komunikasi dan informatika.
+(42) Direktur Jenderal adalah Direktur Jenderal yang lingkup tugas dan fungsinya di bidang penyelenggaraan Telekomunikasi.
+
+## BAB II
+PENYELENGGARAAN JASA TELEKOMUNIKASI
+
+## Bagian Kesatu
+Penyelenggara Jasa Telekomunikasi
+
+## Pasal 2
+Penyelenggara Jasa Telekomunikasi harus berbentuk badan hukum yang didirikan untuk menyelenggarakan Jasa Telekomunikasi berdasarkan ketentuan peraturan perundang- undangan yaitu:
+a. Badan Usaha Milik Negara (BUMN);
+b. Badan Usaha Milik Daerah (BUMD);
+c. Badan Usaha Swasta; atau
+d. Koperasi
+
+## Bagian Kedua
+Kategori Penyelenggaraan Jasa Telekomunikasi
+
+## Paragraf 1
+Umum
+
+## Pasal 3
+(1) Penyelenggaraan Jasa Telekomunikasi terdiri atas kategori:
+	a. Penyelenggaraan Jasa Teleponi Dasar;
+	b. Penyelenggaraan Jasa Nilai Tambah Teleponi; dan
+	c. Penyelenggaraan Jasa Multimedia.
+(2) Kategori Penyelenggaraan Jasa Telekomunikasi sebagaimana dimaksud pada ayat (1) jumlah penyelenggaranya tidak dibatasi dan pemberian izinnya melalui mekanisme evaluasi.
+
+## Paragraf 2
+Penyelenggaraan Jasa Teleponi Dasar
+
+## Pasal 4
+(1) Penyelenggaraan Jasa Teleponi Dasar sebagaimana dimaksud dalam Pasal 3 ayat (1) huruf a diselenggarakan oleh:
+	a. penyelenggara jaringan tetap lokal berbasis circuit switched;
+	b. penyelenggara jaringan tetap sambungan langsung jarak jauh;
+	c. penyelenggara jaringan tetap sambungan langsung internasional;
+	d. penyelenggara jaringan bergerak seluler;
+	e. penyelenggara jaringan bergerak satelit; atau
+	f. penyelenggara jaringan bergerak terestrial radio trunking.
+(2) Selain Penyelenggaraan Jasa Teleponi Dasar sebagaimana dimaksud pada ayat (1), jasa teleponi dasar dapat diselenggarakan oleh Penyelenggara Jasa Telekomunikasi yang menyediakan layanan teleponi dasar melalui satelit yang telah memperoleh Hak Labuh (Landing Right) Satelit.
+
+## Pasal 5
+(1) Penyelenggaraan Jasa Teleponi Dasar sebagaimana dimaksud dalam Pasal 3 ayat (1) huruf a terdiri atas fitur utama:
+	a. teleponi;
+	b. faksimile;
+	c. pesan pendek (short message service/SMS); dan/atau
+	d. pesan multimedia (multimedia messaging service/MMS).
+(2) Penyelenggaraan Jasa Teleponi Dasar dapat menyediakan fitur tambahan.
+
+## Paragraf 3
+Penyelenggaraan Jasa Nilai Tambah Teleponi
+
+## Pasal 6
+Penyelenggaraan Jasa Nilai Tambah Teleponi sebagaimana dimaksud dalam Pasal 3 ayat (1) huruf b terdiri atas:
+a. Layanan Pusat Panggilan Informasi (Call Center);
+b. Layanan Panggilan Terkelola (Calling Card);
+c. Layanan ITKP; dan/atau
+d. Layanan Konte
+
+## Paragraf 4
+Penyelenggaraan Jasa Multimedia
+
+## Pasal 7
+Penyelenggaraan Jasa Multimedia sebagaimana dimaksud dalam Pasal 3 ayat (1) huruf c terdiri atas:
+a. Layanan Akses Internet (ISP);
+b. Layanan Gerbang Akses Internet (NAP);
+c. Layanan Sistem Komunikasi Data; dan/atau
+d. Layanan IPTV.
+
+## BAB III
+HAK DAN KEWAJIBAN PENYELENGGARA JASA TELEKOMUNIKASI
+
+## Pasal 8
+(1) Dalam menyelenggarakan Jasa Telekomunikasi, Penyelenggara Jasa Telekomunikasi wajib:
+	a. memulai penyelenggaraan layanan Jasa Telekomunikasi secara komersial paling lambat 120 (seratus dua puluh) hari kalender terhitung sejak Izin Penyelenggaraan berlaku efektif;
+	b. menjamin terselenggaranya layanan Telekomunikasi sesuai dengan Izin Penyelenggaraan;
+	c. memenuhi Komitmen Layanan;
+	d. menggunakan Alat dan/atau Perangkat Telekomunikasi yang telah memenuhi persyaratan teknis yang ditetapkan dan tersertifikasi;
+	e. mengutamakan penggunaan Alat dan/atau Perangkat Telekomunikasi produksi dalam negeri sepanjang memungkinkan dan tersedia;
+	f. mengikuti ketentuan teknis dalam Rencana Dasar Teknis (Fundamental Technical Plan) Telekomunikasi Nasional sesuai dengan ketentuan peraturan perundang-undangan;
+	g. memperoleh Hak Labuh (Landing Right) Satelit dalam hal menggunakan satelit yang menggunakan filing satelit yang didaftarkan atas nama administrasi telekomunikasi negara lain sesuai dengan ketentuan peraturan perundang-undangan;
+	h. memenuhi pelayanan dan perlindungan terhadap Pelanggan sesuai dengan ketentuan peraturan perundang-undangan;
+	i. melakukan upaya pengamanan dan perlindungan terhadap layanan yang diselenggarakannya serta Sarana dan Prasarana Telekomunikasi sesuai dengan ketentuan peraturan perundang-undangan;
+	j. memenuhi kewajiban pembayaran BHP Telekomunikasi sesuai dengan ketentuan peraturan perundang-undangan;
+	k. memenuhi kewajiban Kontribusi KPU/USO sesuai dengan ketentuan peraturan perundang-undangan;
+	l. menuangkan setiap kerja sama Penyelenggaraan Jasa Telekomunikasi dalam perjanjian tertulis;
+	m. menyediakan kontak layanan informasi yang memiliki fasilitas untuk melayani pengaduan dan pertanyaan dari Pelanggan yang paling sedikit berupa layanan telepon dan surat elektronik;
+	n. memprioritaskan pengiriman, penyaluran, dan penyampaian informasi penting kepada masyarakat terkait dengan kepentingan negara;
+	o. memenuhi ketentuan struktur kepemilikan saham pada badan hukum Penyelenggara Jasa Telekomunikasi sesuai dengan ketentuan peraturan perundang-undangan;
+	p. memenuhi standar kualitas pelayanan Jasa Telekomunikasi;
+	q. mencatat, merekam, dan/atau menyimpan secara rinci pemakaian Jasa Telekomunikasi yang digunakan Pelanggan paling singkat selama 3 (tiga) bulan;
+	r. memelihara rekaman data pengukuran kualitas layanan Jasa Telekomunikasi selama 1 (satu) Tahun Buku dan menyimpannya sampai dengan 1 (satu) Tahun Buku ke depan;
+	s. mempublikasikan pencapaian standar kualitas layanan untuk setiap periode pelaporan secara daring melalui laman kontak layanan informasi milik Penyelenggara Jasa Telekomunikasi; dan
+	t. menyampaikan laporan Penyelenggaraan Jasa Telekomunikasi sesuai dengan ketentuan peraturan perundang-undangan.
+(2) Komitmen Layanan sebagaimana dimaksud pada ayat (1) huruf c berupa Komitmen Layanan untuk tiap tahun dan diakumulasi untuk 5 (lima) tahun.
+(3) Pemenuhan kewajiban pembayaran BHP Telekomunikasi dan Kontribusi KPU/USO sebagaimana dimaksud pada ayat (1) huruf j dan huruf k untuk Penyelenggara Layanan Konten pesan pendek premium (SMS Premium) dilakukan melalui Penyelenggara Jasa Telekomunikasi yang menyelenggarakan layanan teleponi dasar.
+
+## Pasal 9
+Dalam menyelenggarakan Jasa Telekomunikasi, Penyelenggara Jasa Telekomunikasi berhak:
+a. mendapatkan pelayanan perizinan Jasa Telekomunikasi;
+b. mendapatkan pelayanan permohonan penetapan Penomoran Telekomunikasi sesuai dengan ketentuan peraturan perundang-undangan;
+c. menggunakan teknologi pilihannya untuk menyelenggarakan layanan Jasa Telekomunikasi sesuai dengan ketentuan peraturan perundang-undangan;
+d. menerima pembayaran dari Pelanggan atas penyediaan layanan Jasa Telekomunikasi yang diselenggarakannya;
+e. mengajukan pengaduan dan penyelesaian kepada Badan Regulasi TeIekomunikasi Indonesia dalam hal terjadi perselisihan antar penyelenggara Telekomunikasi terkait Penyelenggaraan Jasa Telekomunikasi;
+f. mendapatkan jaminan kerahasiaan data dan informasi yang disampaikan terkait Penyelenggaraan Jasa Telekomunikasi sepanjang dinyatakan rahasia oleh Penyelenggara Jasa Telekomunikasi sesuai dengan ketentuan peraturan perundang-undangan; dan
+g. melakukan penggabungan, peleburan, pengambilalihan, atau pemisahan sesuai dengan ketentuan peraturan perundang-undanga
+
+## BAB IV
+KETENTUAN PENYELENGGARAN JASA TELEKOMUNIKASI
+
+## Bagian Kesatu
+Umum
+
+## Paragraf 1
+Penggunaan Jaringan Telekomunikasi dalam Penyelenggaraan Jasa Telekomunikasi
+
+## Pasal 10
+(1) Dalam menyelenggarakan layanan Jasa Telekomunikasi, Penyelenggara Jasa Telekomunikasi menggunakan Jaringan Telekomunikasi dari Penyelenggara Jaringan Telekomunikasi.
+(2) Penyelenggara Jasa Telekomunikasi dapat mengajukan permohonan kepada Penyelenggara Jaringan Telekomunikasi untuk dapat menggunakan dan/atau menyewa Jaringan Telekomunikasi sesuai dengan spesifikasi dan/atau kapasitas Jaringan Telekomunikasi yang dibutuhkan dengan memenuhi syarat-syarat berlangganan Jaringan Telekomunikasi yang ditetapkan oleh Penyelenggara Jaringan Telekomunikasi.
+(3) Dalam penggunaan Jaringan Telekomunikasi untuk Penyelenggaraan Jasa Telekomunikasi sebagaimana dimaksud pada ayat (1), Penyelenggara Jasa Telekomunikasi dilarang menyewakan kembali Jaringan Telekomunikasi dimaksud tanpa memperoleh izin Penyelenggaraan Jaringan Telekomunikasi.
+
+## Pasal 11
+(1) Penyelenggara Jasa Telekomunikasi dapat melakukan Ketersambungan dengan Penyelenggara Jaringan Telekomunikasi.
+(2) Ketersambungan sebagaimana dimaksud pada ayat (1) dilaksanakan dalam bentuk penyewaan oleh Penyelenggara Jaringan Telekomunikasi kepada Penyelenggara Jasa Telekomunikasi.
+(3) Ketersambungan perangkat milik Penyelenggara Jasa Telekomunikasi dengan Jaringan Telekomunikasi dilaksanakan secara transparan dan tidak diskriminatif.
+(4) Ketentuan lebih lanjut mengenai Ketersambungan diatur dalam Peraturan Menteri.
+
+## Pasal 12
+(1) Untuk penyelenggaraan layanan yang terhubung dengan internet di luar wilayah Indonesia, penyelenggara Jasa Telekomunikasi Layanan Akses Internet (ISP) wajib bekerja sama dengan Penyelenggara Jasa Telekomunikasi yang menyelenggarakan Layanan Gerbang Akses Internet (NAP) sebagaimana dimaksud dalam Pasal 7 huruf b.
+(2) Kerja sama antara Penyelenggara Jasa Telekomunikasi Layanan Akses Internet (ISP) dengan Penyelenggara Jasa Telekomunikasi yang menyelenggarakan Layanan Gerbang Akses Internet (NAP) sebagaimana dimaksud pada ayat (1) dapat dilakukan secara:
+	a. mandiri; dan/atau
+	b. kelompok secara bersama-sama.
+
+## Paragraf 2
+Alat dan/atau Perangkat Telekomunikasi
+
+## Pasal 13
+(1) Penyelenggara Jasa Telekomunikasi wajib memberikan kesempatan bagi Pelanggan untuk menggunakan Alat dan/atau Perangkat Telekomunikasi berupa perangkat akses dan perangkat terminal Pelanggan miliknya sendiri.
+(2) Perangkat akses sebagaimana dimaksud pada ayat (1) merupakan bagian dari Penyelenggaraan Jasa Telekomunikasi untuk keperluan penyambungan Jasa Telekomunikasi yang akan dipergunakan oleh Pelanggan.
+(3) Perangkat terminal Pelanggan sebagaimana dimaksud pada ayat (1) merupakan perangkat/terminal yang berada di lokasi Pelanggan untuk keperluan bertelekomunikasi.
+(4) Penggunaan Alat dan/atau Perangkat Telekomunikasi oleh Pelanggan dalam berlangganan Jasa Telekomunikasi sebagaimana dimaksud pada ayat (1), ayat (2), dan ayat (3) wajib memenuhi ketentuan teknis dan sertifikasi sesuai dengan ketentuan peraturan perundang- undangan.
+
+## Paragraf 3
+Tarif Jasa Telekomunikasi
+
+## Pasal 14
+(1) Penyelenggara Jasa Telekomunikasi wajib menentukan besaran tarif Penyelenggaraan Jasa Telekomunikasi.
+(2) Besaran tarif sebagaimana dimaksud pada ayat (1) wajib mengikuti formula tarif Penyelenggaraan Jasa Telekomunikasi.
+(3) Ketentuan lebih lanjut mengenai formula tarif sebagaimana dimaksud pada ayat (2) ditetapkan oleh Menteri.
+
+## Pasal 15
+(1) Penyelenggara Jasa Telekomunikasi wajib memberikan informasi tarif layanan secara transparan dan tidak diskriminatif terhadap Pelanggan dan/atau Penyelenggara Jasa Telekomunikasi lainnya.
+(2) Ketentuan mengenai perlakuan yang transparan dalam pemberian informasi tarif layanan dan tidak diskriminatif sebagaimana dimaksud pada ayat (1) ditetapkan oleh Menteri.
+
+## Paragraf 4
+Penomoran Telekomunikasi
+
+## Pasal 16
+(1) Penyelenggaraan Jasa Teleponi Dasar sebagaimana dimaksud dalam Pasal 3 ayat (1) huruf a menggunakan Penomoran Telekomunikasi yang ditetapkan kepada Penyelenggara Jaringan Telekomunikasi.
+(2) Penomoran Telekomunikasi dapat ditetapkan untuk Penyelenggaraan Jasa Nilai Tambah Teleponi sebagaimana dimaksud dalam Pasal 3 ayat (1) huruf b meliputi:
+	a. Layanan Pusat Panggilan Informasi (Call Center);
+	b. Layanan Panggilan Terkelola (Calling Card);
+	c. Layanan ITKP; dan/atau
+	d. Layanan Konten.
+(3) Ketentuan lebih lanjut mengenai Penomoran Telekomunikasi ditetapkan oleh Menteri.
+
+## Pasal 17
+(1) Penyelenggaraan Jasa Telekomunikasi yang berbasis protokol internet wajib menggunakan Alamat Protokol Internet (Internet Protocol Address) publik dan/atau Nomor Sistem Otonom (Autonomous System Number) yang dialokasikan kepada Penyelenggara Jasa Telekomunikasi dimaksud.
+(2) Alamat Protokol Internet (Internet Protocol Address) publik dan/atau Nomor Sistem Otonom (Autonomous System Number) sebagaimana dimaksud pada ayat (1) dapat berupa Alamat Protokol Internet (Internet Protocol Address) dan/atau Nomor Sistem Otonom (Autonomous System Number) yang dialokasikan oleh Pengelola Nomor Protokol Internet Nasional atau dialokasikan oleh Penyelenggara Jasa Telekomunikasi yang menyelenggarakan Layanan Gerbang Akses Internet (NAP).
+(3) Dalam hal Penyelenggaraan Jasa Telekomunikasi berbasis protokol internet, Penyelenggara Jasa Telekomunikasi harus melakukan penyelarasan waktu (clock synchronization) sesuai dengan ketentuan peraturan perundang-undangan.
+
+## Paragraf 5
+Pelayanan dan Perlindungan Pelanggan Jasa Telekomunikasi
+
+## Pasal 18
+(1) Penyelenggara Jasa Telekomunikasi dilarang menyediakan layanan yang memiliki muatan Konten bertentangan dengan ketentuan peraturan perundang- undangan.
+(2) Dalam hal Penyelenggara Jasa Telekomunikasi tidak menyediakan muatan Konten secara langsung, Penyelenggara Jasa Telekomunikasi wajib menginformasikan larangan muatan Konten sebagaimana dimaksud pada ayat (1) kepada mitra atau pihak yang bekerja sama dalam menyediakan Konten.
+(3) Dalam hal terdapat pengaduan adanya Konten yang melanggar ketentuan peraturan perundang-undangan sebagaimana dimaksud pada ayat (1), Penyelenggara Jasa Telekomunikasi wajib memblokir layanan dimaksud.
+
+## Pasal 19
+(1) Calon Pelanggan Jasa Telekomunikasi dapat mengajukan permohonan kepada Penyelenggara Jasa Telekomunikasi untuk berlangganan dengan memenuhi syarat-syarat berlangganan Jasa Telekomunikasi yang ditetapkan oleh Penyelenggara Jasa Telekomunikasi dan sesuai dengan ketentuan peraturan perundang-undangan.
+(2) Dalam hal Penyelenggara Jasa Telekomunikasi tidak menyetujui permohonan berlangganan calon Pelanggan sebagaimana dimaksud pada ayat (1), calon Pelanggan dapat meminta Badan Regulasi Telekomunikasi Indonesia untuk melakukan mediasi dan/atau penyelesaian.
+
+## Pasal 20
+(1) Penyelenggara Jasa Telekomunikasi wajib menyimpan dan merahasiakan data Pelanggan paling sedikit berupa nama Pelanggan dan nomor identitas Pelanggan.
+(2) Dalam hal Pelanggan Jasa Telekomunikasi berhenti berlangganan, Penyelenggara Jasa Telekomunikasi wajib menyimpan data Pelanggan sebagaimana dimaksud pada ayat (1) selama paling singkat 90 (sembilan puluh) hari kalender terhitung sejak tanggal berhenti berlangganan.
+(3) Untuk keperluan proses peradilan pidana, Penyelenggara Jasa Telekomunikasi wajib menyimpan data rekaman yang terkait langsung dengan proses peradilan dimaksud sampai dengan putusan pengadilan berkekuatan hukum tetap berdasarkan:
+	a. permintaan tertulis Jaksa Agung dan/atau Kepala Kepolisian Republik Indonesia untuk tindak pidana tertentu; atau
+	b. permintaan penyidik untuk tindak pidana tertentu sesuai dengan ketentuan peraturan perundang- undangan.
+
+## Pasal 21
+Penyelenggara Jasa Telekomunikasi menjamin akurasi sistem pencatatan pemakaian Jasa Telekomunikasi yang digunakan untuk penagihan (billing) atas pemakaian Jasa Telekomunikasi oleh Pelanggan sesuai dengan ketentuan peraturan perundang-undangan.
+
+## Paragraf 6
+Kerja Sama Jual Kembali Jasa Telekomunikasi
+
+## Pasal 22
+(1) Penjualan Jasa Telekomunikasi dapat dilakukan secara Jual Kembali Jasa Telekomunikasi antara Penyelenggara Jasa Telekomunikasi dengan pelaksana Jual Kembali Jasa Telekomunikasi yang dituangkan dalam perjanjian kerja sama.
+(2) Penyelenggara Jasa Telekomunikasi yang melakukan kerja sama Jual Kembali Jasa Telekomunikasi sebagaimana dimaksud pada ayat (1) wajib menjamin keberlangsungan seluruh layanan Telekomunikasi yang diselenggarakannya.
+(3) Kerja sama Jual Kembali Jasa Telekomunikasi sebagaimana dimaksud pada ayat (1) wajib dilakukan dengan ketentuan sebagai berikut:
+	a. pelaksana Jual Kembali Jasa Telekomunikasi menggunakan merek dagang layanan Penyelenggara Jasa Telekomunikasi yang dijual kembali dan dapat menambahkan merek dagang pelaksana Jual Kembali kepada Pelanggan (end user);
+	b. pelaksana Jual Kembali Jasa Telekomunikasi memenuhi ketentuan standar kualitas pelayanan Jasa Telekomunikasi yang telah dikomitmenkan oleh Penyelenggara Jasa Telekomunikasi;
+	c. seluruh pendapatan dari pelaksanaan Jual Kembali Jasa Telekomunikasi menjadi pendapatan dari dan dibukukan oleh Penyelenggara Jasa Telekomunikasi;
+	d. penagihan (billing) mencantumkan merek dagang Penyelenggara Jasa Telekomunikasi; dan
+	e. dalam hal jual kembali layanan Jasa Telekomunikasi berbasis protokol internet, pelaksana Jual Kembali Jasa Telekomunikasi wajib menggunakan Alamat Protokol Internet (Internet Protocol Address) publik dan Nomor Sistem Otonom (Autonomous System Number) milik Penyelenggara Jasa Telekomunikasi.
+(4) Ketentuan jual kembali layanan Jasa Telekomunikasi sebagaimana dimaksud pada ayat (3) dikecualikan untuk penyelenggaraan warung telekomunikasi dan warung internet.
+
+## Bagian Kedua
+Ketentuan Penyelenggaraan Jasa Teleponi Dasar
+
+## Pasal 23
+(1) Dalam menyelenggarakan layanan Teleponi Dasar, Penyelenggara Jasa Telekomunikasi wajib:
+	a. menyediakan Alat dan/atau Perangkat Telekomunikasi dalam menyelenggarakan layanan teleponi dasar; dan
+	b. melakukan kerja sama dengan penyelenggara satelit yang telah memperoleh Hak Labuh (Landing Right) Satelit, dalam hal menyelenggarakan layanan teleponi dasar melalui satelit; dan
+	c. memenuhi komitmen minimal Layanan Teleponi Dasar dengan ketentuan:
+		1) total kapasitas layanan minimal yang disediakan sesuai dengan kapasitas Jaringan Telekomunikasi yang dimiliki/disewa; dan
+		2) cakupan wilayah layanan sesuai dengan cakupan wilayah Penyelenggaraan Jaringan Telekomunikasi.
+(2) Dalam hal Layanan Teleponi Dasar diselenggarakan melalui satelit yang telah memperoleh Hak Labuh (Landing Right) Satelit, Total Kapasitas Layanan Minimal yang disediakan sebagaimana dimaksud pada ayat (1) huruf c berupa:
+	a. pada tahun pertama (awal operasi) paling sedikit tersedia setara 1 (satu) E1 atau setara 30 (tiga puluh) Satuan Sambungan Telepon (SST); dan
+	b. pada tahun kedua sampai dengan seterusnya dapat menambah kapasitas layanan.
+
+## Bagian Ketiga
+Ketentuan Penyelenggaraan Jasa Nilai Tambah Teleponi
+
+## Paragraf 1
+Layanan Pusat Panggilan Informasi (Call Center)
+
+## Pasal 24
+(1) Penyelenggaraan Layanan Pusat Panggilan Informasi (Call Center) dilakukan dengan mengelola panggilan inbound ke Pusat Panggilan Informasi untuk kepentingan pelanggan.
+(2) Selain mengelola panggilan inbound sebagaimana dimaksud pada ayat (1), Penyelenggara Layanan Pusat Panggilan Informasi (Call Center) dapat melakukan panggilan outbound sebagai panggilan end to end antar nomor.
+(3) Dalam menyelenggarakan Layanan Pusat Panggilan Informasi (Call Center) sebagaimana dimaksud dalam Pasal 6 huruf a, Penyelenggara Jasa Telekomunikasi wajib:
+	a. menyediakan Alat dan/atau Perangkat Telekomunikasi dalam menyelenggarakan Layanan Pusat Panggilan Informasi (Call Center);
+	b. melakukan kerja sama dengan Penyelenggara Jasa Telekomunikasi yang menyelenggarakan layanan Teleponi Dasar; dan
+	c. memenuhi Komitmen Layanan berupa kapasitas layanan dengan ketentuan:
+		1) pada tahun pertama (awal operasi) paling sedikit tersedia setara 1 (satu) E1 atau setara 30 (tiga puluh) Satuan Sambungan Telepon (SST);dan
+		2) pada tahun kedua sampai dengan seterusnya dapat menambah kapasitas layanan.
+
+## Paragraf 2
+Layanan Panggilan Terkelola (Calling Card)
+
+## Pasal 25
+Dalam menyelenggarakan Layanan Panggilan Terkelola (Calling Card) sebagaimana dimaksud dalam Pasal 6 huruf b, Penyelenggara Jasa Telekomunikasi wajib:
+a. menyediakan Alat dan/atau Perangkat Telekomunikasi dalam menyelenggarakan Layanan Panggilan Terkelola (Calling Card);
+b. melakukan kerja sama dengan Penyelenggara Jasa Telekomunikasi yang menyelenggarakan layanan Teleponi Dasar; dan
+c. memenuhi Komitmen Layanan berupa kapasitas layanan dengan ketentuan:
+	1) pada tahun pertama (awal operasi) paling sedikit tersedia setara 2 (dua) E1 atau setara 2 (dua) x 30 (tiga puluh) Satuan Sambungan Telepon (SST); dan
+	2) pada tahun kedua sampai dengan seterusnya dapat menambah kapasitas layanan.
+
+## Paragraf 3
+Layanan ITKP
+
+## Pasal 26
+(1) Dalam menyelenggarakan Layanan ITKP sebagaimana dimaksud dalam Pasal 6 huruf c, Penyelenggara Jasa Telekomunikasi wajib:
+	a. menyediakan Alat dan/atau Perangkat Telekomunikasi dalam menyelenggarakan Layanan ITKP;
+	b. melakukan kerja sama dengan Penyelenggara Jasa Telekomunikasi yang menyelenggarakan layanan Teleponi Dasar; dan
+	c. memenuhi Komitmen Layanan berupa kapasitas layanan dengan ketentuan:
+		1) pada tahun pertama (awal operasi) paling sedikit tersedia setara 1 (satu) E1 atau setara 30 (tiga puluh) Satuan Sambungan Telepon (SST); dan
+		2) pada tahun kedua sampai dengan seterusnya wajib menambah kapasitas layanan dengan akumulasi kapasitas yang tersedia pada akhir tahun kelima paling sedikit setara 23 (dua puluh tiga) E1 atau setara 23 (dua puluh tiga) x 30 (tiga puluh) Satuan Sambungan Telepon.
+(2) Penyelenggara Jasa Telekomunikasi yang menyelenggarakan Layanan ITKP dilarang menyalurkan panggilan masuk (incoming call) dari luar wilayah Indonesia.
+
+## Paragraf 4
+Layanan Konten
+
+## Pasal 27
+(1) panggilan premium; dan/atau
+pesan pendek premium (SMS Premium).
+(2) Dalam menyelenggarakan Layanan Konten sebagaimana dimaksud pada ayat (1), Penyelenggara Jasa Telekomunikasi wajib:
+	a. menyediakan Alat dan/atau Perangkat Telekomunikasi dalam menyelenggarakan Layanan Konten;
+	b. menjamin setiap Penyedia Konten Independen yang berkontribusi dalam Penyelenggaraan Layanan Konten telah sesuai dengan ketentuan peraturan perundang-undangan;
+	c. membuat perjanjian kerja sama, dalam hal Penyelenggara Jasa Telekomunikasi yang menyelenggarakan Layanan Konten pesan pendek premium (SMS Premium) menyalurkan konten dari Penyedia Konten Independen asing;
+	d. melakukan kerja sama dengan Penyelenggara Jasa Telekomunikasi yang menyelenggarakan layanan Teleponi Dasar;
+	e. memenuhi Komitmen layanan kepada Penyelenggara Jasa Telekomunikasi yang menyelenggarakan Layanan Konten panggilan premium (Premium Call) berupa kapasitas layanan dengan ketentuan:
+		1) pada tahun pertama (awal operasi) paling sedikit tersedia setara 1 (satu) E1 atau setara 30 (tiga puluh) Satuan Sambungan Telepon (SST); dan
+		2) pada tahun kedua sampai dengan seterusnya dapat menambah kapasitas layanan; dan
+	f. memenuhi Komitmen Layanan kepada Penyelenggara Jasa Telekomunikasi yang menyelenggarakan Layanan Konten pesan pendek premium (SMS Premium) berupa jumlah perjanjian kerja sama dengan Penyedia Konten Independen dengan ketentuan:
+		1) pada tahun pertama (awal operasi) paling sedikit terdapat 2 (dua) perjanjian kerja sama; dan
+		2) pada tahun kedua sampai dengan seterusnya wajib menambah jumlah perjanjian kerja sama dengan akumulasi jumlah perjanjian kerja sama pada akhir tahun kelima adalah paling sedikit 7 (tujuh) perjanjian kerja sama.
+(3) Penyelenggara Jasa Telekomunikasi yang menyelenggarakan Layanan Konten sebagaimana dimaksud pada ayat (1) huruf a dilarang:
+	a. melakukan panggilan premium kepada Pelanggannya; dan
+	b. memanipulasi konfirmasi persetujuan penggunaan Konten dari calon pelanggan dengan cara apapun.
+
+## Pasal 28
+(1) Penyelenggara Jasa Telekomunikasi yang menyelenggarakan Layanan Konten pesan pendek premium (SMS Premium) sebagaimana dimaksud dalam Pasal 27 ayat (1) huruf b dapat menyelenggarakan Layanan Konten pesan pendek premium (SMS Premium) dengan melakukan pengurangan deposit prabayar atau tagihan telepon pascabayar melalui mekanisme:
+	a. berlangganan (pushed services); dan/atau
+	b. tidak berlangganan (pulled services).
+(2) Ring Back Tone (RBT) yang merupakan bagian dari fitur proses switching tidak termasuk dalam Layanan Konten pesan pendek premium (SMS Premium) sebagaimana dimaksud pada ayat (1).
+
+## Bagian Keempat
+Ketentuan Penyelenggaraan Jasa Multimedia
+
+## Paragraf 1
+Layanan Akses Internet (ISP)
+
+## Pasal 29
+(1) Layanan Akses Internet (ISP) sebagaimana dimaksud 
+dalam Pasal 7 huruf a dapat berupa:
+	a. akses internet melalui Jaringan Telekomunikasi;
+	b. akses internet dengan ketersambungan khusus (dedicated connection);
+	c. akses internet untuk ruang publik (hotspot); dan/atau
+	d. akses Internet dalam angkutan transportasi (onboard connectivity).
+(2) Dalam menyelenggarakan Layanan Akses Internet (ISP), Penyelenggara Jasa Telekomunikasi wajib:
+	a. menyediakan Alat dan/atau Perangkat Telekomunikasi dalam menyelenggarakan Layanan Akses Internet (ISP);
+	b. melakukan kerja sama dengan Penyelenggara Jasa Telekomunikasi yang menyelenggarakan Layanan Gerbang Akses Internet (NAP);
+	c. memenuhi ketentuan sertifikasi keselamatan dan kelayakan dari instansi terkait dan ketentuan penggunaan spektrum frekuensi radio yang telah ditetapkan bagi Layanan Akses Internet (ISP) dalam angkutan transportasi (on-board connectivity); dan
+	d. memenuhi Komitmen Layanan berupa kapasitas layanan dengan ketentuan:
+		1) pada tahun pertama (awal operasi):
+			a) paling sedikit tersedia cakupan wilayah layanan di 1 (satu) kota/kabupaten; dan
+			b) paling sedikit tersedia total kapasitas layanan sesuai dengan klasifikasi kota/kabupaten yang dikomitmenkan dalam huruf a.
+		2) pada tahun kedua sampai dengan seterusnya dapat menambah kota/kabupaten yang menjadi penambahan cakupan wilayah dan/atau penambahan pada kapasitas layanan.
+
+## Paragraf 2
+Layanan Gerbang Akses Internet (NAP)
+
+## Pasal 30
+Dalam menyelenggarakan Layanan Gerbang Akses Internet (NAP) sebagaimana dimaksud dalam Pasal 7 huruf b, Penyelenggara Jasa Telekomunikasi wajib:
+a. menyediakan Alat dan/atau Perangkat Telekomunikasi dalam menyelenggarakan Layanan Gerbang Akses Internet (NAP);
+b. memperoleh izin Penyelenggaraan Jaringan Telekomunikasi yang telah berlaku efektif untuk penyelenggaraan jaringan tetap tertutup yang telah terbangun berupa rute domestik dan internasional;
+c. memiliki Nomor PI sendiri; dan
+d. Lokasi Ketersambungan simpul jasa (node) Layanan Gerbang Akses Internet (NAP):
+	1) Lokasi Ketersambungan simpul jasa (node) Layanan Gerbang Akses Internet (NAP): 
+		a) pada tahun pertama (awal operasi) paling sedikit tersedia 2 (dua) node di 2 (dua) provinsi yang berbeda; dan
+		b) pada tahun kedua sampai dengan seterusnya wajib menambah lokasi node dengan akumulasi lokasi yang tersedia pada akhir tahun kelima paling sedikit 10 (sepuluh) node di 10 (sepuluh) provinsi yang berbeda.
+	2) Kapasitas Layanan Bandwidth Domestik:
+		a) pada tahun pertama paling sedikit tersedia 1 (satu) Gbps; dan
+		b) pada tahun kedua sampai dengan seterusnya dapat menambah kapasitas layanan.
+	3) Kapasitas Layanan Bandwidth Internasional:
+		a) pada tahun pertama (awal operasi) tersedia paling sedikit 10 (sepuluh) Gbps; dan
+		b) pada tahun kedua sampai dengan seterusnya wajib menambah kapasitas layanan Bandwidth Internasional dengan akumulasi kapasitas yang tersedia pada akhir tahun kelima paling sedikit 20 (dua puluh) Gbps
+
+## Paragraf 3
+Layanan Sistem Komunikasi Data
+
+## Pasal 31
+Layanan Sistem Komunikasi Data sebagaimana dimaksud dalam Pasal 7 huruf c dapat diselenggarakan dengan berbasis protokol internet dan/atau selain protokol internet melalui:
+a. Jaringan Telekomunikasi; dan/atau
+b. Satelit asing dengan terlebih dahulu memperoleh Hak Labuh (Landing Right) Satelit.
+
+## Pasal 32
+Dalam menyelenggarakan Layanan Sistem Komunikasi Data sebagaimana dimaksud dalam Pasal 7 huruf c, Penyelenggara Jasa Telekomunikasi wajib:
+a. menyediakan Alat dan/atau Perangkat Telekomunikasi dalam menyelenggarakan Layanan Sistem Komunikasi Data;
+b. melakukan kerja sama dengan Penyelenggara Jaringan Telekomunikasi dalam hal menyelenggarakan Layanan Sistem Komunikasi Data melalui Jaringan Telekomunikasi; dan
+c. melakukan kerja sama dengan penyelenggara satelit dan memperoleh Hak Labuh (Landing Right) Satelit dalam hal menyelenggarakan Layanan Sistem Komunikasi Data melalui satelit asing.
+
+## Paragraf 4
+Layanan IPTV
+
+## Pasal 33
+Dalam menyelenggarakan Layanan IPTV sebagaimana dimaksud dalam Pasal 7 huruf d, Penyelenggara Jasa Telekomunikasi:
+a. wajib menyediakan Alat dan/atau Perangkat Telekomunikasi dalam menyelenggarakan Layanan IPTV;
+b. dapat membuka peluang kerja sama penyediaan Layanan IPTV kepada Penyedia Konten Independen dalam negeri;
+c. wajib menjamin bahwa setiap Penyedia Konten Independen yang berkontribusi dalam Layanan IPTV telah mengikuti ketentuan peraturan perundangundangan;
+d. harus bekerja sama dengan Lembaga Penyiaran, dalam hal penyelenggaraan layanan IPTV menyediakan konten penyiaran; dan
+e. memenuhi Komitmen Layanan berupa jumlah perjanjian kerja sama dengan Penyedia Konten Independen dengan ketentuan: 
+	1) pada tahun pertama (awal operasi) paling sedikit terdapat 2 (dua) perjanjian kerja sama; dan
+	2) pada tahun kedua sampai dengan seterusnya dapat menambah jumlah perjanjian kerja sama.
+
+## Bagian Kelima
+Ketentuan Lain-lain
+
+## Pasal 34
+(1) Penyelenggara Telekomunikasi wajib memenuhi ketentuan teknis mengenai:
+	a. kerja sama dalam Penyelenggaraan Jasa Telekomunikasi;
+	b. Jual Kembali Jasa Telekomunikasi;
+	c. standar kualitas pelayanan;
+	d. penetapan Penomoran Telekomunikasi;
+	e. pengamanan dan perlindungan terhadap layanan dan Pelanggan;
+	f. pengaduan dan mediasi antar Penyelenggara Telekomunikasi oleh Badan Regulasi Telekomunikasi Indonesia;
+	g. jenis informasi penting terkait dengan kepentingan negara;
+	h. prosedur pengiriman, penyaluran, dan penyampaian informasi penting;
+	i. fitur tambahan pada penyelenggaraan layanan Teleponi Dasar;
+	j. panggilan outbond pada penyelenggaraan layanan Pusat Panggilan Informasi (call center); dan
+	k. penyelenggaraan masing-masing jenis layanan, meliputi Komitmen Layanan, penyediaan Perangkat Telekomunikasi, penyediaan kapasitas minimal, dan cakupan wilayah.
+(2) Ketentuan teknis sebagaimana dimaksud pada ayat (1) ditetapkan oleh Direktur Jenderal.
+
+## BAB V
+PERIZINAN JASA TELEKOMUNIKASI
+
+## Bagian Kesatu
+Tata Cara Perizinan
+
+## Pasal 35
+(1) Penyelenggara Jasa Telekomunikasi wajib memperoleh Izin Penyelenggaraan dari Menteri.
+(2) Permohonan Izin Penyelenggaraan dapat diajukan setiap waktu oleh Pelaku Usaha melalui OSS sesuai dengan ketentuan peraturan perundang-undangan.
+(3) Ketentuan lebih lanjut mengenai permohonan Izin Penyelenggaraan melalui OSS diatur dalam Peraturan Menteri tersendiri.
+(4) Dikecualikan dari ketentuan pada ayat (2), Menteri dapat menutup peluang usaha untuk menyelenggarakan layanan Jasa Telekomunikasi pada wilayah tertentu.
+
+## Pasal 36
+(1) Pelaku Usaha harus melakukan Uji Laik Operasi:
+	a. dalam rangka pemenuhan Pernyataan Komitmen pada Izin Penyelenggaraan oleh Pelaku Usaha
+	b. jika terdapat perubahan teknologi sistem penyelenggaraan layanan Jasa Telekomunikasi; dan/atau
+	c. jika terdapat penambahan jenis dan/atau kategori layanan Jasa Telekomunikasi.
+(2) Uji Laik Operasi sebagaimana dimaksud pada ayat (1) dilakukan melalui penilaian mandiri oleh Pelaku Usaha.
+(3) Dalam hal diperlukan, Uji Laik Operasi sebagaimana dimaksud pada ayat (2) dapat dilakukan dengan metode uji petik yang dilaksanakan Pelaku Usaha bersama dengan Kementerian berdasarkan permohonan Pelaku Usaha.
+(4) Pelaku Usaha wajib menyampaikan penilaian mandiri sebagaimana dimaksud pada ayat (2) dan permohonan uji petik sebagaimana dimaksud pada ayat (3).
+(5) Dalam hal Uji Laik Operasi untuk pemenuhan Pernyataan Komitmen sebagaimana dimaksud pada ayat (1) huruf a, Pelaku Usaha wajib menyampaikan penilaian mandiri dan permohonan uji petik paling lambat 15 (lima belas) hari kerja sebelum berakhirnya waktu pemenuhan atas pernyataan komitmen.
+(6) Kementerian dapat melakukan verifikasi lapangan terhadap hasil penilaian mandiri Uji Laik Operasi yang dilakukan pelaku usaha sebagaimana dimaksud pada ayat (2).
+(7) Direktorat Jenderal Penyelenggaraan Pos dan Informatika menerbitkan surat keterangan laik operasi yang merupakan hasil Uji Laik Operasi bagi pemohon yang memenuhi persyaratan.
+(8) Direktur Jenderal dapat melakukan audit sewaktu-waktu terhadap hasil pelaksanaan uji laik operasi yang menggunakan metode penilaian mandiri oleh Pelaku Usaha sebagaimana dimaksud pada ayat (2).
+(9) Dalam hal hasil verifikasi lapangan terhadap penilaian mandiri Uji Laik Operasi yang dilakukan pelaku usaha sebagaimana dimaksud pada ayat (6) tidak sesuai dengan parameter dan tata cara Uji Laik Operasi, Pelaku Usaha dikenai sanksi administratif.
+
+## Bagian Kedua
+Layanan Penyelenggaraan Jasa Telekomunikasi
+
+## Pasal 37
+Penyelenggara Jasa Telekomunikasi dapat menyelenggarakan layanan sebagaimana dimaksud dalam Pasal 4, Pasal 6, dan/atau Pasal 7 setelah layanan dimaksud ditetapkan dalam Izin Penyelenggaraan dan telah berlaku efektif.
+
+## Bagian Ketiga
+Perubahan dan Penyesuaian Izin Penyelenggaraan
+
+## Paragraf 1
+Perubahan Nama Badan Hukum
+
+## Pasal 38
+(1) Penyelenggara Jasa Telekomunikasi harus mengajukan perubahan Izin Penyelenggaraan dalam hal melakukan perubahan nama badan hukum.
+(2) Izin Penyelenggaraan sebagaimana dimaksud pada ayat (1) ditetapkan oleh Menteri.
+
+## Paragraf 2
+Perubahan layanan Jasa Telekomunikasi
+
+## Pasal 39
+(1) Penyelenggara Jasa Telekomunikasi dapat mengajukan perubahan jenis dan/atau kategori layanan Jasa Telekomunikasi berupa penghentian dan/atau penambahan layanan Jasa Telekomunikasi kepada Menteri.
+(2) Menteri melakukan evaluasi terhadap pengajuan perubahan layanan Jasa Telekomunikasi sebagaimana dimaksud pada ayat (1) sesuai dengan ketentuan peraturan perundang-undangan.
+
+## Pasal 40
+(1) Penyelenggara Jasa Telekomunikasi dapat melakukan penghentian layanan Jasa Telekomunikasi setelah memperoleh persetujuan Menteri, dengan terlebih dahulu memberikan pilihan kepada Pelanggan untuk:
+	a. mendapatkan pengalihan layanan ke Penyelenggara Jasa Telekomunikasi lain yang menyelenggarakan layanan sejenis; dan/atau
+	b. mendapatkan pengembalian biaya berlangganan yang telah dibayarkan atas sisa masa berlangganan yang belum terpenuhi dan/atau deposit prabayar layanan Jasa Telekomunikasi yang belum digunakan.
+(2) Penghentian layanan Jasa Telekomunikasi sebagaimana dimaksud pada ayat (1) mengakibatkan turut dicabutnya:
+	a. Penetapan Penomoran Telekomunikasi yang terkait dengan layanan Jasa Telekomunikasi yang dikurangi; dan
+	b. hak-hak lainnya yang melekat dengan layanan Jasa Telekomunikasi yang dikurangi.
+(3) Penghentian layanan Jasa Telekomunikasi tidak menghilangkan kewajiban lain dari Penyelenggara Jasa Telekomunikasi yang merupakan piutang negara.
+
+## Pasal 41
+Penyelenggara Jasa Telekomunikasi mengajukan permohonan penambahan layanan Jasa Telekomunikasi sebagaimana dimaksud dalam Pasal 39 ayat (1) kepada Menteri sesuai dengan ketentuan peraturan perundang-undangan. Paragraf 3 Perubahan Alamat Domisili
+
+## Paragraf 3
+Perubahan Alamat Domisili
+
+## Pasal 42
+(1) Dalam hal melakukan perubahan alamat domisili badan hukum, Penyelenggara Jasa Telekomunikasi harus melaporkan kepada Menteri.
+(2) Penyelenggara Jasa Telekomunikasi bertanggungjawab atas segala konsekuensi hukum akibat tidak dilakukannya pelaporan sebagaimana dimaksud pada ayat (1).
+
+## Paragraf 4
+Penyesuaian Komitmen Layanan
+
+## Pasal 43
+(1) Penyelenggara Jasa Telekomunikasi dapat mengajukan penyesuaian Komitmen Layanan dalam Izin Penyelenggaraan dengan ketentuan penyesuaian dimaksud tidak mengurangi jumlah komitmen kumulatif selama 5 (lima) tahun.
+(2) Penyesuaian sebagaimana dimaksud pada ayat (1) tidak dapat diajukan untuk Komitmen Layanan tahun pertama.
+(3) Permohonan penyesuaian Komitmen Layanan sebagaimana dimaksud pada ayat (1) hanya dapat dilakukan untuk Komitmen Layanan tahun berikutnya dan diajukan paling lambat 20 (dua puluh) hari kerja sebelum masuk periode tahun berikutnya.
+
+## Pasal 44
+(1) Menteri dapat melakukan penyesuaian Komitmen Layanan milik Penyelenggara Jasa Telekomunikasi.
+(2) Penyesuaian Komitmen Layanan sebagaimana dimaksud pada ayat (1) dilakukan dengan mempertimbangkan:
+	a. pemenuhan jangkauan layanan dan peningkatan kapasitas layanan untuk menjaga kualitas layanan yang dibutuhkan oleh masyarakat;
+	b. perubahan parameter komitmen pembangunan atau penyediaan layanan akibat perkembangan teknologi; dan
+kemampuan Pelaku Usaha.
+(3) Penyesuaian sebagaimana dimaksud pada ayat (1) disampaikan kepada Penyelenggara Jasa Telekomunikasi.
+(4) Penyelenggara Jasa Telekomunikasi wajib melaksanakan penyesuaian komitmen sebagaimana dimaksud pada ayat (3).
+
+## Bagian Keempat
+Ketentuan Lain-Lain
+
+## Pasal 45
+(1) Penyelenggara Telekomunikasi wajib memenuhi ketentuan teknis mengenai:
+	a. penutupan peluang usaha;
+	b. tata cara Uji Laik Operasi;
+	c. tata cara penetapan Izin Penyelenggaraan;
+	d. perubahan nama badan hukum;
+	e. perubahan layanan jasa telekomunikasi;
+	f. perubahan alamat domisili; dan
+	g. penyesuaian Komitmen Layanan.
+(2) Ketentuan teknis sebagaimana dimaksud pada ayat (1) ditetapkan oleh Direktur Jenderal.
+
+## BAB VI
+PENGAWASAN DAN PENGENDALIAN
+
+## Bagian Kesatu
+Umum
+
+## Pasal 46
+(1) Pengawasan dan pengendalian atas pelaksanaan Peraturan Menteri ini dilaksanakan oleh Menteri.
+(2) Pengawasan dan pengendalian sebagaimana dimaksud pada ayat (1) meliputi:
+	a. monitoring dan evaluasi terhadap Penyelenggaraan Jasa Telekomunikasi;
+	b. monitoring dan evaluasi terhadap penggunaan Penomoran Telekomunikasi; dan
+	c. pengenaan sanksi atas pelanggaran oleh Penyelenggara Jasa Telekomunikasi.
+(3) Untuk melaksanakan fungsi pengawasan dan pengendalian sebagaimana dimaksud pada ayat (2), Menteri dapat membentuk tim atau menunjuk unit kerja tertentu.
+
+## Bagian Kedua
+Monitoring dan Evaluasi Penyelenggaraan Jasa Telekomunikasi dan Laporan Penyelenggaraan Jasa Telekomunikasi
+
+## Pasal 47
+(1) Monitoring terhadap Penyelenggara Jasa Telekomunikasi terdiri dari:
+	a. kepatuhan Penyelenggara Jasa Telekomunikasi terhadap ketentuan Penyelenggaraan Jasa Telekomunikasi; dan
+	b. pengenaan sanksi atas pelanggaran ketentuan Penyelenggaraan Jasa Telekomunikasi.
+(2) Evaluasi terhadap Penyelenggara Jasa Telekomunikasi terdiri dari:
+	a. evaluasi tahunan terhadap kinerja Penyelenggaraan Jasa Telekomunikasi;
+	b. evaluasi tahunan terhadap penggunaan Penomoran Telekomunikasi; dan
+	c. evaluasi menyeluruh 5 (lima) tahunan terhadap kinerja Penyelenggaraan Jasa Telekomunikasi.
+(3) Dalam pelaksanaan evaluasi tahunan sebagaimana dimaksud pada ayat (2) huruf a, Penyelenggara Jasa Telekomunikasi wajib:
+	a. menyampaikan laporan penyelenggaraan tahunan;
+	b. menyampaikan laporan pencapaian kualitas layanan Jasa Telekomunikasi;
+	c. memenuhi Komitmen Layanan pada tahun penyelenggaraan yang dievaluasi; dan
+	d. memenuhi ketentuan Penyelenggaraan Jasa Telekomunikasi sesuai dengan ketentuan peraturan perundang-undangan.
+(4) Evaluasi menyeluruh 5 (lima) tahunan sebagaimana dimaksud pada ayat (2) huruf c berupa penilaian pencapaian realisasi komitmen layanan selama 5 (lima) tahun penyelenggaraan Jasa Telekomunikasi dan penyusunan rekapitulasi kesimpulan operasional penyelenggaraan, yang dilakukan setiap 5 (lima) tahun.
+
+## Pasal 48
+(1) Laporan penyelenggaraan tahunan Jasa Telekomunikasi sebagaimana dimaksud dalam Pasal 47 ayat (3) huruf a, wajib disampaikan paling lambat pada tanggal 30 April pada tahun berikutnya.
+(2) Laporan pencapaian kualitas layanan sebagaimana dimaksud dalam Pasal 47 ayat (3) huruf b wajib disampaikan bersamaan dengan laporan penyelenggaraan tahunan sebagaimana dimaksud pada ayat (1).
+(3) Selain laporan pencapaian kualitas layanan sebagaimana dimaksud pada ayat (2), untuk memperoleh data kualitas layanan, Menteri dapat melakukan pengukuran standar kualitas layanan.
+
+## Pasal 49
+(1) Menteri dapat meminta data kepada Penyelenggara Jasa Telekomunikasi selain dari yang telah disampaikan dalam laporan penyelenggaraan.
+(2) Penyelenggara Jasa Telekomunikasi wajib memberikan data atas permintaan sebagaimana dimaksud pada ayat (1) sesuai dengan ketentuan peraturan perundangundangan.
+
+## Pasal 50
+Menteri menetapkan pencabutan Penetapan Penomoran Telekomunikasi dalam hal:
+a. Penyelenggara Jasa Telekomunikasi tidak menggunakan Penomoran Telekomunikasi dalam jangka waktu 12 (dua belas) bulan berturut-turut; atau
+b. Izin Penyelenggaraan dan/atau layanan Jasa Telekomunikasi dicabut dan/atau dinyatakan tidak berlaku.
+
+## Bagian Ketiga
+Ketentuan Lain-Lain
+
+## Pasal 51
+(1) Penyelenggara Telekomunikasi wajib memenuhi ketentuan teknis mengenai:
+	a. tata cara monitoring dan evaluasi terhadap Penyelenggara Jasa Telekomunikasi;
+	b. tata cara evaluasi penggunaan Penomoran Telekomunikasi;
+	c. perhitungan capaian pemenuhan Komitmen Layanan Penyelenggaraan Jasa Telekomunikasi;
+	d. penilaian capaian standar kualitas layanan Penyelenggaraan Jasa Telekomunikasi;
+	e. pencabutan penetapan penomoran; dan
+	f. laporan Penyelenggara Jasa Telekomunikasi.
+(2) Ketentuan teknis sebagaimana dimaksud pada ayat (1) ditetapkan oleh Direktur Jenderal.
+
+## BAB VII
+SANKSI
+
+## Pasal 52
+(1) Pelanggaran terhadap ketentuan Pasal 8 ayat (1) huruf a, Pasal 8 ayat (1) huruf b, Pasal 8 ayat (1) huruf g, Pasal 8 ayat (1) huruf i, Pasal 8 ayat (1) huruf m, Pasal 8 ayat (1) huruf o, Pasal 8 ayat (1) huruf p, Pasal 8 ayat (1) huruf q, Pasal 8 ayat (1) huruf r, Pasal 12 ayat (1), Pasal 17 ayat (1), Pasal 18 ayat (1), Pasal 18 ayat (2), Pasal 18 ayat (3), Pasal 20 ayat (1), Pasal 20 ayat (2), Pasal 20 ayat (3), Pasal 22 ayat (4), Pasal 23, Pasal 24 ayat (3), Pasal 25, Pasal 26 ayat (1), Pasal 26 ayat (2), Pasal 27 ayat (2), Pasal 27 ayat (3), Pasal 29 ayat (2), Pasal 30, Pasal 32, Pasal 33 huruf a, Pasal 33 huruf c, Pasal 34 ayat (1), Pasal 45 ayat (1), Pasal 47 ayat (3) huruf b, Pasal 49 ayat (2), dan/atau Pasal 51 ayat (1) huruf a sampai dengan huruf e dapat dikenai sanksi adminsitratif berupa:
+	a. surat peringatan;
+	b. pencabutan layanan jasa telekomunikasi; dan/atau
+	c. pencabutan izin penyelenggaraan.
+(2) Pelanggaran terhadap ketentuan sebagaimana dimaksud dalam Pasal 8 ayat (1) huruf t dikenai sanksi administratif berupa: 
+	a. surat peringatan;
+	b. denda; dan/atau
+	c. pencabutan izin penyelenggaraan.
+(3) Pelanggaran terhadap ketentuan Pasal 8 ayat (1) huruf l, Pasal 8 ayat (1) huruf s, Pasal 13 ayat (1), dan/atau Pasal 48 ayat (2) dikenai sanksi administratif berupa surat peringatan.
+(4) Surat peringatan sebagaimana dimaksud pada ayat (1), ayat (2), dan ayat (3) diberikan paling banyak 3 (tiga) kali dengan jangka waktu masing-masing 7 (tujuh) hari kerja.
+(5) Pengenaan sanksi administratif berupa surat peringatan kedua dan/atau ketiga sebagaimana dimaksud pada ayat (3) mempertimbangkan tanggapan dan/atau keberatan tertulis dari Penyelenggara Jasa Telekomunikasi jika ada.
+(6) Pengenaan sanksi administratif sebagaimana dimaksud pada ayat (1) dan ayat (2) dilakukan secara berjenjang.
+
+## Pasal 53
+(1) Penyelenggara Jasa Telekomunikasi yang tidak memenuhi kewajiban Komitmen Layanan untuk 5 (lima) tahun sebagaimana dimaksud dalam Pasal 8 ayat (1) huruf c dan ayat (2) dikenai sanksi administratif dengan ketentuan sebagai berikut: 
+	a. Penyelenggara Jasa Telekomunikasi yang tidak melakukan penyediaan layanan dikenai sanksi administratif sebagaimana dimaksud dalam Pasal 52 ayat (1); dan/atau
+	b. Penyelenggara Jasa Telekomunikasi yang persentase akumulasi pencapaian pemenuhan komitmen layanannya lebih besar dari 0% (nol persen) namun kurang dari 100% (seratus persen) dikenai sanksi administratif berupa surat peringatan dan/atau pencabutan layanan Jasa Telekomunikasi.
+(2) Penyelenggara Jasa Telekomunikasi yang tidak memenuhi Komitmen Layanan tiap tahun sebagaimana dimaksud dalam Pasal 8 ayat (1) huruf c dan ayat (2) diberikan surat pemberitahuan
+
+## Pasal 54
+Pengenaan sanksi adminsitratif berupa denda dilakukan berdasarkan besaran sesuai dengan Peraturan Pemerintah yang mengatur mengenai Penerimaan Negara Bukan Pajak pada Kementerian Komunikasi dan Informatika.
+
+## Pasal 55
+Pelanggaran terhadap ketentuan Pasal 8 ayat (1) huruf d, Pasal 8 ayat (1) huruf e, Pasal 8 ayat (1) huruf f, Pasal 8 ayat (1) huruf h, Pasal 8 ayat (1) huruf j, Pasal 8 ayat (1) huruf k, Pasal 8 ayat (1) huruf n, Pasal 10 ayat (3), Pasal 13 ayat (4), Pasal 14 ayat (1), Pasal 14 ayat (2), Pasal 15 ayat (1), Pasal 35 ayat (1), dan/atau Pasal 47 ayat (3) huruf d dikenai sanksi sesuai dengan ketentuan peraturan perundang-undangan.
+
+## Pasal 56
+(1) Direksi, Pengurus, dan/atau Badan Hukum Penyelenggara Jasa Telekomunikasi dapat ditetapkan dalam Daftar Hitam Penyelenggara Telekomunikasi dalam hal:
+	a. Penyelenggara Jasa Telekomunikasi dikenai sanksi administratif berupa pencabutan Izin Penyelenggaraan dan/atau hak penyelenggaraan layanan Jasa Telekomunikasi;
+	b. Penyelenggara Jasa Telekomunikasi tidak melakukan pengalihan Pelanggan dan/atau pengembalian biaya berlangganan sesuai ketentuan dalam Pasal 40 ayat (1); dan/atau
+	c. Penyelenggara Jasa Telekomunikasi tidak memenuhi kewajiban Penerimaan Negara Bukan Pajak yang merupakan piutang negara yang berlaku pada Kementerian Komunikasi dan Informatika sebagaimana dimaksud dalam Pasal 40 ayat (3).
+(2) Direktur Jenderal menetapkan Daftar Hitam sebagaimana dimaksud pada ayat (1).
+(3) Direksi, pengurus, dan/atau badan hukum Penyelenggara Jasa Telekomunikasi yang telah ditetapkan dalam Daftar Hitam Penyelenggara Telekomunikasi, dilarang terlibat dalam Penyelenggaraan Jasa Telekomunikasi selama:
+	a. 2 (dua) tahun sejak tanggal ditetapkan dalam Daftar Hitam; dan/atau
+	b. kewajiban yang menjadi piutang negara tidak dipenuhi.
+(4) Direksi, pengurus, dan/atau badan hukum Penyelenggara Jasa Telekomunikasi dapat dikeluarkan dari Daftar Hitam Penyelenggara Telekomunikasi setelah memenuhi seluruh ketentuan sebagaimana dimaksud pada ayat (3).
+(5) Pengeluaran dari Daftar Hitam sebagaimana dimaksud pada ayat (4) ditetapkan oleh Direktur Jenderal.
+
+## BAB VIII
+KETENTUAN PERALIHAN
+
+## Pasal 57
+(1) Penyelenggara Jasa Telekomunikasi yang telah memperoleh Izin Penyelenggaraan Jasa Telekomunikasi sebelum berlakunya Peraturan Menteri ini, wajib menyesuaikan dengan ketentuan dalam Peraturan Menteri ini paling lambat 24 (dua puluh empat) bulan sejak Peraturan Menteri ini mulai berlaku.
+(2) Penyelenggara Jasa Telekomunikasi yang tidak melakukan penyesuaian setelah habis masa peralihan sebagaimana dimaksud pada ayat (1), Izin Penyelenggaraannya tidak berlaku.
+
+## Pasal 58
+(1) Dikecualikan dari ketentuan sebagaimana dimaksud dalam Pasal 57, untuk:
+	a. Penyelenggara Jasa Multimedia Layanan Gerbang Akses Internet (NAP) wajib memenuhi ketentuan sebagaimana dimaksud dalam Pasal 30 huruf b, paling lambat 60 (enam puluh) bulan sejak Peraturan Menteri ini mulai berlaku; dan
+	b. Penyelenggara IPTV yang telah memperoleh Surat Persetujuan Penyelenggaraan Layanan IPTV harus memperoleh penyesuaian menjadi Penyelenggara Jasa Telekomunikasi yang menyelenggarakan Layanan IPTV sesuai dengan Peraturan Menteri ini paling lambat sampai dengan berakhirnya masa berlaku persetujuan dimaksud.
+(2) Dalam hal Penyelenggara Jasa Telekomunikasi yang telah memperoleh Izin Penyelenggaraan bermaksud mengajukan penambahan layanan Jasa Telekomunikasi, Penyelenggara Jasa Telekomunikasi wajib melakukan penyesuaian Izin Penyelenggaraan sesuai dengan ketentuan peraturan perundang-undangan.
+(3) Penyelenggara Jasa Telekomunikasi yang memperoleh penetapan Penomoran Telekomunikasi wajib menyesuaikan Penetapan Penomoran Telekomunikasi sesuai dengan perubahan Izin Penyelenggaraan Jasa Telekomunikasi.
+
+## BAB IX
+KETENTUAN PENUTUP
+
+## Pasal 59
+Pada saat Peraturan Menteri ini mulai berlaku:
+a. ketentuan dalam Peraturan Menteri Komunikasi dan Informatika Nomor 11 Tahun 2014 tentang Tata Cara Pengenaan Sanksi Administratif Berupa Denda Terhadap Penyelenggara Telekomunikasi;
+b. ketentuan dalam Peraturan Menteri Komunikasi dan Informatika Nomor 7 Tahun 2018 tentang Pelayanan Perizinan Berusaha Terintegrasi Secara Elektronik Bidang Komunikasi dan Informatika sebagaimana telah diubah dengan Peraturan Menteri Komunikasi dan Informatika Nomor 7 tahun 2019 tentang Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 7 Tahun 2018 tentang Pelayanan Perizinan Berusaha Terintegrasi Secara Elektronik Bidang Komunikasi dan Informatika; dan
+c. ketentuan yang merupakan peraturan pelaksanaan dalam Penyelenggaraan Jasa Telekomunikasi,
+dinyatakan masih tetap berlaku sepanjang tidak bertentangan dengan ketentuan dalam Peraturan Menteri ini.
+
+## Pasal 60
+Pada saat Peraturan Menteri ini mulai berlaku:
+a. Keputusan Menteri Perhubungan Nomor: KM. 21 Tahun 2001 tentang Penyelenggaraan Jasa Telekomunikasi;
+b. Keputusan Menteri Perhubungan Nomor: KM. 30 Tahun 2004 tentang Perubahan atas Keputusan Menteri Perhubungan Nomor: KM. 21 Tahun 2001 tentang Penyelenggaraan Jasa Telekomunikasi;
+c. Peraturan Menteri Komunikasi dan Informatika Nomor: 05/PER/M.KOMINFO/1/2006 tentang Penyelenggaraan Warung Telekomunikasi;
+d. Peraturan Menteri Komunikasi dan Informatika Nomor 10 Tahun 2007 tentang Penggunaan Fitur Berbayar Jasa Telekomunikasi;
+e. Peraturan Menteri Komunikasi dan Informatika Nomor: 07/P/M.Kominfo/04/2008 tentang Perubahan Kedua atas Keputusan Menteri Perhubungan Nomor: KM. 21 Tahun 2001 tentang Penyelenggaraan Jasa Telekomunikasi;
+f. Peraturan Menteri Komunikasi dan Informatika Nomor: 31/PER/M.KOMINFO/09/2008 tentang Perubahan Ketiga atas Keputusan Menteri Perhubungan Nomor: KM. 21 Tahun 2001 tentang Penyelenggaraan Jasa Telekomunikasi;
+g. Peraturan Menteri Komunikasi dan Informatika Nomor 14/PER/M.KOMINFO/04/2011 tentang Standar Kualitas Pelayanan Jasa Internet Teleponi untuk Keperluan Publik (Berita Negara Republik Indonesia Tahun 2011 Nomor 255);
+h. Peraturan Menteri Komunikasi dan Informatika Nomor 25 Tahun 2012 tentang Standar Kualitas Pelayanan Jasa Teleponi Dasar pada Jaringan Tetap Sambungan Langsung Jarak Jauh (Berita Negara Republik Indonesia Tahun 2012 Nomor 959);
+i. Peraturan Menteri Komunikasi dan Informatika Nomor 26 Tahun 2012 tentang Standar Kualitas Pelayanan Jasa Teleponi Dasar pada Jaringan Tetap Sambungan Langsung Internasional (Berita Negara Republik Indonesia Tahun 2012 Nomor 960);
+j. Peraturan Menteri Komunikasi dan Informatika Nomor 27 Tahun 2012 tentang Standar Kualitas Pelayanan Jasa Teleponi Dasar pada Jaringan Tetap dengan Mobilitas Terbatas (Berita Negara Republik Indonesia Tahun 2012 Nomor 961);
+k. Peraturan Menteri Komunikasi dan Informatika Nomor 15 Tahun 2013 tentang Standar Kualitas Pelayanan Jasa Teleponi Dasar pada Jaringan Tetap Lokal (Berita Negara Republik Indonesia Tahun 2013 Nomor 609);
+l. Peraturan Menteri Komunikasi dan Informatika Nomor 16 Tahun 2013 tentang Standar Kualitas Pelayanan Jasa Teleponi Dasar pada Jaringan Bergerak Seluler (Berita Negara Republik Indonesia Tahun 2013 Nomor 610);
+m. Peraturan Menteri Komunikasi dan Informatika Nomor 34 Tahun 2014 tentang Standar Kualitas Pelayanan bagi Penyelenggara Jaringan Bergerak Satelit dan Penyelenggara Jasa Teleponi Dasar Melalui Satelit (Berita Negara Republik Indonesia Tahun 2014 Nomor 1379);
+n. Peraturan Menteri Komunikasi dan Informatika Nomor 8 Tahun 2015 tentang Perubahan Keempat atas Keputusan Menteri Perhubungan Nomor: KM. 21 Tahun 2001 tentang Penyelenggaraan Jasa Telekomunikasi (Berita Negara Republik Indonesia Tahun 2015 Nomor 251);
+o. Peraturan Menteri Komunikasi dan Informatika Nomor 8 Tahun 2017 tentang Penyelenggaraan Jasa Internet Teleponi untuk Keperluan Publik (Berita Negara Republik Indonesia Tahun 2017 Nomor 233);
+p. Peraturan Menteri Komunikasi dan Informatika Nomor 9 Tahun 2017 tentang Penyelenggaraan Jasa Penyediaan Konten pada Jaringan Bergerak Seluler (Berita Negara Republik Indonesia Tahun 2017 Nomor 234), dicabut dan dinyatakan tidak berlaku
+
+## Pasal 61
+Peraturan Menteri ini mulai berlaku setelah 6 (enam) bulan terhitung sejak tanggal diundangkan.
+
+Agar setiap orang mengetahuinya, memerintahkan
+pengundangan Peraturan Menteri ini dengan penempatannya
+dalam Berita Negara Republik Indonesia.
+
+Ditetapkan di Jakarta
+pada tanggal 18 Oktober 2019
+MENTERI KOMUNIKASI DAN INFORMATIKA
+REPUBLIK INDONESIA,
+ttd.
+RUDIANTARA
+
+Diundangkan di Jakarta
+pada tanggal 25 Oktober 2019
+DIREKTUR JENDERAL
+PERATURAN PERUNDANG-UNDANGAN
+KEMENTERIAN HUKUM DAN HAK ASASI MANUSIA
+REPUBLIK INDONESIA,
+ttd.
+WIDODO EKATJAHJANA
+BERITA NEGARA REPUBLIK INDONESIA TAHUN 2019 NOMOR 1329
+
+Salinan sesuai dengan aslinya
+Kementerian Komunikasi dan Informatika
+Kepala Biro Hukum,
+Bertiana Sari Paraf: Kabag Bankum

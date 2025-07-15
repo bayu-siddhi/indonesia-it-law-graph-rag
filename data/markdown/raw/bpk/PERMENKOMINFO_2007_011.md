@@ -1,0 +1,294 @@
+## Menimbang    :   a.
+
+<!-- image -->
+
+## PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA REPUBLIK INDONESIA
+
+## NOMOR :  11 / PER / M.KOMINFO / 04 / 2007
+
+TENTANG
+
+## PENYEDIAAN KEWAJIBAN PELAYANAN UNIVERSAL TELEKOMUNIKASI
+
+## DENGAN RAHMAT TUHAN YANG MAHA ESA
+
+## MENTERI KOMUNIKASI DAN INFORMATIKA,
+
+- bahwa telekomunikasi  mempunyai  peran  yang  strategis  dalam menunjang dan mendukung kegiatan perekonomian, memantapkan pertahanan dan keamanan serta mencerdaskan kehidupan bangsa;
+- b. bahwa  sarana  dan  prasarana  telekomunikasi  belum  dapat memenuhi kebutuhan masyarakat di daerah tertinggal, daerah terpencil,  daerah  perintisan,  atau  daerah  perbatasan  serta daerah yang tidak layak secara ekonomis;
+- c. bahwa  telah  dibentuk  Balai  Telekomunikasi  dan  Informatika Perdesaan  (BTIP)  sebagai  instansi  khusus  yang  mempunyai tanggungjawab sebagai pengelola penyediaan kontribusi pelayanan universal telekomunikasi;
+- d. bahwa sehubungan dengan huruf a dan huruf b di atas,  perlu ditetapkan Penyediaan Kewajiban Pelayanan Universal Telekomunikasi  dengan  Peraturan  Menteri  Komunikasi  dan Informatika;
+- 1. Undang-Undang  Republik  Indonesia  Nomor  36  Tahun  1999 tentang Telekomunikasi (Lembaran Negara Republik Indonesia Tahun 1999 Nomor 154, Tambahan Lembaran Negara Republik Indonesia Nomor 3881);
+- 2. Undang-Undang  Republik  Indonesia  Nomor  20  Tahun  1997 tentang Penerimaan Negara Bukan Pajak (Lembaran Negara Republik Indonesia Tahun  1997  Nomor  43,  Tambahan Lembaran Negara Republik Indonesia Nomor 3687);
+- 3. Undang-Undang  Republik  Indonesia  Nomor  17  Tahun  2003 tentang Keuangan Negara (Lembaran Negara Republik Indonesia Tahun 2003 Nomor 47, Tambahan Lembaran Negara Republik Indonesia Nomor 4286);
+
+Mengingat
+
+:
+
+- 4. Undang-Undang  Republik  Indonesia  Nomor  32  Tahun  2004 tentang  Pemerintahan  Daerah  (Lembaran  Negara  Republik Indonesia Tahun 2005 Nomor 38, Tambahan Lembaran Negara Republik Indonesia Nomor 4493);
+- 5. Undang-Undang  Republik  Indonesia  Nomor  1  Tahun  2004 tentang Perbendaharaan Negara (Lembaran Negara Republik Indonesia Tahun 2004 Nomor 5, Tambahan Lembaran Negara Republik Indonesia Nomor 4355);
+- 6. Peraturan  Pemerintah  Republik  Indonesia  Nomor  73  Tahun 1999  tentang  Tata  Cara  Penggunaan  Penerimaan  Negara Bukan  Pajak  Yang  Bersumber  Pada  Kegiatan  Tertentu (Lembaran Negara Republik Indonesia Tahun 1999 Nomor 136, Tambahan Lembaran Negara Republik Indonesia Nomor 3871);
+- 7. Peraturan  Pemerintah  Republik  Indonesia  Nomor  52  Tahun 2000  tentang  Penyelenggaraan  Telekomunikasi  (Lembaran Negara Republik Indonesia Tahun 2000 Nomor 107, Tambahan Lembaran Negara Republik Indonesia Nomor 3980);
+- 8.    Peraturan Presiden Republik Indonesia Nomor 9 Tahun 2005 tentang Kedudukan, Tugas, Fungsi, Susunan Organisasi, dan Tata Kerja Kementerian Negara Republik Indonesia;
+- 9.    Peraturan Presiden Republik Indonesia Nomor 10 Tahun 2005 tentang Unit Organisasi dan tugas Eselon I Kementerian Negara Republik Indonesia;
+- 10.   Peraturan    Pemerintah  Republik  Indonesia  Nomor  23  Tahun 2005 tentang Pengelolaan Keuangan Badan Layanan Umum (Lembaran Negara Republik Indonesia Tahun 2005 Nomor 48, Tambahan Lembaran Negara Republik Indonesia Nomor 4502);
+- 11.   Keputusan Menteri Perhubungan Nomor KM 20 Tahun 2001 tentang Penyelenggaraan Jaringan Telekomunikasi;
+- 12.   Keputusan Menteri Perhubungan Nomor KM 21 Tahun 2001 tentang Penyelenggaraan Jasa Telekomunikasi;
+- 13.   Peraturan Menteri Komunikasi dan Informatika Nomor 01/P/M.KOMINFO/4/2005  tentang  Organisasi  dan  Tata  Kerja Departemen Komunikasi dan Informatika;
+- 14.   Keputusan Menteri Keuangan Nomor 1006/KMK.05/2006 tentang  Penetapan  Balai  Telekomunikasi  Dan  Informatika Perdesaan  Pada  Departemen  Komunikasi  Dan  Informatika Sebagai Instansi Pemerintah Yang Menerapkan Pola Pengelolaan Keuangan Badan Layanan Umum;
+
+Menetapkan  :
+
+- 15. Peraturan Menteri Komunikasi dan Informatika Nomor 35/Per.M.KOMINFO/11/2006 tentang Organisasi dan Tata Kerja Balai Telekomunikasi dan Informatika Perdesaan;
+
+## MEMUTUSKAN :
+
+PERATURAN  MENTERI  KOMUNIKASI  DAN  INFORMATIKA TENTANG PENYEDIAAN KEWAJIBAN PELAYANAN UNIVERSAL TELEKOMUNIKASI.
+
+## BAB I
+
+## KETENTUAN UMUM
+
+## Pasal 1
+
+## Dalam Peraturan Menteri ini yang dimaksud dengan:
+
+- 1. Telekomunikasi  adalah  setiap  pemancaran,  pengiriman  dan atau  penerimaan  dari  setiap  informasi  dalam  bentuk  tandatanda, isyarat, tulisan, gambar, suara, dan bunyi melalui sistem kawat, optik, radio, atau sistem elektromagnetik lainnya;
+- 2. Jaringan telekomunikasi adalah rangkaian perangkat telekomunikasi  dan  kelengkapannya  yang  digunakan  dalam bertelekomunikasi;
+- 3. Jasa  telekomunikasi  adalah  layanan  telekomunikasi  untuk memenuhi kebutuhan bertelekomunikasi dengan menggunakan jaringan telekomunikasi;
+- 4. Penyelenggaraan  telekomunikasi  adalah  kegiatan  penyediaan dan pelayanan telekomunikasi sehingga memungkinkan terselenggaranya telekomunikasi;
+- 5. Penyelenggaraan  jaringan  telekomunikasi  adalah  kegiatan penyediaan dan atau pelayanan jaringan telekomunikasi yang memungkinkan terselenggaranya telekomunikasi;
+- 6. Penyelenggaraan jasa telekomunikasi adalah kegiatan penyediaan  dan  atau  pelayanan  jasa  telekomunikasi  yang memungkinkan terselenggaranya telekomunikasi;
+- 7. Penyelenggara  jaringan  tetap  lokal  adalah  penyelenggara jaringan  di  wilayah  yang  ditentukan  menggunakan  jaringan kabel dan atau jaringan lokal tanpa kabel;
+
+- 8. Interkoneksi adalah keterhubungan antar jaringan telekomunikasi dari penyelenggara telekomunikasi yang berbeda;
+- 9. Kewajiban Pelayanan Universal yang selanjutnya disebut KPU adalah  kewajiban  yang  dibebankan  kepada  penyelenggara jaringan  telekomunikasi  dan  atau  jasa  telekomunikasi  untuk memenuhi aksesibilitas bagi wilayah atau sebagian masyarakat yang belum terjangkau  oleh penyelenggara jaringan dan atau jasa telekomunikasi;
+- 10. Kontribusi  Kewajiban  Pelayanan  Universal  yang  selanjutnya disebut KKPU adalah kontribusi yang merupakan Penerimaan Negara  Bukan  Pajak  (PNBP)  yang  harus  dibayar  oleh penyelenggara telekomunikasi;
+- 11. Pelaksana  penyedia  KPU  telekomunikasi  selanjutnya  disebut pelaksana  penyedia  adalah  penyedia  akses  dan  layanan telekomunikasi di wilayah pelayanan universal telekomunikasi;
+- 12. Wilayah pelayanan universal telekomunikasi selanjutnya disebut WPUT adalah wilayah yang belum terjangkau fasilitas jaringan dan atau jasa telekomunikasi seperti daerah tertinggal, daerah terpencil,  daerah  perintisan  atau  daerah  perbatasan  serta daerah yang tidak layak secara ekonomis;
+- 13. Kontrak adalah perikatan antara pengguna barang/jasa dengan penyedia barang/jasa dalam pelaksanaan pengadaan barang/jasa;
+- 14. Kontrak  Induk  adalah  kontrak  perikatan  penyediaan  layanan berdasar kinerja dengan skema tahun jamak yang mencantumkan  paling  tidak  dasar-dasar  perjanjian,  definisi, tujuan  perjanjian,  hak  dan  kewajiban  para  pihak  termasuk alokasi resiko, jaminan pelaksanaan, jangka waktu perjanjian, tahapan  operasional,  larangan  pengalihan  kontrak,  standar pelayanan operasi, mekanisme penetapan tarif, indikator kinerja dan  sanksi,  mekanisme  pengawasan  kinerja,  penyelesaian sengketa, keadaaan memaksa, ketentuan hukum yang berlaku serta ketentuan tentang kontrak anak;
+- 15. Kontrak  anak  adalah  kontrak  penugasan  penyediaan  jasa layanan  bersifat  tahunan  yang  mencantumkan  paling  tidak volume pekerjaan, harga satuan, spesifikasi teknik, rencana tarif serta parameter kinerja dan ketentuan sanksi;
+- 16. Menteri  adalah  Menteri  yang  lingkup  tugas  dan  tanggung jawabnya di bidang  telekomunikasi;
+- 17. Direktur Jenderal adalah Direktur Jenderal Pos dan Telekomunikasi;
+
+- 18.   Balai Telekomunikasi dan Informatika Perdesaan yang selanjutnya  disebut  BTIP  adalah  Satuan  Kerja  di  lingkungan Direktorat Jenderal Pos dan Telekomunikasi yang melaksanakan            pola penerapan keuangan Badan Layanan  Umum  dalam  rangka            penyediaan  pelayanan universal telekomunikasi.
+
+## BAB II
+
+## KEWAJIBAN PELAYANAN UNIVERSAL TELEKOMUNIKASI
+
+## Pasal  2
+
+- (1) Setiap  penyelenggara  jaringan  telekomunikasi  dan/atau  jasa telekomunikasi wajib dikenakan KPU telekomunikasi.
+- (2) KPU  telekomunikasi  sebagaimana  dimaksud  pada  ayat  (1) dilakukan melalui KKPU dalam bentuk prosentase tertentu dari pendapatan kotor penyelenggara telekomunikasi setiap tahun.
+- (3) KKPU  sebagaimana  dimaksud  pada  ayat  (2),  merupakan Pendapatan Negara Bukan Pajak (PNBP).
+- (4) Ketentuan  mengenai  besaran  penyetoran,  dan  tata  cara penarikan KKPU diatur dengan peraturan perundang-undangan tersendiri.
+
+## Pasal 3
+
+- (1) Penyediaan KPU telekomunikasi berupa penyediaan akses dan layanan telekomunikasi di WPUT.
+- (2) Penyediaan  KPU  telekomunikasi  dalam  bentuk  penyediaan akses sebagaimana dimaksud pada ayat (1) dibiayai dari KKPU yang dikelola oleh BTIP.
+- (3) Pembiayaan dari KKPU sebagaimana dimaksud pada ayat (2) merupakan  biaya  sewa  atas  jasa  penyediaan  akses  KPU telekomunikasi.
+
+## Pasal  4
+
+- (1) Penyediaan  KPU  telekomunikasi  harus  dapat  memberikan layanan  jasa  teleponi  dasar  dan  selanjutnya  harus  dapat dikembangkan ke tahap penyediaan layanan jasa multimedia dan layanan telekomunikasi berbasis informasi lainnya.
+
+- (2)  Penyediaan KPU telekomunikasi sebagaimana dimaksud pada ayat  (1)  merupakan    penyediaan  layanan  telekomunikasi berbayar dan berbasis komunal.
+
+## BAB III
+
+## WILAYAH PELAYANAN UNIVERSAL TELEKOMUNIKASI
+
+## Pasal 5
+
+- (1) Menteri menetapkan wilayah tertentu sebagai WPUT.
+- (2) Penetapan wilayah tertentu sebagaimana dimaksud pada ayat (1) dilaksanakan setelah berkoordinasi dengan instansi terkait dan atau mempertimbangkan masukan dari masyarakat.
+- (3) WPUT sebagaimana dimaksud pada ayat (1) dapat dikelompokkan dalam bentuk blok wilayah berdasarkan kondisi geografis.
+- (4) WPUT sebagaimana dimaksud pada ayat (1), akan dilakukan evaluasi sesuai  dengan  dinamika  perkembangan  wilayah tersebut.
+
+## Pasal 6
+
+- (1) Penyediaan KPU telekomunikasi di WPUT dilaksanakan  oleh pelaksana penyedia berdasarkan proses seleksi yang diselenggarakan oleh BTIP.
+- (2) Seleksi sebagaimana dimaksud pada ayat (1) dilakukan melalui pelelangan umum.
+- (3) Tata cara pelelangan umum sebagaimana dimaksud pada ayat (2), sesuai dengan  peraturan  perundang-undangan  yang berlaku.
+
+## BAB IV
+
+## SELEKSI PELAKSANA PENYEDIAAN KPU TELEKOMUNIKASI
+
+## Pasal 7
+
+Peserta  lelang  umum  penyediaan  KPU  telekomunikasi  adalah penyelenggara jaringan dan/atau jasa telekomunikasi.
+
+## Pasal 8
+
+- (1)  Penyedian KPU telekomunikasi disetiap blok WPUT dilaksanakan oleh 1 (satu) pelaksana penyedia.
+- (2) Peserta  seleksi  dapat  menjadi  pemenang  seleksi  pelaksana penyedia KPU telekomunikasi di lebih dari 1 (satu) blok WPUT .
+
+## Pasal 9
+
+- (1) Parameter penilaian dalam pelaksanaan lelang umum penyediaan KPU telekomunikasi meliputi aspek :
+- a. biaya penyediaan layanan;
+- b. pengoperasian dan pemeliharaan;
+- c. tarif layanan;
+- d. penyediaan interkoneksi layanan;
+- e. jenis layanan minimal;
+- f. penggunaan produk dalam negeri.
+- (2) Ketentuan teknis parameter penilaian akan diatur lebih lanjut dalam dokumen pelelangan umum.
+
+## Pasal 10
+
+- (1) Pemenang  seleksi  pelaksana  penyedia  dapat  diberikan  izin penyelenggaraan jaringan tetap lokal dengan wilayah layanan regional.
+- (2) Wilayah regional sebagaimana dimaksud pada ayat (1) sesuai dengan blok WPUT yang dimenangkan oleh peserta seleksi.
+- (3) Proses pemberian izin penyelenggaraan sebagaimana dimaksud pada ayat (1) dilakukan atas permohonan pelaksana penyedia.
+
+## Pasal 11
+
+- (1) Kontrak  penyediaan  KPU  telekomunikasi  bersifat  multiyears yang terdiri dari  kontrak induk dan kontrak anak .
+- (2) Kontrak induk sebagaimana dimaksud pada ayat (1) merupakan hubungan  hukum  antara  pelaksana  penyedia  dengan  BTIP dalam penyediaan KPU telekomunikasi untuk jangka waktu 5 tahun.
+- (3) Kontrak anak sebagaimana dimaksud pada ayat (1) merupakan bagian  dari  kontrak  induk  untuk  menugaskan  pelaksana penyedia dalam penyediaan KPU telekomunikasi dan mengevaluasi kinerja penyediaan akses dan layanan telekomunikasi.
+- (4) Kontrak induk dapat diperpanjang berdasarkan hasil evaluasi.
+
+## Pasal 12
+
+Kontrak Induk dapat berakhir apabila :
+
+- a. jangka waktu kontrak induk telah selesai;
+- b. pelaksana penyedia tidak memenuhi kewajiban yang tercantum dalam kontrak.
+
+## BAB V
+
+## PERSYARATAN TEKNIS PENYEDIAAN KPU TELEKOMUNIKASI
+
+Pasal 13
+
+Pelaksana penyedia wajib  memenuhi persyaratan teknis sekurangkurangnya sebagai   berikut :
+
+- a. penyediaan  jaringan  untuk  menyalurkan  jasa  teleponi  dasar, yang  dapat  dikembangkan  untuk  penyediaan  layanan  jasa multimedia  dan  layanan  telekomunikasi  berbasis  informasi lainnya;
+- b. penyediaan jasa telefoni dasar untuk umum dengan layanan panggilan lokal, SLJJ, SLI dan panggilan ke layanan jaringan bergerak;
+- c. layanan  telekomunikasi  dengan  kemampuan  dipanggil  dan memanggil;
+- d. interkoneksi dengan penyelenggara telekomunikasi lainnya;
+
+- e. dapat digunakan untuk menghubungi pelayanan darurat;
+- f. menggunakan  alat  atau  perangkat  yang  telah  mendapatkan sertifikat perangkat dari Direktur Jenderal.
+
+## BAB VI
+
+## HAK DAN KEWAJIBAN PELAKSANA PENYEDIAAN KPU TELEKOMUNIKASI
+
+## Pasal 14
+
+- (1) Pelaksana  penyedia  berhak  mendapatkan  akses  interkoneksi dari penyelenggara jasa/jaringan telekomunikasi.
+- (2) Pemberian  akses  interkoneksi  sebagaimana  dimaksud  pada ayat  (1)  dilaksanakan  sesuai  dengan  peraturan  perundangundangan yang berlaku.
+
+## Pasal 15
+
+- (1) Pelaksana  penyedia  dapat  diberikan  uang  muka  dalam penyediaan akses telekomunikasi.
+- (2) Pemberian uang muka sebagaimana dimaksud pada ayat (1) sesuai dengan peraturan perundang-undangan yang berlaku.
+
+## Pasal 16
+
+- (1) Pelaksana penyedia berhak mendapatkan biaya sewa atas  jasa penyediaan akses KPU telekomunikasi sebagaimana dimaksud dalam pasal 3 ayat (3).
+- (2) Biaya sewa atas jasa penyediaan akses KPU telekomunikasi sebagaimana dimaksud pada ayat (1), diberikan berdasarkan kesiapan fungsi dan berbasis kinerja dari :
+- a.    proses penyediaan akses ;
+- b.    layanan telekomunikasi;
+- c.    pengoperasian ; dan/atau
+- d.    pemeliharaan.
+- (3) Tata  cara  pembayaran  biaya  sewa  sebagaimana  dimaksud pada ayat (1) di atur dalam kontrak.
+
+## Pasal 17
+
+- (1) Pelaksana penyedia berhak memperoleh seluruh pendapatan dari hasil penyediaan layanan KPU telekomunikasi.
+- (2) Pendapatan sebagaimana dimaksud pada ayat (1) merupakan pembiayaan atas jasa pendukung penyediaan KPU telekomunikasi untuk kesinambungan layanan di WPUT.
+
+## Pasal 18
+
+Pelaksana penyedia wajib membangun,  mengoperasikan  dan memelihara  serta mengembangkan  akses  dan  layanan  KPU telekomunikasi.
+
+## Pasal 19
+
+- (1) Untuk  kesinambungan  layanan,  pelaksana  penyedia  dapat melibatkan masyarakat atau badan usaha dalam penyediaan KPU telekomunikasi.
+- (2) Keterlibatan masyarakat  atau  badan  usaha  sebagaimana dimaksud dalam ayat (1) dilakukan berdasarkan kontrak atau kesepakatan.
+
+## Pasal 20
+
+- (1) Pelaksana  penyedia  wajib  memberlakukan  tarif  layanan  jasa teleponi dasar maksimal sesuai dengan tarif yang ditetapkan oleh penyelenggara jaringan tetap lokal dominan.
+- (2) Pelaksana penyedia wajib menanggung resiko atas pendapatan sebagaimana  dimaksud  dalam  Pasal  17  dari  penyediaan layanan KPU  telekomunikasi.
+
+## Pasal 21
+
+## Pelaksana penyedia wajib :
+
+- a. menjamin interoperability sistem yang dibangun dengan sistem milik penyelenggara telekomunikasi lainnya;
+- b. menggunakan sistem penomoran yang telah dialokasikan;
+- c. mengikuti  ketentuan  dalam  Rencana  Dasar   Teknis  yang ditetapkan oleh Menteri;
+
+- d. melaksanakan pencatatan atas pendapatan dari hasil penyediaan KPU telekomunikasi dan dilaporkan secara berkala kepada BTIP;
+- e. menyediakan  akses  dan  menyampaikan  data  pengoperasian kepada BTIP.
+
+## Pasal 22
+
+- (1) Penyediaan  KPU  telekomunikasi  wajib  beroperasi  setiap  hari selama 24 (dua puluh empat) jam .
+- (2) Pelaksana  penyedia  wajib  melaksanakan  penyediaan  KPU telekomunikasi berdasarkan tingkat kualitas layanan sebagaimana yang ditetapkan dalam kontrak.
+
+## BAB VII
+
+## TATA CARA PENGAWASAN DAN PENGENDALIAN
+
+## Pasal 23
+
+- (1) Direktur Jenderal melaksanakan pengawasan terhadap kegiatan pelayanan  KPU  telekomunikasi  secara  berkala  berdasarkan tingkat kualitas layanan.
+- (2) Untuk melaksanakan pengawasan sebagaimana dimaksud pada ayat  (1),  Direktur  Jenderal  dapat  melimpahkan  kewenangan pengawasan dan pengendalian kepada BTIP.
+
+BAB  VIII
+
+## SANKSI
+
+Pasal 24
+
+Penyelenggara jaringan telekomunikasi dan jasa telekomunikasi yang tidak memberikan akses interkoneksi sebagaimana dimaksud dalam Pasal 14, dikenakan sanksi denda sesuai ketentuan yang berlaku.
+
+## Pasal 25
+
+Pelaksana penyediaan  KPU telekomunikasi yang tidak memenuhi ketentuan dalam perjanjian sebagaimana dimaksud dalam Pasal 18, Pasal 20, Pasal 21, Pasal 22, diberikan sanksi yang diatur lebih lanjut dalam kontrak induk.
+
+## SALINAN Keputusan ini disampaikan kepada :
+
+- 1. Ketua Badan Pemeriksa Keuangan;
+- 2. Menteri Koordinator Bidang Perekonomian;
+- 3. Menteri Koordinator Bidang Politik, Hukum dan Keamanan;
+- 4. Menteri Dalam Negeri;
+- 5. Menteri Negara Pembangunan Daerah Tertinggal;
+- 6. Menteri Pertahanan;
+- 7. Menteri Perindustrian;
+- 8. Menteri Perdagangan;
+- 9. Menteri Hukum dan Hak-hak Azasi Manusia;
+- 10. Sekretaris Negara;
+- 11.  Sekretaris Jenderal, Inspektur Jenderal, Para Direktur Jenderal dan Para Kepala Badan di lingkungan Departemen Komunikasi dan Informatika;
+- 12. Para  Kepala  Biro  dan  Para  Kepala  Pusat  di  lingkungan  Sekretariat  Jenderal Departemen Komunikasi dan Informatika;
+- 13. Kepala Balai Telekomunikasi dan Informatika Perdesaan.
+
+## BAB IX
+
+## PENUTUP
+
+## Pasal 26
+
+Dengan berlakunya Peraturan ini maka Keputusan Menteri Perhubungan Nomor 34 Tahun 2004 tentang Kewajiban Pelayanan Universal dinyatakan dicabut dan tidak berlaku.
+
+## Pasal 27
+
+Peraturan ini mulai berlaku pada tanggal ditetapkan.
+
+Ditetapkan di    :   Jakarta
+
+Pada tanggal    :   13 April  2007
+
+## MENTERI KOMUNIKASI DAN INFORMATIKA
+
+ttd
+
+## SOFYAN A. DJALIL

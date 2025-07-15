@@ -1,0 +1,190 @@
+J
+
+<!-- image -->
+
+## MENTERI KOMUNIKASI DAN INFORMATIKA REPUBLIK INDONESIA
+
+## PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA REPUBLIK INDONESIA NOMOR: 42 1 PER 1 M.KOMINFO 110/2009
+
+## TENTANG
+
+## TATA CARP. MEMPEROLEH IZiN BAGI LEMBAGA PENYIARAN ASING YANG MELAKUKAN KEGIATAN PELIPUTAN DIINDONESIA
+
+## DENGAN RAHMAT TUHAN YANG MAHA ESA
+
+## MENTERI KOMUNlKASI DAN INFORMATIKA REPLJBLlK INDONESIA,
+
+Menimbang:
+
+lv1engingat
+
+1.
+
+bahwa untuk melaksanakan ketentuan Pasal 7 Peraturan Psmerintah Republik Indonesia Nomor 49 Tahun 2005 tentang Pedoman Keqiatan. Peliputan Lembaga Penyiaran Asing, perlu menetapkan Peraturan Menter; Komunikasi dan Informatika Republik Indonesia tentang Tata Cara Memperoleh Izin Bagi Lembaga Penyiaran Asing yang Melakukan Kegiatan Peliputan di Indonesia;
+
+Undanq-Undanq Nomor 32 Tahun 2002 tentang Penyiaran (Lembaran Negara Republik Indonesia Tahun 2002 Nomor 13[, Tambahan Lembaran Negara Republik Indonesia Nomor 4252);
+
+- 2. Peraturan Pemerintah Republik Indonesia Nomor 49 Tahun 2005 ten tang Pedoman Keg;atan Peliputan Lembaga Penyiaran Asing (Lernbaran Negara Repubhk Indonesia Tahun 2005 Nomor 126, Tambahan Lembaran Negara Republik Indonesia Nomor 4565);
+- 3. Peraturan Presiden Republik Indonesia Nomor 9 Tahun 2005 tentanq Kedudukan, Tugas, Fungsi, Susunan Organisasi, dan Tata Kerja Kementerian Negara Republik Indonesia;
+- 4. Peraturan Presider. Republik Indonesia Nomor 10 Tahun 2005 tentang Unit Orqanisas! dan Tugas Eselon I Kementerian Negara Republik Indonesia sebagaimana telah diubah dengan Peraturan Presiden Nomor 15 Tahun 2005' ,
+- 5. Keputusan Presiden Republik Indonesia Nomor 31/P Tahun 2007 tentanq Pengangkatan Menteri Negara dan Kabinet Indonesia Bersatu;
+- 6. Peraturan Menteri Komunikasi dan Informatika Nomor 25/P/M.KOMINFOI7/2008 tentang Organisasi dan Tata Kerja Departemen Kornunikasi dan Informaffka: ,
+
+II
+
+## MEMUTUSKAN:
+
+## BABI
+
+## KETENTUAN UMUM
+
+Menetapkan:
+
+PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA REPUBLIK INDONESIA TENTANG TAT A CARA MEMPEROLEH IZIN BAGI LEMBAGA PENYIARAN ASING YANG MEL.A.KUKAN KF.:GIATAN PELIPUTAN 01 INDONESIA.
+
+## Pasal 1
+
+## Dalam Peraturan ini yang dimaksud dengan:
+
+- 1 Siaran ada!ah pesan atau rangkaian pesan dalam bentuk suara, gambar, atau suara dar. gambar, atau yang berbentuk gratis, karakter, baik yang bersitat interaktif maupun tidak, yang dapat diterima melalui perangkat penerima siaran.
+- 2. Penyiaran adalah kegiatan pemancarluasan siaran melalui sarana pernancaran dan/atau sarana transmisi di darat, laut, atau antariksa dengan menggunakan spektrum frekuensi radio melalui udara, kabel, dan/atau media lalnnya untuk dapat diterima secara serentak dan bersamaan oleh masyarakat dengan perangkat penerima siaran.
+- 3. Lembaga Penyiaran Asing adalah lembaga penyiaran yang didirikan berdasarl<an ketentuan peraturan perundang-undangan lu~r neger; dan/atau berpusat dJluar negeri.
+- 4. Stasiun Penyiaran adalah tempat program acara diproduksi/diofah dan dipancarluaskan mefalui sarana pemancaran dan/atau sarana transmisi di darat, faut atau antariksa dengan menggunakan spektrum frekuensi radio melalui udara. kabel, dan/atau media fainnya untuk dapat diterima secara serentak dan bersarnaan ofeh masyarakat dengan perangkat penerima siaran.
+- 5. Siaran tidak tetap adalah kegiatan siaran yang tidak dflakukan secara berkala dan rnerupakan perlstiwa yang terjadi di Indonesia untuk diketahui oleh masyarakat internasional.
+- 6. Jurnalistik adalah kegiatan yang meliputi meneari, memperoleh, memiliki, menyimpan, rnengolah, dan menyampaikan infarmasi baik dafam bentuk tulisan, suara .gambar, suara dan gambar, serta data dan grafik maupun dalarn bentuk lainnya yang akan dimuat di media penyiaran.
+- 7. l<orespondc'1 adalah jurnalis atau komentator yang memberikan laporan kepada radio atau berita televisi dar; lokasi lain.
+- 8. Ka.ntor Penyiarf.ln Asing adalah tempat koresponden Lembaga Penyiaran ASIng bekerja untuk mendukung kegiatan liputan jurnalistik yang dilakukan di Indonesia.
+
+- 9. Cloaring House odalah forum atau rapel koordlnasl den pengewssen terhedap orang as:ng dan Lembaga Swadaya Masyeraket aslng yang masuk ke Indonesia yang dikoordinir oleh Departemen Luar Negeri berdasarkan Keputusan Menteri Luar Negeri yang bertugas guna mencegah dan rnenanqqulanqi masalah - masalah yang menjadi ancaman Negara Kesatuan Republik Indonesia
+- 10. Menter! adalah menteri yang ruang lingkup lugas dan tanggung jawabnya di b:dang kornunikasi dan informatika.
+- 11. Perwakilan Republik Indonesia adalah kantor perwakilan Republik Indonesia di luar nege:ri, baik setingkat Kedutaan Sesar, Konsulat Jenderal, maupun Konsulat RI.
+
+## BAB" KEGIATAN PELIPUTAN
+
+## Pasal2
+
+l.embaqa Penyiaran Asing dilarang didirikan di Indonesia.
+
+## Pasal 3
+
+Lernbaqa Penyiaran Asing hanya dapat menyelenggarakan kegiatan peliputan di Indonesia, yang meliputi:
+
+- a. kegiatan siaran secara tidak tetap; dan/atau
+- c. kegiatan jurnalistik.
+
+## Pasal4
+
+- (1) Lernbaqa Penyiaran Asing yang menyelenggarakan kegiatan siaran secara tidak tetap di Indonesia sebagaimana dimaksud dalam Pasal 3 dapat membawa perangkat pengiriman ke dan penerima siaran dari satelit dan/atau media lainnya.
+- (2) Lembaga Penyiaran Asing yang menyelenggarakan kegiatan jurnalistik di Indonesia sebagaimana dimaksud da'arn Pasal 3 dapat:
+- a. menempatkan koresponden untuk melakukan kegiatan jurnalistik; atau
+- b. rnernbuka kantor penyiaran asing untuk mendukung bidang administratif.
+
+## PasalS
+
+r~eyjatan pehputan Lembaga Penyiaran Asing di Indonesia beserta fasilitas pendukunqnya sebagaimana dimaksud dalam Pasal 3 dan Pasal 4 harus mendapatkan izin Menteri.
+
+## BAB III PERSYARAT AN KEGIAT AN PELIPUTAN
+
+## Bag ian Kesatu Perangkat Pengiriman ke dan Penerima Siaran dari Satelit
+
+## Pasal6
+
+?erangkat pengiriman ke dan penerima siaran dari satelit dan/atau media lainnya sebaqairnana dimaksud dalam Pasal 4 ayat (1) wajib memenuhi ketentuan peraturan perundangan-undangan,
+
+## Pasal7
+
+- (1) Peranqxat penqlriman ke dan penerima siaran dari satelit danJatau media lainnya sebagaimana dimaksud dalam Pasal 6 hanya dapat digunakan di Indonesla dalam jangka waktu yang diizinkan Menteri.
+- (2) Setelah rnasa berlaku penggunaan perangkat pengiriman ke dan penerima siaran dari satelit dan/atau media lainnya telah habis sebagaimana dimaksud pada ayat (1). Lembaga Penyiaran Asing wajib mernbawa kembali perangkat pengiriman dan penerima siaran tersebut ke negara asalnya.
+
+## Bagian Kedua Koresponden
+
+## Pasal8
+
+I<oresponden sebagaimana dimaksud dalam Pasal 4 ayat (2) huruf a dapat melakukan kegiatan )eliputan ke seluruh wilayah Indonesia sesuai dengan ketentuan peraturan perundang-undangan, kecuali wilayah-wilayah tertentu yang rnernerlukan perumoanqan khUSLJSdalam rangka menjaga kedaulatan Negara Kesatuan Republik lndonesia.
+
+## BABIV KA.NTOR PENYIARAN ASING
+
+## Pasal 9
+
+Dalarr, membuka kantor penyiaran asinq sebagaimana dimaksud dalam Pasal 4 ayat (2) huruf b, Lembaga Penyiaran Asing wajib memenuhi ketentuan sebagai berikut:
+
+- a. kantor penyiaran asi~g ~rsebut bukan merupakan stasiun penyiaran; dan
+- t.. k~ntoi pen~la~an. aSlng tersebut bertokasl di ibukota negara dan berada pada wilayah yurisdikst Negara Republik Indonesia.
+
+## JANGKA WAKTU PENYIMPANAN MATERI SIARAN
+
+## BABV LEMBAGA PENYIARAN ASING
+
+## Pasal10
+
+Bahan siaran, terrnasuk rekaman audio, rekaman video, foto, dan dokumen yang diperoleh dari kegiatan peiiputan di Indonesia wajib disimpan oleh Lembaga Penyiaran Asing dalam jangka waktu paling kurang selama 1 (satu) tahun.
+
+## BABVI
+
+## TATA CAR A PERIZINAN
+
+## Pasal11
+
+- (1) Untuk mendapatkan lzin siaran secara tidak tetap dan/atau kegiatan [urnalistik, membawa perangkat pengiriman ke dan penerirna dari satelit dan/atau media lainnya, menempatkan koresponden, atau membuka kantor penylaran asing-sebcgaimana dimaksud dalam Pasal 5, Lembaga Penyiaran Asing mengajukan surat permohonan tertulis kepada Menteri.
+- (2) Surat permohonan tertulis sebagaimana dimaksud pada ayat (1) memuat alasan, janqka waktu, dan lokasi kegiatan, serta dilengkapi rekomendasi dari Perwakilan Pernerintah Republik Indonesia di negara asal tempat Lembaga Penyiaran Asing tersebut.
+
+## Pasal12
+
+- (1) Permohonan tertulis sebagaimana dimaksud dalam Pasal 11, Menteri meneruskan permohonan tersebut kepada clearing house untuk dibahas
+- (2) Hasil pembahasan clearing house sebagaimana dimaksud pada ayat (1) berupa rekomendasi kepada Menter; sebagai dasar pemberian atau penolakan izin.
+
+## Pasal13
+
+Setelah rnenerlma rekomendasi clearing house sebagaimana dimaksud dalam Pasal 12 ayar (2) Menteri mempertimbangkan untuk memberikan atau menolak izin I<egiatan peliputan oleh Lembaga Penyiaran Asing di Indonesia.
+
+## Pasal 14
+
+Keputusan pernberian atau penolakan permohonan izin disampaikan Menter! kepada Lembaga Penyiaran ASing dalam waktu paling lama 14 (empat belas) hari kerja setelah diterirnanya rekomendasi dari clearing house.
+
+## Pasal15
+
+Pcmberian izin kegiatan peliputan oleh Lembaga Penyiaran Asing di Indonesia ditetapkan dengan keputusan Menteri.
+
+## Pasal16
+
+- (1) Izin kegiatan peliputan sebagaimana dimaksud dalam Pasal 15 diberikan kepada Lembaga Penyiaran Asing dalam jangka waktu sebagai benkut:
+- a. untuk perangkat pengiriman ke dan penerima siaran dari satetit dan/atau media lainnya, dan/atau penempatan koresponden di Indonesia diber'kan izin sesuai dengan perrnohonan:
+- b. untuk pendiriar. kantor penyiaran asing di Indonesia diberikan izin selana 5 (lima) tahun dan dapat diperpanjang dengan mengajukan permohonan perpanjangan 3 (tiga) bulan sebelum izin berakhir untuk dilakukan evaluasi.
+- (2) Evaluasi sebagaimana dimaksud pada ayat (~) huruf b meliputi:
+- a efektivitas kantor penyiaran asing; dan
+- b. peruntukan permohonan perpanjanqan.
+
+## Pasal 17
+
+Lembaga Penyiaran Asing yang tidak memenuhi ketentuan sebagaimana din:aksud dalarn Pasal 6, Pasal 7, Pasal 8, dan Pasal 9, maka izin kegiatan peliputan yang telah diberikan akan ditinjau kembali.
+
+## BABVI KETENTUAN PERALIHAN
+
+## Pasal 18
+
+- (1) P~'1dasaat Peraturan Men~eri in.; mula;. berlaku. Lembaga Penyiaran Asing yQng telah rneridapatkan lzin dan Pemerrntah dinyatakan tetap berlaku.
+- (2) IZi~ sebagaimana dimaksud paela ayat (1) harus dilakukan penyesuaian paling Iambat 6 (enarn) bulan sejak ditetapkannya peraturan ini.
+
+/
+
+## BAB VII KETENTUAN PENUTUP
+
+Pasal 19
+
+Peraturan Menter; ini berlaku pada tanggal ditetapkan.
+
+<!-- image -->
+
+MOHAMMAD NUH
+
+MENTERI KOMUNIKASI DAN INFORMATIKA REPUBLIK INDONESIA,
+
+Jakarta
+
+19 Oktober 2009
+
+Ditetapkan di
+
+pada tanggal
+
+7

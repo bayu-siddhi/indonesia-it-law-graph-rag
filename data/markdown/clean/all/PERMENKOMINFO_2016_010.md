@@ -1,0 +1,214 @@
+PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA
+NOMOR 10 TAHUN 2016
+TENTANG
+LAYANAN NOMOR TUNGGAL PANGGILAN DARURAT
+
+DENGAN RAHMAT TUHAN YANG MAHA ESA
+MENTERI KOMUNIKASI DAN INFORMATIKA REPUBLIK INDONESIA,
+
+## menimbang
+a. bahwa ketentuan Pasal 20 Undang-Undang Nomor 36 Tahun 1999 tentang Telekomunikasi menyatakan setiap penyelenggara telekomunikasi wajib memberikan prioritas untuk pengiriman, penyaluran, dan penyampaian informasi penting yang menyangkut keamanan negara, keselamatan jiwa manusia dan harta benda, bencana alam, marabahaya, dan/atau wabah penyakit;
+b. bahwa layanan Nomor Tunggal Panggilan Darurat di Indonesia perlu lebih dioptimalkan untuk mendukung pengiriman, penyaluran, dan penyampaian informasi penting yang menyangkut keamanan negara, keselamatan jiwa manusia dan harta benda, bencana alam, marabahaya, dan/atau wabah penyakit sebagaimana dimaksud pada huruf a, sehingga penanganan keadaan darurat dapat dilaksanakan secara terpadu;
+c. bahwa berdasarkan pertimbangan sebagaimana dimaksud dalam huruf a dan huruf b, perlu menetapkan Peraturan Menteri Komunikasi dan Informatika tentang Layanan Nomor Tunggal Panggilan Darurat;
+
+## mengingat
+(1) Undang-Undang Nomor 36 Tahun 1999 tentang Telekomunikasi (Lembaran Negara Republik Indonesia Tahun 1999 Nomor 154, Tambahan Lembaran Negara Republik Indonesia Nomor 3881);
+(2) Undang-Undang Nomor 24 Tahun 2007 tentang Penanggulangan Bencana (Lembaran Negara Republik Indonesia Tahun 2007 Nomor 66, Tambahan Lembaran Negara Republik Indonesia Nomor 4723);
+(3) Undang-Undang Nomor 39 Tahun 2008 tentang Kementerian Negara (Lembaran Negara Republik Indonesia Tahun 2008 Nomor 166, Tambahan Lembaran Negara Republik Indonesia Nomor 4916);
+(4) Undang-Undang Nomor 23 Tahun 2014 tentang Pemerintah Daerah (Lembaran Negara Republik Indonesia Tahun 2014 Nomor 244, Tambahan Lembaran Negara Republik Indonesia Nomor 5587);
+(5) Undang-Undang Nomor 30 Tahun 2014 tentang Administrasi Pemerintahan (Lembaran Negara Republik Indonesia Tahun 2014 Nomor: 292, Tambahan Lembaran Negara Republik Indonesia Nomor: 5601);
+(6) Peraturan Pemerintah Nomor 52 Tahun 2000 tentang Penyelenggaraan Telekomunikasi (Lembaran Negara Republik Indonesia Tahun 2000 Nomor 107, Tambahan Lembaran Negara Republik Indonesia Nomor 3980);
+(7) Peraturan Pemerintah Nomor 6 Tahun 2006 tentang Pengelolaan Barang Milik Negara/Daerah (Lembaran Negara Republik Indonesia Tahun 2006 Nomor 20, Tambahan Lembaran Negara Republik Indonesia Nomor 4609);
+(8) Peraturan Presiden Nomor 7 Tahun 2015 tentang Organisasi Kementerian Negara (Lembaran Negara Republik Indonesia Tahun 2015 Nomor 8);
+(9) Peraturan Presiden Nomor 54 Tahun 2015 tentang Kementerian Komunikasi dan Informatika (Lembaran Negara Republik Indonesia Tahun 2015 Nomor 96);
+(10) Peraturan Menteri Keuangan Nomor 96/PMK.06/2007 tentang Tata Cara Pelaksanaan Penggunaan, Pemanfaatan, Penghapusan, dan Pemindahtanganan Barang Milik Negara;
+(11) Peraturan Menteri Komunikasi dan Informatika Nomor: 01/PER/M.KOMINFO/01/2010 tentang Penyelenggaraan Jaringan Telekomunikasi sebagaimana telah beberapa kali diubah terakhir dengan Peraturan Menteri Komunikasi dan Informatika Nomor 7 Tahun 2015 tentang Perubahan Kedua atas Peraturan Menteri Komunikasi dan Informatika Nomor: 01/PER/M.KOMINFO/01/2010 tentang Penyelenggaraan Jaringan Telekomunikasi (Berita Negara Republik Indonesia Tahun 2015 Nomor 250);
+(12) Peraturan Menteri Komunikasi dan Informatika Nomor 18 Tahun 2014 tentang Sertifikasi Alat dan Perangkat Telekomunikasi sebagaimana telah diubah dengan Peraturan Menteri Komunikasi dan Informatika Nomor 1 Tahun 2015 tentang Perubahan atas Peraturan Menteri Komunikasi dan Informatika Nomor 18 Tahun 2014 tentang Sertifikasi Alat dan Perangkat Telekomunikasi (Berita Negara Republik Indonesia Tahun 2014 Nomor 882);
+(13) Peraturan Menteri Komunikasi dan Informatika Nomor 1 Tahun 2016 tentang Organisasi dan Tata Kerja Kementerian Komunikasi dan Informatika (Berita Negara Republik Indonesia Tahun 2016 Nomor 103);
+(14) Keputusan Menteri Perhubungan Nomor: KM.4 Tahun 2001 tentang Penetapan Rencana Dasar Teknis Nasional 2000 (Fundamental Technical Plan National 2000) Pembangunan Telekomunikasi Nasional sebagaimana telah beberapa kali diubah, terakhir dengan Peraturan Menteri Komunikasi dan Informatika Nomor 17 Tahun 2014 tentang Perubahan Ketujuh atas Keputusan Menteri Perhubungan Nomor: KM.4 Tahun 2001 tentang Penetapan Rencana Dasar Teknis Nasional 2000 (Fundamental Technical Plan National 2000) Pembangunan Telekomunikasi Nasional (Berita Negara Republik Indonesia Tahun 2014 Nomor 770);
+
+## memperhatikan
+
+## memutuskan
+
+## menetapkan
+PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA TENTANG LAYANAN NOMOR TUNGGAL PANGGILAN DARURAT.
+
+## BAB I
+KETENTUAN UMUM
+
+## Pasal 1
+Dalam Peraturan Menteri ini yang dimaksud dengan:
+(1) Telekomunikasi adalah setiap pemancaran, pengiriman dan/atau penerimaan dari setiap informasi dalam bentuk tanda-tanda, isyarat, tulisan, gambar, suara, dan bunyi melalui sistem kawat, optik, radio atau sistem elektromagnetik lainnya.
+(2) Jaringan Telekomunikasi adalah rangkaian perangkat telekomunikasi dan kelengkapannya yang digunakan dalam bertelekomunikasi.
+(3) Penyelenggara Jaringan Telekomunikasi adalah badan usaha milik negara, badan usaha milik daerah, badan usaha swasta, dan koperasi yang melakukan penyelenggaraan jaringan telekomunikasi yang telah mendapatkan izin penyelenggaraan telekomunikasi.
+(4) Pusat Panggilan Darurat (Emergency Call Center) adalah pusat informasi yang digunakan untuk menerima dan mengirimkan permintaan pertolongan dalam keadaan darurat melalui jaringan telekomunikasi.
+(5) Nomor Tunggal Panggilan Darurat adalah nomor tunggal yang digunakan untuk keperluan layanan panggilan keadaan darurat.
+(6) Kementerian adalah Kementerian yang menyelenggarakan urusan pemerintahan di bidang komunikasi dan informatika.
+(7) Direktur Jenderal adalah Direktur Jenderal yang ruang lingkup tugas dan fungsinya di bidang penyelenggaraan telekomunikasi.
+
+## Pasal 2
+Peraturan Menteri ini bertujuan untuk:
+a. membentuk sistem Pusat Panggilan Darurat yang terpadu;
+b. menyatukan nomor panggilan darurat untuk mempermudah masyarakat dalam penanggulangan keadaan darurat;
+c. mempercepat penanggulangan keadaan darurat; dan
+d. mempermudah koordinasi antar instansi terkait.
+
+## BAB II
+LAYANAN NOMOR TUNGGAL PANGGILAN DARURAT
+
+## Pasal 3
+(1) Layanan Nomor Tunggal Panggilan Darurat harus menggunakan Nomor 112.
+(2) Penggunaan Nomor 112 sebagaimana dimaksud pada ayat (1) merupakan bagian dari Ikhtisar Peruntukan Nomor pada Lampiran 2 Peraturan Menteri Komunikasi dan Informatika Nomor 17 Tahun 2014 tentang Perubahan Ketujuh atas Keputusan Menteri Perhubungan Nomor KM. 4 Tahun 2001 tentang Penetapan Rencana Dasar Teknis Nasional 2000 (Fundamental Technical Plan National 2000) Pembangunan Telekomunikasi Nasional.
+
+## Pasal 4
+(1) Layanan Nomor Tunggal Panggilan Darurat diselenggarakan di tingkat nasional dan daerah.
+(2) Layanan Nomor Tunggal Panggilan Darurat dilaksanakan untuk penanganan keadaan darurat yang meliputi:
+	a. kebakaran;
+	b. kerusuhan;
+	c. kecelakaan;
+	d. bencana alam;
+	e. penanganan masalah kesehatan;
+	f. gangguan keamanan dan ketertiban umum; dan/atau
+	g. keadaaan darurat lainnya yang ditetapkan oleh Pemerintah dan/atau Pemerintah Daerah.
+
+## Pasal 5
+**NO_REF**
+(1) Layanan Nomor Tunggal Panggilan Darurat di tingkat nasional dilaksanakan oleh Kementerian.
+(2) Kementerian menyediakan sistem panggilan darurat di tingkat nasional.
+(3) Sistem panggilan darurat di tingkat nasional sebagaimana dimaksud pada ayat (2) berfungsi sebagai:
+	a. pusat data nasional panggilan darurat yang melakukan penyimpanan data penanganan keadaan darurat secara nasional; dan
+	b. pusat data informasi nomor dan lokasi pemanggil.
+(4) Data dan informasi sebagaimana dimaksud pada ayat (3) digunakan untuk perencanaan dan antisipasi penanganan keadaan darurat.
+(5) Informasi nomor dan lokasi pemanggil sebagaimana dimaksud pada ayat (3) huruf b tidak termasuk informasi yang wajib dirahasiakan oleh Penyelenggara Jaringan Telekomunikasi sebagaimana dimaksud dalam Pasal 42 ayat (1) Undang-Undang Nomor 36 Tahun 1999 tentang Telekomunikasi.
+
+## Pasal 6
+(1) Layanan Nomor Tunggal Panggilan Darurat di tingkat daerah dilaksanakan oleh Pemerintah Daerah Kabupaten/Kota, kecuali untuk Daerah Khusus Ibukota Jakarta.
+(2) Layanan Nomor Tunggal Panggilan Darurat untuk Daerah Khusus Ibukota Jakarta dilaksanakan oleh Pemerintah Daerah Provinsi.
+(3) Dalam menyelenggarakan layanan Nomor Tunggal Panggilan Darurat, Pemerintah Daerah Provinsi/Kabupaten/Kota sebagaimana dimaksud pada ayat (1) harus mengajukan Permohonan untuk mengaktifkan Layanan Nomor Tunggal Panggilan Darurat kepada Direktur Jenderal.
+(4) Dalam hal memerlukan infrastruktur Pusat Panggilan Darurat, Pemerintah Daerah Kabupaten/Kota dapat mengajukan permohonan untuk penyediaan kepada Direktur Jenderal.
+
+## Pasal 7
+(1) Dalam menyelenggarakan layanan Nomor Tunggal Panggilan Darurat di tingkat daerah, Pemerintah Daerah Kabupaten/Kota harus:
+	a. menyediakan sarana dan/atau prasarana pendukung untuk Pusat Panggilan Darurat;
+	b. melakukan koordinasi dengan instansi terkait untuk tindak lanjut penanganan layanan Nomor Tunggal Panggilan Darurat; dan
+	c. melakukan pengawasan pelaksanaan layanan Nomor Tunggal Panggilan Darurat di daerahnya.
+(2) Instansi terkait sebagaimana dimaksud pada ayat (1) huruf b meliputi instansi yang menangani layanan kedaruratan sebagaimana dimaksud dalam Pasal 4 ayat (2).
+(3) Dalam menyelenggarakan layanan Nomor Tunggal Panggilan Darurat di tingkat daerah, Pemerintah Daerah Provinsi dapat berperan serta dalam melakukan koordinasi, pengawasan, dan pembinaan layanan Nomor Tunggal Panggilan Darurat terhadap Pemerintah Daerah Kabupaten/Kota di wilayahnya.
+
+## BAB III
+PENYELENGGARA JARINGAN TELEKOMUNIKASI DALAM LAYANAN NOMOR TUNGGAL PANGGILAN DARURAT
+
+## Pasal 8
+(1) Penyelenggara Jaringan Telekomunikasi wajib menyampaikan panggilan ke Pusat Panggilan Darurat di Provinsi atau Kabupaten/Kota sesuai lokasi pemanggil.
+(2) Penyelenggara Jaringan Telekomunikasi sebagaimana dimaksud pada ayat (1) meliputi:
+	a. penyelenggara jaringan tetap lokal berbasis circuitswitched;
+	b. penyelenggara jaringan bergerak seluler; dan
+	c. penyelenggara jaringan bergerak satelit.
+
+## Pasal 9
+Penyelenggara Jaringan Telekomunikasi sebagaimana dimaksud dalam Pasal 8 ayat (1) wajib:
+a. menyediakan Jaringan, Sarana dan Prasarana Telekomunikasi yang terhubung dengan Pusat Panggilan Darurat;
+b. menyambungkan panggilan keadaan darurat yang diterima dari masyarakat ke Pusat Panggilan Darurat di Provinsi atau Kabupaten/Kota sesuai lokasi pemanggil; dan
+c. menginformasikan lokasi dan nomor telepon pemanggil ke pusat data nasional panggilan darurat.
+
+## Pasal 10
+(1) Konfigurasi jaringan Layanan Nomor Tunggal Panggilan Darurat yang disediakan oleh Kementerian ditetapkan oleh Direktur Jenderal.
+(2) Konfigurasi jaringan Layanan Nomor Tunggal Panggilan Darurat sebagaimana dimaksud pada ayat (1) termasuk kapasitas jaringan untuk Layanan Nomor Tunggal Panggilan Darurat di Pemerintah Daerah Provinsi atau Kabupaten/Kota.
+
+## Pasal 11
+Penyelenggara Jaringan Telekomunikasi dalam menghubungkan jaringan dengan Pusat Panggilan Darurat wajib memenuhi konfigurasi jaringan sebagaimana dimaksud dalam Pasal 10 ayat (1).
+
+## Pasal 12
+Persentase jumlah panggilan layanan Nomor Tunggal Darurat yang tidak mengalami Dropped Call pada jaringan Penyelenggara Jaringan Telekomunikasi wajib paling sedikit sesuai dengan ketentuan peraturan perundang-undangan.
+
+## Pasal 13
+Panggilan keadaan darurat oleh masyarakat ke Pusat Panggilan Darurat tidak dikenakan biaya.
+
+## Pasal 14
+(1) Pemerintah Daerah Provinsi atau Kabupaten/Kota dapat mengusulkan penambahan kapasitas jaringan telekomunikasi sebagaimana dimaksud dalam Pasal 10 ayat (2) untuk meningkatkan kualitas layanan Nomor Tunggal Panggilan Darurat.
+(2) Usulan penambahan kapasitas jaringan telekomunikasi sebagaimana dimaksud pada ayat (1) harus terlebih dahulu disetujui oleh Penyelenggara Jaringan Telekomunikasi.
+(3) Penyelenggara Jaringan Telekomunikasi wajib melaporkan secara tertulis kepada Direktur Jenderal setiap usulan penambahan kapasitas jaringan telekomunikasi di Daerah Provinsi atau Kabupaten/Kota paling lambat 1 (satu) bulan sejak usulan penambahan kapasitas diterima Penyelenggara Jaringan Telekomunikasi.
+
+## BAB IV
+SISTEM PUSAT PANGGILAN DARURAT
+
+## Pasal 15
+(1) Kementerian menyediakan infrastruktur Pusat Panggilan Darurat berdasarkan permohonan Pemerintah Daerah Kabupaten/Kota sebagaimana dimaksud dalam Pasal 6 ayat (4) berupa:
+	a. sistem call center layanan Nomor Tunggal Panggilan Darurat; dan
+	b. sarana telekomunikasi layanan Nomor Tunggal Panggilan Darurat.
+(2) Sistem Pusat Panggilan Darurat memiliki fungsi paling sedikit:
+	a. menerima panggilan keadaan darurat dari masyarakat;
+	b. antar muka penanganan keadaan darurat dalam memberikan informasi keadaan darurat ke instansi terkait;
+	c. meneruskan informasi keadaan darurat ke instansi terkait;
+	d. rekapitulasi penerimaan panggilan darurat dari masyarakat berupa nomor, lokasi, dan waktu penerimaan informasi; dan
+	e. rekapitulasi pengiriman informasi keadaan darurat ke instansi terkait yang disertai dengan waktu pengiriman informasi.
+
+## Pasal 16
+(1) Infrastruktur Pusat Panggilan Darurat sebagaimana dimaksud dalam Pasal 15 ayat (1) disediakan oleh Kementerian melalui mekanisme sewa atau hibah sesuai dengan ketentuan peraturan perundang-undangan.
+(2) Mekanisme sewa atau hibah sebagaimana dimaksud pada ayat (1) ditetapkan oleh Direktur Jenderal berdasarkan evaluasi.
+(3) Mekanisme sewa sebagaimana dimaksud pada ayat (1) dilakukan untuk jangka waktu paling lama 3 (tiga) tahun.
+(4) Setelah berakhirnya jangka waktu sewa sebagaimana dimaksud pada ayat (2), Pemerintah Daerah Kabupaten/Kota bertanggung jawab melanjutkan Layanan Nomor Tunggal Panggilan Darurat.
+(5) Penyerahan Infrastruktur Pusat Panggilan Darurat dengan mekanisme hibah sebagaimana dimaksud pada ayat (1) dilakukan sesuai dengan ketentuan peraturan perundang-undangan.
+
+## Pasal 17
+Sistem Pusat Panggilan Darurat beroperasi selama 24 (dua puluh empat) jam setiap hari.
+
+## Pasal 18
+(1) Pemerintah Daerah Provinsi atau Kabupaten/Kota menyusun dan melaksanakan standar operasional prosedur sesuai dengan situasi dan kondisi daerah masing-masing untuk penanganan keadaan darurat sebagaimana dimaksud dalam Pasal 4 ayat (2).
+(2) Standar operasional prosedur sebagaimana dimaksud pada ayat (1) paling sedikit memuat:
+	a. waktu penanganan keadaan darurat; dan
+	b. tata cara penanganan keadaan darurat.
+(3) Standar operasional prosedur yang telah disusun oleh Pemerintah Daerah Provinsi atau Kabupaten/Kota sebagaimana dimaksud pada ayat (1) harus dilaporkan kepada Direktur Jenderal.
+
+## Pasal 19
+Panggilan yang masuk ke Pusat Panggilan Darurat diteruskan kepada instansi terkait untuk ditindaklanjuti sesuai dengan standar operasional prosedur sebagaimana dimaksud dalam Pasal 18 ayat (1).
+
+## Pasal 20
+Setiap orang yang melakukan panggilan ke Pusat Panggilan Darurat dilarang memberikan informasi yang tidak benar.
+
+## BAB V
+SOSIALIASI, EVALUASI, MONITORING, PENGAWASAN, DAN PENGENDALIAN
+
+## Pasal 21
+(1) Direktur Jenderal melaksanakan sosialisasi Layanan Nomor Tunggal Panggilan Darurat secara umum kepada masyarakat.
+(2) Pemerintah Daerah Provinsi atau Kabupaten/Kota berperan serta melaksanakan sosialisasi Layanan Nomor Tunggal Panggilan Darurat kepada masyarakat di daerah masing-masing.
+
+## Pasal 22
+(1) Direktur Jenderal melakukan evaluasi, monitoring, pengawasan dan pengendalian terhadap kinerja Pusat Panggilan Darurat di daerah dan/atau Penyelenggara Jaringan Telekomunikasi.
+(2) Evaluasi dan monitoring, pengawasan dan pengendalian sebagaimana dimaksud pada ayat (1) dilakukan untuk meningkatkan kinerja Pusat Panggilan Darurat dan/atau Penyelenggara Jaringan Telekomunikasi dalam menangani keadaan darurat di daerah.
+
+## Pasal 23
+Direktur Jenderal melaksanakan pengawasan dan pengendalian terhadap pelaksanaan Peraturan Menteri ini.
+
+## BAB VI
+SANKSI
+
+## Pasal 24
+Pelanggaran terhadap ketentuan sebagaimana dimaksud dalam Pasal 8 ayat (1), Pasal 9, Pasal 11, Pasal 12, Pasal 14 ayat (3) dan Pasal 20 dikenai sanksi sesuai dengan ketentuan peraturan perundang-undangan.
+
+## BAB VII
+KETENTUAN PERALIHAN
+
+## Pasal 25
+Pada saat Peraturan Menteri ini mulai berlaku, Kementerian/Lembaga lain dan Pemerintah Daerah Provinsi atau Kabupaten/Kota yang telah melaksanakan layanan Nomor Panggilan Darurat tetap dapat melaksanakan kegiatannya dan wajib menyesuaikan dengan Peraturan Menteri ini dalam jangka waktu paling lama 5 (lima) tahun dengan mempertimbangkan kesiapan aspek teknis dan aspek non teknis.
+
+## BAB VIII
+KETENTUAN PENUTUP
+
+## Pasal 26
+Peraturan Menteri ini mulai berlaku pada tanggal diundangkan.
+
+Agar setiap orang mengetahuinya, memerintahkan pengundangan Peraturan Menteri ini dengan penempatannya dalam Berita Negara Republik Indonesia.
+
+Ditetapkan di Jakarta
+pada tanggal 11 Juli 2016
+MENTERI KOMUNIKASI DAN INFORMATIKA REPUBLIK INDONESIA,
+ttd
+RUDIANTARA
+
+Diundangkan di Jakarta
+pada tanggal 15 Juli 2016
+DIREKTUR JENDERAL PERATURAN PERUNDANG-UNDANGAN KEMENTERIAN HUKUM DAN HAK ASASI MANUSIA REPUBLIK INDONESIA,
+ttd
+WIDODO EKATJAHJANA
