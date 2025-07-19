@@ -40,7 +40,7 @@ Before running the application, ensure you have the following installed and conf
     *   `NEO4J_DATABASE`: Name of your Neo4j database (default: `db-large`).
     *   `NEO4J_USERNAME`: Username for your Neo4j database.
     *   `NEO4J_PASSWORD`: Password for your Neo4j database.
-    *   `EMBEDDING_MODEL`: Name of the HuggingFace embedding model to use (default: `intfloat/multilingual-e5-large`).
+    *   `EMBEDDING_MODEL`: HuggingFace embedding model to use (default: `intfloat/multilingual-e5-large`).
     *   `ANTHROPIC_API_KEY`: API key for accessing Claude models.
     *   `GOOGLE_API_KEY`: API key for accessing Gemini models (optional, used only for evaluation).
 
@@ -140,7 +140,7 @@ Below is an overview of the main files and directories in this project:
     │   │       ├── base/                 # Cleaned base regulations markdown files
     │   │       ├── amendment/            # Cleaned amendment regulations markdown files
     │   │       └── all/                  # Combined cleaned base and amendment regulations markdown files
-    │   └── json/                         # Extracted and structured regulation content and metadata with in JSON format
+    │   └── json/                         # Extracted and structured regulation content and metadata in JSON format
     ├── src/                              # Source code modules
     │   ├── grag/                         # Graph-RAG system modules
     │   │   ├── workflow.py               # Definition of the Graph-RAG workflow
