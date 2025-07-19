@@ -88,6 +88,14 @@ Follow these steps to set up and run the application:
         GOOGLE_API_KEY=your_google_api_key
         ```
 
+5.  **Prepare the Neo4j Database:**
+
+    * Make sure you have a Neo4j database (version **5.26.1**) with the name **`db-large`**.
+    * Run the notebook [graph_construction.ipynb](prep/graph_construction.ipynb), specifically **cell number 4**, with the parameters:
+      - `database="db-large"`
+      - `embedding_model="intfloat/multilingual-e5-large"`
+    * This notebook will build the legal knowledge graph and embed the data into your Neo4j database.
+
 > [!NOTE]
 > - `GOOGLE_API_KEY` is optional and used only for evaluation purposes.
 > - Make sure to replace placeholder values in `.env` file with your actual credentials.
